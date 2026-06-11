@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "siteName": "KYROZZ GmbH",
+    "tagline": "Global Manufacturing. German Reliability."
+  },
+  "nav": {
+    "services": "Services",
+    "injectionMolding": "Injection Molding",
+    "tooling": "Tooling & Prototyping",
+    "massProduction": "Mass Production",
+    "testing": "Testing & Quality",
+    "3dPrinting": "3D Printing",
+    "assembly": "Assembly Services",
+    "products": "Products",
+    "materials": "Materials",
+    "industries": "Industries",
+    "about": "About Us",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "🇩🇪 German-Managed · Global Manufacturing",
+      "h1": "Precision Injection Molding. German Quality. Competitive Cost.",
+      "sub": "We manage your injection molding project from Germany — prototyping to high-volume production, delivered on time.",
+      "ctaPrimary": "Get a Free Quote →",
+      "ctaSecondary": "View Our Capabilities"
+    },
+    "stats": {
+      "projects": "500+",
+      "projectsLabel": "Completed Projects",
+      "partners": "20+",
+      "partnersLabel": "Global Partners",
+      "countries": "15+",
+      "countriesLabel": "Countries Served",
+      "management": "100%",
+      "managementLabel": "German Project Management"
+    }
+  },
+  "quote": {
+    "title": "Request a Free Quote",
+    "step1": "Project Details",
+    "step2": "Part Specifications",
+    "step3": "Your Contact Info",
+    "submit": "Send My Quote Request",
+    "responsePromise": "We respond within 24 business hours"
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "legal": "Legal Notice"
+  }
+}

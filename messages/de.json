@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "siteName": "KYROZZ GmbH",
+    "tagline": "Globale Fertigung. Deutsche Zuverlässigkeit."
+  },
+  "nav": {
+    "services": "Leistungen",
+    "injectionMolding": "Spritzguss",
+    "tooling": "Werkzeugbau & Prototypen",
+    "massProduction": "Serienproduktion",
+    "testing": "Prüfung & Qualität",
+    "3dPrinting": "3D-Druck",
+    "assembly": "Montageleistungen",
+    "products": "Produkte",
+    "materials": "Materialien",
+    "industries": "Branchen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "getQuote": "Angebot anfragen"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "🇩🇪 Deutsch verwaltet · Globale Fertigung",
+      "h1": "Präzisions-Spritzguss. Deutsche Qualität. Wettbewerbsfähige Kosten.",
+      "sub": "Wir verwalten Ihr Spritzgussprojekt aus Deutschland — von der Prototypenentwicklung bis zur Hochvolumenproduktion, pünktlich geliefert.",
+      "ctaPrimary": "Kostenloses Angebot →",
+      "ctaSecondary": "Unsere Fähigkeiten ansehen"
+    },
+    "stats": {
+      "projects": "500+",
+      "projectsLabel": "Abgeschlossene Projekte",
+      "partners": "20+",
+      "partnersLabel": "Globale Partner",
+      "countries": "15+",
+      "countriesLabel": "Länder bedient",
+      "management": "100%",
+      "managementLabel": "Deutsches Projektmanagement"
+    }
+  },
+  "quote": {
+    "title": "Kostenloses Angebot anfragen",
+    "step1": "Projektdetails",
+    "step2": "Teilespezifikationen",
+    "step3": "Ihre Kontaktdaten",
+    "submit": "Angebotsanfrage senden",
+    "responsePromise": "Wir antworten innerhalb von 24 Geschäftsstunden"
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "legal": "Rechtliches"
+  }
+}
