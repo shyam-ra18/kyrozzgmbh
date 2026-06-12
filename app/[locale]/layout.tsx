@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Montserrat, DM_Sans } from "next/font/google";
 import "@/app/globals.css";
 import "lenis/dist/lenis.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-dmsans",
   display: "swap",
 });
 
-const jetBrainsMono = JetBrains_Mono({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-montserrat",
   display: "swap",
 });
 import Navbar from "@/components/layout/Navbar";
@@ -63,7 +63,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <head>
       </head>
-      <body suppressHydrationWarning className={`${plusJakartaSans.variable} ${jetBrainsMono.variable} font-sans`}>
+      <body suppressHydrationWarning className={`${dmSans.variable} ${montserrat.variable} font-sans`}>
         <NextIntlClientProvider messages={messages}>
           <SmoothScrolling>
             <Navbar locale={locale} />

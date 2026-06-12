@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
-import { TeamSection } from "@/components/sections/Team";
 import { ContactSection } from "@/components/sections/Contact";
 import { CoreServices, Introduction } from "@/components/sections/Services";
 import { IndustriesBento, Metrics, HTMLServices, HTMLProcess, WhyKyrozz, HTMLFAQ } from "@/components/sections/HTMLSections";
@@ -23,7 +22,6 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
       <IndustriesBento />
       <Metrics />
       <HTMLFAQ />
-      <TeamSection />
       <ContactSection />
     </div>
   );

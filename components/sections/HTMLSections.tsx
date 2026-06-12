@@ -230,6 +230,69 @@ export function HTMLProcess() {
             </div>
           ))}
         </div>
+
+        {/* 3D Printing Technology section */}
+        <div className="mt-32">
+          <div className="text-center mb-12">
+            <h3 className="text-[28px] font-bold text-[#0B1523]">Our 3D Printing Technology</h3>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-200 bg-white rounded-[24px] p-8 lg:p-12 shadow-[0_4px_24px_rgb(0,0,0,0.03)] border border-[#0B1523]/5">
+            
+            {/* Left: H2S */}
+            <div className="flex flex-col md:flex-row gap-8 items-center lg:items-start lg:pr-12 pb-12 lg:pb-0">
+              <div className="w-full md:w-[45%] flex-shrink-0">
+                <Image src="/bambulab-h2s.png" alt="Bambu Lab H2S" width={400} height={400} className="w-full h-auto object-contain" />
+              </div>
+              <div className="w-full md:w-[55%] space-y-3 pt-2">
+                <div>
+                  <h4 className="text-[22px] font-bold text-blue-600 mb-1.5">Bambu Lab H2S</h4>
+                  <p className="text-[13px] font-semibold text-[#0B1523]">Dual Nozzle. Maximum Versatility.</p>
+                </div>
+                <div className="space-y-3 pt-3">
+                  {[
+                    "Dual-extruder for multi-material and multi-color printing",
+                    "High-speed, high-accuracy output",
+                    "Large build volume for bigger parts",
+                    "Advanced automation for unmatched reliability"
+                  ].map((feature, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <svg className="w-4 h-4 text-blue-600 shrink-0 mt-[1px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span className="text-[13px] text-slate-600 leading-snug font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right: P2S */}
+            <div className="flex flex-col md:flex-row gap-8 items-center lg:items-start lg:pl-12 pt-12 lg:pt-0">
+              <div className="w-full md:w-[45%] flex-shrink-0">
+                <Image src="/bambulab-p2s.png" alt="Bambu Lab P2S" width={400} height={400} className="w-full h-auto object-contain" />
+              </div>
+              <div className="w-full md:w-[55%] space-y-3 pt-2">
+                <div>
+                  <h4 className="text-[22px] font-bold text-blue-600 mb-1.5">Bambu Lab P2S</h4>
+                  <p className="text-[13px] font-semibold text-[#0B1523]">Speed. Precision. Performance.</p>
+                </div>
+                <div className="space-y-3 pt-3">
+                  {[
+                    "High-speed printing with outstanding accuracy",
+                    "Reliable performance for prototypes and functional parts",
+                    "Easy to use, easy to trust",
+                    "Ideal for everyday production and engineering parts"
+                  ].map((feature, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <svg className="w-4 h-4 text-blue-600 shrink-0 mt-[1px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span className="text-[13px] text-slate-600 leading-snug font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   );
@@ -290,58 +353,78 @@ export function WhyKyrozz() {
 
 export function HTMLFAQ() {
   const faqs = [
-    { q: "What file formats do you accept for 3D printing?", a: "We accept STEP (.stp/.step), IGES, STL, OBJ, 3MF, and most native CAD formats including SolidWorks, CATIA, and Fusion 360. Send us what you have — including 2D drawings for context — and we'll work from there." },
-    { q: "How long does 3D printing take? What is the turnaround time?", a: "Standard lead time for 3D printed parts is 5-7 business days. Express orders ship within 72 hours. Injection molded parts typically take 2-4 weeks including tooling. We confirm your exact timeline at the quoting stage — no surprises." },
-    { q: "What is the minimum order quantity for 3D printing and injection molding?", a: "For 3D printing there is no minimum — single parts are welcome and get the same quality treatment as large runs. For injection molding we work from 500 units upwards; tooling costs are quoted separately and amortized into longer production runs." },
-    { q: "What tolerances can you achieve with FDM and SLA printing?", a: "Standard FDM achieves ±0.2mm. Our precision FDM with Bambu Lab H2S/P2S and SLA processes reach ±0.1mm. Injection molded parts achieve ±0.05mm. CNC machined parts can hold ±0.01mm. CMM measurement reports available on request." },
-    { q: "Are my design files and IP kept confidential?", a: "Yes — completely. Files are encrypted during upload and storage. NDAs are available before any design review. We treat your IP with the same seriousness as German B2B standards require. Your files are never shared without your explicit consent." },
-    { q: "Do you provide quality documentation and CMM reports?", a: "Every order ships with a delivery note and quality record. First article inspection reports, CMM measurement reports, and material certificates are available for regulated industries. Full PPAP documentation (Levels 1-5) is offered for automotive clients." },
-    { q: "Can you help optimize my design for manufacturing (DFM)?", a: "Yes — free with every quote. Our engineers provide DFM reviews covering wall thickness, support reduction, and material substitutions that cut cost without compromising function. We save clients an average of 18% through DFM optimization alone." },
-    { q: "What makes KYROZZ different from other online manufacturing services?", a: "KYROZZ is your single point of contact in Europe with German project management and quality oversight, while leveraging competitive global production costs through our audited partner network. You get German engineering standards without German-only pricing." }
+    { 
+      icon: <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>,
+      q: "How does an order for a 3D print work?", 
+      a: "Fill out our contact form and send us your files if available. We will get in touch to discuss your requirements. After rebuilding the part digitally, we will confirm the details (material, color, etc.) and provide you with a custom offer for printing." 
+    },
+    { 
+      icon: <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /><path strokeLinecap="round" strokeLinejoin="round" d="M9 9h1M9 13h6M9 17h6" /></svg>,
+      q: "What 3D file formats can you use?", 
+      a: "We support STL, STEP, 3MF, STP, and OBJ." 
+    },
+    { 
+      icon: <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>,
+      q: "What is 3D printing?", 
+      a: "3D printing, also known as additive manufacturing, is the process of creating three-dimensional objects by building them layer by layer using a computer-controlled printer." 
+    },
+    { 
+      icon: <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
+      q: "How does FDM 3D printing work?", 
+      a: "FDM (Fused Deposition Modeling) melts a thermoplastic filament and deposits it layer by layer to build the object. It is a reliable process for strong, functional parts and prototypes." 
+    },
+    { 
+      icon: <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+      q: "How long does it take to 3D print an object?", 
+      a: "The printing time depends on the size, complexity, material and quantity. Small parts may take a few hours, while larger or complex parts can take several days." 
+    }
   ];
 
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
     <section id="faq" className="bg-white py-28">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-12 lg:gap-24 items-start">
-        <div className="lg:sticky lg:top-[120px]">
-          <div className="font-mono text-[11px] tracking-[2px] uppercase text-blue-600 mb-4 before:content-['—_']">FAQ</div>
-          <h2 className="text-4xl md:text-[clamp(44px,4.5vw,64px)] font-black tracking-[-1px] leading-[0.9] text-[#0B1523] uppercase">
-            Common<br /><em className="text-blue-600 not-italic block">Questions</em>
-          </h2>
-          <p className="text-[15px] leading-[1.75] text-[#5C6E8A] mt-5">
-            Everything you need before placing your first order. Our engineers reply within 4 hours.
-          </p>
-          <div className="mt-8 p-5 bg-[#EEF2FF] rounded-lg border-l-[3px] border-blue-600">
-            <p className="text-[13px] text-[#0B1523] leading-[1.6]">
-              Still have questions? <a href="#contact" className="text-blue-600 font-semibold hover:underline">Send us your question directly</a> — a production engineer will reply, not a sales rep.
-            </p>
-          </div>
+      <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0B1523] mb-5 tracking-tight">Frequently Asked Questions</h2>
+          <div className="w-10 h-[3px] bg-blue-600 mx-auto rounded-full"></div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="space-y-4">
           {faqs.map((f, i) => {
             const isOpen = openIdx === i;
             return (
-              <div key={i} className="border-b border-[#0B1523]/10 first:border-t">
+              <div 
+                key={i} 
+                className="bg-white rounded-[20px] p-5 sm:p-7 shadow-[0_2px_16px_rgb(0,0,0,0.03)] border border-slate-100 transition-all duration-300 hover:shadow-[0_4px_24px_rgb(0,0,0,0.06)]"
+              >
                 <div 
                   onClick={() => setOpenIdx(isOpen ? null : i)}
-                  className="flex items-center justify-between gap-5 py-6 cursor-pointer group"
+                  className="flex items-start gap-5 sm:gap-6 cursor-pointer group"
                 >
-                  <span className={`text-[16px] font-semibold leading-[1.4] transition-colors duration-200 ${isOpen ? 'text-blue-600' : 'text-[#0B1523] group-hover:text-blue-600'}`}>
-                    {f.q}
-                  </span>
-                  <div className={`w-[30px] h-[30px] shrink-0 border-[1.5px] rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-blue-600 border-blue-600 rotate-45' : 'border-[#0B1523]/10'}`}>
-                    <svg viewBox="0 0 12 12" fill="none" className={`w-3 h-3 transition-colors duration-200 ${isOpen ? 'stroke-white' : 'stroke-blue-600'}`}>
-                      <path d="M6 2v8M2 6h8" strokeLinecap="round" strokeWidth="1.5"/>
-                    </svg>
+                  <div className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-blue-600 flex items-center justify-center shrink-0 shadow-md shadow-blue-600/20">
+                    {f.icon}
                   </div>
-                </div>
-                <div className={`overflow-hidden transition-[max-height] duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'max-h-[300px]' : 'max-h-0'}`}>
-                  <p className="pb-6 text-[14px] leading-[1.8] text-[#5C6E8A] pr-10">
-                    {f.a}
-                  </p>
+                  <div className="flex-1 pt-3 md:pt-4">
+                    <div className="flex items-center justify-between gap-4">
+                      <h3 className={`text-[17px] font-bold leading-snug transition-colors duration-200 ${isOpen ? 'text-[#0B1523]' : 'text-[#0B1523] group-hover:text-blue-600'}`}>
+                        {f.q}
+                      </h3>
+                      <div className="shrink-0 mt-0.5">
+                        <svg 
+                          className={`w-[22px] h-[22px] text-blue-600 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+                          fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className={`overflow-hidden transition-[max-height,opacity] duration-400 ease-in-out ${isOpen ? 'max-h-[300px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <p className="text-[14px] leading-[1.8] text-[#5C6E8A] pr-4">
+                        {f.a}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             );
