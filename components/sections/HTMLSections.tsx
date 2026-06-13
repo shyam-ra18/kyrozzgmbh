@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Target, Clock, Zap, Layers, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Target, Clock, Zap, Layers, ShieldCheck, CheckCircle2, FilePlus2, Settings, Printer, Box, ArrowRight } from 'lucide-react';
 
 export function Ticker() {
   return (
@@ -126,67 +126,54 @@ export function Metrics() {
 export function HTMLServices() {
   const services = [
     { 
-      num: "S.01", 
       name: "3D Printing Services", 
       text: "High-precision 3D printing with FDM technology for functional prototypes and end-use parts.", 
       features: ["Prototype Development", "Functional Parts Production", "Wide Range of Materials"], 
-      img: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&q=75&auto=format" 
+      img: "/3dprint-ser1.png" 
     },
     { 
-      num: "S.02", 
       name: "Design & Engineering Support", 
       text: "From concept to CAD model - we help bring your ideas to life with expert design support.", 
       features: ["3D Modeling", "Design Optimization", "Print-Ready Files"], 
-      img: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&q=75&auto=format" 
+      img: "/design-ser2.png" 
     },
     { 
-      num: "S.03", 
       name: "Post-Processing & Finishing", 
       text: "Quality finishing and post-processing for perfect fit, look, and performance.", 
       features: ["Surface Finishing", "Support Removal", "Quality Inspection"], 
-      img: "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=600&q=75&auto=format" 
+      img: "/post-ser3.png" 
     }
   ];
 
   return (
-    <section id="services" className="bg-white pt-28 pb-0">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-end mb-16">
-        <div>
-          <div className="font-mono text-[11px] tracking-[2px] uppercase text-blue-600 mb-4 before:content-['—_']">Core Services</div>
-          <h2 className="text-4xl md:text-[clamp(44px,5vw,68px)] font-black tracking-[-1px] leading-[0.95] text-[#0B1523] uppercase">
-            Everything You Need<br />to <em className="text-blue-600 not-italic">Build Your Parts</em>
-          </h2>
-        </div>
-        <div>
-          <p className="text-base leading-[1.75] text-[#5C6E8A] max-w-[400px]">From rapid prototyping to high-volume serial production — precision manufacturing managed from Germany, produced globally.</p>
-          <a href="#contact" className="inline-flex items-center gap-2 text-[13px] font-semibold text-blue-600 mt-5 tracking-[0.3px] transition-all hover:gap-3.5">
-            Let's Build Your Parts 
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
-          </a>
-        </div>
-      </div>
-      
-      <div className="border-t border-[#0B1523]/10">
-        {services.map((s, i) => (
-          <div key={i} className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[200px_1fr_300px] gap-6 lg:gap-12 items-stretch border-b border-[#0B1523]/10 transition-colors duration-300 hover:bg-[#EEF2FF] group cursor-pointer">
-            <div className="font-mono text-[11px] text-[#5C6E8A] pt-8 lg:pt-11 pb-4 lg:pb-10 flex items-start">{s.num}</div>
-            <div className="pt-2 lg:pt-10 pb-10">
-              <div className="font-sans text-[32px] font-bold tracking-[0.5px] text-[#0B1523] uppercase mb-2.5 transition-colors duration-200 group-hover:text-blue-600">{s.name}</div>
-              <p className="text-[14px] leading-[1.7] text-[#5C6E8A] max-w-[480px] mb-6">{s.text}</p>
-              <div className="flex flex-col gap-2.5">
-                {s.features.map((feature, j) => (
-                  <div key={j} className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-[18px] h-[18px] text-blue-600 shrink-0" strokeWidth={2} />
-                    <span className="text-[14px] text-[#0B1523] font-medium">{feature}</span>
-                  </div>
-                ))}
+    <section id="services" className="bg-white py-24">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center text-[#0B1523] mb-14">Our Core Services</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {services.map((s, i) => (
+            <div key={i} className="bg-[#F8F9FA] rounded-[24px] overflow-hidden border border-slate-100 flex flex-col shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative h-[240px] w-full bg-slate-200">
+                <Image src={s.img} alt={s.name} fill className="object-cover" />
+              </div>
+              <div className="p-8 flex-1 flex flex-col">
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-3 leading-tight">{s.name}</h3>
+                <p className="text-[14px] text-slate-600 mb-8 leading-relaxed flex-1">{s.text}</p>
+                
+                <div className="flex flex-col gap-3">
+                  {s.features.map((feature, j) => (
+                    <div key={j} className="flex items-start gap-3">
+                      <svg className="w-4 h-4 text-slate-800 mt-[2px] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-[13px] text-slate-800 font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="hidden lg:block overflow-hidden my-4 relative h-[200px] rounded-md">
-              <Image src={s.img} alt={s.name} fill className="object-cover transition-transform duration-[600ms] filter grayscale-[30%] group-hover:scale-[1.04] group-hover:grayscale-0" />
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -194,45 +181,39 @@ export function HTMLServices() {
 
 export function HTMLProcess() {
   const steps = [
-    { num: "01", title: "Upload CAD", text: "STEP, IGES, STL, OBJ, 3MF — all major formats. Send what you have; we work with it." },
-    { num: "02", title: "Project Review", text: "Engineers assess your design for manufacturability within 24 hours. Free DFM always included." },
-    { num: "03", title: "Partner Selection", text: "We match your project to the best-fit global partner — screened, audited, and approved." },
-    { num: "04", title: "Quote & Material", text: "Transparent pricing, material recommendations, and lead time. Zero hidden costs." },
-    { num: "05", title: "Production & QC", text: "Certified machines, real-time QC monitoring, and German quality oversight at every stage." },
-    { num: "06", title: "Delivery & Docs", text: "Parts ship with full quality report, dimensional data, and material certificates." }
+    {
+      num: "1. SEND YOUR FILE",
+      desc: "Upload your 3D model (STL, OBJ, 3MF) and share your requirements.",
+      icon: <FilePlus2 className="w-10 h-10 text-blue-600 stroke-[1.25]" />
+    },
+    {
+      num: "2. WE PREPARE & PLAN",
+      desc: "We review your file, recommend the best material and settings.",
+      icon: <Settings className="w-10 h-10 text-blue-600 stroke-[1.25]" />
+    },
+    {
+      num: "3. WE PRINT",
+      desc: "Your part is printed using Bambu Lab H2S or P2S with precision.",
+      icon: <Printer className="w-10 h-10 text-blue-600 stroke-[1.25]" />
+    },
+    {
+      num: "4. QUALITY CHECK",
+      desc: "Every part is inspected to ensure it meets our high standards.",
+      icon: <CheckCircle2 className="w-10 h-10 text-blue-600 stroke-[1.25]" />
+    },
+    {
+      num: "5. PACK & DELIVER",
+      desc: "Carefully packed and shipped fast – straight to you.",
+      icon: <Box className="w-10 h-10 text-blue-600 stroke-[1.25]" />
+    }
   ];
 
   return (
-    <section id="process" className="bg-[#F5F7FA] py-28">
+    <section id="process" className="bg-white py-24 border-t border-slate-100">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-10 mb-16">
-          <div>
-            <div className="font-mono text-[11px] tracking-[2px] uppercase text-blue-600 mb-4 before:content-['—_']">Our Process</div>
-            <h2 className="text-4xl md:text-[clamp(40px,4.5vw,60px)] font-black tracking-[-1px] leading-[0.95] text-[#0B1523] uppercase">
-              From File<br />to <em className="text-blue-600 not-italic">Factory Floor</em>
-            </h2>
-          </div>
-          <p className="text-[14px] leading-[1.75] text-[#5C6E8A] max-w-[300px] md:text-right">
-            A transparent, engineer-led workflow built for industrial buyers who cannot afford surprises.
-          </p>
-        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 relative gap-8 lg:gap-2">
-          <div className="hidden lg:block absolute top-[27px] left-[4%] right-[4%] h-px bg-gradient-to-r from-transparent via-blue-600/30 to-transparent pointer-events-none" />
-          
-          {steps.map((s, i) => (
-            <div key={i} className="relative lg:pr-3 group cursor-pointer">
-              <div className="w-[54px] h-[54px] rounded-full bg-white border-[1.5px] border-[#0B1523]/10 flex items-center justify-center mb-6 relative z-10 transition-colors duration-300 group-hover:bg-blue-600 group-hover:border-blue-600">
-                <span className="font-mono text-[11px] text-blue-600 transition-colors duration-200 group-hover:text-white">{s.num}</span>
-              </div>
-              <div className="font-sans text-[17px] font-bold tracking-[0.5px] uppercase text-[#0B1523] mb-2 transition-colors duration-200 group-hover:text-blue-600">{s.title}</div>
-              <p className="text-[13px] leading-[1.65] text-[#5C6E8A]">{s.text}</p>
-            </div>
-          ))}
-        </div>
-
         {/* 3D Printing Technology section */}
-        <div className="mt-32">
+        <div className="mb-24">
           <div className="text-center mb-12">
             <h3 className="text-[28px] font-bold text-[#0B1523]">Our 3D Printing Technology</h3>
           </div>
@@ -291,6 +272,42 @@ export function HTMLProcess() {
             </div>
 
           </div>
+        </div>
+
+        {/* Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0B1523] tracking-tight">
+            From Idea to Finished Part – Our Proven Process
+          </h2>
+        </div>
+
+        {/* Steps Grid */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-4">
+          {steps.map((step, idx) => (
+            <Fragment key={idx}>
+              <div className="flex flex-col items-center text-center flex-1 w-full group">
+                {/* Icon Container */}
+                <div className="w-20 h-20 rounded-full border border-slate-100 bg-slate-50/50 flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-blue-50 group-hover:scale-105">
+                  {step.icon}
+                </div>
+                {/* Number & Title */}
+                <h3 className="text-[13px] font-extrabold text-blue-600 uppercase tracking-wider mb-2.5 leading-none">
+                  {step.num}
+                </h3>
+                {/* Description */}
+                <p className="text-[12px] text-slate-500 leading-relaxed max-w-[220px] font-medium">
+                  {step.desc}
+                </p>
+              </div>
+
+              {/* Arrow Indicator between steps */}
+              {idx < 4 && (
+                <div className="hidden lg:flex items-center justify-center h-20 text-blue-600">
+                  <ArrowRight className="w-5 h-5 text-blue-600 stroke-[2.5]" />
+                </div>
+              )}
+            </Fragment>
+          ))}
         </div>
 
       </div>

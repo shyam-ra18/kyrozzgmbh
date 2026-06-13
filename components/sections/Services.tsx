@@ -18,7 +18,7 @@ const services = [
   {
     image: "/injection-molding.png",
     title: 'INJECTION MOLDING',
-    desc: 'High-Quality Plastic Parts',
+    desc: 'High-Quality Plastic Parts\nfor Global Markets',
   }
 ];
 

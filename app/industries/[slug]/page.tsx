@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { industries } from "@/content/industries";
 
 interface Props {
-  params: Promise<{ slug: string; locale: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -139,16 +139,15 @@ export default function ThreeDPrintingPage() {
       </section>
 
       {/* 3. Our 3D Printing Technology */}
-      <section className="py-12 md:py-14 bg-slate-50 border-t border-slate-200">
+      <section className="py-12 md:py-14">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <div className="font-mono text-[11px] tracking-[2px] uppercase text-blue-600 mb-3 before:content-['—_'] after:content-['_—']">Capabilities</div>
             <h2 className="text-2xl md:text-[32px] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
               Our 3D Printing <em className="text-blue-600 not-italic">Technology</em>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center bg-slate-50 rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100">
             {/* Image */}
             <div className="lg:col-span-4 relative aspect-4/3 flex items-center justify-center drop-shadow-xl">
               <Image

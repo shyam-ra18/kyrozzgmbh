@@ -12,7 +12,7 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors: Record<string, string> = {};
-    
+
     if (!form.name.trim()) newErrors.name = 'Name is required';
     if (!form.email.trim()) {
       newErrors.email = 'Email is required';
@@ -34,12 +34,12 @@ export function ContactSection() {
   return (
     <section className="py-24 bg-slate-50 border-t border-slate-100" id="contact">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center mb-16">
           <div className="inline-block py-1 px-3 bg-blue-50 text-blue-600 text-[10px] font-bold tracking-[0.2em] rounded mb-6 uppercase">
             Get in Touch
           </div>
-          <h2 className="text-4xl md:text-5xl font-sans font-light text-slate-900 mb-6 tracking-tight">Let's Build <span className="font-bold text-slate-900">Your Parts!</span></h2>
+          <h2 className="text-4xl md:text-5xl font-sans font-light text-slate-900 mb-6 tracking-tight">Upload Your Files Get an <span className="font-bold text-blue-600">Instant Quote</span></h2>
           <p className="text-slate-500 font-light leading-relaxed max-w-2xl mx-auto">Fill out the form below and upload your 3D files to get a fast, personalized quote for your project.</p>
         </div>
 
@@ -60,47 +60,47 @@ export function ContactSection() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">Name *</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.name ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`} 
-                        placeholder="Enter your name" 
+                        className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.name ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`}
+                        placeholder="Enter your name"
                       />
                       {errors.name && <p className="text-red-500 text-xs mt-1.5">{errors.name}</p>}
                     </div>
                     <div>
                       <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">Company</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         value={form.company}
                         onChange={(e) => setForm({ ...form, company: e.target.value })}
-                        className="w-full px-4 py-3 rounded border border-slate-200 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm font-light bg-slate-50" 
-                        placeholder="Enter your company name" 
+                        className="w-full px-4 py-3 rounded border border-slate-200 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm font-light bg-slate-50"
+                        placeholder="Enter your company name"
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">Email *</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.email ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`} 
-                      placeholder="Enter your email address" 
+                      className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.email ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`}
+                      placeholder="Enter your email address"
                     />
                     {errors.email && <p className="text-red-500 text-xs mt-1.5">{errors.email}</p>}
                   </div>
 
                   <div>
                     <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">Project / Description *</label>
-                    <textarea 
-                      rows={4} 
+                    <textarea
+                      rows={4}
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.message ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`} 
-                      placeholder="Tell us about your project, requirements, materials..." 
+                      className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.message ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`}
+                      placeholder="Tell us about your project, requirements, materials..."
                     />
                     {errors.message && <p className="text-red-500 text-xs mt-1.5">{errors.message}</p>}
                   </div>

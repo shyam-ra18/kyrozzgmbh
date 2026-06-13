@@ -6,7 +6,7 @@ import { products } from "@/content/products";
 import { ChevronRight, ArrowRight, MessageSquare } from "lucide-react";
 
 interface Props {
-  params: Promise<{ slug: string; locale: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
