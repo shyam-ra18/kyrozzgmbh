@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { ContactSection } from "@/components/sections/Contact";
 import { CoreServices, Introduction } from "@/components/sections/Services";
-import { IndustriesBento, Metrics, HTMLServices, HTMLProcess, WhyKyrozz, HTMLFAQ } from "@/components/sections/HTMLSections";
+import { IndustriesBento, HTMLProcess } from "@/components/sections/HTMLSections";
+import { WhatYouExpect } from "@/components/sections/WhatYouExpect";
 
 export const metadata: Metadata = {
   title: "Injection Molding Manufacturer | KYROZZ GmbH Germany",
@@ -16,12 +17,9 @@ export default function HomePage() {
       <Hero />
       <CoreServices />
       <Introduction />
-      <HTMLServices />
+      <WhatYouExpect />
       <HTMLProcess />
-      <WhyKyrozz />
       <IndustriesBento />
-      <Metrics />
-      <HTMLFAQ />
       <ContactSection />
     </div>
   );

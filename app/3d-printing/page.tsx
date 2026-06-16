@@ -14,6 +14,9 @@ import {
   Lightbulb,
   ArrowRight
 } from "lucide-react";
+import { HTMLServices, HTMLFAQ } from "@/components/sections/HTMLSections";
+import { SimpleOrderingProcess } from "@/components/sections/SimpleOrderingProcess";
+import { BambuTechShowcase } from "@/components/sections/BambuTechShowcase";
 
 export const metadata: Metadata = {
   title: "3D Printing Service Germany | Industrial Prototyping | KYROZZ GmbH",
@@ -216,6 +219,14 @@ export default function ThreeDPrintingPage() {
           </div>
         </div>
       </section>
+
+      <HTMLServices />
+
+      <SimpleOrderingProcess />
+
+      <BambuTechShowcase />
+
+      <HTMLFAQ />
 
       {/* 5. Bottom CTA Banner */}
       <section className="py-12 md:py-14 bg-white">

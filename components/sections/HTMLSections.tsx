@@ -2,7 +2,7 @@
 import React, { useState, Fragment } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Target, Clock, Zap, Layers, ShieldCheck, CheckCircle2, FilePlus2, Settings, Printer, Box, ArrowRight } from 'lucide-react';
+import { CheckCircle2, FilePlus2, Settings, Printer, Box, ArrowRight, GraduationCap, Gamepad2, Building2, Wrench } from 'lucide-react';
 
 export function Ticker() {
   return (
@@ -33,43 +33,75 @@ export function Ticker() {
 
 export function IndustriesBento() {
   const industries = [
-    { img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&q=75&auto=format", name: "Automotive", sub: "OEM components, jigs, fixtures & prototypes for Tier-1 suppliers", wide: true, tall: true },
-    { img: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=700&q=75&auto=format", name: "Medical", sub: "Biocompatible parts, Class I housings, surgical tools", wide: true, tall: false },
-    { img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=700&q=75&auto=format", name: "Robotics", sub: "Lightweight structural parts, grippers, enclosures", wide: false, tall: false },
-    { img: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=700&q=75&auto=format", name: "Aerospace", sub: "Low-volume metal & high-performance polymer parts", wide: false, tall: false },
-    { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=75&auto=format", name: "Electronics", sub: "ESD-safe enclosures, EMI shielding, product housings", wide: false, tall: false },
-    { img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=700&q=75&auto=format", name: "Research & Education", sub: "Microfluidics, custom labware, research apparatus", wide: false, tall: false },
+    {
+      name: "Industrial Manufacturing",
+      desc: "Functional parts, tools, and production aids.",
+      icon: <Settings className="w-5 h-5 text-blue-600 shrink-0" />,
+      img: "https://images.unsplash.com/photo-1530138754840-ae8d54b809fa?w=600&q=80&auto=format"
+    },
+    {
+      name: "Education & Research",
+      desc: "Prototypes, teaching tools, and experiments.",
+      icon: <GraduationCap className="w-5 h-5 text-blue-600 shrink-0" />,
+      img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80&auto=format"
+    },
+    {
+      name: "Hobbyist & Maker",
+      desc: "Creative projects, custom parts, and more.",
+      icon: <Gamepad2 className="w-5 h-5 text-blue-600 shrink-0" />,
+      img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80&auto=format"
+    },
+    {
+      name: "Product Development",
+      desc: "Prototypes and functional parts for faster innovation.",
+      icon: <Box className="w-5 h-5 text-blue-600 shrink-0" />,
+      img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80&auto=format"
+    },
+    {
+      name: "Model Making & Prototyping",
+      desc: "Detailed models and visual prototypes.",
+      icon: <Building2 className="w-5 h-5 text-blue-600 shrink-0" />,
+      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&auto=format"
+    },
+    {
+      name: "Custom Parts & Solutions",
+      desc: "Tailored components for unique applications.",
+      icon: <Wrench className="w-5 h-5 text-blue-600 shrink-0" />,
+      img: "https://images.unsplash.com/photo-1615840287214-7fe58a8b668f?w=600&q=80&auto=format"
+    }
   ];
 
   return (
     <section id="industries" className="bg-[#F5F7FA] py-24 md:py-32">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="font-mono text-[11px] tracking-[2px] uppercase text-blue-600 mb-4 before:content-['—_']">Industries We Serve</div>
-        <h2 className="text-4xl md:text-[clamp(44px,5vw,68px)] font-black tracking-[-1px] leading-[0.95] text-slate-900 uppercase">
-          Built for<br /><em className="text-blue-600 not-italic">Every Industry</em>
+        <h2 className="text-3xl md:text-[38px] font-extrabold tracking-tight text-center text-slate-900">
+          Industries We Empower
         </h2>
       </div>
       
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[260px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
           {industries.map((ind, i) => (
-            <div 
-              key={i} 
-              className={`relative overflow-hidden rounded-xl group ${ind.tall ? 'md:row-span-2' : ''} ${ind.wide ? 'md:col-span-2' : ''}`}
-            >
-              <Image 
-                src={ind.img} 
-                alt={ind.name}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B1523]/85 to-transparent to-[55%] transition-all duration-300 group-hover:from-blue-600/70" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className={`font-sans font-bold tracking-[1px] uppercase text-white mb-1 ${i === 0 ? 'text-3xl' : 'text-[22px]'}`}>
-                  {ind.name}
-                </div>
-                <div className="text-xs text-white/55 leading-[1.5]">
-                  {ind.sub}
+            <div key={i} className="flex flex-col group bg-white rounded-2xl border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md transition-all duration-300 overflow-hidden">
+              <div className="relative w-full aspect-[16/10] bg-slate-100">
+                <Image 
+                  src={ind.img} 
+                  alt={ind.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2.5 mb-3">
+                    {ind.icon}
+                    <h3 className="font-bold text-[14px] text-blue-900 tracking-tight leading-tight group-hover:text-blue-600 transition-colors duration-200">
+                      {ind.name}
+                    </h3>
+                  </div>
+                  <p className="text-[12px] text-slate-500 leading-relaxed">
+                    {ind.desc}
+                  </p>
                 </div>
               </div>
             </div>
@@ -80,48 +112,6 @@ export function IndustriesBento() {
   );
 }
 
-export function Metrics() {
-  const metrics = [
-    { n: "500", sup: "+", label: "Projects delivered across 15+ countries", tag: "Completed Projects" },
-    { n: "72", sup: "h", label: "Express turnaround for 3D printed prototypes", tag: "Express Delivery" },
-    { n: "±0.1", sup: "mm", label: "Standard tolerance for FDM and SLA printing", tag: "Precision" },
-    { n: "20", sup: "+", label: "Audited global manufacturing partners", tag: "Global Network" },
-    { n: "150", sup: "T", label: "Injection molding capacity in tonnes", tag: "IM Capacity" },
-    { n: "5", sup: "dec", label: "Decades of injection molding legacy", tag: "Manufacturing Heritage" },
-    { n: "24", sup: "h", label: "Free DFM review turnaround on every quote", tag: "Design Review" },
-    { n: "100", sup: "%", label: "Customer-focused German project management", tag: "Satisfaction Focus" },
-  ];
-
-  return (
-    <section id="metrics" className="bg-[#15243A] py-24 md:py-32">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-end mb-16">
-          <div>
-            <div className="font-mono text-[11px] tracking-[2px] uppercase text-blue-500 mb-4 before:content-['//_']">By The Numbers</div>
-            <h2 className="text-4xl md:text-[clamp(44px,4.5vw,64px)] font-black tracking-[-1px] leading-[0.95] text-white uppercase">
-              Performance<br />You Can <em className="text-blue-500 not-italic">Measure</em>
-            </h2>
-          </div>
-          <p className="text-[15px] leading-[1.8] text-white/45 lg:pb-2">
-            Real numbers from real projects. KYROZZ combines German engineering discipline with the cost efficiency of a trusted global production network — and these metrics prove it.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 rounded-xl overflow-hidden">
-          {metrics.map((m, i) => (
-            <div key={i} className="bg-[#15243A] p-8 md:p-9 transition-colors duration-200 hover:bg-blue-600/10">
-              <div className="font-sans text-[52px] font-extrabold tracking-[-2px] text-white leading-none">
-                {m.n}<em className="text-blue-500 not-italic">{m.sup}</em>
-              </div>
-              <div className="text-[13px] text-white/40 mt-2 leading-[1.5] min-h-[40px]">{m.label}</div>
-              <span className="font-mono text-[10px] tracking-[1px] uppercase text-blue-500 mt-3 block">{m.tag}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 export function HTMLServices() {
   const services = [
@@ -212,67 +202,6 @@ export function HTMLProcess() {
     <section id="process" className="bg-white py-24 border-t border-slate-100">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* 3D Printing Technology section */}
-        <div className="mb-24">
-          <div className="text-center mb-12">
-            <h3 className="text-[28px] font-bold text-[#0B1523]">Our 3D Printing Technology</h3>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-200 bg-white rounded-[24px] p-8 lg:p-12 shadow-[0_4px_24px_rgb(0,0,0,0.03)] border border-[#0B1523]/5">
-            
-            {/* Left: H2S */}
-            <div className="flex flex-col md:flex-row gap-8 items-center lg:items-start lg:pr-12 pb-12 lg:pb-0">
-              <div className="w-full md:w-[45%] flex-shrink-0">
-                <Image src="/bambulab-h2s.png" alt="Bambu Lab H2S" width={400} height={400} className="w-full h-auto object-contain" />
-              </div>
-              <div className="w-full md:w-[55%] space-y-3 pt-2">
-                <div>
-                  <h4 className="text-[22px] font-bold text-blue-600 mb-1.5">Bambu Lab H2S</h4>
-                  <p className="text-[13px] font-semibold text-[#0B1523]">Dual Nozzle. Maximum Versatility.</p>
-                </div>
-                <div className="space-y-3 pt-3">
-                  {[
-                    "Dual-extruder for multi-material and multi-color printing",
-                    "High-speed, high-accuracy output",
-                    "Large build volume for bigger parts",
-                    "Advanced automation for unmatched reliability"
-                  ].map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <svg className="w-4 h-4 text-blue-600 shrink-0 mt-[1px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-[13px] text-slate-600 leading-snug font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right: P2S */}
-            <div className="flex flex-col md:flex-row gap-8 items-center lg:items-start lg:pl-12 pt-12 lg:pt-0">
-              <div className="w-full md:w-[45%] flex-shrink-0">
-                <Image src="/bambulab-p2s.png" alt="Bambu Lab P2S" width={400} height={400} className="w-full h-auto object-contain" />
-              </div>
-              <div className="w-full md:w-[55%] space-y-3 pt-2">
-                <div>
-                  <h4 className="text-[22px] font-bold text-blue-600 mb-1.5">Bambu Lab P2S</h4>
-                  <p className="text-[13px] font-semibold text-[#0B1523]">Speed. Precision. Performance.</p>
-                </div>
-                <div className="space-y-3 pt-3">
-                  {[
-                    "High-speed printing with outstanding accuracy",
-                    "Reliable performance for prototypes and functional parts",
-                    "Easy to use, easy to trust",
-                    "Ideal for everyday production and engineering parts"
-                  ].map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <svg className="w-4 h-4 text-blue-600 shrink-0 mt-[1px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-[13px] text-slate-600 leading-snug font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
 
         {/* Title */}
         <div className="text-center mb-16">
@@ -310,59 +239,6 @@ export function HTMLProcess() {
           ))}
         </div>
 
-      </div>
-    </section>
-  );
-}
-
-export function WhyKyrozz() {
-  const feats = [
-    { icon: <Target className="w-[22px] h-[22px] stroke-white" strokeWidth={1.5} />, title: "German Project Management", text: "One dedicated project engineer manages your order end-to-end — from DFM review to final delivery. German precision oversight combined with local production expertise in India for the best of both worlds." },
-    { icon: <Clock className="w-[22px] h-[22px] stroke-white" strokeWidth={1.5} />, title: "72-Hour Express Turnaround", text: "Prototypes ship in 72 hours without shortcuts. Standard lead time 5-7 business days with full quality documentation. Production-floor scheduling that actually works — we don't overcommit and underdeliver." },
-    { icon: <Zap className="w-[22px] h-[22px] stroke-white" strokeWidth={1.5} />, title: "±0.1mm Tolerance, Verified", text: "Machines calibrated daily. Every critical dimension verified with CMM coordinate measuring equipment. CMM reports available on request for all regulated industries including automotive and medical." },
-    { icon: <Layers className="w-[22px] h-[22px] stroke-white" strokeWidth={1.5} />, title: "1 Part or 500,000 — Same Care", text: "No minimum order on 3D printing. Injection molding from 500 units. The same QC process applies regardless of volume. Infrastructure scales with your roadmap, not the other way around." },
-    { icon: <ShieldCheck className="w-[22px] h-[22px] stroke-white" strokeWidth={1.5} />, title: "Complete Confidentiality", text: "Your files, designs, and IP are encrypted and handled with complete confidentiality. NDAs available before any design review. Secure file transfer with end-to-end encryption as standard." }
-  ];
-
-  return (
-    <section id="why" className="bg-[#0B1523] py-28">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-12 lg:gap-24 items-start">
-        <div className="lg:sticky lg:top-[120px]">
-          <div className="font-mono text-[11px] tracking-[2px] uppercase text-blue-500 mb-4 before:content-['//_']">Why KYROZZ</div>
-          <h2 className="text-4xl md:text-[clamp(44px,4.5vw,68px)] font-black tracking-[-1px] leading-[0.9] text-white uppercase mb-6">
-            Precision<br />Without<br /><em className="text-blue-500 not-italic block">Exception</em>
-          </h2>
-          <p className="text-[15px] leading-[1.8] text-white/50 mb-8">
-            We operate where quality, speed, and engineering know-how converge. German project management meets trusted global production — every order gets the same level of rigour, from prototype to series.
-          </p>
-          <div className="flex flex-col gap-2">
-            {[
-              "ISO 9001:2015 Certified Partners",
-              "DIN EN ISO 3302 Compliant",
-              "REACH & RoHS Compliant",
-              "IATF 16949 Ready"
-            ].map((c, i) => (
-              <div key={i} className="flex items-center gap-3 font-mono text-[11px] tracking-[1px] uppercase text-white/50 py-3 px-4 border border-white/10 rounded-md transition-all duration-200 hover:border-blue-600/40 hover:text-white/80 hover:bg-blue-600/5">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
-                {c}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col">
-          {feats.map((f, i) => (
-            <div key={i} className="py-8 border-b border-white/10 grid grid-cols-[52px_1fr] gap-6 items-start transition-all duration-200 group hover:bg-white/5 hover:px-3 hover:rounded-xl hover:-mx-3 first:border-t cursor-pointer">
-              <div className="w-[52px] h-[52px] rounded-xl bg-[#1A56DB]/15 border border-[#1A56DB]/25 flex items-center justify-center shrink-0 transition-colors duration-250 group-hover:bg-[#1A56DB] group-hover:border-[#1A56DB]">
-                {f.icon}
-              </div>
-              <div>
-                <div className="font-sans text-[21px] font-bold tracking-[0.5px] uppercase text-white mb-2">{f.title}</div>
-                <p className="text-[14px] leading-[1.7] text-white/45">{f.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

@@ -8,8 +8,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 const navLinks = [
   { label: "HOME", href: "/" },
   { label: "3D PRINTING", href: "/3d-printing" },
-  { label: "INJECTION MOLDING", href: "/injection-molding" },
-  { label: "CNC MACHINING", href: "/cnc-machining" },
+  { label: "INJECTION MOLDING & CNC", href: "/injection-molding" },
   { label: "ABOUT US", href: "/about" },
   { label: "CONTACT", href: "/contact" },
 ];
