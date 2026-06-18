@@ -57,7 +57,7 @@ const highlights = [
 
 export function SimpleOrderingProcess() {
   return (
-    <section className="py-24 bg-white border-t border-slate-100">
+    <section className="py-16 bg-white border-t border-slate-100">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title */}

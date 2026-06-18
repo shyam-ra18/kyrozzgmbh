@@ -38,7 +38,7 @@ const expectations = [
 
 export function WhatYouExpect() {
   return (
-    <section className="py-24 bg-slate-50 border-b border-slate-100 overflow-hidden">
+    <section className="py-16 bg-slate-50 border-b border-slate-100 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           

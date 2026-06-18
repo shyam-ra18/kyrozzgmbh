@@ -49,7 +49,7 @@ const commitmentsRight = [
 
 export default function OurMission() {
   return (
-    <section className="py-24 lg:py-32 bg-white border-b border-slate-100 overflow-hidden">
+    <section className="py-16 lg:py-20 bg-white border-b border-slate-100 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 1. Our Mission (Centered Content) */}

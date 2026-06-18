@@ -37,7 +37,7 @@ export default function ProductsPage() {
         description="Browse our manufactured products or request a custom part for your application."
       />
 
-      <section className="py-16 md:py-24 flex-1">
+      <section className="py-12 md:py-16 flex-1">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Category tabs */}

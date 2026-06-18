@@ -51,7 +51,7 @@ export default function FeaturedServices() {
           <section
             key={s.id}
             id={s.id}
-            className={`relative overflow-hidden py-24 lg:py-36 ${s.bgClass} border-b border-slate-100`}
+            className={`relative overflow-hidden py-16 lg:py-24 ${s.bgClass} border-b border-slate-100`}
           >
             {/* Dot Pattern Background */}
             <div

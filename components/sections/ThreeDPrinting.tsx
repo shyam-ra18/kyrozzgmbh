@@ -39,7 +39,7 @@ export function ThreeDPrintingSection() {
     <section id="3d-printing" className="bg-white flex flex-col scroll-mt-24">
       
       {/* 1. Hero Section */}
-      <div className="relative overflow-hidden py-20 md:py-32">
+      <div className="relative overflow-hidden py-16 md:py-20">
         {/* Subtle dot pattern background */}
         <div className="absolute inset-0 bg-[url('/images/hero-pattern.png')] opacity-5 pointer-events-none" />
         
@@ -85,7 +85,7 @@ export function ThreeDPrintingSection() {
       </div>
 
       {/* 2. Why Choose 3D Printing */}
-      <div className="py-24 md:py-32 bg-white relative overflow-hidden">
+      <div className="py-16 md:py-20 bg-white relative overflow-hidden">
         {/* Subtle background decoration */}
         <div className="absolute top-0 right-0 w-1/2 h-[500px] bg-gradient-to-bl from-blue-50/50 to-transparent pointer-events-none" />
         
@@ -142,7 +142,7 @@ export function ThreeDPrintingSection() {
       </div>
 
       {/* 3. Our 3D Printing Technology */}
-      <div className="py-20 md:py-28 bg-slate-50 border-t border-slate-200">
+      <div className="py-16 md:py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
@@ -198,7 +198,7 @@ export function ThreeDPrintingSection() {
       </div>
 
       {/* 4. Applications We Serve */}
-      <div className="py-20 bg-white border-t border-slate-200">
+      <div className="py-16 bg-white border-t border-slate-200">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-slate-900">
@@ -220,7 +220,7 @@ export function ThreeDPrintingSection() {
       </div>
 
       {/* 5. Bottom CTA Banner */}
-      <div className="py-16 md:py-24 bg-[#0A102A] relative overflow-hidden">
+      <div className="py-12 md:py-16 bg-[#0A102A] relative overflow-hidden">
         {/* Background glow effects */}
         <div className="absolute top-0 right-0 w-[800px] h-full bg-blue-600/20 blur-[120px] pointer-events-none rounded-full" />
         

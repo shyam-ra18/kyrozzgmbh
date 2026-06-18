@@ -32,7 +32,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="py-24 bg-slate-50 border-t border-slate-100" id="contact">
+    <section className="py-16 bg-slate-50 border-t border-slate-100" id="contact">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-16">
