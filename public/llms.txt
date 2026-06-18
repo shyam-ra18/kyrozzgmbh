@@ -1,0 +1,31 @@
+# KYROZZ GmbH
+
+KYROZZ GmbH is a professional, German-managed manufacturing and project management partner specializing in industrial-grade 3D printing, high-precision injection molding, CNC machining, assembly, and global strategic sourcing solutions.
+
+## Brand Information & Geographic Location
+- **Name:** KYROZZ GmbH
+- **Location:** Munich, Germany (Munich HQ)
+- **Email:** info@kyrozz.com
+- **Website:** https://kyrozz.com
+- **Core Value Proposition:** European engineering oversight and quality control combined with a global partner network to deliver cost-effective, high-quality manufacturing solutions.
+
+## Core Capabilities
+- **3D Printing (FDM & SLA):** Professional production of plastic prototypes and end-use components using advanced printers (such as Bambu Lab H2S & P2S).
+- **Injection Molding:** Custom tooling, rapid prototyping, and high-volume mass production under German quality standards.
+- **CNC Machining:** High-precision milling and turning of metals and engineering plastics with tight tolerances.
+- **Assembly Services:** Complete contract manufacturing, electromechanical assembly, snap-fits, ultrasonic welding, and custom kitting/packaging.
+
+## Sitemap & Directory Structure
+- [Homepage](https://kyrozz.com/): Overview of services, mission statement, partner network, client case highlights, and contact/RFQ portal.
+- [3D Printing Services](https://kyrozz.com/3d-printing): Details on FDM technology, Bambu Lab systems, industrial materials (PLA, PETG, ABS, PC, Nylon/PA, TPU, ASA), and technical advantages.
+- [Injection Molding](https://kyrozz.com/injection-molding): Sourcing and tooling capabilities for volume production, material selection, and network oversight.
+  - [Mass Production](https://kyrozz.com/injection-molding/mass-production): Sourcing, high-volume production limits (50T-1000T clamping, 50M+ annual parts).
+  - [Tooling & Prototyping](https://kyrozz.com/injection-molding/tooling-prototyping): Rapid prototype tooling in 1-2 weeks; production tooling in 4-8 weeks.
+  - [Quality Control & Testing](https://kyrozz.com/injection-molding/testing-quality): Inspection checklist, melt flow index testing, drop/stack load checks, and IIP certifications.
+- [Assembly Services](https://kyrozz.com/assembly-services): Mechanical and electromechanical assembly, packaging, and kitting solutions.
+- [Materials Catalog](https://kyrozz.com/materials): Direct sheet mapping of available thermoplastics, engineering materials, and physical spec parameters.
+- [Products Catalog](https://kyrozz.com/products): Gallery of standard and custom manufactured parts (filters, pumps, structural fixtures).
+- [Get a Quote / RFQ](https://kyrozz.com/quote): Upload CAD files (STL, STEP, STP, OBJ, 3MF) and input specifications for prompt 24h feedback.
+- [Contact Us](https://kyrozz.com/contact): Direct address, telephone line, and custom sales inquiries.
+- [Impressum (Legal Notice)](https://kyrozz.com/impressum)
+- [Datenschutz (Privacy Policy)](https://kyrozz.com/datenschutz)

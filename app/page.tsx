@@ -6,12 +6,20 @@ import { IndustriesBento } from "@/components/sections/HTMLSections";
 import FeaturedServices from "@/components/sections/FeaturedServices";
 import OurMission from "@/components/sections/OurMission";
 import { TeamSection } from "@/components/sections/Team";
+import { cookies } from "next/headers";
+import * as de from "@/content/de";
+import * as en from "@/content/en";
 
-export const metadata: Metadata = {
-  title: "Injection Molding Manufacturer | KYROZZ GmbH Germany",
-  description: "KYROZZ GmbH — German-managed injection molding, prototyping to high-volume production. 500+ projects, 20+ global partners, delivered in 15+ countries.",
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const content = locale === "de" ? de : en;
+  return {
+    title: content.homePage.metadata.title,
+    description: content.homePage.metadata.description,
+    alternates: { canonical: "/" },
+  };
+}
 
 export default function HomePage() {
   return (

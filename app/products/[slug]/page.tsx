@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { products } from "@/content/products";
 import { ChevronRight, ArrowRight, MessageSquare } from "lucide-react";
+import { cookies } from "next/headers";
+import * as de from "@/content/de";
+import * as en from "@/content/en";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -11,6 +13,9 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const { products } = locale === "de" ? de : en;
   const product = products.find((p) => p.slug === slug);
   if (!product) return { title: "Product Not Found" };
   return {
@@ -19,16 +24,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
+export async function generateStaticParams() {
+  // We use English as the baseline for static param slugs
+  return en.products.map((p) => ({ slug: p.slug }));
 }
 
 export default async function ProductDetailPage({ params }: Props) {
   const { slug } = await params;
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const { products } = locale === "de" ? de : en;
   const product = products.find((p) => p.slug === slug);
   if (!product) notFound();
 
   const related = products.filter((p) => p.category === product.category && p.slug !== slug).slice(0, 3);
+
+  const isDe = locale === "de";
+  const textBreadcrumb = isDe ? "Produkte" : "Products";
+  const textMaterial = isDe ? "Material" : "Material";
+  const textManufacturing = isDe ? "Fertigung" : "Manufacturing";
+  const textInjectionMolding = isDe ? "Spritzguss" : "Injection Molding";
+  const textEnquireNow = isDe ? "Jetzt anfragen" : "Enquire Now";
+  const textAskQuestion = isDe ? "Frage stellen" : "Ask a Question";
+  const textRelatedProducts = isDe ? "Ähnliche Produkte" : "Related Products";
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col pt-24 md:pt-32">
@@ -37,7 +55,7 @@ export default async function ProductDetailPage({ params }: Props) {
           
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-slate-500 mb-10">
-            <Link href="/products" className="hover:text-blue-600 transition-colors">Products</Link>
+            <Link href="/products" className="hover:text-blue-600 transition-colors">{textBreadcrumb}</Link>
             <ChevronRight className="w-4 h-4" />
             <span className="text-slate-900 font-medium">{product.name}</span>
           </div>
@@ -70,12 +88,12 @@ export default async function ProductDetailPage({ params }: Props) {
               
               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mb-10">
                 <div className="flex justify-between items-center pb-4 border-b border-slate-100 mb-4">
-                  <span className="text-slate-500 font-medium">Material</span>
+                  <span className="text-slate-500 font-medium">{textMaterial}</span>
                   <span className="text-slate-900 font-bold">{product.material}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-500 font-medium">Manufacturing</span>
-                  <span className="text-slate-900 font-bold">Injection Molding</span>
+                  <span className="text-slate-500 font-medium">{textManufacturing}</span>
+                  <span className="text-slate-900 font-bold">{textInjectionMolding}</span>
                 </div>
               </div>
               
@@ -84,13 +102,13 @@ export default async function ProductDetailPage({ params }: Props) {
                   href="/contact" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/30"
                 >
-                  Enquire Now <ArrowRight className="w-5 h-5" />
+                  {textEnquireNow} <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link 
                   href="/contact" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-xl font-bold hover:bg-slate-50 hover:border-slate-300 transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-slate-500/30"
                 >
-                  Ask a Question <MessageSquare className="w-5 h-5 text-slate-400" />
+                  {textAskQuestion} <MessageSquare className="w-5 h-5 text-slate-400" />
                 </Link>
               </div>
             </div>
@@ -101,7 +119,7 @@ export default async function ProductDetailPage({ params }: Props) {
       {related.length > 0 && (
         <section className="py-20 bg-white border-t border-slate-200">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-10">Related Products</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-10">{textRelatedProducts}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {related.map((rp) => (
                 <Link 

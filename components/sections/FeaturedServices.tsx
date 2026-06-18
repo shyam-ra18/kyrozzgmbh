@@ -3,50 +3,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-const servicesData = [
-  {
-    id: "3d-printing",
-    title: "3D Printing",
-    highlight: "Components",
-    subtitle: "Your Professional Partner for High-Quality Production of Plastic Components.",
-    desc: "We specialize in 3D printing components, utilizing the FDM printing process. We invite you to explore our website to learn more about our company, our services, and how to contact us. We appreciate your visit to our website.",
-    image: "/images/3d_printer_hero.png",
-    imageAlt: "Active 3D Printer",
-    ctaHref: "/3d-printing",
-    alignRight: true,
-    bgClass: "bg-white",
-  },
-  {
-    id: "injection-molding",
-    title: "Injection Molding",
-    highlight: "Solutions",
-    subtitle: "Precision Injection Molding Solutions Through Our Trusted Sourcing Network.",
-    desc: "KYROZZ GmbH is a German-based project management company that delivers high-precision injection molded components through a network of carefully selected manufacturing partners worldwide. We manage your injection molding project from Germany — prototyping to high-volume production, delivered on time.",
-    image: "/man-work.png",
-    imageAlt: "Injection Molding Engineering",
-    ctaHref: "/injection-molding",
-    alignRight: false,
-    bgClass: "bg-slate-50",
-  },
-  {
-    id: "cnc-machining",
-    title: "CNC Machining",
-    highlight: "Services",
-    subtitle: "High-Precision CNC Machined Parts with Tight Tolerances.",
-    desc: "Precision milling and turning services in engineering metals and plastics. Ideal for functional parts, tooling, and low-volume production. Get components machined to your exact CAD specifications with fast turnaround times and German project management oversight.",
-    image: "/cnc.png",
-    imageAlt: "CNC Machined Component",
-    ctaHref: "/injection-molding",
-    alignRight: true,
-    bgClass: "bg-white",
-  },
-];
+import { useContent } from "@/context/LocaleContext";
 
 export default function FeaturedServices() {
+  const featuredServices = useContent().featuredServices;
   return (
     <div className="w-full">
-      {servicesData.map((s) => {
+      {featuredServices.map((s) => {
         return (
           <section
             key={s.id}
@@ -89,7 +52,7 @@ export default function FeaturedServices() {
               <div
                 className={`absolute inset-y-0 ${
                   s.alignRight ? "right-0 ml-1.5" : "left-0 mr-1.5"
-                } w-full`}
+                } w-full bg-white`}
                 style={{
                   clipPath: s.alignRight
                     ? "polygon(10% 0, 100% 0, 100% 100%, 0 100%)"
@@ -100,14 +63,14 @@ export default function FeaturedServices() {
                   src={s.image}
                   alt={s.imageAlt}
                   fill
-                  className="object-cover"
+                  className="object-contain p-24 xl:p-28 mix-blend-multiply"
                 />
               </div>
             </div>
 
             <div
-              className={`max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex ${
-                s.alignRight ? "justify-start" : "justify-end"
+              className={`max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row ${
+                s.alignRight ? "lg:justify-start" : "lg:justify-end"
               }`}
             >
               <div
@@ -131,18 +94,18 @@ export default function FeaturedServices() {
                     href={s.ctaHref}
                     className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide w-fit"
                   >
-                    LEARN MORE <ArrowRight className="w-4 h-4" />
+                    {s.cta} <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
 
               {/* Mobile Image (shown below text on small screens) */}
-              <div className="lg:hidden max-w-lg mx-auto w-full mt-12 relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+              <div className="lg:hidden max-w-xs md:max-w-sm mx-auto w-full mt-12 relative aspect-video rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white">
                 <Image
                   src={s.image}
                   alt={s.imageAlt}
                   fill
-                  className="object-cover"
+                  className="object-contain p-12 mix-blend-multiply"
                 />
               </div>
             </div>

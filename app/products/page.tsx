@@ -2,12 +2,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { products, productCategories } from "@/content/products";
+import { useContent } from "@/context/LocaleContext";
 import { ArrowRight, Droplets, Settings, FlaskConical, Package } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { SubCTA } from "@/components/sections/SubCTA";
 
 export default function ProductsPage() {
+  const { products, productCategories, productsPage } = useContent();
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filtered = activeCategory === "all"
@@ -27,14 +28,14 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
       <PageHero
-        badge="Product Catalogue"
+        badge={productsPage.hero.badge}
         title={
           <>
-            Injection Molded Products <br />
-            <span className="text-blue-500">— Standard & Custom</span>
+            {productsPage.hero.title} <br />
+            <span className="text-blue-500">{productsPage.hero.titleHighlight}</span>
           </>
         }
-        description="Browse our manufactured products or request a custom part for your application."
+        description={productsPage.hero.description}
       />
 
       <section className="py-12 md:py-16 flex-1">
@@ -89,7 +90,7 @@ export default function ProductsPage() {
                       {product.material}
                     </span>
                     <Link href="/contact" className="text-blue-600 text-sm font-bold flex items-center gap-1.5 group-hover:gap-2 transition-all focus-visible:outline-none focus-visible:underline">
-                      Enquire <ArrowRight size={16} className="text-blue-500 group-hover:text-blue-600" />
+                      {productsPage.enquire} <ArrowRight size={16} className="text-blue-500 group-hover:text-blue-600" />
                     </Link>
                   </div>
                 </div>
@@ -99,16 +100,16 @@ export default function ProductsPage() {
 
           {filtered.length === 0 && (
             <div className="text-center py-20 bg-white rounded-2xl border border-slate-200">
-              <p className="text-slate-500 text-lg">No products found in this category.</p>
+              <p className="text-slate-500 text-lg">{productsPage.noProducts}</p>
             </div>
           )}
         </div>
       </section>
 
       <SubCTA
-        title="Don't See What You Need?"
-        description="We manufacture custom injection molded parts to your specifications. Share your requirements and we'll build it."
-        primaryText="Request Custom Part"
+        title={productsPage.subCTA.title}
+        description={productsPage.subCTA.description}
+        primaryText={productsPage.subCTA.primaryText}
       />
     </div>
   );

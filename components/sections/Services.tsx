@@ -3,31 +3,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-
-const services = [
-  {
-    image: "/cnc.png",
-    title: 'CNC MACHINING',
-    desc: 'Precision Components\nwith Tight Tolerances',
-  },
-  {
-    image: "/3d-print.png",
-    title: '3D PRINTING',
-    desc: 'Rapid Prototyping &\nProduction Parts',
-  },
-  {
-    image: "/injection-molding.png",
-    title: 'INJECTION MOLDING',
-    desc: 'High-Quality Plastic Parts\nfor Global Markets',
-  }
-];
+import { useContent } from '@/context/LocaleContext';
 
 export function CoreServices() {
+  const { introduction } = useContent();
   return (
     <section className="py-20 bg-white border-b border-slate-100">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-          {services.map((s, i) => (
+          {introduction.services.map((s, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -53,6 +37,7 @@ export function CoreServices() {
 }
 
 export function Introduction() {
+  const { introduction } = useContent();
   return (
     <section className="py-16 bg-slate-50">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,14 +60,14 @@ export function Introduction() {
             viewport={{ once: true }}
           >
             <h2 className="text-[2.5rem] md:text-5xl lg:text-[3.5rem] font-sans font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight">
-              Engineering Precision.<br />
-              <span className="text-blue-600">Delivering Excellence.</span>
+              {introduction.heading1}<br />
+              <span className="text-blue-600">{introduction.heading2}</span>
             </h2>
-            <p className="text-slate-800 text-lg mb-8 leading-relaxed font-medium max-w-xl">
-              KYROZZ GmbH is a German manufacturing partner providing 3D printing, injection molding, CNC machining and sourcing solutions for industrial customers worldwide.<br /><br />With local expertise in Germany and trusted production partners, we deliver quality, reliability and performance at every step.
+            <p className="text-slate-800 text-lg mb-8 leading-relaxed font-medium max-w-xl whitespace-pre-line">
+              {introduction.body}
             </p>
             <button className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-md transition-all hover:bg-blue-700 uppercase tracking-wide gap-2 border border-blue-600 mt-4">
-              LEARN MORE ABOUT US <ArrowRight className="w-5 h-5" />
+              {introduction.cta} <ArrowRight className="w-5 h-5" />
             </button>
           </motion.div>
         </div>

@@ -3,17 +3,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
-
-const navLinks = [
-  { label: "HOME", href: "/" },
-  { label: "3D PRINTING", href: "/3d-printing" },
-  { label: "INJECTION MOLDING & CNC", href: "/injection-molding" },
-  { label: "ABOUT US", href: "/about" },
-  { label: "CONTACT", href: "/contact" },
-];
+import { Menu, X } from "lucide-react";
+import { useContent, useLocale } from "@/context/LocaleContext";
 
 export default function Navbar({ locale }: { locale: string }) {
+  const { navbar } = useContent();
+  const currentLocale = useLocale();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -50,7 +45,7 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-8">
           <div className="flex items-center gap-8">
-            {navLinks.map((link) => {
+            {navbar.links.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
@@ -69,7 +64,7 @@ export default function Navbar({ locale }: { locale: string }) {
             <button
               onClick={() => handleLocaleChange("en")}
               className={`text-xs font-bold px-2 py-1 rounded transition-colors ${
-                locale === "en"
+                currentLocale === "en"
                   ? "bg-blue-600 text-white"
                   : "text-slate-600 hover:text-blue-600 hover:bg-slate-100"
               }`}
@@ -79,7 +74,7 @@ export default function Navbar({ locale }: { locale: string }) {
             <button
               onClick={() => handleLocaleChange("de")}
               className={`text-xs font-bold px-2 py-1 rounded transition-colors ${
-                locale === "de"
+                currentLocale === "de"
                   ? "bg-blue-600 text-white"
                   : "text-slate-600 hover:text-blue-600 hover:bg-slate-100"
               }`}
@@ -103,7 +98,7 @@ export default function Navbar({ locale }: { locale: string }) {
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-white/10 px-4 py-6 shadow-2xl">
           <div className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {navbar.links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -116,14 +111,14 @@ export default function Navbar({ locale }: { locale: string }) {
 
             {/* Mobile Language Switcher */}
             <div className="flex items-center gap-2 pt-2 border-t border-white/10">
-              <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Language:</span>
+              <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">{navbar.languageLabel}</span>
               <button
                 onClick={() => {
                   handleLocaleChange("en");
                   setIsMobileMenuOpen(false);
                 }}
                 className={`text-xs font-bold px-3 py-1.5 rounded transition-colors ${
-                  locale === "en"
+                  currentLocale === "en"
                     ? "bg-blue-600 text-white"
                     : "text-slate-300 hover:text-white hover:bg-white/5"
                 }`}
@@ -136,7 +131,7 @@ export default function Navbar({ locale }: { locale: string }) {
                   setIsMobileMenuOpen(false);
                 }}
                 className={`text-xs font-bold px-3 py-1.5 rounded transition-colors ${
-                  locale === "de"
+                  currentLocale === "de"
                     ? "bg-blue-600 text-white"
                     : "text-slate-300 hover:text-white hover:bg-white/5"
                 }`}

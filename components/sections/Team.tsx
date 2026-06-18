@@ -1,38 +1,25 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const team = [
-  {
-    name: 'Nirav Lukhi',
-    role: 'Founder & CEO',
-    image: '/nirav.png',
-    desc: 'Driven by a strong entrepreneurial vision, Nirav founded KYROZZ GmbH to bridge innovative manufacturing solutions with global business opportunities.',
-    areas: ['Business Development', 'Global Sourcing', 'Strategic Partnerships', 'Company Leadership']
-  },
-  {
-    name: 'Pratik Kachhariya',
-    role: 'AM Engineer',
-    image: '/pratik.png',
-    desc: 'Pratik specializes in additive manufacturing and supports customers throughout the complete production process. His expertise includes FDM 3D printing and print optimization.',
-    areas: ['Additive Manufacturing', 'Print Optimization', 'FDM Printing Technologies', 'Quality Assurance']
-  }
-];
+import { useContent } from '@/context/LocaleContext';
 
 export function TeamSection() {
+  const { team } = useContent();
   return (
     <section className="py-16 bg-white border-t border-slate-100" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block py-1 px-3 bg-blue-50 text-blue-600 text-[10px] font-bold tracking-[0.2em] rounded mb-6 uppercase">
-            Our Team
+            {team.badge}
           </div>
-          <h2 className="text-4xl md:text-5xl font-sans font-light text-slate-900 mb-6 tracking-tight">Meet Our <span className="font-bold">Experts</span></h2>
-          <p className="text-slate-500 text-lg font-light">A dedicated team working together to deliver reliable, high-quality 3D printing solutions.</p>
+          <h2 className="text-4xl md:text-5xl font-sans font-light text-slate-900 mb-6 tracking-tight">
+            {team.heading1} <span className="font-bold">{team.heading2}</span> {team.heading2suffix}
+          </h2>
+          <p className="text-slate-500 text-lg font-light">{team.subheading}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {team.map((member, i) => (
+          {team.members.map((member, i) => (
             <motion.div 
               key={member.name}
               initial={{ opacity: 0, y: 20 }}
@@ -52,7 +39,7 @@ export function TeamSection() {
                 
                 <div className="mt-auto">
                   <h4 className="flex items-center justify-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-widest mb-6 border-t border-slate-200 pt-6">
-                    Areas of Focus
+                    {team.areasTitle}
                   </h4>
                   <ul className="text-left grid grid-cols-2 gap-3 text-sm text-slate-600">
                     {member.areas.map(area => (

@@ -56,3 +56,118 @@ body {
   background: #94A3B8;
   border-radius: 3px;
 }
+
+:root {
+  --c-primary: #254ee0;
+  --c-electric: #3b76f6;
+  --c-border: #e2e8f0;
+  --c-silver: #64748b;
+  --c-mist: #f8fafc;
+  --c-ink: #0f172a;
+  --c-steel: #0b1523;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 48px;
+  --space-4xl: 64px;
+  --space-5xl: 80px;
+  --space-6xl: 96px;
+
+  --font-body: var(--font-dmsans);
+  --font-display: var(--font-montserrat);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 1024px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  color: #254ee0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  width: fit-content;
+}
+
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--c-border);
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  border-color: #254ee0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  gap: 8px;
+}
+.btn-primary {
+  background-color: var(--c-primary);
+  color: white !important;
+}
+.btn-primary:hover {
+  background-color: #1d3eb6;
+  transform: translateY(-1px);
+}
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.btn-ghost {
+  background-color: transparent;
+  border-color: var(--c-border);
+  color: var(--c-ink);
+}
+.btn-ghost:hover {
+  background-color: var(--c-mist);
+}

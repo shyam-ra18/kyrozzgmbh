@@ -1,0 +1,12 @@
+# Machine-readable AI preferences for KYROZZ GmbH
+# For more detailed documentation, see /llms.txt
+
+User-Agent: *
+Allow-Crawling: Yes
+Allow-Training: Yes
+
+Organization: KYROZZ GmbH
+Homepage: https://kyrozz.com
+Geographic-Scope: Global (Headquartered in Munich, Germany)
+Engineering-Domains: 3D Printing, Injection Molding, CNC Machining, Sourcing Sourcing
+Contact-Email: info@kyrozz.com

@@ -2,41 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HeartHandshake, Award, Zap, ShieldCheck, Coins } from 'lucide-react';
+import { useContent } from '@/context/LocaleContext';
 
-const expectations = [
-  {
-    num: "01",
-    icon: HeartHandshake,
-    title: "Customer-Focused Solutions",
-    desc: "We listen, understand, and deliver solutions tailored exactly to your needs."
-  },
-  {
-    num: "02",
-    icon: Award,
-    title: "Experienced Professionals",
-    desc: "Our expertise ensures flawless results from consultation to completion."
-  },
-  {
-    num: "03",
-    icon: Zap,
-    title: "Fast & Reliable Turnaround",
-    desc: "We value your time and guarantee quick, dependable service and delivery."
-  },
-  {
-    num: "04",
-    icon: ShieldCheck,
-    title: "High Quality Assured",
-    desc: "Premium materials and advanced technology for precise, durable, and consistent parts."
-  },
-  {
-    num: "05",
-    icon: Coins,
-    title: "Great Value for Money",
-    desc: "Excellent quality and service at a competitive price-performance ratio."
-  }
-];
+const expectationIcons = [HeartHandshake, Award, Zap, ShieldCheck, Coins];
 
 export function WhatYouExpect() {
+  const { whatYouExpect } = useContent();
   return (
     <section className="py-16 bg-slate-50 border-b border-slate-100 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,14 +17,14 @@ export function WhatYouExpect() {
           <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[11px] font-mono tracking-wider uppercase font-bold">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping"></span>
-              Our Commitment
+              {whatYouExpect.badge}
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-              What You Can <br />
-              <span className="text-blue-600 bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Expect from KYROZZ</span>
+              {whatYouExpect.heading1} <br />
+              <span className="text-blue-600 bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">{whatYouExpect.heading2}</span>
             </h2>
             <p className="text-slate-600 text-base leading-relaxed max-w-md font-medium">
-              We combine German engineering precision with client-oriented service. Every engagement is built on transparency, quality, and exceptional performance.
+              {whatYouExpect.body}
             </p>
             <div className="pt-4 hidden lg:block">
               <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full" />
@@ -62,8 +33,8 @@ export function WhatYouExpect() {
 
           {/* Right expectations list */}
           <div className="lg:col-span-7 space-y-4">
-            {expectations.map((exp, i) => {
-              const Icon = exp.icon;
+            {whatYouExpect.expectations.map((exp, i) => {
+              const Icon = expectationIcons[i];
               return (
                 <motion.div
                   key={i}

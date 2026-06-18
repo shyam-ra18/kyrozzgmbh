@@ -22,6 +22,7 @@ import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
 import SmoothScrolling from "@/components/layout/SmoothScrolling";
 import { routing } from "@/lib/routing";
+import { LocaleProvider } from "@/context/LocaleContext";
 
 export const metadata: Metadata = {
   title: {
@@ -40,6 +41,20 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
+  alternates: {
+    canonical: "https://kyrozz.com",
+    languages: {
+      "en": "https://kyrozz.com",
+      "de": "https://kyrozz.com",
+      "x-default": "https://kyrozz.com",
+    },
+  },
+  other: {
+    "geo.region": "DE-BY",
+    "geo.placename": "Munich",
+    "geo.position": "48.135125;11.581981",
+    "ICBM": "48.135125, 11.581981",
+  },
 };
 
 // static params removed
@@ -62,12 +77,14 @@ export default async function RootLayout({
       </head>
       <body suppressHydrationWarning className={`${dmSans.variable} ${montserrat.variable} font-sans`}>
         <NextIntlClientProvider messages={messages}>
-          <SmoothScrolling>
-            <Navbar locale={locale} />
-            <main>{children}</main>
-            <Footer locale={locale} />
-            <FloatingCTA locale={locale} />
-          </SmoothScrolling>
+          <LocaleProvider initialLocale={locale as "en" | "de"}>
+            <SmoothScrolling>
+              <Navbar locale={locale} />
+              <main>{children}</main>
+              <Footer locale={locale} />
+              <FloatingCTA locale={locale} />
+            </SmoothScrolling>
+          </LocaleProvider>
         </NextIntlClientProvider>
       </body>
     </html>

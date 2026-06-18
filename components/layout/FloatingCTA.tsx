@@ -1,20 +1,17 @@
 "use client";
-import Link from "next/link";
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function FloatingCTA({ locale }: { locale: string }) {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-      {/* WhatsApp */}
+      {/* Email */}
       <a
-        href="https://wa.me/49XXXXXXXXXX"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Chat on WhatsApp"
-        aria-label="Chat on WhatsApp"
-        className="w-[52px] h-[52px] bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/40 text-white hover:scale-110 hover:bg-[#20bd5a] transition-transform duration-200 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+        href="mailto:info@kyrozz.com"
+        title="Send an Email"
+        aria-label="Send an Email"
+        className="w-[52px] h-[52px] bg-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-600/40 text-white hover:scale-110 hover:bg-blue-700 transition-all duration-200 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
       >
-        <MessageCircle size={24} fill="currentColor" />
+        <Mail size={24} />
       </a>
     </div>
   );

@@ -1,24 +1,53 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { industries } from "@/content/industries";
+import { cookies } from "next/headers";
+import * as de from "@/content/de";
+import * as en from "@/content/en";
 
-export const metadata: Metadata = {
-  title: "Injection Molding for Automotive, Medical & Electrical Industries | KYROZZ",
-  description: "KYROZZ serves automotive, electrical, medical, and consumer goods industries with precision injection molded plastic components.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const isDe = locale === "de";
+  return {
+    title: isDe 
+      ? "Spritzguss für Automobil-, Medizin- & Elektroindustrie | KYROZZ" 
+      : "Injection Molding for Automotive, Medical & Electrical Industries | KYROZZ",
+    description: isDe 
+      ? "KYROZZ bedient die Automobil-, Elektro-, Medizin- und Konsumgüterindustrie mit präzisen Spritzguss-Kunststoffteilen." 
+      : "KYROZZ serves automotive, electrical, medical, and consumer goods industries with precision injection molded plastic components.",
+  };
+}
 
-export default function IndustriesPage() {
+export default async function IndustriesPage() {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const content = locale === "de" ? de : en;
+  const { industries } = content;
+
+  const isDe = locale === "de";
+  const labelHero = isDe ? "Branchen" : "Industries";
+  const titleHero = isDe ? "Präzisionsfertigung für jede Branche" : "Precision Manufacturing Across Every Industry";
+  const descHero = isDe 
+    ? "Von der Automobilindustrie bis zur Medizintechnik — KYROZZ liefert hochpräzise Spritzgussteile, die den anspruchsvollsten Branchenanforderungen entsprechen." 
+    : "From automotive to medical — KYROZZ delivers precision injection molded parts that meet the toughest industry requirements.";
+  const textComparison = isDe ? "Vergleich" : "Comparison";
+  const textBottomTitle = isDe ? "Ihre Branche nicht dabei?" : "Don't See Your Industry?";
+  const textBottomSub = isDe 
+    ? "Wir sind in vielen Branchen tätig. Kontaktieren Sie uns, um Ihre spezifischen Anforderungen zu besprechen." 
+    : "We work across many sectors. Contact us to discuss your specific requirements.";
+  const textBottomCTA = isDe ? "Kontakt aufnehmen" : "Get in Touch";
+
   return (
     <>
       <section style={{ background: "linear-gradient(135deg, #0A0F1E, #0D1635)", padding: "var(--space-6xl) 0 var(--space-5xl)", position: "relative" }}>
         <div className="hero-pattern" />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <div className="section-label">Industries</div>
+          <div className="section-label">{labelHero}</div>
           <h1 style={{ color: "white", maxWidth: 720, marginBottom: "var(--space-lg)" }}>
-            Precision Manufacturing Across Every Industry
+            {titleHero}
           </h1>
           <p style={{ fontSize: 18, color: "rgba(255,255,255,0.65)", maxWidth: 560 }}>
-            From automotive to medical — KYROZZ delivers precision injection molded parts that meet the toughest industry requirements.
+            {descHero}
           </p>
         </div>
       </section>
@@ -48,10 +77,10 @@ export default function IndustriesPage() {
 
       <section style={{ background: "var(--c-primary)", padding: "var(--space-4xl) 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ color: "white", marginBottom: "var(--space-md)" }}>Don&apos;t See Your Industry?</h2>
-          <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "var(--space-xl)" }}>We work across many sectors. Contact us to discuss your specific requirements.</p>
+          <h2 style={{ color: "white", marginBottom: "var(--space-md)" }}>{textBottomTitle}</h2>
+          <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "var(--space-xl)" }}>{textBottomSub}</p>
           <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 36px", background: "white", color: "var(--c-primary)", borderRadius: 10, fontWeight: 700, fontSize: 16, textDecoration: "none" }}>
-            Get in Touch →
+            {textBottomCTA} →
           </Link>
         </div>
       </section>
