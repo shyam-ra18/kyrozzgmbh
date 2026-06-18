@@ -3,8 +3,6 @@ import Link from "next/link";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 export default function FloatingCTA({ locale }: { locale: string }) {
-  const prefix = locale === "de" ? "/de" : "";
-
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* WhatsApp */}

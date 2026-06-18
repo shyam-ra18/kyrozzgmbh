@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { SubCTA } from "@/components/sections/SubCTA";
 import { TeamSection } from "@/components/sections/Team";
+import { WhatYouExpect } from "@/components/sections/WhatYouExpect";
 import { 
   CheckCircle, 
   Globe, 
@@ -105,6 +106,8 @@ export default function AboutPage() {
 
       {/* Reusing existing Team component which uses correct team members */}
       <TeamSection />
+
+      <WhatYouExpect />
 
       <section className="py-20 md:py-28 bg-slate-950 relative overflow-hidden">
         {/* Background graphics */}

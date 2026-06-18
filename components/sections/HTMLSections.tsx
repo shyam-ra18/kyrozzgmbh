@@ -37,42 +37,42 @@ export function IndustriesBento() {
       name: "Industrial Manufacturing",
       desc: "Functional parts, tools, and production aids.",
       icon: <Settings className="w-5 h-5 text-blue-600 shrink-0" />,
-      img: "https://images.unsplash.com/photo-1530138754840-ae8d54b809fa?w=600&q=80&auto=format"
+      img: "/industrial-manufacturing.png"
     },
     {
       name: "Education & Research",
       desc: "Prototypes, teaching tools, and experiments.",
       icon: <GraduationCap className="w-5 h-5 text-blue-600 shrink-0" />,
-      img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80&auto=format"
+      img: "/education.png"
     },
     {
       name: "Hobbyist & Maker",
       desc: "Creative projects, custom parts, and more.",
       icon: <Gamepad2 className="w-5 h-5 text-blue-600 shrink-0" />,
-      img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80&auto=format"
+      img: "/hobbyist.png"
     },
     {
       name: "Product Development",
       desc: "Prototypes and functional parts for faster innovation.",
       icon: <Box className="w-5 h-5 text-blue-600 shrink-0" />,
-      img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80&auto=format"
+      img: "/product-dev.png"
     },
     {
       name: "Model Making & Prototyping",
       desc: "Detailed models and visual prototypes.",
       icon: <Building2 className="w-5 h-5 text-blue-600 shrink-0" />,
-      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&auto=format"
+      img: "/model-making-prototype.png"
     },
     {
       name: "Custom Parts & Solutions",
       desc: "Tailored components for unique applications.",
       icon: <Wrench className="w-5 h-5 text-blue-600 shrink-0" />,
-      img: "https://images.unsplash.com/photo-1615840287214-7fe58a8b668f?w=600&q=80&auto=format"
+      img: "/custom-part-sol.png"
     }
   ];
 
   return (
-    <section id="industries" className="bg-[#F5F7FA] py-24 md:py-32">
+    <section id="industries" className="bg-[#F5F7FA] py-16 md:py-20">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <h2 className="text-3xl md:text-[38px] font-extrabold tracking-tight text-center text-slate-900">
           Industries We Empower
@@ -136,7 +136,7 @@ export function HTMLServices() {
   ];
 
   return (
-    <section id="services" className="bg-white py-24">
+    <section id="services" className="bg-white py-16">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-[#0B1523] mb-14">Our Core Services</h2>
         
@@ -199,7 +199,7 @@ export function HTMLProcess() {
   ];
 
   return (
-    <section id="process" className="bg-white py-24 border-t border-slate-100">
+    <section id="process" className="bg-white py-16 border-t border-slate-100">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
 
