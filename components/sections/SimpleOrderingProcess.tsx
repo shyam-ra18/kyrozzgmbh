@@ -27,12 +27,13 @@ export function SimpleOrderingProcess() {
             const Icon = stepIcons[idx];
             return (
               <React.Fragment key={idx}>
-                <div className="flex flex-col items-center text-center flex-1 p-6 bg-slate-50/50 rounded-2xl border border-slate-50 hover:bg-slate-50 hover:border-slate-100 transition-all duration-300 group">
-                  {/* Step Badge & Icon Container */}
-                  <div className="relative mb-6">
-                    <div className="absolute -top-2 -left-8 bg-blue-600 text-white font-mono font-bold text-xs px-2 py-1 rounded-sm shadow-md">
-                      {step.num}
-                    </div>
+                <div className="flex flex-col items-center text-center flex-1 p-8 bg-slate-50/50 rounded-2xl border border-slate-50 hover:bg-slate-50 hover:border-slate-100 transition-all duration-300 group relative overflow-hidden">
+                  {/* Large Stylized Step Number in Left Corner */}
+                  <div className="absolute top-4 left-5 select-none pointer-events-none font-sans font-extrabold text-5xl md:text-6xl bg-gradient-to-br from-blue-600 to-indigo-600 bg-clip-text text-transparent opacity-15 transition-all duration-300 group-hover:scale-105 group-hover:opacity-25">
+                    {step.num}
+                  </div>
+                  {/* Icon Container */}
+                  <div className="relative mb-6 mt-2">
                     <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white">
                       <Icon className="w-8 h-8" strokeWidth={1.5} />
                     </div>
@@ -42,7 +43,7 @@ export function SimpleOrderingProcess() {
                     {step.title}
                   </h3>
                   {/* Description */}
-                  <p className="text-xs text-slate-500 leading-relaxed max-w-[260px] font-medium">
+                  <p className="text-[13.5px] text-slate-500 leading-relaxed max-w-[260px] font-medium">
                     {step.desc}
                   </p>
                 </div>
