@@ -25,29 +25,33 @@ export function TeamSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 flex flex-col p-2"
+              transition={{ delay: i * 0.1, duration: 0.5, ease: "easeOut" }}
+              className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 flex flex-col p-2 group hover:bg-white hover:shadow-xl hover:border-blue-200 transition-all duration-500 hover:-translate-y-1.5"
             >
               <div className="h-64 overflow-hidden relative rounded-xl bg-slate-200">
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top mix-blend-luminosity opacity-80" />
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 to-transparent"></div>
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="w-full h-full object-cover object-top mix-blend-luminosity opacity-80 group-hover:scale-105 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-500" 
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 to-transparent group-hover:from-white transition-all duration-500"></div>
               </div>
-              <div className="p-8 pt-4 text-center flex-grow flex flex-col bg-slate-50">
-                <h3 className="text-2xl font-bold text-slate-900 mb-1">{member.name}</h3>
+              <div className="p-8 pt-4 text-center flex-grow flex flex-col bg-slate-50 group-hover:bg-white transition-all duration-500">
+                <h3 className="text-2xl font-bold text-slate-900 mb-1 transition-colors duration-300 group-hover:text-blue-900">{member.name}</h3>
                 <p className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">{member.role}</p>
                 <p className="text-slate-500 font-light leading-relaxed mb-8">{member.desc}</p>
                 
                 <div className="mt-auto">
-                  <h4 className="flex items-center justify-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-widest mb-6 border-t border-slate-200 pt-6">
+                  <h4 className="flex items-center justify-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-widest mb-6 border-t border-slate-200 pt-6 group-hover:border-slate-100 transition-colors">
                     {team.areasTitle}
                   </h4>
                   <ul className="text-left grid grid-cols-2 gap-3 text-sm text-slate-600">
                     {member.areas.map(area => (
-                      <li key={area} className="flex items-start gap-2">
-                        <svg className="w-4 h-4 text-slate-300 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <li key={area} className="flex items-start gap-2 group/item">
+                        <svg className="w-4 h-4 text-slate-300 mt-0.5 shrink-0 transition-transform duration-300 group-hover/item:scale-110 group-hover/item:text-blue-500 group-hover:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        {area}
+                        <span className="transition-colors group-hover/item:text-slate-900">{area}</span>
                       </li>
                     ))}
                   </ul>

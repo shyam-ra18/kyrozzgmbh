@@ -13,7 +13,7 @@ export function SimpleOrderingProcess() {
   return (
     <section className="py-16 bg-white border-t border-slate-100">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-extrabold text-[#0B1523] tracking-tight">
@@ -61,13 +61,13 @@ export function SimpleOrderingProcess() {
         {/* Detailed Info Card Panel */}
         <div className="max-w-6xl mx-auto bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 shadow-xs">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 p-8 sm:p-10 lg:p-12 items-center">
-            
+
             {/* Left Image Column */}
-            <div className="lg:col-span-5 relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/60 bg-slate-100 shadow-sm">
-              <Image 
-                src="/3d-print.png" 
-                alt="Präzise 3D-gedruckte Bauteile" 
-                fill 
+            <div className="lg:col-span-5 relative w-full aspect-square rounded-2xl overflow-hidden">
+              <Image
+                src="/3d-print.png"
+                alt="Präzise 3D-gedruckte Bauteile"
+                fill
                 className="object-cover"
               />
             </div>

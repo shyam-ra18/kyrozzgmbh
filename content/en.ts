@@ -563,51 +563,7 @@ export const whatYouExpect = {
   ],
 };
 
-// ─────────────────────────────────────────────
-// COMPANY HIGHLIGHTS (CompanyHighlights.tsx)
-// ─────────────────────────────────────────────
-export const companyHighlights = {
-  definesHeading: "What Defines KYROZZ?",
-  defines: [
-    {
-      title: "Agile & Proficient\nTeam",
-      desc: "Experienced professionals delivering precision and innovation in every project.",
-    },
-    {
-      title: "Quality You\nCan Trust",
-      desc: "High-quality, precise components built to exceed expectations.",
-    },
-    {
-      title: "Client-Focused\nApproach",
-      desc: "Your satisfaction is our priority—solutions tailored to your unique needs.",
-    },
-    {
-      title: "Bespoke\nSolutions",
-      desc: "Custom 3D printing solutions crafted to match your exact requirements.",
-    },
-    {
-      title: "Cutting-Edge\nTechnology",
-      desc: "Advanced 3D printing and scanning technologies for efficient, reliable results.",
-    },
-  ],
-  processHeading: "Our 3D Printing Process",
-  processSteps: [
-    { title: "1. CONSULTATION", desc: "We understand your ideas and technical requirements." },
-    { title: "2. DESIGN & REVIEW", desc: "We optimize your model for performance and printability." },
-    { title: "3. PRINTING", desc: "High-precision printing using advanced technology and quality materials." },
-    { title: "4. QUALITY CHECK", desc: "Every part is inspected to ensure accuracy, strength, and consistency." },
-    { title: "5. DELIVERY", desc: "Fast, secure delivery right to your doorstep." },
-  ],
-  industriesHeading: "Industries We Empower",
-  industries: [
-    { image: "/industries/industry-1.png", title: "Industrial Manufacturing", desc: "Functional parts, tools, and production aids." },
-    { image: "/industries/industry-2.png", title: "Education & Research", desc: "Prototypes, teaching tools, and experiments." },
-    { image: "/industries/industry-3.png", title: "Hobbyist & Maker", desc: "Creative projects, custom parts, and more." },
-    { image: "/industries/industry-4.png", title: "Product Development", desc: "Prototypes and functional parts for faster innovation." },
-    { image: "/industries/industry-5.png", title: "Model Making & Prototyping", desc: "Detailed models and visual prototypes." },
-    { image: "/industries/industry-6.png", title: "Custom Parts & Solutions", desc: "Tailored components for unique applications." },
-  ],
-};
+
 
 // ─────────────────────────────────────────────
 // PAGE HERO COMPONENT (Reusable)
@@ -733,23 +689,23 @@ export const injectionMoldingPage = {
     ],
   },
   whySection: {
-    heading: "WHY KYROZZ INJECTION MOLDING?",
+    heading: "WHY KYROZZ FOR INJECTION MOLDING & CNC MACHINING?",
     items: [
       {
-        title: "We Don't Manufacture Here.",
-        desc: "We work with a carefully selected network of certified manufacturing partners who meet our strict standards for quality, precision, and reliability.",
+        title: "Global Production. German Oversight.",
+        desc: "We collaborate with a carefully selected network of certified manufacturing partners specializing in injection molding and CNC machining, ensuring the highest standards of quality, precision, and reliability.",
       },
       {
         title: "German Project Management.",
-        desc: "We handle every step – from engineering review and partner selection to production monitoring and final delivery.",
+        desc: "We manage every step of your project—from technical review and supplier selection to production oversight, quality assurance, and final delivery.",
       },
       {
         title: "Quality You Can Trust.",
-        desc: "Our quality experts ensure every component meets European standards through rigorous inspections and continuous process control.",
+        desc: "Our quality experts ensure that every molded or machined component meets European standards through rigorous inspections, process monitoring, and continuous quality control.",
       },
       {
         title: "On Time. Every Time.",
-        desc: "We coordinate the entire supply chain to ensure your products are delivered on time – every time.",
+        desc: "We coordinate the entire manufacturing and supply chain process to ensure your injection molded and CNC-machined parts are delivered reliably and on schedule.",
       },
     ],
     advantagesHeading: "YOUR ADVANTAGES",
@@ -757,10 +713,10 @@ export const injectionMoldingPage = {
       "German Customer Support",
       "Dedicated Project Management",
       "Trusted Global Manufacturing Partners",
-      "High-Precision Injection Molding",
+      "Precision Manufacturing Expertise (Injection Molding & CNC Machining)",
       "Competitive Production Costs",
-      "Quality Control & Inspection",
-      "Reliable Logistics & Delivery",
+      "Comprehensive Quality Control & Inspection",
+      "Reliable Logistics & On-Time Delivery",
       "Single Point of Contact in Europe",
     ],
   },
@@ -771,10 +727,11 @@ export const injectionMoldingPage = {
     { val: "100%", lbl: "Customer-Focused Project Management" },
   ],
   onePartner: {
-    heading1: "One Partner.",
-    heading2: "Global Manufacturing Capability.",
-    body: "From concept to delivery, KYROZZ GmbH acts as your manufacturing partner, ensuring that every project is completed efficiently, professionally, and according to your requirements.",
-    cta: "REQUEST A QUOTE",
+    heading1: "We are the legacy of",
+    heading2: "precision manufacturing.",
+    body1: "Shaping high-performance components through injection molding and CNC machining.",
+    body2: "We manufacture more than parts;",
+    body3: "we build lasting partnerships.",
   },
   processSteps: [
     { num: "1", title: "YOUR INQUIRY", desc: "You send us your\nrequirements" },

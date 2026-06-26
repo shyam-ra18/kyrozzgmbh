@@ -564,51 +564,7 @@ export const whatYouExpect = {
   ],
 };
 
-// ─────────────────────────────────────────────
-// COMPANY HIGHLIGHTS (CompanyHighlights.tsx)
-// ─────────────────────────────────────────────
-export const companyHighlights = {
-  definesHeading: "Was KYROZZ auszeichnet",
-  defines: [
-    {
-      title: "Agiles &\nkompetentes Team",
-      desc: "Erfahrene Fachleute, die in jedem Projekt Präzision und Innovation liefern.",
-    },
-    {
-      title: "Qualität, der\nSie vertrauen können",
-      desc: "Hochwertige, präzise Bauteile, die Erwartungen übertreffen.",
-    },
-    {
-      title: "Kundenorientierter\nAnsatz",
-      desc: "Ihre Zufriedenheit hat Priorität — Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind.",
-    },
-    {
-      title: "Individuelle\nLösungen",
-      desc: "Maßgeschneiderte 3D-Drucklösungen, die Ihren genauen Anforderungen entsprechen.",
-    },
-    {
-      title: "Modernste\nTechnologie",
-      desc: "Fortschrittliche 3D-Druck- und Scantechnologien für effiziente, zuverlässige Ergebnisse.",
-    },
-  ],
-  processHeading: "Unser 3D-Druckprozess",
-  processSteps: [
-    { title: "1. BERATUNG", desc: "Wir verstehen Ihre Ideen und technischen Anforderungen." },
-    { title: "2. DESIGN & ÜBERPRÜFUNG", desc: "Wir optimieren Ihr Modell für Leistung und Druckbarkeit." },
-    { title: "3. DRUCKEN", desc: "Hochpräziser Druck mit fortschrittlicher Technologie und hochwertigen Materialien." },
-    { title: "4. QUALITÄTSPRÜFUNG", desc: "Jedes Teil wird auf Genauigkeit, Festigkeit und Konsistenz geprüft." },
-    { title: "5. LIEFERUNG", desc: "Schnelle, sichere Lieferung direkt zu Ihnen." },
-  ],
-  industriesHeading: "Branchen, die wir stärken",
-  industries: [
-    { image: "/industries/industry-1.png", title: "Industrielle Fertigung", desc: "Funktionsteile, Werkzeuge und Produktionshilfsmittel." },
-    { image: "/industries/industry-2.png", title: "Bildung & Forschung", desc: "Prototypen, Lehrmittel und Experimente." },
-    { image: "/industries/industry-3.png", title: "Hobby & Maker", desc: "Kreative Projekte, individuelle Teile und mehr." },
-    { image: "/industries/industry-4.png", title: "Produktentwicklung", desc: "Prototypen und Funktionsteile für schnellere Innovation." },
-    { image: "/industries/industry-5.png", title: "Modellbau & Prototyping", desc: "Detaillierte Modelle und visuelle Prototypen." },
-    { image: "/industries/industry-6.png", title: "Individuelle Teile & Lösungen", desc: "Maßgeschneiderte Komponenten für besondere Anwendungen." },
-  ],
-};
+
 
 // ─────────────────────────────────────────────
 // PAGE HERO COMPONENT (Reusable)
@@ -735,23 +691,23 @@ export const injectionMoldingPage = {
     ],
   },
   whySection: {
-    heading: "WARUM KYROZZ SPRITZGUSS?",
+    heading: "WARUM KYROZZ FÜR SPRITZGUSS & CNC-BEARBEITUNG?",
     items: [
       {
-        title: "Wir fertigen hier nicht selbst.",
-        desc: "Wir arbeiten mit einem sorgfältig ausgewählten Netzwerk zertifizierter Fertigungspartner, die unsere strengen Qualitäts- und Zuverlässigkeitsstandards erfüllen.",
+        title: "Globale Produktion. Deutsche Aufsicht.",
+        desc: "Wir arbeiten mit einem sorgfältig ausgewählten Netzwerk zertifizierter Fertigungspartner zusammen, die auf Spritzguss und CNC-Bearbeitung spezialisiert sind, und gewährleisten so höchste Standards in Bezug auf Qualität, Präzision und Zuverlässigkeit.",
       },
       {
         title: "Deutsches Projektmanagement.",
-        desc: "Wir übernehmen jeden Schritt — von der Ingenieurprüfung über die Partnerauswahl bis hin zur Produktionsüberwachung und Endlieferung.",
+        desc: "Wir steuern jeden Schritt Ihres Projekts – von der technischen Prüfung und Lieferantenauswahl bis hin zur Produktionsüberwachung, Qualitätssicherung und Endlieferung.",
       },
       {
         title: "Qualität, der Sie vertrauen können.",
-        desc: "Unsere Qualitätsexperten stellen sicher, dass jede Komponente durch strenge Inspektionen und kontinuierliche Prozesskontrolle europäischen Standards entspricht.",
+        desc: "Unsere Qualitätsexperten stellen sicher, dass jedes Spritzguss- oder CNC-Bauteil durch strenge Inspektionen, Prozessüberwachung und kontinuierliche Qualitätskontrolle europäischen Standards entspricht.",
       },
       {
         title: "Pünktlich. Immer.",
-        desc: "Wir koordinieren die gesamte Lieferkette, um sicherzustellen, dass Ihre Produkte pünktlich geliefert werden — immer.",
+        desc: "Wir koordinieren den gesamten Herstellungs- und Lieferkettenprozess, um sicherzustellen, dass Ihre Spritzguss- und CNC-Teile zuverlässig und termingerecht geliefert werden.",
       },
     ],
     advantagesHeading: "IHRE VORTEILE",
@@ -759,10 +715,10 @@ export const injectionMoldingPage = {
       "Deutschsprachiger Kundensupport",
       "Dediziertes Projektmanagement",
       "Vertrauenswürdige globale Fertigungspartner",
-      "Hochpräziser Spritzguss",
+      "Präzisionsfertigungskompetenz (Spritzguss & CNC-Bearbeitung)",
       "Wettbewerbsfähige Produktionskosten",
-      "Qualitätskontrolle & Inspektion",
-      "Zuverlässige Logistik & Lieferung",
+      "Umfassende Qualitätskontrolle & Inspektion",
+      "Zuverlässige Logistik & pünktliche Lieferung",
       "Einziger Ansprechpartner in Europa",
     ],
   },
@@ -773,10 +729,11 @@ export const injectionMoldingPage = {
     { val: "100%", lbl: "Kundenorientiertes Projektmanagement" },
   ],
   onePartner: {
-    heading1: "Ein Partner.",
-    heading2: "Globale Fertigungskapazität.",
-    body: "Vom Konzept bis zur Lieferung fungiert KYROZZ GmbH als Ihr Fertigungspartner und stellt sicher, dass jedes Projekt effizient, professionell und gemäß Ihren Anforderungen abgeschlossen wird.",
-    cta: "ANGEBOT ANFORDERN",
+    heading1: "Wir sind das Vermächtnis der",
+    heading2: "Präzisionsfertigung.",
+    body1: "Formen von Hochleistungskomponenten durch Spritzguss und CNC-Bearbeitung.",
+    body2: "Wir fertigen mehr als nur Teile;",
+    body3: "wir bauen dauerhafte Partnerschaften auf.",
   },
   processSteps: [
     { num: "1", title: "IHRE ANFRAGE", desc: "Sie senden uns Ihre\nAnforderungen" },

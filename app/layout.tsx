@@ -2,21 +2,8 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { cookies } from "next/headers";
-import { Montserrat, DM_Sans } from "next/font/google";
 import "@/app/globals.css";
 import "lenis/dist/lenis.css";
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dmsans",
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  display: "swap",
-});
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
@@ -74,8 +61,11 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
       </head>
-      <body suppressHydrationWarning className={`${dmSans.variable} ${montserrat.variable} font-sans`}>
+      <body suppressHydrationWarning className="font-sans">
         <NextIntlClientProvider messages={messages}>
           <LocaleProvider initialLocale={locale as "en" | "de"}>
             <SmoothScrolling>

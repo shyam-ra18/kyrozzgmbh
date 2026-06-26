@@ -30,12 +30,12 @@ export function Ticker() {
 }
 
 const industryIcons = [
-  <Settings key="s" className="w-5 h-5 text-blue-600 shrink-0" />,
-  <GraduationCap key="g" className="w-5 h-5 text-blue-600 shrink-0" />,
-  <Gamepad2 key="gp" className="w-5 h-5 text-blue-600 shrink-0" />,
-  <Box key="b" className="w-5 h-5 text-blue-600 shrink-0" />,
-  <Building2 key="bu" className="w-5 h-5 text-blue-600 shrink-0" />,
-  <Wrench key="w" className="w-5 h-5 text-blue-600 shrink-0" />,
+  <Settings key="s" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <GraduationCap key="g" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <Gamepad2 key="gp" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <Box key="b" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <Building2 key="bu" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <Wrench key="w" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
 ];
 
 export function IndustriesBento() {
@@ -51,29 +51,39 @@ export function IndustriesBento() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
           {industriesBento.industries.map((ind, i) => (
-            <div key={i} className="flex flex-col group bg-white rounded-2xl border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md transition-all duration-300 overflow-hidden">
-              <div className="relative w-full aspect-[16/10] bg-slate-100">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: i * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -6, transition: { duration: 0.2 } }}
+              className="flex flex-col group bg-white rounded-2xl border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-blue-200 transition-all duration-300 overflow-hidden"
+            >
+              <div className="relative w-full aspect-[4/3] bg-slate-100 overflow-hidden">
                 <Image 
                   src={ind.img} 
                   alt={ind.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
-              <div className="p-4 flex-1 flex flex-col justify-between">
+              <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2.5 mb-3">
-                    {industryIcons[i]}
-                    <h3 className="font-bold text-[14px] text-blue-900 tracking-tight leading-tight group-hover:text-blue-600 transition-colors duration-200">
+                    <div className="text-blue-600 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                      {industryIcons[i]}
+                    </div>
+                    <h3 className="font-bold text-[16px] text-blue-900 tracking-tight leading-tight group-hover:text-blue-600 transition-colors duration-200">
                       {ind.name}
                     </h3>
                   </div>
-                  <p className="text-[12px] text-slate-500 leading-relaxed">
+                  <p className="text-[14px] text-slate-500 leading-relaxed font-medium">
                     {ind.desc}
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -90,18 +100,26 @@ export function HTMLServices() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {htmlSections.services.items.map((s, i) => (
-            <div key={i} className="bg-[#F8F9FA] rounded-[24px] overflow-hidden border border-slate-100 flex flex-col shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative h-[240px] w-full bg-slate-200">
-                <Image src={s.img} alt={s.name} fill className="object-cover" />
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              className="bg-white rounded-[24px] overflow-hidden border border-slate-100 flex flex-col shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-xl hover:border-blue-200 transition-all duration-300 group"
+            >
+              <div className="relative h-[240px] w-full bg-slate-200 overflow-hidden">
+                <Image src={s.img} alt={s.name} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
               </div>
               <div className="p-8 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-[#1e3a8a] mb-3 leading-tight">{s.name}</h3>
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-3 leading-tight transition-colors duration-300 group-hover:text-blue-600">{s.name}</h3>
                 <p className="text-[14px] text-slate-600 mb-8 leading-relaxed flex-1">{s.text}</p>
                 
                 <div className="flex flex-col gap-3">
                   {s.features.map((feature, j) => (
                     <div key={j} className="flex items-start gap-3">
-                      <svg className="w-4 h-4 text-slate-800 mt-[2px] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-blue-600 mt-[2px] shrink-0 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                       </svg>
                       <span className="text-[13px] text-slate-800 font-medium">{feature}</span>
@@ -109,7 +127,7 @@ export function HTMLServices() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -141,9 +159,15 @@ export function HTMLProcess() {
         <div className="flex flex-wrap lg:flex-nowrap items-start justify-center lg:justify-between gap-x-6 gap-y-12">
           {htmlSections.process.steps.map((step, idx) => (
             <Fragment key={idx}>
-              <div className="flex flex-col items-center text-center w-[45%] sm:w-[45%] md:w-[28%] lg:flex-1 group">
-                {/* Icon Container */}
-                <div className="w-20 h-20 rounded-full border border-slate-100 bg-slate-50/50 flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-blue-50 group-hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: idx * 0.08, duration: 0.5, ease: "easeOut" }}
+                className="flex flex-col items-center text-center w-[45%] sm:w-[45%] md:w-[28%] lg:flex-1 group"
+              >
+                {/* Icon Container using our globals.css animation container */}
+                <div className="w-20 h-20 rounded-full border border-slate-100 bg-slate-50/50 flex items-center justify-center mb-6 icon-animate-container">
                   {processIcons[idx]}
                 </div>
                 {/* Number & Title */}
@@ -154,7 +178,7 @@ export function HTMLProcess() {
                 <p className="text-[12px] text-slate-500 leading-relaxed max-w-[220px] font-medium mx-auto">
                   {step.desc}
                 </p>
-              </div>
+              </motion.div>
 
               {/* Arrow Indicator between steps */}
               {idx < 4 && (
@@ -196,13 +220,13 @@ export function HTMLFAQ() {
             return (
               <div 
                 key={i} 
-                className="bg-white rounded-[20px] p-5 sm:p-7 shadow-[0_2px_16px_rgb(0,0,0,0.03)] border border-slate-100 transition-all duration-300 hover:shadow-[0_4px_24px_rgb(0,0,0,0.06)]"
+                className="bg-white rounded-[24px] p-5 sm:p-7 shadow-[0_4px_20px_rgba(15,23,42,0.02)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(37,99,235,0.05)] hover:border-blue-100"
               >
                 <div 
                   onClick={() => setOpenIdx(isOpen ? null : i)}
                   className="flex items-start gap-5 sm:gap-6 cursor-pointer group"
                 >
-                  <div className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-blue-600 flex items-center justify-center shrink-0 shadow-md shadow-blue-600/20">
+                  <div className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-blue-600 flex items-center justify-center shrink-0 shadow-md shadow-blue-600/10 group-hover:scale-105 group-hover:shadow-blue-600/20 transition-all duration-300">
                     {faqIcons[i]}
                   </div>
                   <div className="flex-1 pt-3 md:pt-4">

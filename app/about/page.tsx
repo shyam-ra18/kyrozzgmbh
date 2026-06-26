@@ -7,6 +7,7 @@ import { Factory, CheckCircle, Globe, ShieldCheck, Zap, TrendingUp, Gem, Message
 import { cookies } from "next/headers";
 import * as de from "@/content/de";
 import * as en from "@/content/en";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 export async function generateMetadata(): Promise<Metadata> {
   const cookieStore = await cookies();
@@ -54,9 +55,11 @@ export default async function AboutPage() {
             </div>
             <div className="grid grid-cols-2 gap-4 md:gap-6">
               {aboutPage.model.stats.map((stat) => (
-                <div key={stat.label} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center shadow-sm hover:shadow-md transition-shadow">
-                  <div className="text-4xl md:text-5xl font-black text-blue-600 mb-2">{stat.value}</div>
-                  <div className="text-sm font-semibold text-slate-500 uppercase tracking-wide">{stat.label}</div>
+                <div key={stat.label} className="bg-white p-8 rounded-2xl border border-slate-100 text-center shadow-xs hover:shadow-xl hover:border-blue-200 transition-all duration-500 hover:-translate-y-1 group">
+                  <div className="text-4xl md:text-5xl font-black text-blue-600 mb-2 transition-transform duration-500 group-hover:scale-105">
+                    <AnimatedCounter value={stat.value} />
+                  </div>
+                  <div className="text-sm font-semibold text-slate-500 uppercase tracking-wide transition-colors duration-300 group-hover:text-blue-600">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -75,12 +78,12 @@ export default async function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
             {aboutPage.whySection.reasons.map((r, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
-                <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  {(() => { const Icon = reasonIcons[idx]; return <Icon className="w-8 h-8 text-blue-500" />; })()}
+              <div key={idx} className="premium-card group">
+                <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 icon-animate-container">
+                  {(() => { const Icon = reasonIcons[idx]; return <Icon className="w-8 h-8 text-blue-500 transition-colors duration-300" />; })()}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{r.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{r.desc}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 transition-colors duration-300 group-hover:text-blue-900">{r.title}</h3>
+                <p className="text-slate-600 leading-relaxed text-sm font-medium">{r.desc}</p>
               </div>
             ))}
           </div>
