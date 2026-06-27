@@ -13,14 +13,14 @@ export default function ImpressumPage() {
         <div style={{ color: "var(--c-ink)", lineHeight: 1.8 }}>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Angaben gemäß § 5 TMG</h2>
           <p><strong>KYROZZ GmbH</strong></p>
-          <p>Musterstraße 1</p>
-          <p>80331 München, Deutschland</p>
+          <p>Poschingerstraße 33</p>
+          <p>94469 Deggendorf, Deutschland</p>
           <p style={{ marginTop: "var(--space-md)" }}><strong>Handelsregister:</strong> HRB XXXXX</p>
-          <p><strong>Registergericht:</strong> Amtsgericht München</p>
+          <p><strong>Registergericht:</strong> Amtsgericht Deggendorf</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Vertreten durch</h2>
           <p>Geschäftsführer: [Name des Geschäftsführers]</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Kontakt</h2>
-          <p><strong>Telefon:</strong> +49 XXX XXX XXXX</p>
+          <p><strong>Telefon:</strong> +91 95123 60862</p>
           <p><strong>E-Mail:</strong> info@kyrozz.com</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Umsatzsteuer-ID</h2>
           <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE XXXXXXXXX</p>

@@ -132,7 +132,7 @@ export default function QuotePage() {
                     </div>
                     <div style={{ marginBottom: "var(--space-md)" }}>
                       <label style={{ fontSize: 13, fontWeight: 600, marginBottom: 6, display: "block" }}>Phone (optional)</label>
-                      <input value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} placeholder="+49 XXX XXX XXXX" style={{ width: "100%", padding: "12px 16px", borderRadius: 8, border: "1.5px solid var(--c-border)", fontSize: 15, outline: "none" }} />
+                      <input value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} placeholder="+91 95123 60862" style={{ width: "100%", padding: "12px 16px", borderRadius: 8, border: "1.5px solid var(--c-border)", fontSize: 15, outline: "none" }} />
                     </div>
                     <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: "var(--space-xl)" }}>
                       <input type="checkbox" id="gdpr-quote" required checked={form.gdpr} onChange={e => setForm({ ...form, gdpr: e.target.checked })} style={{ marginTop: 2, flexShrink: 0 }} />
@@ -170,7 +170,6 @@ export default function QuotePage() {
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-sm)" }}>
                 {[
                   { icon: "🇩🇪", text: "German Project Management" },
-                  { icon: "✅", text: "ISO Quality Standards" },
                   { icon: "⏱️", text: "24-Hour Response Guarantee" },
                   { icon: "💬", text: "English & German Support" },
                 ].map((badge) => (

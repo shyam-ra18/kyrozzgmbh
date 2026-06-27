@@ -25,7 +25,7 @@ export default function Navbar({ locale }: { locale: string }) {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-[background-color,border-color,padding] duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm' : 'bg-white border-b border-slate-100 py-6'
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-[background-color,border-color,padding] duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 py-2 shadow-sm' : 'bg-white border-b border-slate-100 py-3'
       }`}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
@@ -39,7 +39,11 @@ export default function Navbar({ locale }: { locale: string }) {
           }}
           className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg"
         >
-          <Image src="/kyrozz_logo_hd.png" alt="Kyrozz Logo" width={160} height={40} className="h-10 w-auto" />
+          <img
+            src="/kyrozz_logo_hd.png"
+            alt="Kyrozz Logo"
+            className={`transition-all duration-300 w-[clamp(100px,10vw,180px)] h-auto `}
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -59,7 +63,8 @@ export default function Navbar({ locale }: { locale: string }) {
             })}
           </div>
 
-          {/* Language Switcher */}
+          {/* Language Switcher - Hidden for now */}
+          {/* 
           <div className="flex items-center gap-1 border-l border-slate-200 pl-4 ml-2">
             <button
               onClick={() => handleLocaleChange("en")}
@@ -82,6 +87,7 @@ export default function Navbar({ locale }: { locale: string }) {
               DE
             </button>
           </div>
+          */}
         </div>
 
         {/* Mobile hamburger */}
@@ -109,7 +115,8 @@ export default function Navbar({ locale }: { locale: string }) {
               </Link>
             ))}
 
-            {/* Mobile Language Switcher */}
+            {/* Mobile Language Switcher - Hidden for now */}
+            {/* 
             <div className="flex items-center gap-2 pt-2 border-t border-white/10">
               <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">{navbar.languageLabel}</span>
               <button
@@ -139,6 +146,7 @@ export default function Navbar({ locale }: { locale: string }) {
                 DE
               </button>
             </div>
+            */}
           </div>
         </div>
       )}

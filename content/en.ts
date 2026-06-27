@@ -35,8 +35,7 @@ export const footer = {
   description:
     "Your German manufacturing partner providing industrial-grade 3D printing, injection molding, CNC machining and strategic sourcing solutions worldwide.",
   badge1: "🇩🇪 German Managed",
-  badge2: "ISO Quality",
-  location: "Germany (Munich HQ)",
+  location: "Poschingerstraße 33, 94469 Deggendorf",
   copyright: "All rights reserved.",
 };
 
@@ -50,6 +49,8 @@ export const hero = {
     "Your Partner for 3D Printing, Injection Molding, CNC Machining & Global Sourcing.",
   ctaPrimary: "REQUEST A QUOTE",
   ctaSecondary: "CONTACT US",
+  bannerHeading: "Building the Future, Layer by Layer",
+  bannerBody: "Our success is measured by the success of our customers. We are committed to delivering innovative manufacturing solutions that help businesses move faster, reduce costs, and bring better products to market.",
 };
 
 // ─────────────────────────────────────────────
@@ -134,7 +135,7 @@ export const ourMission = {
   heading1: "Engineering Ideas Into",
   heading2: "Reliable Products",
   body1:
-    "our mission is to empower engineers and product teams to confidently transform digital designs into dependable, production-ready components.",
+    "At KYROZZ GmbH, our mission is to empower engineers and product teams to confidently transform digital designs into dependable, production-ready components.",
   body2:
     "We specialize in application-driven manufacturing solutions, combining engineering expertise with advanced 3D Printing, CNC Machining, and Injection Molding technologies to deliver parts that perform reliably in real-world environments.",
   body3:
@@ -756,7 +757,7 @@ export const aboutPage = {
     headingLine1: "German Management.",
     headingLine2: "Global Production. Your Success.",
     description:
-      "For 50+ years, KYROZZ GmbH has been connecting European businesses with world-class injection molding manufacturers — managed with German precision from our Munich headquarters.",
+      "For 50+ years, KYROZZ GmbH has been connecting European businesses with world-class injection molding manufacturers — managed with German precision from our Deggendorf headquarters.",
   },
   model: {
     badge: "Our Model",

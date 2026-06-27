@@ -19,7 +19,7 @@ export default function DatenschutzPage() {
 
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>3. Verantwortliche Stelle</h2>
           <p>Verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-          <p><strong>KYROZZ GmbH</strong><br />Musterstraße 1<br />80331 München<br />E-Mail: info@kyrozz.com</p>
+          <p><strong>KYROZZ GmbH</strong><br />Poschingerstraße 33<br />94469 Deggendorf<br />E-Mail: info@kyrozz.com</p>
 
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>4. Erhebung und Speicherung personenbezogener Daten</h2>
           <p>Bei Nutzung unserer Kontaktformulare werden die von Ihnen eingegebenen Daten (Name, E-Mail, Unternehmen, Nachricht) gespeichert, um Ihre Anfrage bearbeiten zu können. Die Daten werden nicht ohne Ihre Einwilligung an Dritte weitergegeben.</p>

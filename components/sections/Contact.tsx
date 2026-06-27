@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { UploadCloud, CheckCircle2 } from 'lucide-react';
+import { UploadCloud, CheckCircle2, MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { useContent } from '@/context/LocaleContext';
 
@@ -44,7 +44,22 @@ export function ContactSection() {
           <h2 className="text-4xl md:text-5xl font-sans font-light text-slate-900 mb-6 tracking-tight">
             {contactSection.heading} <span className="font-bold text-blue-600">{contactSection.headingHighlight}</span>
           </h2>
-          <p className="text-slate-500 font-light leading-relaxed max-w-2xl mx-auto">{contactSection.subheading}</p>
+          <p className="text-slate-500 font-light leading-relaxed max-w-2xl mx-auto mb-10">{contactSection.subheading}</p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-slate-600">
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-blue-500" />
+              Poschingerstraße 33, 94469 Deggendorf
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-blue-500" />
+              +91 95123 60862
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-blue-500" />
+              info@kyrozz.com
+            </div>
+          </div>
         </div>
 
         <div className="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">

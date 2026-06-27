@@ -10,7 +10,7 @@ import {
   Check,
   Layers,
 } from "lucide-react";
-import { useContent } from "@/context/LocaleContext";
+import { useContent, useLocale } from "@/context/LocaleContext";
 
 const valueIcons = [
   <Target key="target" className="w-8 h-8 text-blue-600" />,
@@ -21,6 +21,7 @@ const valueIcons = [
 
 export default function OurMission() {
   const { ourMission } = useContent();
+  const locale = useLocale();
   return (
     <section className="py-16 lg:py-20 bg-white border-b border-slate-100 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,28 +39,61 @@ export default function OurMission() {
           </h2>
           <div className="space-y-6 text-slate-600 text-[15px] sm:text-base leading-relaxed font-medium">
             <p>
-              Bei <strong className="text-blue-600 font-bold">KYROZZ GmbH</strong> {ourMission.body1}
-            </p>
-            <p>
-              {ourMission.body2.split("3D-Druck, CNC-Bearbeitung").map((part, i) =>
+              {ourMission.body1.split("KYROZZ GmbH").map((part, i) =>
                 i === 0 ? (
                   <span key={i}>
                     {part}
-                    <strong className="text-blue-600 font-bold">3D-Druck, CNC-Bearbeitung</strong>
+                    <strong className="text-blue-600 font-bold">KYROZZ GmbH</strong>
                   </span>
                 ) : (
-                  <span key={i}>
-                    {part.split("Spritzguss").map((p, j) =>
-                      j === 0 ? (
-                        <span key={j}>
-                          {p}
-                          <strong className="text-blue-600 font-bold">Spritzguss</strong>
-                        </span>
-                      ) : (
-                        <span key={j}>{p}</span>
-                      )
-                    )}
-                  </span>
+                  <span key={i}>{part}</span>
+                )
+              )}
+            </p>
+            <p>
+              {locale === "en" ? (
+                ourMission.body2.split("3D Printing, CNC Machining").map((part, i) =>
+                  i === 0 ? (
+                    <span key={i}>
+                      {part}
+                      <strong className="text-blue-600 font-bold">3D Printing, CNC Machining</strong>
+                    </span>
+                  ) : (
+                    <span key={i}>
+                      {part.split("Injection Molding").map((p, j) =>
+                        j === 0 ? (
+                          <span key={j}>
+                            {p}
+                            <strong className="text-blue-600 font-bold">Injection Molding</strong>
+                          </span>
+                        ) : (
+                          <span key={j}>{p}</span>
+                        )
+                      )}
+                    </span>
+                  )
+                )
+              ) : (
+                ourMission.body2.split("3D-Druck, CNC-Bearbeitung").map((part, i) =>
+                  i === 0 ? (
+                    <span key={i}>
+                      {part}
+                      <strong className="text-blue-600 font-bold">3D-Druck, CNC-Bearbeitung</strong>
+                    </span>
+                  ) : (
+                    <span key={i}>
+                      {part.split("Spritzguss").map((p, j) =>
+                        j === 0 ? (
+                          <span key={j}>
+                            {p}
+                            <strong className="text-blue-600 font-bold">Spritzguss</strong>
+                          </span>
+                        ) : (
+                          <span key={j}>{p}</span>
+                        )
+                      )}
+                    </span>
+                  )
                 )
               )}
             </p>

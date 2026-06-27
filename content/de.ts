@@ -36,8 +36,7 @@ export const footer = {
   description:
     "Ihr deutscher Fertigungspartner für industriellen 3D-Druck, Spritzguss, CNC-Bearbeitung und strategische Beschaffungslösungen weltweit.",
   badge1: "🇩🇪 Deutsches Management",
-  badge2: "ISO-Qualität",
-  location: "Deutschland (München HQ)",
+  location: "Poschingerstraße 33, 94469 Deggendorf",
   copyright: "Alle Rechte vorbehalten.",
 };
 
@@ -51,6 +50,8 @@ export const hero = {
     "Ihr Partner für 3D-Druck, Spritzguss, CNC-Bearbeitung & globale Beschaffung.",
   ctaPrimary: "ANGEBOT ANFORDERN",
   ctaSecondary: "KONTAKT",
+  bannerHeading: "Die Zukunft Schicht für Schicht aufbauen",
+  bannerBody: "Unser Erfolg misst sich am Erfolg unserer Kunden. Wir verpflichten uns, innovative Fertigungslösungen zu liefern, die Unternehmen helfen, schneller voranzukommen, Kosten zu senken und bessere Produkte auf den Markt zu bringen.",
 };
 
 // ─────────────────────────────────────────────
@@ -758,7 +759,7 @@ export const aboutPage = {
     headingLine1: "Deutsches Management.",
     headingLine2: "Globale Produktion. Ihr Erfolg.",
     description:
-      "Seit 50+ Jahren verbindet KYROZZ GmbH europäische Unternehmen mit erstklassigen Spritzgussherstellern — verwaltet mit deutscher Präzision von unserem Münchner Hauptsitz.",
+      "Seit 50+ Jahren verbindet KYROZZ GmbH europäische Unternehmen mit erstklassigen Spritzgussherstellern — verwaltet mit deutscher Präzision von unserem Deggendorfer Hauptsitz.",
   },
   model: {
     badge: "Unser Modell",

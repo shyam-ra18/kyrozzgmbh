@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "DE-BY",
-    "geo.placename": "Munich",
-    "geo.position": "48.135125;11.581981",
-    "ICBM": "48.135125, 11.581981",
+    "geo.placename": "Deggendorf",
+    "geo.position": "48.8358;12.9644",
+    "ICBM": "48.8358, 12.9644",
   },
 };
 

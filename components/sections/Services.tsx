@@ -1,9 +1,16 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import { ArrowRight, Headset, Clock, ShieldCheck, Globe, Layers } from 'lucide-react';
 import { useContent } from '@/context/LocaleContext';
+
+const highlights = [
+  { icon: Headset, label: "German\nCustomer Support" },
+  { icon: Clock, label: "Fast Turnaround\n& On-Time Delivery" },
+  { icon: ShieldCheck, label: "Quality Assurance\n& Inspection" },
+  { icon: Globe, label: "Global Manufacturing\nNetwork" },
+  { icon: Layers, label: "Prototype to\nMass Production" },
+];
 
 export function CoreServices() {
   const { introduction } = useContent();
@@ -23,7 +30,6 @@ export function CoreServices() {
               <div className="w-[180px] h-[120px] mb-6 overflow-hidden relative group">
                 <div className="absolute inset-0 bg-white" />
                 <img src={s.image} className="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform group-hover:scale-105 duration-500" alt={s.title} />
-                {/* Simulate a subtle blue glow under the machine */}
                 <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-24 h-4 bg-blue-500 rounded-full blur-xl opacity-40 mix-blend-screen" />
               </div>
               <h3 className="text-xl font-bold text-blue-600 mb-2">{s.title}</h3>
@@ -39,37 +45,60 @@ export function CoreServices() {
 export function Introduction() {
   const { introduction } = useContent();
   return (
-    <section className="py-16 bg-slate-50">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="relative bg-gradient-to-r from-slate-50 via-white to-slate-50 border-y border-slate-100 overflow-hidden mt-6">
+      {/* Subtle decorative dots pattern — right side */}
+      <div className="absolute top-0 right-0 w-72 h-full opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(circle, #3b82f6 1.5px, transparent 1.5px)', backgroundSize: '14px 14px' }} />
+
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-48 sm:pt-32 lg:pt-24 pb-12 lg:pb-16">
+        {/* Top row: Logo + Text */}
+        <div className="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left gap-6 lg:gap-12 mb-5">
+          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="flex justify-center"
+            className="shrink-0"
           >
-            {/* Kyrozz Logo Large Version */}
-            <div className="relative flex flex-col items-center">
-              <Image src="/service-logo.png" alt="Kyrozz Service Logo" width={500} height={500} className="w-auto max-h-[400px] object-contain drop-shadow-xl" />
-            </div>
+            <img
+              src="/kyrozz_logo_hd.png"
+              alt="Kyrozz GmbH Logo"
+              className="w-[clamp(140px,15vw,240px)] h-auto"
+            />
           </motion.div>
 
+          {/* Vertical blue gradient divider */}
+          <div className="hidden lg:block w-[3px] h-20 rounded-full bg-gradient-to-b from-blue-400 via-blue-600 to-blue-400 shrink-0" />
+
+          {/* Text */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-[2.5rem] md:text-5xl lg:text-[3.5rem] font-sans font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight">
-              {introduction.heading1}<br />
-              <span className="text-blue-600">{introduction.heading2}</span>
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-3 leading-tight tracking-tight">
+              {introduction.heading1}{" "}
+              <span className="text-blue-600 italic">{introduction.heading2}</span>
             </h2>
-            <p className="text-slate-800 text-lg mb-8 leading-relaxed font-medium max-w-xl whitespace-pre-line">
+            <p className="text-slate-500 text-sm md:text-base leading-relaxed font-medium max-w-2xl">
               {introduction.body}
             </p>
-            <button className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-md transition-all hover:bg-blue-700 uppercase tracking-wide gap-2 border border-blue-600 mt-4">
-              {introduction.cta} <ArrowRight className="w-5 h-5" />
-            </button>
           </motion.div>
+        </div>
+
+        {/* Bottom row: Highlight icons */}
+        <div className="border-t border-slate-100 pt-4">
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
+            {highlights.map((h, i) => (
+              <div key={i} className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
+                  <h.icon className="w-4 h-4 text-blue-600" />
+                </div>
+                <span className="text-xs font-bold text-slate-600 leading-tight whitespace-pre-line">
+                  {h.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
