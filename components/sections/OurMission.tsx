@@ -25,7 +25,6 @@ export default function OurMission() {
   return (
     <section className="py-16 lg:py-20 bg-white border-b border-slate-100 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* 1. Our Mission (Centered Content) */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <div className="flex items-center justify-center mb-4">
@@ -156,44 +155,6 @@ export default function OurMission() {
             </div>
           </div>
         </div>
-
-        {/* 3. Bottom Row (Dark Blue Banner) */}
-        <div className="bg-[#0B1523] rounded-3xl p-6 md:p-8 text-white relative overflow-hidden shadow-2xl border border-white/5">
-          {/* Subtle bg glow */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_120%,rgba(37,99,235,0.15),transparent_50%)] pointer-events-none" />
-          
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
-            {/* Left Content */}
-            <div className="flex items-start gap-6 max-w-2xl flex-1">
-              <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
-                <Layers className="w-7 h-7 text-blue-400" />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">
-                  {ourMission.bannerHeading}
-                </h3>
-                <p className="text-slate-400 text-xs md:text-sm leading-relaxed font-semibold">
-                  {ourMission.bannerBody}
-                </p>
-              </div>
-            </div>
-
-            {/* Vertical Line Divider (hidden on mobile, shown on lg) */}
-            <div className="hidden lg:block w-px h-16 bg-white/10" />
-
-            {/* Right Branding */}
-            <div className="shrink-0 w-full lg:w-auto flex justify-center lg:justify-start lg:pl-10">
-              <Image
-                src="/kyrozz_logo_hd.png"
-                alt="Kyrozz Logo"
-                width={160}
-                height={40}
-                className="h-10 w-auto brightness-0 invert"
-              />
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );
