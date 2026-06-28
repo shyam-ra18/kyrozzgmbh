@@ -228,7 +228,7 @@ export function BambuTechShowcase() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/quote"
+                href="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide"
               >
                 {bambuTechShowcase.fdmSection.ctaPrimary} <ArrowRight className="w-4 h-4" />

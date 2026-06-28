@@ -37,14 +37,14 @@ export function Hero() {
             {hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="inline-flex items-center justify-center gap-2.5 bg-blue-600 text-white px-8 py-4 rounded-md text-sm font-bold transition hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_10px_36px_rgba(37,99,235,0.35)] group uppercase tracking-wider border border-blue-600">
+            <a href="/contact" className="inline-flex items-center justify-center gap-2.5 bg-blue-600 text-white px-8 py-4 rounded-md text-sm font-bold transition hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_10px_36px_rgba(37,99,235,0.35)] group uppercase tracking-wider border border-blue-600">
               <FileText className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
               {hero.ctaPrimary}
-            </button>
-            <button className="inline-flex items-center justify-center gap-2.5 bg-transparent text-white border border-white/50 px-8 py-4 rounded-md text-sm font-bold transition hover:border-white hover:bg-white/10 group uppercase tracking-wider">
+            </a>
+            <a href="tel:+4915758906010" className="inline-flex items-center justify-center gap-2.5 bg-transparent text-white border border-white/50 px-8 py-4 rounded-md text-sm font-bold transition hover:border-white hover:bg-white/10 group uppercase tracking-wider">
               <Phone className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
               {hero.ctaSecondary}
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>

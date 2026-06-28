@@ -4,7 +4,7 @@ import { ArrowRight, Mail } from 'lucide-react';
 export function SubCTA({ 
   title, 
   description, 
-  primaryHref = "/quote", 
+  primaryHref = "/contact", 
   primaryText = "Request a Quote", 
   secondaryHref = "/contact", 
   secondaryText = "Talk to an Expert" 

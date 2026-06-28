@@ -58,13 +58,13 @@ export function ThreeDPrintingSection() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
-                  href="/quote" 
+                  href="/contact" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide"
                 >
                   REQUEST A QUOTE <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link 
-                  href="/contact" 
+                  href="/about" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-600 border border-slate-200 rounded-md font-bold hover:bg-slate-50 transition-colors text-sm tracking-wide shadow-sm"
                 >
                   LEARN MORE <ArrowRight className="w-4 h-4" />
@@ -237,7 +237,7 @@ export function ThreeDPrintingSection() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
-                  href="/quote" 
+                  href="/contact" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide"
                 >
                   GET A QUOTE <ArrowRight className="w-4 h-4" />

@@ -50,7 +50,8 @@ export const hero = {
   ctaPrimary: "REQUEST A QUOTE",
   ctaSecondary: "CONTACT US",
   bannerHeading: "Building the Future, Layer by Layer",
-  bannerBody: "Our success is measured by the success of our customers. We are committed to delivering innovative manufacturing solutions that help businesses move faster, reduce costs, and bring better products to market.",
+  bannerBody:
+    "Our success is measured by the success of our customers. We are committed to delivering innovative manufacturing solutions that help businesses move faster, reduce costs, and bring better products to market.",
 };
 
 // ─────────────────────────────────────────────
@@ -105,7 +106,7 @@ export const featuredServices = [
     subtitle:
       "Precision Injection Molding Solutions Through Our Trusted Sourcing Network.",
     desc: "KYROZZ GmbH is a German-based project management company that delivers high-precision injection molded components through a network of carefully selected manufacturing partners worldwide. We manage your injection molding project from Germany — prototyping to high-volume production, delivered on time.",
-    image: "/injection-molding.png",
+    image: "/injection-molding-hero.png",
     imageAlt: "Injection Molding Engineering",
     ctaHref: "/injection-molding",
     alignRight: false,
@@ -305,7 +306,11 @@ export const htmlSections = {
       {
         name: "3D Printing Services",
         text: "High-precision 3D printing using FDM technology for functional prototypes and end-use parts.",
-        features: ["Prototype Development", "Functional Part Production", "Wide Material Selection"],
+        features: [
+          "Prototype Development",
+          "Functional Part Production",
+          "Wide Material Selection",
+        ],
         img: "/3dprint-ser1.png",
       },
       {
@@ -317,7 +322,11 @@ export const htmlSections = {
       {
         name: "Post-Processing & Finishing",
         text: "High-quality finishing services for a perfect fit, look, and performance.",
-        features: ["Surface Treatment", "Support Structure Removal", "Quality Inspection"],
+        features: [
+          "Surface Treatment",
+          "Support Structure Removal",
+          "Quality Inspection",
+        ],
         img: "/post-ser3.png",
       },
     ],
@@ -455,7 +464,10 @@ export const bambuTechShowcase = {
     { label: "Materials", desc: "Wide range of engineering filaments" },
     { label: "High\nPrecision", desc: "Consistent accuracy for every project" },
     { label: "Fast\nTurnaround", desc: "Quick production, on-time delivery" },
-    { label: "Satisfaction\nGuaranteed", desc: "Quality you can trust, service you can rely on" },
+    {
+      label: "Satisfaction\nGuaranteed",
+      desc: "Quality you can trust, service you can rely on",
+    },
   ],
   fdmSection: {
     heading1: "Why Choose",
@@ -470,11 +482,26 @@ export const bambuTechShowcase = {
   },
   processHeading: "From Concept to Finished Part",
   processSteps: [
-    { num: "1. SEND YOUR FILE", desc: "Upload your 3D model (STL, OBJ, 3MF) and share your requirements." },
-    { num: "2. WE PREPARE & PLAN", desc: "We review your file and recommend the best material and settings." },
-    { num: "3. WE PRINT", desc: "Your part is printed with precision using the Bambu Lab H2S or P2S." },
-    { num: "4. QUALITY CHECK", desc: "Every part is inspected to ensure it meets our high standards." },
-    { num: "5. PACK & DELIVER", desc: "Carefully packed and shipped fast – straight to you." },
+    {
+      num: "1. SEND YOUR FILE",
+      desc: "Upload your 3D model (STL, OBJ, 3MF) and share your requirements.",
+    },
+    {
+      num: "2. WE PREPARE & PLAN",
+      desc: "We review your file and recommend the best material and settings.",
+    },
+    {
+      num: "3. WE PRINT",
+      desc: "Your part is printed with precision using the Bambu Lab H2S or P2S.",
+    },
+    {
+      num: "4. QUALITY CHECK",
+      desc: "Every part is inspected to ensure it meets our high standards.",
+    },
+    {
+      num: "5. PACK & DELIVER",
+      desc: "Carefully packed and shipped fast – straight to you.",
+    },
   ],
 };
 
@@ -564,8 +591,6 @@ export const whatYouExpect = {
   ],
 };
 
-
-
 // ─────────────────────────────────────────────
 // PAGE HERO COMPONENT (Reusable)
 // ─────────────────────────────────────────────
@@ -632,17 +657,45 @@ export const threeDPrintingPage = {
     ctaSecondary: "CONTACT US",
   },
   reasons: [
-    { title: "High Precision", desc: "Complex geometries with fine details and tight tolerances." },
-    { title: "Fast Turnaround", desc: "Rapid prototyping and quick production to meet your timelines." },
-    { title: "Design Freedom", desc: "No tooling required — bring your ideas to life without limitations." },
-    { title: "Multiple Materials", desc: "Wide range of engineering plastics to suit every application." },
-    { title: "Reliable Quality", desc: "Consistent, durable, and high-quality components you can trust." },
+    {
+      title: "High Precision",
+      desc: "Complex geometries with fine details and tight tolerances.",
+    },
+    {
+      title: "Fast Turnaround",
+      desc: "Rapid prototyping and quick production to meet your timelines.",
+    },
+    {
+      title: "Design Freedom",
+      desc: "No tooling required — bring your ideas to life without limitations.",
+    },
+    {
+      title: "Multiple Materials",
+      desc: "Wide range of engineering plastics to suit every application.",
+    },
+    {
+      title: "Reliable Quality",
+      desc: "Consistent, durable, and high-quality components you can trust.",
+    },
   ],
-  materials: ["ABS", "PC", "PLA", "Nylon (PA)", "PETG", "TPU", "ASA", "And More"],
+  materials: [
+    "ABS",
+    "PC",
+    "PLA",
+    "Nylon (PA)",
+    "PETG",
+    "TPU",
+    "ASA",
+    "And More",
+  ],
   fdmSection: {
     heading: "FDM Printing",
     body: "Fused Deposition Modeling (FDM) is ideal for functional prototypes and production parts with durability and cost-efficiency.",
-    features: ["Strong & Durable Parts", "Wide Range of Materials", "Cost-Effective Solutions"],
+    features: [
+      "Strong & Durable Parts",
+      "Wide Range of Materials",
+      "Cost-Effective Solutions",
+    ],
     materialsHeading: "Materials We Work With",
   },
   applications: [
@@ -730,15 +783,28 @@ export const injectionMoldingPage = {
   onePartner: {
     heading1: "We are the legacy of",
     heading2: "precision manufacturing.",
-    body1: "Shaping high-performance components through injection molding and CNC machining.",
+    body1:
+      "Shaping high-performance components through injection molding and CNC machining.",
     body2: "We manufacture more than parts;",
     body3: "we build lasting partnerships.",
   },
   processSteps: [
     { num: "1", title: "YOUR INQUIRY", desc: "You send us your\nrequirements" },
-    { num: "2", title: "PROJECT REVIEW", desc: "We analyze &\nprovide best solution" },
-    { num: "3", title: "PARTNER SELECTION", desc: "We choose the right\nmanufacturing partner" },
-    { num: "4", title: "PRODUCTION & QC", desc: "Production with strict\nquality control" },
+    {
+      num: "2",
+      title: "PROJECT REVIEW",
+      desc: "We analyze &\nprovide best solution",
+    },
+    {
+      num: "3",
+      title: "PARTNER SELECTION",
+      desc: "We choose the right\nmanufacturing partner",
+    },
+    {
+      num: "4",
+      title: "PRODUCTION & QC",
+      desc: "Production with strict\nquality control",
+    },
     { num: "5", title: "DELIVERY", desc: "On-time delivery to\nyour location" },
   ],
 };
@@ -779,20 +845,48 @@ export const aboutPage = {
     badge: "Why KYROZZ",
     heading: "7 Reasons Companies Choose KYROZZ",
     reasons: [
-      { title: "German Project Management", desc: "Your single point of contact in Germany managing everything." },
-      { title: "Global Manufacturing Network", desc: "20+ vetted partners worldwide delivering European quality standards." },
-      { title: "End-to-End Service", desc: "From DFM review through production, QC, and delivery — we handle it all." },
-      { title: "Fast Turnaround", desc: "Prototypes in 2 weeks, quotes within 24 hours." },
-      { title: "Competitive Pricing", desc: "Global manufacturing cost savings with German quality oversight." },
-      { title: "Quality Guarantee", desc: "100% inspection and European quality standards on every order." },
-      { title: "Transparent Communication", desc: "Regular updates, English and German support, no surprises." },
+      {
+        title: "German Project Management",
+        desc: "Your single point of contact in Germany managing everything.",
+      },
+      {
+        title: "Global Manufacturing Network",
+        desc: "20+ vetted partners worldwide delivering European quality standards.",
+      },
+      {
+        title: "End-to-End Service",
+        desc: "From DFM review through production, QC, and delivery — we handle it all.",
+      },
+      {
+        title: "Fast Turnaround",
+        desc: "Prototypes in 2 weeks, quotes within 24 hours.",
+      },
+      {
+        title: "Competitive Pricing",
+        desc: "Global manufacturing cost savings with German quality oversight.",
+      },
+      {
+        title: "Quality Guarantee",
+        desc: "100% inspection and European quality standards on every order.",
+      },
+      {
+        title: "Transparent Communication",
+        desc: "Regular updates, English and German support, no surprises.",
+      },
     ],
   },
   globalNetwork: {
     badge: "Global Network",
     heading: "A Global Manufacturing Network",
     body: "Our manufacturing partners are located across Europe, Asia, and beyond — each audited and approved by our German quality team.",
-    countries: ["China", "Vietnam", "Germany", "Czech Republic", "Poland", "Turkey"],
+    countries: [
+      "China",
+      "Vietnam",
+      "Germany",
+      "Czech Republic",
+      "Poland",
+      "Turkey",
+    ],
   },
   cta: {
     title: "Work with a Partner You Can Trust",
@@ -810,7 +904,8 @@ export const contactPage = {
     badge: "Contact",
     headingLine1: "Let's Talk About Your",
     headingLine2: "Project",
-    description: "Send us your requirements and we will respond within 24 business hours.",
+    description:
+      "Send us your requirements and we will respond within 24 business hours.",
   },
 };
 
@@ -854,7 +949,8 @@ export const industries = [
     name: "Automotive",
     icon: "🚗",
     h1: "Automotive Plastic Parts — Precision Under Pressure",
-    description: "Tight tolerances, heat-resistant materials, and zero defects for the automotive supply chain.",
+    description:
+      "Tight tolerances, heat-resistant materials, and zero defects for the automotive supply chain.",
     keyAngle: "Tight tolerances, heat resistance",
     painPoints: [
       "Stringent dimensional tolerances",
@@ -874,7 +970,8 @@ export const industries = [
     name: "Electrical",
     icon: "⚡",
     h1: "Electrical Housing & Enclosures — Injection Molded",
-    description: "UL-rated materials, IP-rated housings, and precise fitment for electrical and electronic components.",
+    description:
+      "UL-rated materials, IP-rated housings, and precise fitment for electrical and electronic components.",
     keyAngle: "UL-rated materials, IP ratings",
     painPoints: [
       "Flammability and UL rating requirements",
@@ -894,7 +991,8 @@ export const industries = [
     name: "Medical",
     icon: "🏥",
     h1: "Medical-Grade Plastic Components",
-    description: "ISO cleanroom production, biocompatible materials, and full traceability for medical devices.",
+    description:
+      "ISO cleanroom production, biocompatible materials, and full traceability for medical devices.",
     keyAngle: "ISO cleanroom, biocompatible materials",
     painPoints: [
       "Biocompatibility and FDA/CE compliance",
@@ -914,7 +1012,8 @@ export const industries = [
     name: "Consumer Goods",
     icon: "🛍️",
     h1: "Consumer Product Injection Molding",
-    description: "Speed to market, design flexibility, and competitive unit costs for consumer product brands.",
+    description:
+      "Speed to market, design flexibility, and competitive unit costs for consumer product brands.",
     keyAngle: "Speed to market, design flexibility",
     painPoints: [
       "Short time-to-market pressure",
@@ -1009,7 +1108,8 @@ export const products = [
     slug: "pp-filter-housing-10",
     name: 'PP Filter Housing 10"',
     category: "water-filtration" as const,
-    description: "Standard 10-inch polypropylene filter housing for residential and light commercial water filtration systems.",
+    description:
+      "Standard 10-inch polypropylene filter housing for residential and light commercial water filtration systems.",
     material: "Polypropylene (PP)",
     image: "/images/products/filter-housing.png",
   },
@@ -1018,7 +1118,8 @@ export const products = [
     slug: "pp-filter-housing-20",
     name: 'PP Filter Housing 20"',
     category: "water-filtration" as const,
-    description: "Heavy-duty 20-inch filter housing for commercial and industrial water treatment applications.",
+    description:
+      "Heavy-duty 20-inch filter housing for commercial and industrial water treatment applications.",
     material: "Polypropylene (PP)",
     image: "/images/products/filter-housing-20.png",
   },
@@ -1027,7 +1128,8 @@ export const products = [
     slug: "twin-filter-housing",
     name: "Twin PP Filter Housing",
     category: "water-filtration" as const,
-    description: "Dual-stage filtration housing for enhanced water purification with two cartridge slots.",
+    description:
+      "Dual-stage filtration housing for enhanced water purification with two cartridge slots.",
     material: "Polypropylene (PP)",
     image: "/images/products/twin-housing.png",
   },
@@ -1036,7 +1138,8 @@ export const products = [
     slug: "centrifugal-pump-body",
     name: "Centrifugal Pump Body",
     category: "pump-components" as const,
-    description: "Precision-molded centrifugal pump body for water circulation systems, chemical-resistant.",
+    description:
+      "Precision-molded centrifugal pump body for water circulation systems, chemical-resistant.",
     material: "PA66 (Nylon)",
     image: "/images/products/pump-body.png",
   },
@@ -1045,7 +1148,8 @@ export const products = [
     slug: "pump-impeller",
     name: "Pump Impeller",
     category: "pump-components" as const,
-    description: "High-efficiency injection molded impeller for centrifugal pumps, balanced for low vibration.",
+    description:
+      "High-efficiency injection molded impeller for centrifugal pumps, balanced for low vibration.",
     material: "PPO (Noryl)",
     image: "/images/products/impeller.png",
   },
@@ -1054,7 +1158,8 @@ export const products = [
     slug: "sediment-filter-cartridge",
     name: "Sediment Filter Cartridge",
     category: "filter-media" as const,
-    description: "5-micron sediment filter cartridge for pre-filtration of water systems.",
+    description:
+      "5-micron sediment filter cartridge for pre-filtration of water systems.",
     material: "Polypropylene (PP)",
     image: "/images/products/sediment-filter.png",
   },
@@ -1063,7 +1168,8 @@ export const products = [
     slug: "carbon-block-cartridge",
     name: "Carbon Block Cartridge",
     category: "filter-media" as const,
-    description: "Activated carbon block cartridge for chlorine, taste, and odor reduction.",
+    description:
+      "Activated carbon block cartridge for chlorine, taste, and odor reduction.",
     material: "Activated Carbon / PP",
     image: "/images/products/carbon-block.png",
   },
@@ -1072,7 +1178,8 @@ export const products = [
     slug: "pp-granules-injection",
     name: "PP Granules (Injection Grade)",
     category: "raw-materials" as const,
-    description: "Food-grade polypropylene granules optimized for injection molding applications.",
+    description:
+      "Food-grade polypropylene granules optimized for injection molding applications.",
     material: "Polypropylene (PP)",
     image: "/images/products/pp-granules.png",
   },
@@ -1092,12 +1199,14 @@ export const productCategories = [
 export const materialsPage = {
   metadata: {
     title: "Injection Molding Materials Guide | PP, ABS, PA, POM | KYROZZ GmbH",
-    description: "Complete guide to injection molding materials. Compare PP, ABS, PA66, POM, PC, HDPE, TPE for your application. Material selection help from KYROZZ engineers.",
+    description:
+      "Complete guide to injection molding materials. Compare PP, ABS, PA66, POM, PC, HDPE, TPE for your application. Material selection help from KYROZZ engineers.",
   },
   hero: {
     label: "Materials Guide",
     title: "Which Plastic Material Is Right for Your Part?",
-    description: "Material expertise that ensures your parts perform in their intended environment.",
+    description:
+      "Material expertise that ensures your parts perform in their intended environment.",
   },
   table: {
     label: "Comparison",
@@ -1108,7 +1217,10 @@ export const materialsPage = {
     label: "Selection Guide",
     title: "How to Choose the Right Material",
     items: [
-      { q: "Is the part in contact with food or drinking water?", a: "PP, HDPE, or PETG (food-grade grades)" },
+      {
+        q: "Is the part in contact with food or drinking water?",
+        a: "PP, HDPE, or PETG (food-grade grades)",
+      },
       { q: "Does the part need to withstand >100°C?", a: "PA66, PC, or PPS" },
       { q: "Is flexibility or rubber-feel required?", a: "TPE or TPU" },
       { q: "Is dimensional stability critical?", a: "POM or PA66+GF" },
@@ -1118,7 +1230,8 @@ export const materialsPage = {
   sustainability: {
     label: "Sustainability",
     title: "Sustainable Material Options",
-    description: "KYROZZ supports sustainable manufacturing with bio-based and recycled material options for qualifying applications.",
+    description:
+      "KYROZZ supports sustainable manufacturing with bio-based and recycled material options for qualifying applications.",
     bullets: [
       "Bio-based PLA and PHA options",
       "Post-consumer recycled (PCR) PP and HDPE",
@@ -1126,13 +1239,15 @@ export const materialsPage = {
       "Halogen-free formulations available",
       "Full material data sheets and compliance docs",
     ],
-    notSure: "Not sure which material? Our engineers will review your application and recommend the optimal material for performance and cost.",
+    notSure:
+      "Not sure which material? Our engineers will review your application and recommend the optimal material for performance and cost.",
   },
   bottomCTA: {
     title: "Not Sure Which Material?",
-    description: "Ask our engineers — free material consultation with every quote request.",
+    description:
+      "Ask our engineers — free material consultation with every quote request.",
     cta: "Ask Our Engineers",
-  }
+  },
 };
 
 // ─────────────────────────────────────────────
@@ -1143,13 +1258,15 @@ export const productsPage = {
     badge: "Product Catalogue",
     title: "Injection Molded Products",
     titleHighlight: "— Standard & Custom",
-    description: "Browse our manufactured products or request a custom part for your application.",
+    description:
+      "Browse our manufactured products or request a custom part for your application.",
   },
   enquire: "Enquire",
   noProducts: "No products found in this category.",
   subCTA: {
     title: "Don't See What You Need?",
-    description: "We manufacture custom injection molded parts to your specifications. Share your requirements and we'll build it.",
+    description:
+      "We manufacture custom injection molded parts to your specifications. Share your requirements and we'll build it.",
     primaryText: "Request Custom Part",
-  }
+  },
 };

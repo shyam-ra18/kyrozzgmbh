@@ -35,7 +35,7 @@ export default function ToolingPrototypingPage() {
         title={<>From Prototype to Production &mdash; <span className="text-blue-500">Rapid Tooling</span></>}
         description="Fast prototyping. Production-ready tooling. German quality oversight from day one."
       >
-        <Link href="/quote" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
+        <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
           Start Your Project <ArrowRight className="w-4 h-4" />
         </Link>
         <a href="/kyrozz-pricing-guide.pdf" className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent border border-slate-700 text-slate-300 font-bold text-sm rounded-full transition-all hover:bg-slate-800 hover:text-white gap-2" download>
@@ -115,7 +115,7 @@ export default function ToolingPrototypingPage() {
       <SubCTA 
         title="Prototype in 2 Weeks. Tell Us Your Requirements."
         description="Upload your CAD file or describe your part — our engineers will respond within 24 hours."
-        primaryHref="/quote"
+        primaryHref="/contact"
         primaryText="Start Your Project"
         secondaryHref="/materials"
         secondaryText="View Materials"

@@ -28,7 +28,7 @@ export default function TestingQualityPage() {
         title={<>Zero Defects Policy &mdash; <span className="text-blue-500">Advanced Testing</span></>}
         description="We don't ship until it's perfect. 8 testing methods. European standards. 100% inspection."
       >
-        <Link href="/quote" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
+        <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
           Request a Sample <ArrowRight className="w-4 h-4" />
         </Link>
         <a href="/kyrozz-quality-standards.pdf" className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent border border-slate-700 text-slate-300 font-bold text-sm rounded-full transition-all hover:bg-slate-800 hover:text-white gap-2" download>
@@ -95,7 +95,7 @@ export default function TestingQualityPage() {
       <SubCTA 
         title="Require Certified Quality Parts?"
         description="Request a sample batch with full quality documentation — no commitment required."
-        primaryHref="/quote"
+        primaryHref="/contact"
         primaryText="Request a Sample"
         secondaryHref="/contact"
         secondaryText="Contact QA Department"

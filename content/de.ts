@@ -51,7 +51,8 @@ export const hero = {
   ctaPrimary: "ANGEBOT ANFORDERN",
   ctaSecondary: "KONTAKT",
   bannerHeading: "Die Zukunft Schicht für Schicht aufbauen",
-  bannerBody: "Unser Erfolg misst sich am Erfolg unserer Kunden. Wir verpflichten uns, innovative Fertigungslösungen zu liefern, die Unternehmen helfen, schneller voranzukommen, Kosten zu senken und bessere Produkte auf den Markt zu bringen.",
+  bannerBody:
+    "Unser Erfolg misst sich am Erfolg unserer Kunden. Wir verpflichten uns, innovative Fertigungslösungen zu liefern, die Unternehmen helfen, schneller voranzukommen, Kosten zu senken und bessere Produkte auf den Markt zu bringen.",
 };
 
 // ─────────────────────────────────────────────
@@ -106,7 +107,7 @@ export const featuredServices = [
     subtitle:
       "Präzisions-Spritzgusslösungen über unser vertrauenswürdiges Beschaffungsnetzwerk.",
     desc: "KYROZZ GmbH ist ein in Deutschland ansässiges Projektmanagement-Unternehmen, das hochpräzise Spritzgussbauteile über ein Netzwerk sorgfältig ausgewählter Fertigungspartner weltweit liefert. Wir verwalten Ihr Spritzgussprojekt aus Deutschland — vom Prototyp bis zur Großserienproduktion, termingerecht geliefert.",
-    image: "/injection-molding.png",
+    image: "/injection-molding-hero.png",
     imageAlt: "Spritzguss Logo",
     ctaHref: "/injection-molding",
     alignRight: false,
@@ -263,7 +264,8 @@ export const contactSection = {
     name: "Ihren Namen eingeben",
     company: "Ihren Firmennamen eingeben",
     email: "Ihre E-Mail-Adresse eingeben",
-    message: "Erzählen Sie uns von Ihrem Projekt, Anforderungen, Materialien...",
+    message:
+      "Erzählen Sie uns von Ihrem Projekt, Anforderungen, Materialien...",
   },
   upload: {
     cta: "Datei hochladen",
@@ -306,19 +308,31 @@ export const htmlSections = {
       {
         name: "3D-Druckdienstleistungen",
         text: "Hochpräziser 3D-Druck mit FDM-Technologie für funktionale Prototypen und Endverbrauchsteile.",
-        features: ["Prototypenentwicklung", "Funktionsteile-Produktion", "Breites Materialspektrum"],
+        features: [
+          "Prototypenentwicklung",
+          "Funktionsteile-Produktion",
+          "Breites Materialspektrum",
+        ],
         img: "/3dprint-ser1.png",
       },
       {
         name: "Design- & Ingenieur-Support",
         text: "Vom Konzept zum CAD-Modell — wir helfen, Ihre Ideen mit fachkundiger Designunterstützung zum Leben zu erwecken.",
-        features: ["3D-Modellierung", "Design-Optimierung", "Druckfertige Dateien"],
+        features: [
+          "3D-Modellierung",
+          "Design-Optimierung",
+          "Druckfertige Dateien",
+        ],
         img: "/design-ser2.png",
       },
       {
         name: "Nachbearbeitung & Veredelung",
         text: "Hochwertige Nachbearbeitung für perfekte Passform, Optik und Leistung.",
-        features: ["Oberflächenbehandlung", "Stützstruktur-Entfernung", "Qualitätsprüfung"],
+        features: [
+          "Oberflächenbehandlung",
+          "Stützstruktur-Entfernung",
+          "Qualitätsprüfung",
+        ],
         img: "/post-ser3.png",
       },
     ],
@@ -454,9 +468,18 @@ export const bambuTechShowcase = {
   highlights: [
     { label: "Mehrere fortschrittliche\nDrucker", desc: "Bambu Lab H2S & P2S" },
     { label: "Breites Material-\nspektrum", desc: "Technische Filamente" },
-    { label: "Hohe\nPräzision", desc: "Konsistente Genauigkeit für jedes Projekt" },
-    { label: "Kurze\nDurchlaufzeiten", desc: "Schnelle Produktion, pünktliche Lieferung" },
-    { label: "Zufriedenheit\ngarantiert", desc: "Qualität, der Sie vertrauen können" },
+    {
+      label: "Hohe\nPräzision",
+      desc: "Konsistente Genauigkeit für jedes Projekt",
+    },
+    {
+      label: "Kurze\nDurchlaufzeiten",
+      desc: "Schnelle Produktion, pünktliche Lieferung",
+    },
+    {
+      label: "Zufriedenheit\ngarantiert",
+      desc: "Qualität, der Sie vertrauen können",
+    },
   ],
   fdmSection: {
     heading1: "Warum",
@@ -471,11 +494,26 @@ export const bambuTechShowcase = {
   },
   processHeading: "Vom Konzept zum fertigen Teil",
   processSteps: [
-    { num: "1. DATEI SENDEN", desc: "Laden Sie Ihr 3D-Modell (STL, OBJ, 3MF) hoch und teilen Sie Ihre Anforderungen mit." },
-    { num: "2. WIR BEREITEN VOR & PLANEN", desc: "Wir prüfen Ihre Datei und empfehlen das beste Material und die Einstellungen." },
-    { num: "3. WIR DRUCKEN", desc: "Ihr Teil wird präzise mit dem Bambu Lab H2S oder P2S gedruckt." },
-    { num: "4. QUALITÄTSPRÜFUNG", desc: "Jedes Teil wird kontrolliert, um unsere hohen Standards zu erfüllen." },
-    { num: "5. VERPACKEN & LIEFERN", desc: "Sorgfältig verpackt und schnell geliefert — direkt zu Ihnen." },
+    {
+      num: "1. DATEI SENDEN",
+      desc: "Laden Sie Ihr 3D-Modell (STL, OBJ, 3MF) hoch und teilen Sie Ihre Anforderungen mit.",
+    },
+    {
+      num: "2. WIR BEREITEN VOR & PLANEN",
+      desc: "Wir prüfen Ihre Datei und empfehlen das beste Material und die Einstellungen.",
+    },
+    {
+      num: "3. WIR DRUCKEN",
+      desc: "Ihr Teil wird präzise mit dem Bambu Lab H2S oder P2S gedruckt.",
+    },
+    {
+      num: "4. QUALITÄTSPRÜFUNG",
+      desc: "Jedes Teil wird kontrolliert, um unsere hohen Standards zu erfüllen.",
+    },
+    {
+      num: "5. VERPACKEN & LIEFERN",
+      desc: "Sorgfältig verpackt und schnell geliefert — direkt zu Ihnen.",
+    },
   ],
 };
 
@@ -565,8 +603,6 @@ export const whatYouExpect = {
   ],
 };
 
-
-
 // ─────────────────────────────────────────────
 // PAGE HERO COMPONENT (Reusable)
 // ─────────────────────────────────────────────
@@ -599,7 +635,8 @@ export const homePage = {
 // ─────────────────────────────────────────────
 export const threeDPrintingPage = {
   metadata: {
-    title: "3D-Druckservice Deutschland | Industrielles Prototyping | KYROZZ GmbH",
+    title:
+      "3D-Druckservice Deutschland | Industrielles Prototyping | KYROZZ GmbH",
     description:
       "Industrieller 3D-Druck für schnelle Prototypen in echten Konstruktionsmaterialien. ABS, PLA, Aluminium und mehr. Vom CAD zum Teil in wenigen Tagen.",
   },
@@ -634,17 +671,45 @@ export const threeDPrintingPage = {
     ctaSecondary: "KONTAKT",
   },
   reasons: [
-    { title: "Hohe Präzision", desc: "Komplexe Geometrien mit feinen Details und engen Toleranzen." },
-    { title: "Schnelle Lieferung", desc: "Rapid Prototyping und schnelle Produktion für Ihre Zeitpläne." },
-    { title: "Designfreiheit", desc: "Kein Werkzeug erforderlich — bringen Sie Ihre Ideen ohne Einschränkungen zum Leben." },
-    { title: "Mehrere Materialien", desc: "Breites Spektrum an technischen Kunststoffen für jede Anwendung." },
-    { title: "Zuverlässige Qualität", desc: "Konsistente, langlebige und hochwertige Bauteile, denen Sie vertrauen können." },
+    {
+      title: "Hohe Präzision",
+      desc: "Komplexe Geometrien mit feinen Details und engen Toleranzen.",
+    },
+    {
+      title: "Schnelle Lieferung",
+      desc: "Rapid Prototyping und schnelle Produktion für Ihre Zeitpläne.",
+    },
+    {
+      title: "Designfreiheit",
+      desc: "Kein Werkzeug erforderlich — bringen Sie Ihre Ideen ohne Einschränkungen zum Leben.",
+    },
+    {
+      title: "Mehrere Materialien",
+      desc: "Breites Spektrum an technischen Kunststoffen für jede Anwendung.",
+    },
+    {
+      title: "Zuverlässige Qualität",
+      desc: "Konsistente, langlebige und hochwertige Bauteile, denen Sie vertrauen können.",
+    },
   ],
-  materials: ["ABS", "PC", "PLA", "Nylon (PA)", "PETG", "TPU", "ASA", "Und mehr"],
+  materials: [
+    "ABS",
+    "PC",
+    "PLA",
+    "Nylon (PA)",
+    "PETG",
+    "TPU",
+    "ASA",
+    "Und mehr",
+  ],
   fdmSection: {
     heading: "FDM-Druck",
     body: "Fused Deposition Modeling (FDM) ist ideal für funktionale Prototypen und Produktionsteile mit Langlebigkeit und Kosteneffizienz.",
-    features: ["Robuste & langlebige Teile", "Breites Materialspektrum", "Kosteneffiziente Lösungen"],
+    features: [
+      "Robuste & langlebige Teile",
+      "Breites Materialspektrum",
+      "Kosteneffiziente Lösungen",
+    ],
     materialsHeading: "Materialien, mit denen wir arbeiten",
   },
   applications: [
@@ -732,16 +797,37 @@ export const injectionMoldingPage = {
   onePartner: {
     heading1: "Wir sind das Vermächtnis der",
     heading2: "Präzisionsfertigung.",
-    body1: "Formen von Hochleistungskomponenten durch Spritzguss und CNC-Bearbeitung.",
+    body1:
+      "Formen von Hochleistungskomponenten durch Spritzguss und CNC-Bearbeitung.",
     body2: "Wir fertigen mehr als nur Teile;",
     body3: "wir bauen dauerhafte Partnerschaften auf.",
   },
   processSteps: [
-    { num: "1", title: "IHRE ANFRAGE", desc: "Sie senden uns Ihre\nAnforderungen" },
-    { num: "2", title: "PROJEKTPRÜFUNG", desc: "Wir analysieren &\nliefern die beste Lösung" },
-    { num: "3", title: "PARTNERAUSWAHL", desc: "Wir wählen den richtigen\nFertigungspartner" },
-    { num: "4", title: "PRODUKTION & QK", desc: "Produktion mit strenger\nQualitätskontrolle" },
-    { num: "5", title: "LIEFERUNG", desc: "Pünktliche Lieferung an\nIhren Standort" },
+    {
+      num: "1",
+      title: "IHRE ANFRAGE",
+      desc: "Sie senden uns Ihre\nAnforderungen",
+    },
+    {
+      num: "2",
+      title: "PROJEKTPRÜFUNG",
+      desc: "Wir analysieren &\nliefern die beste Lösung",
+    },
+    {
+      num: "3",
+      title: "PARTNERAUSWAHL",
+      desc: "Wir wählen den richtigen\nFertigungspartner",
+    },
+    {
+      num: "4",
+      title: "PRODUKTION & QK",
+      desc: "Produktion mit strenger\nQualitätskontrolle",
+    },
+    {
+      num: "5",
+      title: "LIEFERUNG",
+      desc: "Pünktliche Lieferung an\nIhren Standort",
+    },
   ],
 };
 
@@ -781,20 +867,48 @@ export const aboutPage = {
     badge: "Warum KYROZZ",
     heading: "7 Gründe, warum Unternehmen KYROZZ wählen",
     reasons: [
-      { title: "Deutsches Projektmanagement", desc: "Ihr einziger Ansprechpartner in Deutschland, der alles koordiniert." },
-      { title: "Globales Fertigungsnetzwerk", desc: "20+ geprüfte Partner weltweit, die europäische Qualitätsstandards erfüllen." },
-      { title: "End-to-End-Service", desc: "Von der DFM-Prüfung über Produktion, QK bis zur Lieferung — wir übernehmen alles." },
-      { title: "Schnelle Lieferung", desc: "Prototypen in 2 Wochen, Angebote innerhalb von 24 Stunden." },
-      { title: "Wettbewerbsfähige Preise", desc: "Globale Fertigungskosteneinsparungen mit deutschem Qualitätsmanagement." },
-      { title: "Qualitätsgarantie", desc: "100% Inspektion und europäische Qualitätsstandards bei jeder Bestellung." },
-      { title: "Transparente Kommunikation", desc: "Regelmäßige Updates, englisch- und deutschsprachiger Support, keine Überraschungen." },
+      {
+        title: "Deutsches Projektmanagement",
+        desc: "Ihr einziger Ansprechpartner in Deutschland, der alles koordiniert.",
+      },
+      {
+        title: "Globales Fertigungsnetzwerk",
+        desc: "20+ geprüfte Partner weltweit, die europäische Qualitätsstandards erfüllen.",
+      },
+      {
+        title: "End-to-End-Service",
+        desc: "Von der DFM-Prüfung über Produktion, QK bis zur Lieferung — wir übernehmen alles.",
+      },
+      {
+        title: "Schnelle Lieferung",
+        desc: "Prototypen in 2 Wochen, Angebote innerhalb von 24 Stunden.",
+      },
+      {
+        title: "Wettbewerbsfähige Preise",
+        desc: "Globale Fertigungskosteneinsparungen mit deutschem Qualitätsmanagement.",
+      },
+      {
+        title: "Qualitätsgarantie",
+        desc: "100% Inspektion und europäische Qualitätsstandards bei jeder Bestellung.",
+      },
+      {
+        title: "Transparente Kommunikation",
+        desc: "Regelmäßige Updates, englisch- und deutschsprachiger Support, keine Überraschungen.",
+      },
     ],
   },
   globalNetwork: {
     badge: "Globales Netzwerk",
     heading: "Ein globales Fertigungsnetzwerk",
     body: "Unsere Fertigungspartner befinden sich in Europa, Asien und darüber hinaus — jeder geprüft und zugelassen von unserem deutschen Qualitätsteam.",
-    countries: ["China", "Vietnam", "Deutschland", "Tschechische Republik", "Polen", "Türkei"],
+    countries: [
+      "China",
+      "Vietnam",
+      "Deutschland",
+      "Tschechische Republik",
+      "Polen",
+      "Türkei",
+    ],
   },
   cta: {
     title: "Arbeiten Sie mit einem Partner, dem Sie vertrauen können",
@@ -812,7 +926,8 @@ export const contactPage = {
     badge: "Kontakt",
     headingLine1: "Lassen Sie uns über Ihr",
     headingLine2: "Projekt sprechen",
-    description: "Senden Sie uns Ihre Anforderungen und wir antworten innerhalb von 24 Geschäftsstunden.",
+    description:
+      "Senden Sie uns Ihre Anforderungen und wir antworten innerhalb von 24 Geschäftsstunden.",
   },
 };
 
@@ -826,7 +941,8 @@ export const injectionMoldingFAQs = [
       "KYROZZ arbeitet mit Projekten ab Prototypenmengen (ab 50–100 Teile) bis hin zu Millionen von Einheiten. Unsere Mindestbestellung hängt von der Teilekomplexität und den Werkzeugkosten ab. Wir empfehlen, uns mit Ihren Projektdetails zu kontaktieren, für eine genaue Einschätzung.",
   },
   {
-    question: "Wie lange dauert es, ein Prototypen-Spritzgusswerkzeug zu erhalten?",
+    question:
+      "Wie lange dauert es, ein Prototypen-Spritzgusswerkzeug zu erhalten?",
     answer:
       "Rapid-Prototypen-Werkzeuge dauern in der Regel 2–4 Wochen, je nach Teilekomplexität. Produktionsqualitätswerkzeuge aus Stahl dauern 4–8 Wochen. Für dringende Projekte können wir Zeitpläne beschleunigen. Nach Fertigstellung des Werkzeugs werden Musterteile innerhalb von 1–2 Wochen zur Prüfung zugesandt.",
   },
@@ -836,7 +952,8 @@ export const injectionMoldingFAQs = [
       "Alle Teile werden nach europäischen Qualitätsstandards mit 100% Maßprüfung hergestellt. Wir führen Schmelzflusstests, Falltests, Stapelbelastungstests, Dichtigkeitstests und Wandstärkenprüfungen durch. Kritische Teile können zur externen IIP-Zertifizierungsprüfung eingesandt werden.",
   },
   {
-    question: "Können Sie sowohl Prototyping als auch Massenproduktion übernehmen?",
+    question:
+      "Können Sie sowohl Prototyping als auch Massenproduktion übernehmen?",
     answer:
       "Ja. KYROZZ verwaltet den gesamten Produktlebenszyklus — von der ersten Designberatung und DFM-Prüfung über Prototypen-Werkzeuge, Bemusterung, Produktionshochlauf bis zur Massenproduktion. Ihr Projektmanager in Deutschland koordiniert alles mit unseren geprüften globalen Fertigungspartnern.",
   },
@@ -856,7 +973,8 @@ export const industries = [
     name: "Automobilindustrie",
     icon: "🚗",
     h1: "Automobil-Kunststoffteile — Präzision unter Druck",
-    description: "Enge Toleranzen, hitzebeständige Materialien und null Defekte für die Automobilzulieferkette.",
+    description:
+      "Enge Toleranzen, hitzebeständige Materialien und null Defekte für die Automobilzulieferkette.",
     keyAngle: "Enge Toleranzen, Hitzebeständigkeit",
     painPoints: [
       "Strenge Maßtoleranzen",
@@ -876,7 +994,8 @@ export const industries = [
     name: "Elektrotechnik",
     icon: "⚡",
     h1: "Elektrische Gehäuse & Umhausungen — Spritzgegossen",
-    description: "UL-geprüfte Materialien, IP-geprüfte Gehäuse und präzise Passform für elektrische und elektronische Komponenten.",
+    description:
+      "UL-geprüfte Materialien, IP-geprüfte Gehäuse und präzise Passform für elektrische und elektronische Komponenten.",
     keyAngle: "UL-geprüfte Materialien, IP-Schutzarten",
     painPoints: [
       "Entflammbarkeit und UL-Schutzklasse-Anforderungen",
@@ -896,7 +1015,8 @@ export const industries = [
     name: "Medizintechnik",
     icon: "🏥",
     h1: "Medizinische Kunststoffkomponenten in Lebensmittelqualität",
-    description: "ISO-Reinraumproduktion, biokompatible Materialien und vollständige Rückverfolgbarkeit für Medizinprodukte.",
+    description:
+      "ISO-Reinraumproduktion, biokompatible Materialien und vollständige Rückverfolgbarkeit für Medizinprodukte.",
     keyAngle: "ISO-Reinraum, biokompatible Materialien",
     painPoints: [
       "Biokompatibilität und FDA/CE-Konformität",
@@ -916,7 +1036,8 @@ export const industries = [
     name: "Konsumgüter",
     icon: "🛍️",
     h1: "Spritzguss für Konsumgüter",
-    description: "Schnelle Markteinführung, Designflexibilität und wettbewerbsfähige Stückkosten für Konsumgütermarken.",
+    description:
+      "Schnelle Markteinführung, Designflexibilität und wettbewerbsfähige Stückkosten für Konsumgütermarken.",
     keyAngle: "Schnelle Markteinführung, Designflexibilität",
     painPoints: [
       "Kurzer Zeitdruck bis zur Markteinführung",
@@ -940,7 +1061,8 @@ export const materials = [
   {
     name: "Polypropylen",
     shortName: "PP",
-    properties: "Leichtgewichtig, chemikalienbeständig, gute Ermüdungsbeständigkeit",
+    properties:
+      "Leichtgewichtig, chemikalienbeständig, gute Ermüdungsbeständigkeit",
     typicalUse: "Filtergehäuse, Verpackungen, Automobilteile",
     tempRange: "-10°C bis 130°C",
     costLevel: "Niedrig" as const,
@@ -985,7 +1107,8 @@ export const materials = [
   {
     name: "Polyethylen hoher Dichte",
     shortName: "HDPE",
-    properties: "Chemikalienbeständig, lebensmittelsicher, flexibel bei niedrigen Temperaturen",
+    properties:
+      "Chemikalienbeständig, lebensmittelsicher, flexibel bei niedrigen Temperaturen",
     typicalUse: "Behälter, Rohre, Lebensmittelkontaktanwendungen",
     tempRange: "-50°C bis 90°C",
     costLevel: "Niedrig" as const,
@@ -1011,7 +1134,8 @@ export const products = [
     slug: "pp-filter-housing-10",
     name: 'PP-Filtergehäuse 10"',
     category: "water-filtration" as const,
-    description: "Standard 10-Zoll Polypropylen-Filtergehäuse für Wasserfilteranlagen in Privathaushalten und leichter Gewerbenutzung.",
+    description:
+      "Standard 10-Zoll Polypropylen-Filtergehäuse für Wasserfilteranlagen in Privathaushalten und leichter Gewerbenutzung.",
     material: "Polypropylen (PP)",
     image: "/images/products/filter-housing.png",
   },
@@ -1020,7 +1144,8 @@ export const products = [
     slug: "pp-filter-housing-20",
     name: 'PP-Filtergehäuse 20"',
     category: "water-filtration" as const,
-    description: "Robustes 20-Zoll Filtergehäuse für gewerbliche und industrielle Wasseraufbereitungsanwendungen.",
+    description:
+      "Robustes 20-Zoll Filtergehäuse für gewerbliche und industrielle Wasseraufbereitungsanwendungen.",
     material: "Polypropylen (PP)",
     image: "/images/products/filter-housing-20.png",
   },
@@ -1029,7 +1154,8 @@ export const products = [
     slug: "twin-filter-housing",
     name: "Doppel-PP-Filtergehäuse",
     category: "water-filtration" as const,
-    description: "Zweistufiges Filtergehäuse für verbesserte Wasserreinigung mit zwei Kartuschenplätzen.",
+    description:
+      "Zweistufiges Filtergehäuse für verbesserte Wasserreinigung mit zwei Kartuschenplätzen.",
     material: "Polypropylen (PP)",
     image: "/images/products/twin-housing.png",
   },
@@ -1038,7 +1164,8 @@ export const products = [
     slug: "centrifugal-pump-body",
     name: "Kreiselpumpengehäuse",
     category: "pump-components" as const,
-    description: "Präzisionsgefertigtes Kreiselpumpengehäuse für Wasserumwälzsysteme, chemikalienbeständig.",
+    description:
+      "Präzisionsgefertigtes Kreiselpumpengehäuse für Wasserumwälzsysteme, chemikalienbeständig.",
     material: "PA66 (Nylon)",
     image: "/images/products/pump-body.png",
   },
@@ -1047,7 +1174,8 @@ export const products = [
     slug: "pump-impeller",
     name: "Pumpenflügelrad",
     category: "pump-components" as const,
-    description: "Hocheffizientes spritzgegossenes Flügelrad für Kreiselpumpen, ausgewuchtet für minimale Vibration.",
+    description:
+      "Hocheffizientes spritzgegossenes Flügelrad für Kreiselpumpen, ausgewuchtet für minimale Vibration.",
     material: "PPO (Noryl)",
     image: "/images/products/impeller.png",
   },
@@ -1056,7 +1184,8 @@ export const products = [
     slug: "sediment-filter-cartridge",
     name: "Sedimentfilterkartusche",
     category: "filter-media" as const,
-    description: "5-Mikron-Sedimentfilterkartusche zur Vorfilterung von Wassersystemen.",
+    description:
+      "5-Mikron-Sedimentfilterkartusche zur Vorfilterung von Wassersystemen.",
     material: "Polypropylen (PP)",
     image: "/images/products/sediment-filter.png",
   },
@@ -1065,7 +1194,8 @@ export const products = [
     slug: "carbon-block-cartridge",
     name: "Aktivkohleblock-Kartusche",
     category: "filter-media" as const,
-    description: "Aktivkohleblock-Kartusche zur Reduktion von Chlor, Geschmack und Geruch.",
+    description:
+      "Aktivkohleblock-Kartusche zur Reduktion von Chlor, Geschmack und Geruch.",
     material: "Aktivkohle / PP",
     image: "/images/products/carbon-block.png",
   },
@@ -1074,7 +1204,8 @@ export const products = [
     slug: "pp-granules-injection",
     name: "PP-Granulat (Spritzgussqualität)",
     category: "raw-materials" as const,
-    description: "Lebensmittelechtes Polypropylen-Granulat, optimiert für Spritzgussanwendungen.",
+    description:
+      "Lebensmittelechtes Polypropylen-Granulat, optimiert für Spritzgussanwendungen.",
     material: "Polypropylen (PP)",
     image: "/images/products/pp-granules.png",
   },
@@ -1094,25 +1225,42 @@ export const productCategories = [
 export const materialsPage = {
   metadata: {
     title: "Spritzguss-Materialien | PP, ABS, PA, POM | KYROZZ GmbH",
-    description: "Vollständiger Leitfaden zu Spritzgussmaterialien. PP, ABS, PA66, POM, PC, HDPE, TPE für Ihre Anwendung vergleichen. Materialauswahl-Hilfe von KYROZZ-Ingenieuren.",
+    description:
+      "Vollständiger Leitfaden zu Spritzgussmaterialien. PP, ABS, PA66, POM, PC, HDPE, TPE für Ihre Anwendung vergleichen. Materialauswahl-Hilfe von KYROZZ-Ingenieuren.",
   },
   hero: {
     label: "Materialien-Leitfaden",
     title: "Welches Kunststoffmaterial ist das richtige für Ihr Bauteil?",
-    description: "Materialfachkenntnisse, die sicherstellen, dass Ihre Bauteile in ihrer vorgesehenen Umgebung funktionieren.",
+    description:
+      "Materialfachkenntnisse, die sicherstellen, dass Ihre Bauteile in ihrer vorgesehenen Umgebung funktionieren.",
   },
   table: {
     label: "Vergleich",
     title: "Materialvergleichstabelle",
-    headers: ["Material", "Eigenschaften", "Typische Anwendung", "Temperaturbereich", "Kosten"],
+    headers: [
+      "Material",
+      "Eigenschaften",
+      "Typische Anwendung",
+      "Temperaturbereich",
+      "Kosten",
+    ],
   },
   selection: {
     label: "Auswahlhilfe",
     title: "Wie wählen Sie das richtige Material?",
     items: [
-      { q: "Hat das Teil Kontakt zu Lebensmitteln oder Trinkwasser?", a: "PP, HDPE oder PETG (lebensmittelechte Qualitäten)" },
-      { q: "Muss das Teil Temperaturen >100°C standhalten?", a: "PA66, PC oder PPS" },
-      { q: "Ist Flexibilität oder Gummigefühl erforderlich?", a: "TPE oder TPU" },
+      {
+        q: "Hat das Teil Kontakt zu Lebensmitteln oder Trinkwasser?",
+        a: "PP, HDPE oder PETG (lebensmittelechte Qualitäten)",
+      },
+      {
+        q: "Muss das Teil Temperaturen >100°C standhalten?",
+        a: "PA66, PC oder PPS",
+      },
+      {
+        q: "Ist Flexibilität oder Gummigefühl erforderlich?",
+        a: "TPE oder TPU",
+      },
       { q: "Ist Formstabilität kritisch?", a: "POM oder PA66+GF" },
       { q: "Ist optische Klarheit erforderlich?", a: "PC oder PMMA" },
     ],
@@ -1120,7 +1268,8 @@ export const materialsPage = {
   sustainability: {
     label: "Nachhaltigkeit",
     title: "Nachhaltige Materialoptionen",
-    description: "KYROZZ unterstützt nachhaltige Fertigung mit bio-basierten und recycelten Materialoptionen für geeignete Anwendungen.",
+    description:
+      "KYROZZ unterstützt nachhaltige Fertigung mit bio-basierten und recycelten Materialoptionen für geeignete Anwendungen.",
     bullets: [
       "Bio-basierte PLA- und PHA-Optionen",
       "Post-Consumer-Recycling (PCR) PP und HDPE",
@@ -1128,13 +1277,15 @@ export const materialsPage = {
       "Halogenfreie Formulierungen verfügbar",
       "Vollständige Materialdaten und Konformitätsdokumente",
     ],
-    notSure: "Unsicher, welches Material? Unsere Ingenieure prüfen Ihre Anwendung und empfehlen das optimale Material für Leistung und Kosten.",
+    notSure:
+      "Unsicher, welches Material? Unsere Ingenieure prüfen Ihre Anwendung und empfehlen das optimale Material für Leistung und Kosten.",
   },
   bottomCTA: {
     title: "Unsicher, welches Material?",
-    description: "Fragen Sie unsere Ingenieure — kostenlose Materialberatung bei jeder Angebotsanfrage.",
+    description:
+      "Fragen Sie unsere Ingenieure — kostenlose Materialberatung bei jeder Angebotsanfrage.",
     cta: "Unsere Ingenieure fragen",
-  }
+  },
 };
 
 // ─────────────────────────────────────────────
@@ -1145,13 +1296,15 @@ export const productsPage = {
     badge: "Produktkatalog",
     title: "Spritzguss-Produkte",
     titleHighlight: "— Standard & Individuell",
-    description: "Durchsuchen Sie unsere hergestellten Produkte oder fordern Sie ein individuelles Bauteil für Ihre Anwendung an.",
+    description:
+      "Durchsuchen Sie unsere hergestellten Produkte oder fordern Sie ein individuelles Bauteil für Ihre Anwendung an.",
   },
   enquire: "Anfragen",
   noProducts: "Keine Produkte in dieser Kategorie gefunden.",
   subCTA: {
     title: "Nicht das Richtige gefunden?",
-    description: "Wir fertigen individuelle Spritzgussteile nach Ihren Spezifikationen. Teilen Sie uns Ihre Anforderungen mit.",
+    description:
+      "Wir fertigen individuelle Spritzgussteile nach Ihren Spezifikationen. Teilen Sie uns Ihre Anforderungen mit.",
     primaryText: "Individuelles Teil anfragen",
-  }
+  },
 };

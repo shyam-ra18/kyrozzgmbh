@@ -56,7 +56,7 @@ export default async function IndustryPage({ params }: Props) {
           <div className="section-label">{industry.name}</div>
           <h1 style={{ color: "white", maxWidth: 720, marginBottom: "var(--space-lg)" }}>{industry.h1}</h1>
           <p style={{ fontSize: 18, color: "rgba(255,255,255,0.65)", maxWidth: 560, marginBottom: "var(--space-2xl)" }}>{industry.description}</p>
-          <Link href="/quote" className="btn btn-primary btn-lg">{textCTABtn} →</Link>
+          <Link href="/contact" className="btn btn-primary btn-lg">{textCTABtn} →</Link>
         </div>
       </section>
 
@@ -91,7 +91,7 @@ export default async function IndustryPage({ params }: Props) {
         <div className="container" style={{ textAlign: "center" }}>
           <h2 style={{ color: "white", marginBottom: "var(--space-md)" }}>{textCTAHeading}</h2>
           <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "var(--space-xl)" }}>{textCTASub}</p>
-          <Link href="/quote" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 36px", background: "white", color: "var(--c-primary)", borderRadius: 10, fontWeight: 700, fontSize: 16, textDecoration: "none" }}>
+          <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 36px", background: "white", color: "var(--c-primary)", borderRadius: 10, fontWeight: 700, fontSize: 16, textDecoration: "none" }}>
             {textCTABtn} →
           </Link>
         </div>

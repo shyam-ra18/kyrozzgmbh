@@ -24,7 +24,7 @@ export default function AssemblyServicesPage() {
         title={<>Complete Assembly Services &mdash; <span className="text-blue-500">Beyond Just Injection Molding</span></>}
         description="We don't just mold parts. We build finished products ready for your customer. Assembly, testing, and packaging in one place."
       >
-        <Link href="/quote" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
+        <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
           Start Your Project <ArrowRight className="w-4 h-4" />
         </Link>
       </PageHero>
@@ -104,7 +104,7 @@ export default function AssemblyServicesPage() {
       <SubCTA 
         title="Ready to Simplify Your Supply Chain?"
         description="Get a quote for assembly services — we handle manufacturing, assembly, and delivery in one."
-        primaryHref="/quote"
+        primaryHref="/contact"
         primaryText="Get Assembly Quote"
         secondaryHref="/contact"
         secondaryText="Talk to our Engineering Team"

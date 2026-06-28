@@ -119,7 +119,7 @@ export default async function MaterialsPage() {
         <div className="container" style={{ textAlign: "center" }}>
           <h2 style={{ color: "white", marginBottom: "var(--space-md)" }}>{materialsPage.bottomCTA.title}</h2>
           <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "var(--space-xl)" }}>{materialsPage.bottomCTA.description}</p>
-          <Link href="/quote" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 36px", background: "white", color: "var(--c-primary)", borderRadius: 10, fontWeight: 700, fontSize: 16, textDecoration: "none" }}>
+          <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 36px", background: "white", color: "var(--c-primary)", borderRadius: 10, fontWeight: 700, fontSize: 16, textDecoration: "none" }}>
             {materialsPage.bottomCTA.cta} →
           </Link>
         </div>

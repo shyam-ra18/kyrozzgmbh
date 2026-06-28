@@ -50,18 +50,32 @@ export default function Footer({ locale }: { locale: string }) {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-x-6 gap-y-2 text-xs text-slate-500 lg:justify-end">
-            <div className="flex items-center gap-2">
+            <a
+              href="https://maps.google.com/?q=Poschingerstraße+33,+94469+Deggendorf,+Germany"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-blue-400 transition-colors"
+            >
               <MapPin className="w-3.5 h-3.5 text-blue-500" />
               {footer.location}
-            </div>
-            <div className="flex items-center gap-2">
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=info@kyrozz.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-blue-400 transition-colors"
+            >
               <Mail className="w-3.5 h-3.5 text-blue-500" />
               info@kyrozz.com
-            </div>
-            <div className="flex items-center gap-2">
+            </a>
+            <a href="tel:+4915758906010" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
               <Phone className="w-3.5 h-3.5 text-blue-500" />
-              +91 95123 60862
-            </div>
+              🇩🇪 +49 157 5890 6010
+            </a>
+            <a href="tel:+919512360862" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
+              <Phone className="w-3.5 h-3.5 text-blue-500" />
+              🇮🇳 +91 95123 60862
+            </a>
           </div>
         </div>
 
@@ -92,6 +106,7 @@ export default function Footer({ locale }: { locale: string }) {
             "description": "Deutsches Spritzguss- und Kunststofffertigungsunternehmen",
             "url": "https://kyrozz.com",
             "email": "info@kyrozz.com",
+            "telephone": ["+4915758906010", "+919512360862"],
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "DE",

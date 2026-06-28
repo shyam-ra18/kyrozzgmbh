@@ -17,7 +17,7 @@ export default function MassProductionPage() {
         title={<>High-Volume Injection Molding with <span className="text-blue-500">European Standards</span></>}
         description="Scale to millions of parts. Zero compromise on quality. German oversight at every step."
       >
-        <Link href="/quote" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
+        <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
           Get Volume Quote <ArrowRight className="w-4 h-4" />
         </Link>
       </PageHero>
@@ -79,7 +79,7 @@ export default function MassProductionPage() {
       <SubCTA 
         title="Request a Volume Quote"
         description="Tell us your annual volume and part specifications — we respond within 24 hours with competitive pricing."
-        primaryHref="/quote"
+        primaryHref="/contact"
         primaryText="Get Volume Quote"
         secondaryHref="/contact"
         secondaryText="Talk to a Sourcing Expert"

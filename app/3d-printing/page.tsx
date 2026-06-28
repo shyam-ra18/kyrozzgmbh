@@ -97,7 +97,7 @@ export default async function ThreeDPrintingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/quote"
+                href="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide"
               >
                 {threeDPrintingPage.hero.ctaPrimary} <ArrowRight className="w-4 h-4" />
@@ -258,7 +258,7 @@ export default async function ThreeDPrintingPage() {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  href="/quote"
+                  href="/contact"
                   className="flex items-center justify-center gap-1.5 px-6 py-2.5 bg-blue-600 text-white rounded font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-[11px] tracking-wide w-fit"
                 >
                   {threeDPrintingPage.cta.ctaPrimary} <ArrowRight className="w-3 h-3" />
