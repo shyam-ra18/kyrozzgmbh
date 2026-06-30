@@ -1270,3 +1270,27 @@ export const productsPage = {
     primaryText: "Request Custom Part",
   },
 };
+
+// ─────────────────────────────────────────────
+// COOKIE CONSENT
+// ─────────────────────────────────────────────
+export const cookieConsent = {
+  badge: "🍪 Cookie Notice",
+  title: "We Value Your Privacy",
+  description:
+    "We use cookies to ensure this website works properly. When you submit our contact form, we collect the following data to process your inquiry:",
+  dataPoints: [
+    { label: "Name & Company", detail: "To address you correctly and understand your business context." },
+    { label: "Email Address", detail: "To respond to your inquiry and send project updates." },
+    { label: "Project Description", detail: "To understand your manufacturing requirements." },
+    { label: "Uploaded Files (3D models, videos)", detail: "To evaluate your design for production feasibility." },
+  ],
+  purpose:
+    "All data is processed in accordance with the EU General Data Protection Regulation (GDPR / DSGVO). Your data is used solely for processing your request and will not be shared with third parties without your consent.",
+  provider: "Form provided by JotForm Inc. — governed by their Privacy Policy.",
+  acceptAll: "Accept All",
+  acceptNecessary: "Necessary Only",
+  learnMore: "Privacy Policy",
+  learnMoreHref: "/privacy",
+};
+

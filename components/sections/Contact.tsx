@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { UploadCloud, CheckCircle2 } from 'lucide-react';
 import { Button } from '../ui/Button';
@@ -10,11 +10,25 @@ export function ContactSection() {
   const [form, setForm] = useState({ name: '', company: '', email: '', message: '' });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Auto-resize iframe based on JotForm postMessage events
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (typeof event.data !== 'string') return;
+      const args = event.data.split(':');
+      if (args.length < 2) return;
+      if (args[0] === 'setHeight' && iframeRef.current) {
+        iframeRef.current.style.height = `${parseInt(args[1]) + 30}px`;
+      }
+    };
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors: Record<string, string> = {};
-
     if (!form.name.trim()) newErrors.name = contactSection.errors.name;
     if (!form.email.trim()) {
       newErrors.email = contactSection.errors.emailRequired;
@@ -22,15 +36,12 @@ export function ContactSection() {
       newErrors.email = contactSection.errors.emailInvalid;
     }
     if (!form.message.trim()) newErrors.message = contactSection.errors.message;
-
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
-
     setErrors({});
     setSubmitted(true);
-    // Add API logic here for real submission
   };
 
   return (
@@ -47,6 +58,23 @@ export function ContactSection() {
           <p className="text-slate-500 font-light leading-relaxed max-w-2xl mx-auto mb-10">{contactSection.subheading}</p>
         </div>
 
+        {/* JotForm Embed */}
+        <div className="bg-transparent">
+          <iframe
+            ref={iframeRef}
+            id="JotFormIFrame-261803746797471"
+            title="Online Video Upload Form"
+            allowtransparency={true}
+            allow="geolocation; microphone; camera; fullsc`reen; payment"
+            src="https://form.jotform.com/261803746797471"
+            frameBorder="0"
+            style={{ width: '100%', height: '900px', border: 'none', background: 'transparent', display: 'block' }}
+            scrolling="no"
+          />
+        </div>
+
+        {/*
+        ORIGINAL FORM (commented out, kept for reference)
         <div className="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
           {submitted ? (
             <div className="p-16 text-center">
@@ -64,51 +92,32 @@ export function ContactSection() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.name}</label>
-                      <input
-                        type="text"
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      <input type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
                         className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.name ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`}
-                        placeholder={contactSection.placeholders.name}
-                      />
+                        placeholder={contactSection.placeholders.name} />
                       {errors.name && <p className="text-red-500 text-xs mt-1.5">{errors.name}</p>}
                     </div>
                     <div>
                       <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.company}</label>
-                      <input
-                        type="text"
-                        value={form.company}
-                        onChange={(e) => setForm({ ...form, company: e.target.value })}
+                      <input type="text" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })}
                         className="w-full px-4 py-3 rounded border border-slate-200 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm font-light bg-slate-50"
-                        placeholder={contactSection.placeholders.company}
-                      />
+                        placeholder={contactSection.placeholders.company} />
                     </div>
                   </div>
-
                   <div>
                     <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.email}</label>
-                    <input
-                      type="email"
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
                       className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.email ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`}
-                      placeholder={contactSection.placeholders.email}
-                    />
+                      placeholder={contactSection.placeholders.email} />
                     {errors.email && <p className="text-red-500 text-xs mt-1.5">{errors.email}</p>}
                   </div>
-
                   <div>
                     <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.projectDesc}</label>
-                    <textarea
-                      rows={4}
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    <textarea rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
                       className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.message ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`}
-                      placeholder={contactSection.placeholders.message}
-                    />
+                      placeholder={contactSection.placeholders.message} />
                     {errors.message && <p className="text-red-500 text-xs mt-1.5">{errors.message}</p>}
                   </div>
-
                   <div>
                     <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.files}</label>
                     <div className="flex justify-center px-6 py-8 border-2 border-slate-200 border-dashed rounded bg-slate-50 hover:bg-slate-100 transition-colors cursor-pointer">
@@ -130,6 +139,7 @@ export function ContactSection() {
             </form>
           )}
         </div>
+        */}
       </div>
     </section>
   );

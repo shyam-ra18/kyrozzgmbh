@@ -1308,3 +1308,27 @@ export const productsPage = {
     primaryText: "Individuelles Teil anfragen",
   },
 };
+
+// ─────────────────────────────────────────────
+// COOKIE-EINWILLIGUNG
+// ─────────────────────────────────────────────
+export const cookieConsent = {
+  badge: "🍪 Cookie-Hinweis",
+  title: "Wir schätzen Ihre Privatsphäre",
+  description:
+    "Wir verwenden Cookies, damit diese Website ordnungsgemäß funktioniert. Wenn Sie unser Kontaktformular absenden, erheben wir folgende Daten zur Bearbeitung Ihrer Anfrage:",
+  dataPoints: [
+    { label: "Name & Unternehmen", detail: "Um Sie korrekt anzusprechen und Ihren Unternehmenskontext zu verstehen." },
+    { label: "E-Mail-Adresse", detail: "Um auf Ihre Anfrage zu antworten und Projektupdates zu senden." },
+    { label: "Projektbeschreibung", detail: "Um Ihre Fertigungsanforderungen zu verstehen." },
+    { label: "Hochgeladene Dateien (3D-Modelle, Videos)", detail: "Um Ihr Design auf Produktionstauglichkeit zu prüfen." },
+  ],
+  purpose:
+    "Alle Daten werden gemäß der EU-Datenschutz-Grundverordnung (DSGVO) verarbeitet. Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und ohne Ihre Einwilligung nicht an Dritte weitergegeben.",
+  provider: "Formular bereitgestellt von JotForm Inc. – unterliegt deren Datenschutzrichtlinien.",
+  acceptAll: "Alle akzeptieren",
+  acceptNecessary: "Nur notwendige",
+  learnMore: "Datenschutz",
+  learnMoreHref: "/privacy",
+};
+

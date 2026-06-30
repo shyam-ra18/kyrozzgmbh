@@ -10,6 +10,7 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import SmoothScrolling from "@/components/layout/SmoothScrolling";
 import { routing } from "@/lib/routing";
 import { LocaleProvider } from "@/context/LocaleContext";
+import CookieBanner from "@/components/layout/CookieBanner";
 
 export const metadata: Metadata = {
   title: {
@@ -73,6 +74,7 @@ export default async function RootLayout({
               <main>{children}</main>
               <Footer locale={locale} />
               <FloatingCTA locale={locale} />
+              <CookieBanner />
             </SmoothScrolling>
           </LocaleProvider>
         </NextIntlClientProvider>
