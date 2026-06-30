@@ -64,7 +64,7 @@ export function ContactSection() {
             ref={iframeRef}
             id="JotFormIFrame-261803746797471"
             title="Online Video Upload Form"
-            allowtransparency={true}
+            allowTransparency={true}
             allow="geolocation; microphone; camera; fullsc`reen; payment"
             src="https://form.jotform.com/261803746797471"
             frameBorder="0"
