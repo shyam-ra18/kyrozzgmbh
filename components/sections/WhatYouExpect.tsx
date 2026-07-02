@@ -1,10 +1,11 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HeartHandshake, Award, Zap, ShieldCheck, Coins } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { HandshakeIcon, Award01Icon, ZapIcon, ShieldCheck, CoinsIcon } from '@hugeicons/core-free-icons';
 import { useContent } from '@/context/LocaleContext';
 
-const expectationIcons = [HeartHandshake, Award, Zap, ShieldCheck, Coins];
+const expectationIcons = [HandshakeIcon, Award01Icon, ZapIcon, ShieldCheck, CoinsIcon];
 
 export function WhatYouExpect() {
   const { whatYouExpect } = useContent();
@@ -51,14 +52,14 @@ export function WhatYouExpect() {
                   <div className="flex gap-6 items-center flex-1">
                     {/* Icon Container */}
                     <div className="w-14 h-14 rounded-xl bg-blue-50/50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0 shadow-xs">
-                      <Icon className="w-7 h-7" strokeWidth={1.5} />
+                      <HugeiconsIcon icon={Icon} className="w-7 h-7" strokeWidth={1.5} />
                     </div>
                     
                     <div className="space-y-1.5">
                       <h4 className="font-bold text-slate-800 text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200">
                         {exp.title}
                       </h4>
-                      <p className="text-sm text-slate-500 leading-relaxed max-w-xl font-medium">
+                      <p className="text-base text-slate-500 leading-relaxed max-w-xl font-medium">
                         {exp.desc}
                       </p>
                     </div>

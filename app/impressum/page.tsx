@@ -21,7 +21,7 @@ export default function ImpressumPage() {
           <p>Geschäftsführer: [Name des Geschäftsführers]</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Kontakt</h2>
           <p><strong>Telefon:</strong> +91 95123 60862</p>
-          <p><strong>E-Mail:</strong> info@kyrozz.com</p>
+          <p><strong>E-Mail:</strong> info@kyrozz.de</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Umsatzsteuer-ID</h2>
           <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE XXXXXXXXX</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Haftungsausschluss</h2>

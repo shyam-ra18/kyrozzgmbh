@@ -29,8 +29,8 @@ export default function HomePage() {
       <FeaturedServices />
       <OurMission />
       <IndustriesBento />
-      <TeamSection />
-      <ContactSection />
+      {/* <TeamSection /> */}
+      {/* <ContactSection /> */}
     </div>
   );
 }

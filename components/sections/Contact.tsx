@@ -1,15 +1,12 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { UploadCloud, CheckCircle2 } from 'lucide-react';
-import { Button } from '../ui/Button';
-import { useContent } from '@/context/LocaleContext';
+import React, { useEffect, useRef } from 'react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { MailIcon, CallIcon, MapPinIcon } from '@hugeicons/core-free-icons';
+import { useContent, useLocale } from '@/context/LocaleContext';
 
 export function ContactSection() {
   const { contactSection } = useContent();
-  const [form, setForm] = useState({ name: '', company: '', email: '', message: '' });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const locale = useLocale();
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   // Auto-resize iframe based on JotForm postMessage events
@@ -26,120 +23,108 @@ export function ContactSection() {
     return () => window.removeEventListener('message', handleMessage);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const newErrors: Record<string, string> = {};
-    if (!form.name.trim()) newErrors.name = contactSection.errors.name;
-    if (!form.email.trim()) {
-      newErrors.email = contactSection.errors.emailRequired;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      newErrors.email = contactSection.errors.emailInvalid;
-    }
-    if (!form.message.trim()) newErrors.message = contactSection.errors.message;
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-    setErrors({});
-    setSubmitted(true);
-  };
-
   return (
     <section className="py-16 bg-slate-50 border-t border-slate-100" id="contact">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* Heading Block */}
         <div className="text-center mb-16">
           <div className="inline-block py-1 px-3 bg-blue-50 text-blue-600 text-[10px] font-bold tracking-[0.2em] rounded mb-6 uppercase">
             {contactSection.badge}
           </div>
-          <h2 className="text-4xl md:text-5xl font-sans font-light text-slate-900 mb-6 tracking-tight">
-            {contactSection.heading} <span className="font-bold text-blue-600">{contactSection.headingHighlight}</span>
+          <h2 className="text-3xl md:text-4xl font-sans font-bold text-slate-900 mb-4 tracking-tight">
+            {contactSection.heading} <span className="text-blue-600">{contactSection.headingHighlight}</span>
           </h2>
-          <p className="text-slate-500 font-light leading-relaxed max-w-2xl mx-auto mb-10">{contactSection.subheading}</p>
+          <p className="text-base text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">{contactSection.subheading}</p>
         </div>
 
-        {/* JotForm Embed */}
-        <div className="bg-transparent">
-          <iframe
-            ref={iframeRef}
-            id="JotFormIFrame-261803746797471"
-            title="Online Video Upload Form"
-            allowTransparency={true}
-            allow="geolocation; microphone; camera; fullsc`reen; payment"
-            src="https://form.jotform.com/261803746797471"
-            frameBorder="0"
-            style={{ width: '100%', height: '900px', border: 'none', background: 'transparent', display: 'block' }}
-            scrolling="no"
-          />
-        </div>
-
-        {/*
-        ORIGINAL FORM (commented out, kept for reference)
-        <div className="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
-          {submitted ? (
-            <div className="p-16 text-center">
-              <div className="w-20 h-20 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle2 className="w-10 h-10" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">{contactSection.successTitle}</h3>
-              <p className="text-slate-500">{contactSection.successBody}</p>
-              <Button onClick={() => setSubmitted(false)} className="mt-8 px-8" variant="outline">{contactSection.successBtn}</Button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit}>
-              <div className="p-8 lg:p-12 space-y-12">
-                <div className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.name}</label>
-                      <input type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.name ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`}
-                        placeholder={contactSection.placeholders.name} />
-                      {errors.name && <p className="text-red-500 text-xs mt-1.5">{errors.name}</p>}
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.company}</label>
-                      <input type="text" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })}
-                        className="w-full px-4 py-3 rounded border border-slate-200 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm font-light bg-slate-50"
-                        placeholder={contactSection.placeholders.company} />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.email}</label>
-                    <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.email ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`}
-                      placeholder={contactSection.placeholders.email} />
-                    {errors.email && <p className="text-red-500 text-xs mt-1.5">{errors.email}</p>}
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.projectDesc}</label>
-                    <textarea rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className={`w-full px-4 py-3 rounded border focus:ring-1 outline-none transition-all text-sm font-light bg-slate-50 ${errors.message ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : 'border-slate-200 focus:ring-blue-500 focus:border-blue-500'}`}
-                      placeholder={contactSection.placeholders.message} />
-                    {errors.message && <p className="text-red-500 text-xs mt-1.5">{errors.message}</p>}
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold text-slate-900 uppercase tracking-widest mb-2">{contactSection.labels.files}</label>
-                    <div className="flex justify-center px-6 py-8 border-2 border-slate-200 border-dashed rounded bg-slate-50 hover:bg-slate-100 transition-colors cursor-pointer">
-                      <div className="space-y-2 text-center flex flex-col items-center">
-                        <UploadCloud className="mx-auto h-6 w-6 text-slate-400" />
-                        <div className="text-sm text-slate-600 flex gap-1 items-center justify-center">
-                          <span className="font-bold text-blue-600 hover:text-blue-700">{contactSection.upload.cta}</span>
-                          <span>{contactSection.upload.or}</span>
-                        </div>
-                        <p className="text-[10px] uppercase tracking-widest text-slate-400 mt-1">{contactSection.upload.formats}</p>
-                      </div>
-                    </div>
-                  </div>
+        {/* 2-Column Split Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
+          
+          {/* Left Column: Contact Cards with border labels */}
+          <div className="lg:col-span-5 space-y-9 pt-3">
+            
+            {/* Phone Card */}
+            <div className="border border-slate-200/80 rounded-2xl p-6 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)] relative hover:border-blue-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 group">
+              <span className="absolute -top-3 left-5 px-2.5 py-0.5 bg-white text-[10px] font-extrabold text-blue-600 tracking-wider uppercase border border-slate-200/80 rounded-md">
+                {locale === 'de' ? 'Telefon' : 'Phone'}
+              </span>
+              <div className="flex gap-4 items-center">
+                <div className="w-12 h-12 rounded-xl bg-blue-50/50 border border-blue-100 flex items-center justify-center text-blue-600 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                  <HugeiconsIcon icon={CallIcon} className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-0.5">
+                    {locale === 'de' ? 'Anrufen' : 'Call us'}
+                  </h4>
+                  <a href="tel:+4915758906010" className="text-base sm:text-lg font-bold text-slate-800 hover:text-blue-600 transition-colors block">
+                    🇩🇪 +49 157 5890 6010
+                  </a>
                 </div>
               </div>
-              <div className="bg-slate-50 p-6 sm:px-12 border-t border-slate-200 flex justify-end">
-                <Button type="submit" className="w-full md:w-auto px-12 py-4 rounded shadow-md text-sm">{contactSection.submitBtn}</Button>
+            </div>
+
+            {/* Email Card */}
+            <div className="border border-slate-200/80 rounded-2xl p-6 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)] relative hover:border-blue-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 group">
+              <span className="absolute -top-3 left-5 px-2.5 py-0.5 bg-white text-[10px] font-extrabold text-blue-600 tracking-wider uppercase border border-slate-200/80 rounded-md">
+                {locale === 'de' ? 'E-Mail' : 'Email'}
+              </span>
+              <div className="flex gap-4 items-center">
+                <div className="w-12 h-12 rounded-xl bg-blue-50/50 border border-blue-100 flex items-center justify-center text-blue-600 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                  <HugeiconsIcon icon={MailIcon} className="w-6 h-6" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-0.5">
+                    {locale === 'de' ? 'Schreiben' : 'Write to us'}
+                  </h4>
+                  <a href="https://mail.google.com/mail/?view=cm&to=info@kyrozz.de" target="_blank" rel="noopener noreferrer" className="text-base sm:text-lg font-bold text-slate-800 hover:text-blue-600 transition-colors block truncate">
+                    info@kyrozz.de
+                  </a>
+                </div>
               </div>
-            </form>
-          )}
+            </div>
+
+            {/* Address Card */}
+            <div className="border border-slate-200/80 rounded-2xl p-6 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)] relative hover:border-blue-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 group">
+              <span className="absolute -top-3 left-5 px-2.5 py-0.5 bg-white text-[10px] font-extrabold text-blue-600 tracking-wider uppercase border border-slate-200/80 rounded-md">
+                {locale === 'de' ? 'Adresse' : 'Address'}
+              </span>
+              <div className="flex gap-4 items-start">
+                <div className="w-12 h-12 rounded-xl bg-blue-50/50 border border-blue-100 flex items-center justify-center text-blue-600 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 mt-1">
+                  <HugeiconsIcon icon={MapPinIcon} className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-0.5">
+                    {locale === 'de' ? 'Besuchen' : 'Visit us'}
+                  </h4>
+                  <a href="https://maps.google.com/?q=Poschingerstraße+33,+94469+Deggendorf,+Germany" target="_blank" rel="noopener noreferrer" className="text-base sm:text-lg font-bold text-slate-800 hover:text-blue-600 transition-colors block leading-relaxed">
+                    KYROZZ GmbH<br />
+                    Poschingerstraße 33<br />
+                    94469 Deggendorf, Germany
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Right Column: Contact Form (JotForm) */}
+          <div className="lg:col-span-7 bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-[0_4px_30px_rgba(0,0,0,0.01)] hover:border-blue-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300">
+            <iframe
+              ref={iframeRef}
+              id="JotFormIFrame-261803746797471"
+              title="Online Video Upload Form"
+              allowTransparency={true}
+              allow="geolocation; microphone; camera; fullscreen; payment"
+              src="https://form.jotform.com/261803746797471"
+              frameBorder="0"
+              style={{ width: '100%', height: '800px', border: 'none', background: 'transparent', display: 'block' }}
+              scrolling="no"
+            />
+          </div>
+
         </div>
-        */}
+
       </div>
     </section>
   );

@@ -1,8 +1,10 @@
 "use client";
 import React, { useState, Fragment } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { CheckCircle2, FilePlus2, Settings, Printer, Box, ArrowRight, GraduationCap, Gamepad2, Building2, Wrench } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { CheckmarkCircle01Icon, FileAddIcon, Settings01Icon, PrinterIcon, PackageIcon, ArrowRight01Icon, GraduationCapIcon, Gamepad2Icon, Building02Icon, WrenchIcon } from '@hugeicons/core-free-icons';
 import { useContent } from '@/context/LocaleContext';
 
 export function Ticker() {
@@ -30,16 +32,16 @@ export function Ticker() {
 }
 
 const industryIcons = [
-  <Settings key="s" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
-  <GraduationCap key="g" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
-  <Gamepad2 key="gp" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
-  <Box key="b" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
-  <Building2 key="bu" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
-  <Wrench key="w" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <HugeiconsIcon icon={Settings01Icon} key="s" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <HugeiconsIcon icon={GraduationCapIcon} key="g" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <HugeiconsIcon icon={Gamepad2Icon} key="gp" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <HugeiconsIcon icon={PackageIcon} key="b" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <HugeiconsIcon icon={Building02Icon} key="bu" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
+  <HugeiconsIcon icon={WrenchIcon} key="w" className="w-[22px] h-[22px] text-blue-600 shrink-0" />,
 ];
 
 export function IndustriesBento() {
-  const { industriesBento } = useContent();
+  const { industriesBento, threeDPrintingPage } = useContent();
   return (
     <section id="industries" className="bg-[#F5F7FA] py-16 md:py-20">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -47,9 +49,9 @@ export function IndustriesBento() {
           {industriesBento.heading}
         </h2>
       </div>
-      
+
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-x-3 gap-y-6">
           {industriesBento.industries.map((ind, i) => (
             <motion.div
               key={i}
@@ -58,11 +60,11 @@ export function IndustriesBento() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: i * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="flex flex-col group bg-white rounded-2xl border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-blue-200 transition-all duration-300 overflow-hidden"
+              className="flex flex-col group bg-white rounded-2xl border border-slate-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-blue-300/80 transition-all duration-300 overflow-hidden"
             >
-              <div className="relative w-full aspect-[4/3] bg-slate-100 overflow-hidden">
-                <Image 
-                  src={ind.img} 
+              <div className="relative w-full aspect-[16/13] bg-slate-100 overflow-hidden">
+                <Image
+                  src={ind.img}
                   alt={ind.name}
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -78,7 +80,7 @@ export function IndustriesBento() {
                       {ind.name}
                     </h3>
                   </div>
-                  <p className="text-[14px] text-slate-500 leading-relaxed font-medium">
+                  <p className="text-base text-slate-500 leading-relaxed font-medium">
                     {ind.desc}
                   </p>
                 </div>
@@ -87,6 +89,51 @@ export function IndustriesBento() {
           ))}
         </div>
       </div>
+
+      {/* 5. Bottom CTA Banner */}
+      <section className="py-12">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#0B1523]">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/images/bottom-cta-bg.png"
+                alt="3D-gedruckte Teile"
+                fill
+                className="object-cover object-right lg:object-center"
+              />
+            </div>
+            {/* Gradient Overlay for Text Readability */}
+            <div className="absolute inset-0 z-10 bg-linear-to-r from-[#0B1523] via-[#0B1523]/80 to-transparent" />
+
+            <div className="relative z-20 px-8 py-10 lg:px-12 lg:py-12 max-w-xl">
+              <h2 className="text-2xl md:text-[28px] font-bold text-white mb-3 leading-snug">
+                {threeDPrintingPage.cta.heading1}<br />
+                <span className="text-blue-500">{threeDPrintingPage.cta.heading2}</span>
+              </h2>
+              <p className="text-slate-300 text-base mb-6 max-w-md leading-relaxed">
+                {threeDPrintingPage.cta.body}
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/contact"
+                  className="flex items-center justify-center gap-1.5 px-6 py-2.5 bg-blue-600 text-white rounded font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-[11px] tracking-wide w-fit"
+                >
+                  {threeDPrintingPage.cta.ctaPrimary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-3 h-3" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="flex items-center justify-center gap-1.5 px-6 py-2.5 bg-transparent text-white border border-slate-500 rounded font-bold hover:bg-white/10 hover:border-white transition-colors text-[11px] tracking-wide w-fit"
+                >
+                  {threeDPrintingPage.cta.ctaSecondary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-3 h-3" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </section>
   );
 }
@@ -97,7 +144,7 @@ export function HTMLServices() {
     <section id="services" className="bg-white py-16">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-[#0B1523] mb-14">{htmlSections.services.heading}</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {htmlSections.services.items.map((s, i) => (
             <motion.div
@@ -114,15 +161,15 @@ export function HTMLServices() {
               </div>
               <div className="p-8 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-[#1e3a8a] mb-3 leading-tight transition-colors duration-300 group-hover:text-blue-600">{s.name}</h3>
-                <p className="text-[14px] text-slate-600 mb-8 leading-relaxed flex-1">{s.text}</p>
-                
+                <p className="text-base text-slate-600 mb-8 leading-relaxed flex-1">{s.text}</p>
+
                 <div className="flex flex-col gap-3">
                   {s.features.map((feature, j) => (
                     <div key={j} className="flex items-start gap-3">
                       <svg className="w-4 h-4 text-blue-600 mt-[2px] shrink-0 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-[13px] text-slate-800 font-medium">{feature}</span>
+                      <span className="text-sm sm:text-base text-slate-800 font-medium">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -136,11 +183,11 @@ export function HTMLServices() {
 }
 
 const processIcons = [
-  <FilePlus2 className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
-  <Settings className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
-  <Printer className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
-  <CheckCircle2 className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
-  <Box className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
+  <HugeiconsIcon icon={FileAddIcon} className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
+  <HugeiconsIcon icon={Settings01Icon} className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
+  <HugeiconsIcon icon={PrinterIcon} className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
+  <HugeiconsIcon icon={CheckmarkCircle01Icon} className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
+  <HugeiconsIcon icon={PackageIcon} className="w-10 h-10 text-blue-600 stroke-[1.25]" />,
 ];
 
 export function HTMLProcess() {
@@ -175,7 +222,7 @@ export function HTMLProcess() {
                   {step.num}
                 </h3>
                 {/* Description */}
-                <p className="text-[12px] text-slate-500 leading-relaxed max-w-[220px] font-medium mx-auto">
+                <p className="text-sm sm:text-base text-slate-500 leading-relaxed max-w-[220px] font-medium mx-auto">
                   {step.desc}
                 </p>
               </motion.div>
@@ -183,7 +230,7 @@ export function HTMLProcess() {
               {/* Arrow Indicator between steps */}
               {idx < 4 && (
                 <div className="hidden lg:flex items-center justify-center h-20 text-blue-600">
-                  <ArrowRight className="w-5 h-5 text-blue-600 stroke-[2.5]" />
+                  <HugeiconsIcon icon={ArrowRight01Icon} className="w-5 h-5 text-blue-600 stroke-[2.5]" />
                 </div>
               )}
             </Fragment>
@@ -218,11 +265,11 @@ export function HTMLFAQ() {
           {htmlSections.faq.items.map((f, i) => {
             const isOpen = openIdx === i;
             return (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="bg-white rounded-[24px] p-5 sm:p-7 shadow-[0_4px_20px_rgba(15,23,42,0.02)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(37,99,235,0.05)] hover:border-blue-100"
               >
-                <div 
+                <div
                   onClick={() => setOpenIdx(isOpen ? null : i)}
                   className="flex items-start gap-5 sm:gap-6 cursor-pointer group"
                 >
@@ -235,8 +282,8 @@ export function HTMLFAQ() {
                         {f.q}
                       </h3>
                       <div className="shrink-0 mt-0.5">
-                        <svg 
-                          className={`w-[22px] h-[22px] text-blue-600 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+                        <svg
+                          className={`w-[22px] h-[22px] text-blue-600 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                           fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"
                         >
                           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -244,7 +291,7 @@ export function HTMLFAQ() {
                       </div>
                     </div>
                     <div className={`overflow-hidden transition-[max-height,opacity] duration-400 ease-in-out ${isOpen ? 'max-h-[300px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
-                      <p className="text-[14px] leading-[1.8] text-[#5C6E8A] pr-4">
+                      <p className="text-base leading-[1.8] text-[#5C6E8A] pr-4">
                         {f.a}
                       </p>
                     </div>

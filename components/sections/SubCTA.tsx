@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight, Mail } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowRight01Icon, MailIcon } from '@hugeicons/core-free-icons';
 
 export function SubCTA({ 
   title, 
@@ -24,10 +25,10 @@ export function SubCTA({
         <p className="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">{description}</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href={primaryHref} className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-slate-50 font-bold text-sm rounded-full transition-all shadow-lg hover:-translate-y-0.5 gap-2">
-            {primaryText} <ArrowRight className="w-4 h-4" />
+            {primaryText} <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
           </Link>
           <Link href={secondaryHref} className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-transparent border border-blue-400 text-white hover:bg-blue-700 font-bold text-sm rounded-full transition-all gap-2">
-            <Mail className="w-4 h-4" /> {secondaryText}
+            <HugeiconsIcon icon={MailIcon} className="w-4 h-4" /> {secondaryText}
           </Link>
         </div>
       </div>

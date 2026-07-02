@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Fragment } from "react";
-import { Users, Settings, ShieldCheck, Globe, Truck, MessageSquare, ArrowRight, Check, CheckCircle2, Search, TrendingUp, ClipboardList, Handshake, ChevronRight } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { UserGroupIcon, Settings01Icon, ShieldCheck, GlobeIcon, TruckIcon, MessageSquare, ArrowRight01Icon, CheckIcon, CheckmarkCircle01Icon, SearchIcon, TrendingUp, ClipboardListIcon, HandshakeIcon, ChevronRightIcon } from '@hugeicons/core-free-icons';
 import { cookies } from "next/headers";
 import * as de from "@/content/de";
 import * as en from "@/content/en";
@@ -18,15 +19,15 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const heroIcons = [Users, ShieldCheck, Globe, Truck];
-const whyIcons = [Users, Settings, Search, TrendingUp];
+const heroIcons = [UserGroupIcon, ShieldCheck, GlobeIcon, TruckIcon];
+const whyIcons = [UserGroupIcon, Settings01Icon, SearchIcon, TrendingUp];
 const metricIcons = [
-  <ClipboardList className="w-10 h-10 text-blue-300 stroke-[1.5]" />,
-  <Handshake className="w-10 h-10 text-blue-300 stroke-[1.5]" />,
-  <Globe className="w-10 h-10 text-blue-300 stroke-[1.5]" />,
-  <Check className="w-10 h-10 text-blue-300 stroke-[2.5] border-[2.5px] border-blue-300 rounded-full p-1" />,
+  <HugeiconsIcon icon={ClipboardListIcon} className="w-10 h-10 text-blue-300 stroke-[1.5]" />,
+  <HugeiconsIcon icon={HandshakeIcon} className="w-10 h-10 text-blue-300 stroke-[1.5]" />,
+  <HugeiconsIcon icon={GlobeIcon} className="w-10 h-10 text-blue-300 stroke-[1.5]" />,
+  <HugeiconsIcon icon={CheckIcon} className="w-10 h-10 text-blue-300 stroke-[2.5] border-[2.5px] border-blue-300 rounded-full p-1" />,
 ];
-const processIcons = [MessageSquare, Settings, Users, ShieldCheck, Truck];
+const processIcons = [MessageSquare, Settings01Icon, UserGroupIcon, ShieldCheck, TruckIcon];
 
 export default async function InjectionMoldingPage() {
   const cookieStore = await cookies();
@@ -70,7 +71,7 @@ export default async function InjectionMoldingPage() {
                 return (
                   <div key={idx} className="flex flex-col gap-4">
                     <div className="w-12 h-12 rounded-full border border-blue-500/30 flex items-center justify-center bg-blue-900/40">
-                      <Icon className="w-5 h-5 text-blue-400 stroke-[1.5]" />
+                      <HugeiconsIcon icon={Icon} className="w-5 h-5 text-blue-400 stroke-[1.5]" />
                     </div>
                     <div>
                       <div className="text-[12px] font-bold text-white mb-1.5 leading-snug uppercase tracking-wide whitespace-pre-line">{item.title}</div>
@@ -104,11 +105,11 @@ export default async function InjectionMoldingPage() {
                     return (
                       <div key={idx} className="flex gap-5 group">
                         <div className="w-12 h-12 rounded-xl bg-[#eff6ff] flex items-center justify-center shrink-0 group-hover:bg-[#0a42bf] group-hover:scale-110 group-hover:shadow-[0_4px_12px_rgba(10,66,191,0.2)] transition-all duration-300">
-                          <Icon className="w-6 h-6 text-[#0a42bf] stroke-[1.5] group-hover:text-white transition-colors duration-300" />
+                          <HugeiconsIcon icon={Icon} className="w-6 h-6 text-[#0a42bf] stroke-[1.5] group-hover:text-white transition-colors duration-300" />
                         </div>
                         <div>
                           <h4 className="text-base font-bold text-[#0B1523] mb-1.5 transition-colors duration-300 group-hover:text-[#0a42bf]">{item.title}</h4>
-                          <p className="text-sm text-[#5C6E8A] leading-relaxed font-medium">{item.desc}</p>
+                          <p className="text-base text-[#5C6E8A] leading-relaxed font-medium">{item.desc}</p>
                         </div>
                       </div>
                     );
@@ -125,7 +126,7 @@ export default async function InjectionMoldingPage() {
                 <div className="space-y-4">
                   {injectionMoldingPage.whySection.advantages.map((adv, idx) => (
                     <div key={idx} className="flex items-center gap-3.5 group cursor-default">
-                      <CheckCircle2 className="w-5 h-5 text-[#0a42bf] fill-[#eff6ff] shrink-0 stroke-[2] transition-transform duration-300 group-hover:scale-110" />
+                      <HugeiconsIcon icon={CheckmarkCircle01Icon} className="w-5 h-5 text-[#0a42bf] fill-[#eff6ff] shrink-0 stroke-[2] transition-transform duration-300 group-hover:scale-110" />
                       <span className="text-[15px] font-semibold text-[#334155] transition-colors duration-300 group-hover:text-[#0B1523]">{adv}</span>
                     </div>
                   ))}
@@ -190,7 +191,7 @@ export default async function InjectionMoldingPage() {
                   <div className="flex items-center gap-5 flex-1 w-full lg:w-auto">
                     <div className="shrink-0">
                       <div className="w-[68px] h-[68px] rounded-full border border-slate-200 flex items-center justify-center bg-white shadow-sm hover:shadow-md transition-shadow">
-                        <Icon className="w-6 h-6 text-[#0a42bf] stroke-[1.5]" />
+                        <HugeiconsIcon icon={Icon} className="w-6 h-6 text-[#0a42bf] stroke-[1.5]" />
                       </div>
                     </div>
                     <div className="flex flex-col">
@@ -205,7 +206,7 @@ export default async function InjectionMoldingPage() {
                   {/* Arrow indicator between steps */}
                   {idx < 4 && (
                     <div className="hidden lg:block text-slate-300 mx-2">
-                      <ChevronRight className="w-5 h-5 text-slate-300" />
+                      <HugeiconsIcon icon={ChevronRightIcon} className="w-5 h-5 text-slate-300" />
                     </div>
                   )}
                 </Fragment>

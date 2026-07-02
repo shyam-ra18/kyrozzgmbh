@@ -1,14 +1,15 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Clock, Zap, Layers, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { TargetIcon, Clock01Icon, ZapIcon, LayersIcon, ShieldCheck, CheckmarkCircle01Icon } from '@hugeicons/core-free-icons';
 import { Button } from '../ui/Button';
 
 const features = [
-  { icon: Target, title: 'High Precision', desc: 'Complex geometries with fine details and tight tolerances.' },
-  { icon: Clock, title: 'Fast Turnaround', desc: 'Rapid prototyping and quick production to meet your timelines.' },
-  { icon: Zap, title: 'Design Freedom', desc: 'No tooling required - bring your ideas to life without limitations.' },
-  { icon: Layers, title: 'Multiple Materials', desc: 'Wide range of engineering plastics to suit every application.' },
+  { icon: TargetIcon, title: 'High Precision', desc: 'Complex geometries with fine details and tight tolerances.' },
+  { icon: Clock01Icon, title: 'Fast Turnaround', desc: 'Rapid prototyping and quick production to meet your timelines.' },
+  { icon: ZapIcon, title: 'Design Freedom', desc: 'No tooling required - bring your ideas to life without limitations.' },
+  { icon: LayersIcon, title: 'Multiple Materials', desc: 'Wide range of engineering plastics to suit every application.' },
   { icon: ShieldCheck, title: 'Reliable Quality', desc: 'Consistent, durable, and high-quality components you can trust.' }
 ];
 
@@ -27,7 +28,7 @@ export function PrintFeatures() {
             <p className="text-xl font-light text-slate-900 mb-4">
               Your Professional Partner for High-Quality Production of Plastic Components.
             </p>
-            <p className="text-slate-500 mb-8 leading-relaxed font-light">
+            <p className="text-base text-slate-500 mb-8 leading-relaxed font-light">
               We specialize in 3D printing components, utilizing both FDM and SLA printing processes. We invite you to explore our website to learn more about our company, our services, and how to contact us. We appreciate your visit to our website.
             </p>
             <div className="flex gap-4">
@@ -58,10 +59,10 @@ export function PrintFeatures() {
               className="flex flex-col items-center"
             >
               <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-6">
-                <f.icon className="w-8 h-8 text-blue-600" />
+                <HugeiconsIcon icon={f.icon} className="w-8 h-8 text-blue-600" />
               </div>
               <h4 className="font-bold text-slate-900 mb-3 text-sm tracking-wide">{f.title}</h4>
-              <p className="text-sm text-slate-500 font-light max-w-[200px] leading-relaxed">{f.desc}</p>
+              <p className="text-sm sm:text-base text-slate-500 font-light max-w-[200px] leading-relaxed">{f.desc}</p>
             </motion.div>
           ))}
         </div>

@@ -1,12 +1,13 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Hexagon, Coins, Timer, Leaf, ShieldCheck, Check, ArrowRight } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { HexagonIcon, CoinsIcon, TimerIcon, LeafIcon, ShieldCheck, CheckIcon, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useContent } from '@/context/LocaleContext';
 
-const advantageIcons = [Hexagon, Coins, Timer, Leaf, ShieldCheck];
+const advantageIcons = [HexagonIcon, CoinsIcon, TimerIcon, LeafIcon, ShieldCheck];
 
 export function BambuTechShowcase() {
   const { bambuTechShowcase } = useContent();
@@ -29,13 +30,13 @@ export function BambuTechShowcase() {
             <div className="w-full md:w-[55%] space-y-3 pt-2">
               <div>
                 <h4 className="text-[22px] font-bold text-blue-600 mb-1.5">Bambu Lab H2S</h4>
-                <p className="text-[13px] font-semibold text-[#0B1523]">{bambuTechShowcase.h2s.tagline}</p>
+                <p className="text-sm sm:text-base font-semibold text-[#0B1523]">{bambuTechShowcase.h2s.tagline}</p>
               </div>
               <div className="space-y-3 pt-3">
                 {bambuTechShowcase.h2s.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <svg className="w-4 h-4 text-blue-600 shrink-0 mt-[1px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-[13px] text-slate-600 leading-snug font-medium">{feature}</span>
+                    <span className="text-sm sm:text-base text-slate-600 leading-snug font-medium">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -50,13 +51,13 @@ export function BambuTechShowcase() {
             <div className="w-full md:w-[55%] space-y-3 pt-2">
               <div>
                 <h4 className="text-[22px] font-bold text-blue-600 mb-1.5">Bambu Lab P2S</h4>
-                <p className="text-[13px] font-semibold text-[#0B1523]">{bambuTechShowcase.p2s.tagline}</p>
+                <p className="text-sm sm:text-base font-semibold text-[#0B1523]">{bambuTechShowcase.p2s.tagline}</p>
               </div>
               <div className="space-y-3 pt-3">
                 {bambuTechShowcase.p2s.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <svg className="w-4 h-4 text-blue-600 shrink-0 mt-[1px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-[13px] text-slate-600 leading-snug font-medium">{feature}</span>
+                    <span className="text-sm sm:text-base text-slate-600 leading-snug font-medium">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -87,12 +88,12 @@ export function BambuTechShowcase() {
                 {/* Top content wrapper */}
                 <div className="flex flex-col items-center flex-1 w-full">
                   <div className="w-14 h-14 rounded-2xl border border-blue-50 flex items-center justify-center mb-6 bg-blue-50/50 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                    <Icon className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                    <HugeiconsIcon icon={Icon} className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                   </div>
                   <h4 className="font-bold text-slate-900 mb-3 text-sm tracking-tight leading-snug min-h-[44px] flex items-center justify-center">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-slate-500 font-medium mb-6 leading-relaxed max-w-[200px]">
+                  <p className="text-sm text-slate-500 font-medium mb-6 leading-relaxed max-w-[200px]">
                     {item.desc}
                   </p>
                 </div>
@@ -101,8 +102,8 @@ export function BambuTechShowcase() {
                 <div className="w-full text-left space-y-2.5 pt-4 border-t border-slate-100 mt-auto">
                   {item.checklist.map((checkText, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <Check className="w-3.5 h-3.5 text-blue-600 shrink-0" strokeWidth={3} />
-                      <span className="text-[11px] text-slate-600 font-semibold leading-none">{checkText}</span>
+                      <HugeiconsIcon icon={CheckIcon} className="w-3.5 h-3.5 text-blue-600 shrink-0" strokeWidth={3} />
+                      <span className="text-xs sm:text-sm text-slate-600 font-semibold leading-none">{checkText}</span>
                     </div>
                   ))}
                 </div>
@@ -140,11 +141,11 @@ export function BambuTechShowcase() {
                   </span>
                 </div>
                 {/* Number & Title */}
-                <h3 className="text-[13px] font-extrabold text-blue-600 uppercase tracking-wider mb-2.5 leading-none">
+                <h3 className="text-sm font-extrabold text-blue-600 uppercase tracking-wider mb-2.5 leading-none">
                   {step.num}
                 </h3>
                 {/* Description */}
-                <p className="text-[12px] text-slate-500 leading-relaxed max-w-[220px] font-medium mx-auto min-h-[36px]">
+                <p className="text-sm sm:text-base text-slate-500 leading-relaxed max-w-[220px] font-medium mx-auto min-h-[36px]">
                   {step.desc}
                 </p>
               </motion.div>
@@ -176,7 +177,7 @@ export function BambuTechShowcase() {
                     {item.label}
                   </h4>
                 </div>
-                <p className="text-xs text-slate-500 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-500 font-medium leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>
@@ -222,7 +223,7 @@ export function BambuTechShowcase() {
             <p className="text-lg font-bold text-slate-800 mb-4 leading-snug">
               {bambuTechShowcase.fdmSection.tagline}
             </p>
-            <div className="space-y-4 text-sm text-slate-600 leading-relaxed max-w-lg mb-8 font-medium">
+            <div className="space-y-4 text-base text-slate-600 leading-relaxed max-w-lg mb-8 font-medium">
               <p>{bambuTechShowcase.fdmSection.body1}</p>
               <p>{bambuTechShowcase.fdmSection.body2}</p>
             </div>
@@ -231,13 +232,13 @@ export function BambuTechShowcase() {
                 href="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide"
               >
-                {bambuTechShowcase.fdmSection.ctaPrimary} <ArrowRight className="w-4 h-4" />
+                {bambuTechShowcase.fdmSection.ctaPrimary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
               </Link>
               <Link
                 href="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-blue-600 border border-slate-200 rounded-md font-bold hover:bg-slate-50 transition-colors text-sm tracking-wide shadow-sm"
               >
-                {bambuTechShowcase.fdmSection.ctaSecondary} <ArrowRight className="w-4 h-4" />
+                {bambuTechShowcase.fdmSection.ctaSecondary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
               </Link>
             </div>
           </div>

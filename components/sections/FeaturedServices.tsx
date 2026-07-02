@@ -2,7 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowRight01Icon } from '@hugeicons/core-free-icons';
 import { useContent } from "@/context/LocaleContext";
 import { motion } from "framer-motion";
 
@@ -99,7 +100,7 @@ export default function FeaturedServices() {
                   </div>
                 </div>
 
-                <p className="text-sm text-slate-600 mb-8 leading-relaxed max-w-lg font-medium">
+                <p className="text-base text-slate-600 mb-8 leading-relaxed max-w-lg font-medium">
                   {s.desc}
                 </p>
                 <div>
@@ -107,7 +108,7 @@ export default function FeaturedServices() {
                     href={s.ctaHref}
                     className="group/btn inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/35 hover:-translate-y-0.5 text-sm tracking-wide w-fit"
                   >
-                    {s.cta} <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1.5" />
+                    {s.cta} <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1.5" />
                   </Link>
                 </div>
               </motion.div>

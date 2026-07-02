@@ -39,13 +39,13 @@ export function TeamSection() {
               <div className="p-8 pt-4 text-center flex-grow flex flex-col bg-slate-50 group-hover:bg-white transition-all duration-500">
                 <h3 className="text-2xl font-bold text-slate-900 mb-1 transition-colors duration-300 group-hover:text-blue-900">{member.name}</h3>
                 <p className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">{member.role}</p>
-                <p className="text-slate-500 font-light leading-relaxed mb-8">{member.desc}</p>
+                <p className="text-base text-slate-500 font-light leading-relaxed mb-8">{member.desc}</p>
                 
                 <div className="mt-auto">
                   <h4 className="flex items-center justify-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-widest mb-6 border-t border-slate-200 pt-6 group-hover:border-slate-100 transition-colors">
                     {team.areasTitle}
                   </h4>
-                  <ul className="text-left grid grid-cols-2 gap-3 text-sm text-slate-600">
+                  <ul className="text-left grid grid-cols-2 gap-3 text-sm sm:text-base text-slate-600">
                     {member.areas.map(area => (
                       <li key={area} className="flex items-start gap-2 group/item">
                         <svg className="w-4 h-4 text-slate-300 mt-0.5 shrink-0 transition-transform duration-300 group-hover/item:scale-110 group-hover/item:text-blue-500 group-hover:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">

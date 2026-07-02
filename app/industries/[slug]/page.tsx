@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ChevronRightIcon } from '@hugeicons/core-free-icons';
 import { cookies } from "next/headers";
 import * as de from "@/content/de";
 import * as en from "@/content/en";

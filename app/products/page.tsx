@@ -3,7 +3,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useContent } from "@/context/LocaleContext";
-import { ArrowRight, Droplets, Settings, FlaskConical, Package } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowRight01Icon, DropletIcon, Settings01Icon, Chemistry01Icon, PackageIcon } from '@hugeicons/core-free-icons';
 import { PageHero } from "@/components/sections/PageHero";
 import { SubCTA } from "@/components/sections/SubCTA";
 
@@ -17,10 +18,10 @@ export default function ProductsPage() {
 
   const getCategoryIcon = (id: string) => {
     switch (id) {
-      case "water-filtration": return <Droplets className="w-4 h-4 mr-2" />;
-      case "pump-components": return <Settings className="w-4 h-4 mr-2" />;
-      case "filter-media": return <FlaskConical className="w-4 h-4 mr-2" />;
-      case "raw-materials": return <Package className="w-4 h-4 mr-2" />;
+      case "water-filtration": return <HugeiconsIcon icon={DropletIcon} className="w-4 h-4 mr-2" />;
+      case "pump-components": return <HugeiconsIcon icon={Settings01Icon} className="w-4 h-4 mr-2" />;
+      case "filter-media": return <HugeiconsIcon icon={Chemistry01Icon} className="w-4 h-4 mr-2" />;
+      case "raw-materials": return <HugeiconsIcon icon={PackageIcon} className="w-4 h-4 mr-2" />;
       default: return null;
     }
   };
@@ -81,7 +82,7 @@ export default function ProductsPage() {
                   <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-sm text-slate-600 mb-4 line-clamp-2 flex-1">
+                  <p className="text-base text-slate-600 mb-4 line-clamp-2 flex-1">
                     {product.description}
                   </p>
 
@@ -90,7 +91,7 @@ export default function ProductsPage() {
                       {product.material}
                     </span>
                     <Link href="/contact" className="text-blue-600 text-sm font-bold flex items-center gap-1.5 group-hover:gap-2 transition-all focus-visible:outline-none focus-visible:underline">
-                      {productsPage.enquire} <ArrowRight size={16} className="text-blue-500 group-hover:text-blue-600" />
+                      {productsPage.enquire} <HugeiconsIcon icon={ArrowRight01Icon} size={16} className="text-blue-500 group-hover:text-blue-600" />
                     </Link>
                   </div>
                 </div>

@@ -1,12 +1,13 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UploadCloud, Layers, Printer, Check, FileCheck, Compass, Clock, Package, ArrowRight } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { CloudUploadIcon, LayersIcon, PrinterIcon, CheckIcon, FileCheckIcon, CompassIcon, Clock01Icon, PackageIcon, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 import Image from 'next/image';
 import { useContent } from '@/context/LocaleContext';
 
-const stepIcons = [UploadCloud, Layers, Printer];
-const highlightIcons = [FileCheck, Compass, Clock, Package];
+const stepIcons = [CloudUploadIcon, LayersIcon, PrinterIcon];
+const highlightIcons = [FileCheckIcon, CompassIcon, Clock01Icon, PackageIcon];
 
 export function SimpleOrderingProcess() {
   const { simpleOrderingProcess } = useContent();
@@ -35,7 +36,7 @@ export function SimpleOrderingProcess() {
                   {/* Icon Container */}
                   <div className="relative mb-6 mt-2">
                     <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white">
-                      <Icon className="w-8 h-8" strokeWidth={1.5} />
+                      <HugeiconsIcon icon={Icon} className="w-8 h-8" strokeWidth={1.5} />
                     </div>
                   </div>
                   {/* Title */}
@@ -43,7 +44,7 @@ export function SimpleOrderingProcess() {
                     {step.title}
                   </h3>
                   {/* Description */}
-                  <p className="text-[13.5px] text-slate-500 leading-relaxed max-w-[260px] font-medium">
+                  <p className="text-sm sm:text-base text-slate-500 leading-relaxed max-w-[260px] font-medium">
                     {step.desc}
                   </p>
                 </div>
@@ -51,7 +52,7 @@ export function SimpleOrderingProcess() {
                 {/* Arrow between steps */}
                 {idx < 2 && (
                   <div className="hidden lg:flex items-center justify-center text-slate-300">
-                    <ArrowRight className="w-5 h-5" />
+                    <HugeiconsIcon icon={ArrowRight01Icon} className="w-5 h-5" />
                   </div>
                 )}
               </React.Fragment>
@@ -83,9 +84,9 @@ export function SimpleOrderingProcess() {
                   {simpleOrderingProcess.bullets.map((bullet, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-5 h-5 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 mt-0.5">
-                        <Check className="w-3.5 h-3.5 text-blue-600" strokeWidth={3} />
+                        <HugeiconsIcon icon={CheckIcon} className="w-3.5 h-3.5 text-blue-600" strokeWidth={3} />
                       </div>
-                      <span className="text-sm text-slate-600 leading-relaxed font-medium">
+                      <span className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
                         {bullet}
                       </span>
                     </li>
@@ -100,13 +101,13 @@ export function SimpleOrderingProcess() {
                   return (
                     <div key={i} className="flex gap-4 items-start">
                       <div className="w-10 h-10 rounded-lg bg-blue-50/50 flex items-center justify-center text-blue-600 shrink-0 border border-blue-50">
-                        <Icon className="w-5 h-5" strokeWidth={1.5} />
+                        <HugeiconsIcon icon={Icon} className="w-5 h-5" strokeWidth={1.5} />
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm mb-1">
                           {item.title}
                         </h4>
-                        <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                        <p className="text-sm text-slate-500 leading-relaxed font-medium">
                           {item.desc}
                         </p>
                       </div>

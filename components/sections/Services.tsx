@@ -1,15 +1,22 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Headset, Clock, ShieldCheck, Globe, Layers } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { 
+  CustomerSupportIcon, 
+  Clock01Icon, 
+  ShieldCheck, 
+  GlobeIcon, 
+  LayersIcon 
+} from '@hugeicons/core-free-icons';
 import { useContent } from '@/context/LocaleContext';
 
 const highlights = [
-  { icon: Headset, label: "German\nCustomer Support" },
-  { icon: Clock, label: "Fast Turnaround\n& On-Time Delivery" },
+  { icon: CustomerSupportIcon, label: "German\nCustomer Support" },
+  { icon: Clock01Icon, label: "Fast Turnaround\n& On-Time Delivery" },
   { icon: ShieldCheck, label: "Quality Assurance\n& Inspection" },
-  { icon: Globe, label: "Global Manufacturing\nNetwork" },
-  { icon: Layers, label: "Prototype to\nMass Production" },
+  { icon: GlobeIcon, label: "Global Manufacturing\nNetwork" },
+  { icon: LayersIcon, label: "Prototype to\nMass Production" },
 ];
 
 export function CoreServices() {
@@ -79,7 +86,7 @@ export function Introduction() {
               {introduction.heading1}{" "}
               <span className="text-blue-600 italic">{introduction.heading2}</span>
             </h2>
-            <p className="text-slate-500 text-sm md:text-base leading-relaxed font-medium max-w-2xl">
+            <p className="text-slate-500 text-base leading-relaxed font-medium max-w-2xl">
               {introduction.body}
             </p>
           </motion.div>
@@ -91,9 +98,9 @@ export function Introduction() {
             {highlights.map((h, i) => (
               <div key={i} className="flex items-center gap-2.5">
                 <div className="w-9 h-9 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
-                  <h.icon className="w-4 h-4 text-blue-600" />
+                  <HugeiconsIcon icon={h.icon} className="w-4 h-4 text-blue-600" />
                 </div>
-                <span className="text-xs font-bold text-slate-600 leading-tight whitespace-pre-line">
+                <span className="text-sm font-bold text-slate-600 leading-tight whitespace-pre-line">
                   {h.label}
                 </span>
               </div>

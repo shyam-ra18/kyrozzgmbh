@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Shield, ChevronDown, ChevronUp, X, Check, Cookie } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ShieldIcon, ChevronDownIcon, ChevronUpIcon, Cancel01Icon, CheckIcon, CookieIcon } from '@hugeicons/core-free-icons';
 import { useContent, useLocale } from "@/context/LocaleContext";
 
 const COOKIE_KEY = "kyrozz_cookie_consent";
@@ -57,7 +58,7 @@ export default function CookieBanner() {
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
-                        <Cookie className="w-5 h-5 text-blue-600" />
+                        <HugeiconsIcon icon={CookieIcon} className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
                         <span className="inline-block text-[10px] font-bold tracking-[0.18em] uppercase text-blue-600 bg-blue-50 px-2 py-0.5 rounded mb-1">
@@ -73,7 +74,7 @@ export default function CookieBanner() {
                       className="text-slate-400 hover:text-slate-600 transition-colors flex-shrink-0 mt-0.5"
                       aria-label="Dismiss"
                     >
-                      <X className="w-5 h-5" />
+                      <HugeiconsIcon icon={Cancel01Icon} className="w-5 h-5" />
                     </button>
                   </div>
 
@@ -88,7 +89,7 @@ export default function CookieBanner() {
                       onClick={() => setExpanded((v) => !v)}
                       className="flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors mb-3"
                     >
-                      {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                      {expanded ? <HugeiconsIcon icon={ChevronUpIcon} className="w-4 h-4" /> : <HugeiconsIcon icon={ChevronDownIcon} className="w-4 h-4" />}
                       {expanded
                         ? (locale === "de" ? "Weniger anzeigen" : "Show less")
                         : (locale === "de" ? "Was wir erheben — Details" : "What we collect — details")}
@@ -110,7 +111,7 @@ export default function CookieBanner() {
                                 className="flex gap-3 bg-slate-50 border border-slate-100 rounded-xl p-3.5"
                               >
                                 <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                  <Check className="w-3 h-3 text-blue-600" />
+                                  <HugeiconsIcon icon={CheckIcon} className="w-3 h-3 text-blue-600" />
                                 </div>
                                 <div>
                                   <p className="text-xs font-bold text-slate-800 mb-0.5">{point.label}</p>
@@ -122,7 +123,7 @@ export default function CookieBanner() {
 
                           <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-4">
                             <div className="flex gap-2.5">
-                              <Shield className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                              <HugeiconsIcon icon={ShieldIcon} className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
                               <div>
                                 <p className="text-[11px] text-blue-800 leading-relaxed font-light">
                                   {cookieConsent.purpose}

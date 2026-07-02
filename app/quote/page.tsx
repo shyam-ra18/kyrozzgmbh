@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowRight01Icon, CheckmarkCircle01Icon } from '@hugeicons/core-free-icons';
 
 const STEPS = ["Project Details", "Part Specifications", "Your Contact Info"];
 
@@ -29,7 +30,7 @@ export default function QuotePage() {
         {submitted ? (
           <div style={{ textAlign: "center", padding: "var(--space-5xl) var(--space-2xl)" }}>
             <div style={{ width: 80, height: 80, background: "rgba(16,185,129,0.1)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto var(--space-xl)" }}>
-              <CheckCircle size={40} style={{ color: "#10B981" }} />
+              <HugeiconsIcon icon={CheckmarkCircle01Icon} size={40} style={{ color: "#10B981" }} />
             </div>
             <h1 style={{ marginBottom: "var(--space-md)" }}>Quote Request Sent!</h1>
             <p style={{ fontSize: 18, color: "var(--c-silver)", maxWidth: 480, margin: "0 auto" }}>
@@ -83,7 +84,7 @@ export default function QuotePage() {
                       </select>
                     </div>
                     <button type="button" onClick={next} className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
-                      Next: Part Specifications <ArrowRight size={16} />
+                      Next: Part Specifications <HugeiconsIcon icon={ArrowRight01Icon} size={16} />
                     </button>
                   </div>
                 )}
@@ -108,7 +109,7 @@ export default function QuotePage() {
                     </div>
                     <div style={{ display: "flex", gap: "var(--space-md)" }}>
                       <button type="button" onClick={prev} className="btn btn-ghost" style={{ flex: 1, justifyContent: "center" }}>← Back</button>
-                      <button type="button" onClick={next} className="btn btn-primary" style={{ flex: 2, justifyContent: "center" }}>Next: Contact Info <ArrowRight size={16} /></button>
+                      <button type="button" onClick={next} className="btn btn-primary" style={{ flex: 2, justifyContent: "center" }}>Next: Contact Info <HugeiconsIcon icon={ArrowRight01Icon} size={16} /></button>
                     </div>
                   </div>
                 )}
@@ -143,7 +144,7 @@ export default function QuotePage() {
                     <div style={{ display: "flex", gap: "var(--space-md)" }}>
                       <button type="button" onClick={prev} className="btn btn-ghost" style={{ flex: 1, justifyContent: "center" }}>← Back</button>
                       <button type="submit" className="btn btn-primary" style={{ flex: 2, justifyContent: "center" }}>
-                        Send My Quote Request <ArrowRight size={16} />
+                        Send My Quote Request <HugeiconsIcon icon={ArrowRight01Icon} size={16} />
                       </button>
                     </div>
                   </div>

@@ -3,7 +3,8 @@ import { PageHero } from "@/components/sections/PageHero";
 import { SubCTA } from "@/components/sections/SubCTA";
 import { TeamSection } from "@/components/sections/Team";
 import { WhatYouExpect } from "@/components/sections/WhatYouExpect";
-import { Factory, CheckCircle, Globe, ShieldCheck, Zap, TrendingUp, Gem, MessageCircle } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { FactoryIcon, CheckmarkCircle01Icon, GlobeIcon, ShieldCheck, ZapIcon, TrendingUp, GemIcon, MessageCircle } from '@hugeicons/core-free-icons';
 import { cookies } from "next/headers";
 import * as de from "@/content/de";
 import * as en from "@/content/en";
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const reasonIcons = [CheckCircle, Globe, ShieldCheck, Zap, TrendingUp, Gem, MessageCircle];
+const reasonIcons = [CheckmarkCircle01Icon, GlobeIcon, ShieldCheck, ZapIcon, TrendingUp, GemIcon, MessageCircle];
 
 export default async function AboutPage() {
   const cookieStore = await cookies();
@@ -80,10 +81,10 @@ export default async function AboutPage() {
             {aboutPage.whySection.reasons.map((r, idx) => (
               <div key={idx} className="premium-card group">
                 <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 icon-animate-container">
-                  {(() => { const Icon = reasonIcons[idx]; return <Icon className="w-8 h-8 text-blue-500 transition-colors duration-300" />; })()}
+                  {(() => { const Icon = reasonIcons[idx]; return <HugeiconsIcon icon={Icon} className="w-8 h-8 text-blue-500 transition-colors duration-300" />; })()}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3 transition-colors duration-300 group-hover:text-blue-900">{r.title}</h3>
-                <p className="text-slate-600 leading-relaxed text-sm font-medium">{r.desc}</p>
+                <p className="text-base text-slate-600 leading-relaxed font-medium">{r.desc}</p>
               </div>
             ))}
           </div>
@@ -112,7 +113,7 @@ export default async function AboutPage() {
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {aboutPage.globalNetwork.countries.map((country) => (
               <div key={country} className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full text-slate-200 font-semibold backdrop-blur-md shadow-lg">
-                <Factory className="w-4 h-4 text-blue-400" />
+                <HugeiconsIcon icon={FactoryIcon} className="w-4 h-4 text-blue-400" />
                 {country}
               </div>
             ))}

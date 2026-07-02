@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Menu01Icon, Cancel01Icon } from '@hugeicons/core-free-icons';
 import { useContent, useLocale } from "@/context/LocaleContext";
 
 export default function Navbar({ locale }: { locale: string }) {
@@ -25,7 +26,7 @@ export default function Navbar({ locale }: { locale: string }) {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-[background-color,border-color,padding] duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 py-2 shadow-sm' : 'bg-white border-b border-slate-100 py-3'
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-[background-color,border-color,padding] duration-300 ${isScrolled ? 'bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80 py-2 shadow-lg' : 'bg-slate-950/95 border-b border-slate-900/50 py-3'
       }`}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
@@ -55,7 +56,7 @@ export default function Navbar({ locale }: { locale: string }) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-bold transition-colors py-2 px-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${isActive ? 'text-blue-600 border-b-2 border-blue-600 rounded-none' : 'text-slate-700 hover:text-blue-600 rounded-md'}`}
+                  className={`text-xs font-semibold tracking-wider transition-colors py-2 px-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${isActive ? 'text-blue-400 border-b-2 border-blue-400 rounded-none' : 'text-slate-300 hover:text-blue-400 rounded-md'}`}
                 >
                   {link.label}
                 </Link>
@@ -93,10 +94,10 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* Mobile hamburger */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden text-slate-800 hover:text-blue-600 p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md"
+          className="lg:hidden text-slate-200 hover:text-blue-400 p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md"
           aria-label="Toggle menu"
         >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMobileMenuOpen ? <HugeiconsIcon icon={Cancel01Icon} className="w-6 h-6" /> : <HugeiconsIcon icon={Menu01Icon} className="w-6 h-6" />}
         </button>
       </div>
 

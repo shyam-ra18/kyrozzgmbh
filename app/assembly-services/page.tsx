@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, Factory, ArrowRight } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { CheckmarkCircle01Icon, FactoryIcon, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 import { PageHero } from "@/components/sections/PageHero";
 import { SubCTA } from "@/components/sections/SubCTA";
 
@@ -25,7 +26,7 @@ export default function AssemblyServicesPage() {
         description="We don't just mold parts. We build finished products ready for your customer. Assembly, testing, and packaging in one place."
       >
         <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
-          Start Your Project <ArrowRight className="w-4 h-4" />
+          Start Your Project <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
         </Link>
       </PageHero>
 
@@ -44,7 +45,7 @@ export default function AssemblyServicesPage() {
               <div key={type.title} className="bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200/50">
                 <div className="text-4xl mb-4">{type.icon}</div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{type.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{type.desc}</p>
+                <p className="text-slate-600 text-base leading-relaxed">{type.desc}</p>
               </div>
             ))}
           </div>
@@ -70,7 +71,7 @@ export default function AssemblyServicesPage() {
                   "Kitting and custom packaging"
                 ].map((cap) => (
                   <div key={cap} className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" />
+                    <HugeiconsIcon icon={CheckmarkCircle01Icon} className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" />
                     <span className="text-slate-700 text-lg">{cap}</span>
                   </div>
                 ))}
@@ -91,7 +92,7 @@ export default function AssemblyServicesPage() {
                   "Industrial equipment"
                 ].map((ind) => (
                   <div key={ind} className="flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
-                    <Factory className="w-6 h-6 text-slate-400" />
+                    <HugeiconsIcon icon={FactoryIcon} className="w-6 h-6 text-slate-400" />
                     <span className="text-slate-800 text-lg font-medium">{ind}</span>
                   </div>
                 ))}

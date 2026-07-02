@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle, FileText, Clock, Truck } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ChevronDownIcon, HelpCircleIcon, FileText, Clock01Icon, TruckIcon } from '@hugeicons/core-free-icons';
 
 interface FAQItem {
   id: string;
@@ -15,35 +16,35 @@ const faqItems: FAQItem[] = [
   {
     id: 'mat-1',
     category: 'materials',
-    icon: <FileText className="w-5 h-5 text-blue-600" />,
+    icon: <HugeiconsIcon icon={FileText} className="w-5 h-5 text-blue-600" />,
     question: 'How do I choose the right 3D printing material for my project?',
     answer: 'Material selection depends on the application of your part. For high-temperature or high-durability mechanical components, we recommend Nylon or ABS/ASA. For highly accurate aesthetic prototypes with an exceptionally smooth finish, SLA resin is best. For general low-maintenance concept models, PLA or PETG offer excellent stability and cost-efficiency. Our experts can assist you in selecting the ideal plastic or composite during the quotation process.'
   },
   {
     id: 'lead-1',
     category: 'lead-times',
-    icon: <Clock className="w-5 h-5 text-blue-600" />,
+    icon: <HugeiconsIcon icon={Clock01Icon} className="w-5 h-5 text-blue-600" />,
     question: 'What are your typical production lead times?',
     answer: 'Standard 3D printing and rapid prototyping jobs are completed and shipped within 3 to 5 business days. CNC machining and low-volume injection molding jobs typically range from 7 to 15 business days depending on part complexity, tooling complexity, and specified finishes. Express options are available for urgent project schedules.'
   },
   {
     id: 'ship-1',
     category: 'shipping',
-    icon: <Truck className="w-5 h-5 text-blue-600" />,
+    icon: <HugeiconsIcon icon={TruckIcon} className="w-5 h-5 text-blue-600" />,
     question: 'How do you coordinate international shipments and custom clearance?',
     answer: 'With our corporate headquarters in Germany and specialized production pipelines in India, we manage the complete logistical process. We offer DDP (Delivered Duty Paid) shipping options across the EU and globally, meaning we handle customs clearance, duties, and import taxes. Your parts arrive directly at your location without administrative delays.'
   },
   {
     id: 'mat-2',
     category: 'materials',
-    icon: <FileText className="w-5 h-5 text-blue-600" />,
+    icon: <HugeiconsIcon icon={FileText} className="w-5 h-5 text-blue-600" />,
     question: 'Do you support custom or high-performance polymers?',
     answer: 'Yes. Beyond standard materials, we process glass-reinforced and carbon-filled polymers, TPU elastomers, and polycarbonate. For specialized engineering requests demanding chemical resilience, low outgassing, or biocompatibility, please detail your requirements in our quote form.'
   },
   {
     id: 'gen-1',
     category: 'general',
-    icon: <HelpCircle className="w-5 h-5 text-blue-600" />,
+    icon: <HugeiconsIcon icon={HelpCircleIcon} className="w-5 h-5 text-blue-600" />,
     question: 'Is my IP (Intellectual Property) secure during the quotation process?',
     answer: 'Absolutely. We treat all customer files and CAD models as strictly confidential. Digital transfers are encrypted, and we are glad to sign a formal Non-Disclosure Agreement (NDA) before you transmit any engineering files or technical drawings to us.'
   }
@@ -104,7 +105,7 @@ export function FAQSection() {
                       transition={{ duration: 0.2 }}
                       className={`shrink-0 transition-colors ${isOpen ? 'text-blue-600' : 'text-slate-400'}`}
                     >
-                      <ChevronDown className="w-5 h-5" />
+                      <HugeiconsIcon icon={ChevronDownIcon} className="w-5 h-5" />
                     </motion.div>
                   </button>
 
@@ -117,7 +118,7 @@ export function FAQSection() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.25, ease: 'easeInOut' }}
                       >
-                        <div className="px-6 pb-6 pt-1 text-slate-600 text-sm sm:text-base leading-relaxed pl-16">
+                        <div className="px-6 pb-6 pt-1 text-slate-600 text-base leading-relaxed pl-16">
                           <p className="font-light">{item.answer}</p>
                         </div>
                       </motion.div>

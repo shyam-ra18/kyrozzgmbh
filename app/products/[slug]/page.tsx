@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ChevronRight, ArrowRight, MessageSquare } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ChevronRightIcon, ArrowRight01Icon, MessageSquare } from '@hugeicons/core-free-icons';
 import { cookies } from "next/headers";
 import * as de from "@/content/de";
 import * as en from "@/content/en";
@@ -56,7 +57,7 @@ export default async function ProductDetailPage({ params }: Props) {
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-slate-500 mb-10">
             <Link href="/products" className="hover:text-blue-600 transition-colors">{textBreadcrumb}</Link>
-            <ChevronRight className="w-4 h-4" />
+            <HugeiconsIcon icon={ChevronRightIcon} className="w-4 h-4" />
             <span className="text-slate-900 font-medium">{product.name}</span>
           </div>
 
@@ -102,13 +103,13 @@ export default async function ProductDetailPage({ params }: Props) {
                   href="/contact" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/30"
                 >
-                  {textEnquireNow} <ArrowRight className="w-5 h-5" />
+                  {textEnquireNow} <HugeiconsIcon icon={ArrowRight01Icon} className="w-5 h-5" />
                 </Link>
                 <Link 
                   href="/contact" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-xl font-bold hover:bg-slate-50 hover:border-slate-300 transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-slate-500/30"
                 >
-                  {textAskQuestion} <MessageSquare className="w-5 h-5 text-slate-400" />
+                  {textAskQuestion} <HugeiconsIcon icon={MessageSquare} className="w-5 h-5 text-slate-400" />
                 </Link>
               </div>
             </div>
@@ -139,7 +140,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
                       {rp.name}
                     </h3>
-                    <p className="text-sm text-slate-500 line-clamp-2">
+                    <p className="text-base text-slate-500 line-clamp-2">
                       {rp.description}
                     </p>
                   </div>

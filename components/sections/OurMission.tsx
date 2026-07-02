@@ -2,21 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-  Target,
-  Timer,
-  ShieldCheck,
-  Users,
-  Check,
-  Layers,
-} from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { TargetIcon, TimerIcon, ShieldCheck, UserGroupIcon, CheckIcon, LayersIcon } from '@hugeicons/core-free-icons';
 import { useContent, useLocale } from "@/context/LocaleContext";
 
 const valueIcons = [
-  <Target key="target" className="w-8 h-8 text-blue-600" />,
-  <Timer key="timer" className="w-8 h-8 text-blue-600" />,
-  <ShieldCheck key="shield" className="w-8 h-8 text-blue-600" />,
-  <Users key="users" className="w-8 h-8 text-blue-600" />,
+  <HugeiconsIcon icon={TargetIcon} key="target" className="w-8 h-8 text-blue-600" />,
+  <HugeiconsIcon icon={TimerIcon} key="timer" className="w-8 h-8 text-blue-600" />,
+  <HugeiconsIcon icon={ShieldCheck} key="shield" className="w-8 h-8 text-blue-600" />,
+  <HugeiconsIcon icon={UserGroupIcon} key="users" className="w-8 h-8 text-blue-600" />,
 ];
 
 export default function OurMission() {
@@ -113,7 +107,7 @@ export default function OurMission() {
                 <h4 className="font-extrabold text-slate-800 text-sm md:text-base leading-tight">
                   {val.title}
                 </h4>
-                <p className="text-xs md:text-sm text-slate-500 font-semibold mt-1">
+                <p className="text-sm md:text-base text-slate-500 font-semibold mt-1">
                   {val.sub}
                 </p>
               </div>
@@ -131,9 +125,9 @@ export default function OurMission() {
                   {ourMission.commitmentsLeft.map((text, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                        <Check className="w-3 h-3 text-blue-600 stroke-[3]" />
+                        <HugeiconsIcon icon={CheckIcon} className="w-3 h-3 text-blue-600 stroke-[3]" />
                       </div>
-                      <span className="text-slate-700 font-bold text-xs md:text-sm">
+                      <span className="text-slate-700 font-bold text-sm sm:text-base">
                         {text}
                       </span>
                     </div>
@@ -143,9 +137,9 @@ export default function OurMission() {
                   {ourMission.commitmentsRight.map((text, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                        <Check className="w-3 h-3 text-blue-600 stroke-[3]" />
+                        <HugeiconsIcon icon={CheckIcon} className="w-3 h-3 text-blue-600 stroke-[3]" />
                       </div>
-                      <span className="text-slate-700 font-bold text-xs md:text-sm">
+                      <span className="text-slate-700 font-bold text-sm sm:text-base">
                         {text}
                       </span>
                     </div>

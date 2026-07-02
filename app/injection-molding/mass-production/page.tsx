@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, Factory, ArrowRight } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { CheckmarkCircle01Icon, FactoryIcon, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 import { PageHero } from "@/components/sections/PageHero";
 import { SubCTA } from "@/components/sections/SubCTA";
 
@@ -18,7 +19,7 @@ export default function MassProductionPage() {
         description="Scale to millions of parts. Zero compromise on quality. German oversight at every step."
       >
         <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
-          Get Volume Quote <ArrowRight className="w-4 h-4" />
+          Get Volume Quote <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
         </Link>
       </PageHero>
 
@@ -51,7 +52,7 @@ export default function MassProductionPage() {
               <div className="space-y-4">
                 {["Pre-production first article inspection", "In-process dimensional monitoring", "Batch sampling and SPC", "Final inspection before shipment", "Full traceability documentation"].map((item) => (
                   <div key={item} className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" />
+                    <HugeiconsIcon icon={CheckmarkCircle01Icon} className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" />
                     <span className="text-slate-700 text-lg">{item}</span>
                   </div>
                 ))}
@@ -66,7 +67,7 @@ export default function MassProductionPage() {
               <div className="space-y-4">
                 {["Automotive OEMs and Tier 1 suppliers", "Electrical component manufacturers", "Water filtration companies", "Consumer product brands", "Medical device manufacturers"].map((item) => (
                   <div key={item} className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl border border-slate-200">
-                    <Factory className="w-6 h-6 text-slate-400" />
+                    <HugeiconsIcon icon={FactoryIcon} className="w-6 h-6 text-slate-400" />
                     <span className="text-slate-800 text-lg font-medium">{item}</span>
                   </div>
                 ))}

@@ -5,7 +5,7 @@ KYROZZ GmbH is a professional, German-managed manufacturing and project manageme
 ## Brand Information & Geographic Location
 - **Name:** KYROZZ GmbH
 - **Location:** Munich, Germany (Munich HQ)
-- **Email:** info@kyrozz.com
+- **Email:** info@kyrozz.de
 - **Website:** https://kyrozz.com
 - **Core Value Proposition:** European engineering oversight and quality control combined with a global partner network to deliver cost-effective, high-quality manufacturing solutions.
 

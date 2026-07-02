@@ -1,7 +1,8 @@
 "use client";
 import { useContent } from '@/context/LocaleContext';
 import { motion } from 'framer-motion';
-import { FileText, Layers, Phone } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { FileText, LayersIcon, CallIcon } from '@hugeicons/core-free-icons';
 import Image from 'next/image';
 
 export function Hero() {
@@ -38,11 +39,11 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="/contact" className="inline-flex items-center justify-center gap-2.5 bg-blue-600 text-white px-8 py-4 rounded-md text-sm font-bold transition hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_10px_36px_rgba(37,99,235,0.35)] group uppercase tracking-wider border border-blue-600">
-              <FileText className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
+              <HugeiconsIcon icon={FileText} className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
               {hero.ctaPrimary}
             </a>
             <a href="tel:+4915758906010" className="inline-flex items-center justify-center gap-2.5 bg-transparent text-white border border-white/50 px-8 py-4 rounded-md text-sm font-bold transition hover:border-white hover:bg-white/10 group uppercase tracking-wider">
-              <Phone className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
+              <HugeiconsIcon icon={CallIcon} className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
               {hero.ctaSecondary}
             </a>
           </div>
@@ -51,22 +52,23 @@ export function Hero() {
 
       {/* Banner */}
       <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8 z-40">
-        <div className="bg-gradient-to-br from-slate-900/90 via-[#0B1121]/95 to-slate-800/90 backdrop-blur-xl rounded-xl sm:rounded-2xl border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-4 sm:p-6 lg:p-8 flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-8">
-          <div className="flex items-start text-left gap-3 sm:gap-6 w-full lg:w-3/4">
-            <div className="bg-slate-800/80 border border-slate-700/50 p-2.5 sm:p-4 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0 shadow-inner mt-0.5 sm:mt-0">
-              <Layers className="w-5 h-5 sm:w-8 sm:h-8 text-blue-500" strokeWidth={1.5} />
+        <div className="bg-gradient-to-br from-slate-900/90 via-[#0B1121]/95 to-slate-800/90 backdrop-blur-xl rounded-xl sm:rounded-2xl border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-4 sm:p-6 lg:p-8 flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-4 sm:gap-6 w-full lg:w-11/12 mx-auto">
+            <div className="bg-slate-800/80 border border-slate-700/50 p-2.5 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0 shadow-inner mt-0.5 sm:mt-0">
+              <HugeiconsIcon icon={LayersIcon} className="w-5 h-5 sm:w-8 sm:h-8 text-blue-500" strokeWidth={1.5} />
             </div>
             <div>
               <h3 className="text-sm sm:text-xl font-bold text-white mb-0.5 sm:mb-2">{hero.bannerHeading}</h3>
-              <p className="text-[11px] sm:text-sm text-slate-300 font-medium leading-relaxed max-w-3xl line-clamp-2">{hero.bannerBody}</p>
+              <p className="text-sm md:text-base text-slate-300 font-medium leading-relaxed line-clamp-2">{hero.bannerBody}</p>
             </div>
           </div>
 
-          <div className="hidden lg:block w-px h-16 bg-white/10 shrink-0" />
+          {/* <div className="hidden lg:block w-px h-16 bg-white/10 shrink-0" />
 
           <div className="shrink-0 flex justify-center w-full lg:w-auto pt-3 lg:pt-0 border-t border-white/10 lg:border-t-0 mt-1 lg:mt-0">
-            <img src="/kyrozz_logo_hd.png" alt="Kyrozz Logo" className="h-[20px] sm:h-[30px] lg:h-[36px] w-auto opacity-100 object-contain" />
-          </div>
+            <img src="/kyrozz_logo_hd.png" alt="Kyrozz Logo" className="h-[30px] sm:h-[40px] lg:h-[46px] w-auto opacity-100 object-contain" />
+          </div> */}
+
         </div>
       </div>
     </section>

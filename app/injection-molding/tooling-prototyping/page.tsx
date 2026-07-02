@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, Download, ArrowRight } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { CheckmarkCircle01Icon, Download01Icon, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 import { PageHero } from "@/components/sections/PageHero";
 import { SubCTA } from "@/components/sections/SubCTA";
 
@@ -36,10 +37,10 @@ export default function ToolingPrototypingPage() {
         description="Fast prototyping. Production-ready tooling. German quality oversight from day one."
       >
         <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
-          Start Your Project <ArrowRight className="w-4 h-4" />
+          Start Your Project <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
         </Link>
         <a href="/kyrozz-pricing-guide.pdf" className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent border border-slate-700 text-slate-300 font-bold text-sm rounded-full transition-all hover:bg-slate-800 hover:text-white gap-2" download>
-          <Download className="w-4 h-4" /> Pricing Guide
+          <HugeiconsIcon icon={Download01Icon} className="w-4 h-4" /> Pricing Guide
         </a>
       </PageHero>
 
@@ -79,7 +80,7 @@ export default function ToolingPrototypingPage() {
               <div className="space-y-4">
                 {toolingCapabilities.map((cap) => (
                   <div key={cap} className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" />
+                    <HugeiconsIcon icon={CheckmarkCircle01Icon} className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" />
                     <span className="text-slate-700 text-lg">{cap}</span>
                   </div>
                 ))}

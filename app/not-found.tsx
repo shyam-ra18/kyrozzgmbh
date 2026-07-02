@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight, Settings } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowRight01Icon, Settings01Icon } from '@hugeicons/core-free-icons';
 
 export default function NotFound() {
   return (
@@ -8,7 +9,7 @@ export default function NotFound() {
         <div className="flex justify-center mb-8">
           <div className="relative">
             <div className="absolute inset-0 bg-blue-100 rounded-full blur-xl opacity-50 animate-pulse"></div>
-            <Settings className="w-24 h-24 text-blue-600 relative z-10 animate-[spin_10s_linear_infinite]" />
+            <HugeiconsIcon icon={Settings01Icon} className="w-24 h-24 text-blue-600 relative z-10 animate-[spin_10s_linear_infinite]" />
           </div>
         </div>
         
@@ -29,7 +30,7 @@ export default function NotFound() {
             className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30"
           >
             Return to Homepage
-            <ArrowRight className="w-5 h-5" />
+            <HugeiconsIcon icon={ArrowRight01Icon} className="w-5 h-5" />
           </Link>
         </div>
       </div>

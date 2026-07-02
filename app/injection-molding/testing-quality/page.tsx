@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ShieldCheck, ArrowRight } from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { CheckmarkCircle01Icon, ShieldCheck, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 import { PageHero } from "@/components/sections/PageHero";
 import { SubCTA } from "@/components/sections/SubCTA";
 
@@ -29,10 +30,10 @@ export default function TestingQualityPage() {
         description="We don't ship until it's perfect. 8 testing methods. European standards. 100% inspection."
       >
         <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
-          Request a Sample <ArrowRight className="w-4 h-4" />
+          Request a Sample <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
         </Link>
         <a href="/kyrozz-quality-standards.pdf" className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent border border-slate-700 text-slate-300 font-bold text-sm rounded-full transition-all hover:bg-slate-800 hover:text-white gap-2" download>
-          <ShieldCheck className="w-4 h-4" /> Quality Policy
+          <HugeiconsIcon icon={ShieldCheck} className="w-4 h-4" /> Quality Policy
         </a>
       </PageHero>
 
@@ -51,7 +52,7 @@ export default function TestingQualityPage() {
               <div key={method.title} className="bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200/50">
                 <div className="text-4xl mb-4">{method.icon}</div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{method.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{method.desc}</p>
+                <p className="text-slate-600 text-base leading-relaxed">{method.desc}</p>
               </div>
             ))}
           </div>
@@ -83,7 +84,7 @@ export default function TestingQualityPage() {
                 "Full batch traceability"
               ].map((item) => (
                 <div key={item} className="flex items-center gap-4 p-5 bg-emerald-50 border border-emerald-100 rounded-xl">
-                  <CheckCircle className="w-6 h-6 text-emerald-500 shrink-0" />
+                  <HugeiconsIcon icon={CheckmarkCircle01Icon} className="w-6 h-6 text-emerald-500 shrink-0" />
                   <span className="text-emerald-900 font-medium text-lg">{item}</span>
                 </div>
               ))}

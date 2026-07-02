@@ -1,25 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  Target, 
-  Timer, 
-  Settings, 
-  Layers, 
-  ShieldCheck, 
-  Check, 
-  Box, 
-  Cog, 
-  Wrench, 
-  Lightbulb, 
-  ArrowRight
-} from "lucide-react";
+import { HugeiconsIcon } from '@hugeicons/react';
+import { TargetIcon, TimerIcon, Settings01Icon, LayersIcon, ShieldCheck, CheckIcon, PackageIcon, CogIcon, WrenchIcon, BulbIcon, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 
 const reasons = [
-  { icon: <Target className="w-12 h-12 text-blue-600" />, title: "High Precision", desc: "Complex geometries with fine details and tight tolerances." },
-  { icon: <Timer className="w-12 h-12 text-blue-600" />, title: "Fast Turnaround", desc: "Rapid prototyping and quick production to meet your timelines." },
-  { icon: <Settings className="w-12 h-12 text-blue-600" />, title: "Design Freedom", desc: "No tooling required — bring your ideas to life without limitations." },
-  { icon: <Layers className="w-12 h-12 text-blue-600" />, title: "Multiple Materials", desc: "Wide range of engineering plastics to suit every application." },
-  { icon: <ShieldCheck className="w-12 h-12 text-blue-600" />, title: "Reliable Quality", desc: "Consistent, durable, and high-quality components you can trust." },
+  { icon: <HugeiconsIcon icon={TargetIcon} className="w-12 h-12 text-blue-600" />, title: "High Precision", desc: "Complex geometries with fine details and tight tolerances." },
+  { icon: <HugeiconsIcon icon={TimerIcon} className="w-12 h-12 text-blue-600" />, title: "Fast Turnaround", desc: "Rapid prototyping and quick production to meet your timelines." },
+  { icon: <HugeiconsIcon icon={Settings01Icon} className="w-12 h-12 text-blue-600" />, title: "Design Freedom", desc: "No tooling required — bring your ideas to life without limitations." },
+  { icon: <HugeiconsIcon icon={LayersIcon} className="w-12 h-12 text-blue-600" />, title: "Multiple Materials", desc: "Wide range of engineering plastics to suit every application." },
+  { icon: <HugeiconsIcon icon={ShieldCheck} className="w-12 h-12 text-blue-600" />, title: "Reliable Quality", desc: "Consistent, durable, and high-quality components you can trust." },
 ];
 
 const materials = [
@@ -27,11 +16,11 @@ const materials = [
 ];
 
 const applications = [
-  { icon: <Box className="w-8 h-8 text-blue-600" />, title: "Prototyping" },
-  { icon: <Cog className="w-8 h-8 text-blue-600" />, title: "Product Development" },
-  { icon: <Wrench className="w-8 h-8 text-blue-600" />, title: "Jigs & Fixtures" },
-  { icon: <Settings className="w-8 h-8 text-blue-600" />, title: "End-Use Parts" },
-  { icon: <Lightbulb className="w-8 h-8 text-blue-600" />, title: "Custom Solutions" },
+  { icon: <HugeiconsIcon icon={PackageIcon} className="w-8 h-8 text-blue-600" />, title: "Prototyping" },
+  { icon: <HugeiconsIcon icon={CogIcon} className="w-8 h-8 text-blue-600" />, title: "Product Development" },
+  { icon: <HugeiconsIcon icon={WrenchIcon} className="w-8 h-8 text-blue-600" />, title: "Jigs & Fixtures" },
+  { icon: <HugeiconsIcon icon={Settings01Icon} className="w-8 h-8 text-blue-600" />, title: "End-Use Parts" },
+  { icon: <HugeiconsIcon icon={BulbIcon} className="w-8 h-8 text-blue-600" />, title: "Custom Solutions" },
 ];
 
 export function ThreeDPrintingSection() {
@@ -61,13 +50,13 @@ export function ThreeDPrintingSection() {
                   href="/contact" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide"
                 >
-                  REQUEST A QUOTE <ArrowRight className="w-4 h-4" />
+                  REQUEST A QUOTE <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
                 </Link>
                 <Link 
                   href="/about" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-600 border border-slate-200 rounded-md font-bold hover:bg-slate-50 transition-colors text-sm tracking-wide shadow-sm"
                 >
-                  LEARN MORE <ArrowRight className="w-4 h-4" />
+                  LEARN MORE <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -128,7 +117,7 @@ export function ThreeDPrintingSection() {
                   <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {r.title}
                   </h4>
-                  <p className="text-sm text-slate-600 leading-relaxed font-medium">
+                  <p className="text-base text-slate-600 leading-relaxed font-medium">
                     {r.desc}
                   </p>
                 </div>
@@ -164,7 +153,7 @@ export function ThreeDPrintingSection() {
             {/* Center Content */}
             <div className="lg:col-span-5 border-b lg:border-b-0 lg:border-r border-slate-200 pb-10 lg:pb-0 lg:pr-10">
               <h4 className="text-2xl font-bold text-blue-900 mb-4">FDM Printing</h4>
-              <p className="text-slate-600 mb-8 leading-relaxed">
+              <p className="text-base text-slate-600 mb-8 leading-relaxed">
                 Fused Deposition Modeling (FDM) is ideal for functional prototypes and production parts with durability and cost-efficiency.
               </p>
               <div className="space-y-4">
@@ -174,7 +163,7 @@ export function ThreeDPrintingSection() {
                   "Cost-Effective Solutions"
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-blue-600 shrink-0" />
+                    <HugeiconsIcon icon={CheckIcon} className="w-5 h-5 text-blue-600 shrink-0" />
                     <span className="font-bold text-slate-800">{feature}</span>
                   </div>
                 ))}
@@ -240,13 +229,13 @@ export function ThreeDPrintingSection() {
                   href="/contact" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide"
                 >
-                  GET A QUOTE <ArrowRight className="w-4 h-4" />
+                  GET A QUOTE <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
                 </Link>
                 <Link 
                   href="/contact" 
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border border-slate-600 rounded-md font-bold hover:bg-white/5 transition-colors text-sm tracking-wide"
                 >
-                  CONTACT US <ArrowRight className="w-4 h-4" />
+                  CONTACT US <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
                 </Link>
               </div>
             </div>
