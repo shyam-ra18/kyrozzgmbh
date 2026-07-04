@@ -10,14 +10,14 @@ export function Hero() {
   return (
     <section className="relative w-full min-h-[500px] md:min-h-[650px] lg:min-h-[750px] flex items-center bg-[#0A0F1C] py-10 md:py-0">
       {/* Main Hero Image */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-y-0 left-0 w-full md:w-[70%] lg:w-[60%] bg-gradient-to-r from-[#0A0F1C] via-[#0A0F1C]/80 to-transparent z-10" />
+      <div className="absolute inset-0 left-30 overflow-hidden">
+        <div className="absolute inset-y-0 left-0 w-full md:w-[50%] lg:w-[45%] bg-linear-to-r from-[#0A0F1C] via-[#0A0F1C]/60 to-transparent z-10" />
         <Image
-          src="/hero.png"
+          src="/hero2.png"
           alt="Fertigungshintergrund"
           fill
           priority={true}
-          className="absolute left-30 top-0 w-full h-full object-fill mix-blend-lighten"
+          className="absolute left-0 top-0 w-full h-full object-fill mix-blend-lighten"
         />
       </div>
 
@@ -42,7 +42,7 @@ export function Hero() {
               <HugeiconsIcon icon={FileText} className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
               {hero.ctaPrimary}
             </a>
-            <a href="tel:+4915758906010" className="inline-flex items-center justify-center gap-2.5 bg-transparent text-white border border-white/50 px-8 py-4 rounded-md text-sm font-bold transition hover:border-white hover:bg-white/10 group uppercase tracking-wider">
+            <a href="/contact" className="inline-flex items-center justify-center gap-2.5 bg-transparent text-white border border-white/50 px-8 py-4 rounded-md text-sm font-bold transition hover:border-white hover:bg-white/10 group uppercase tracking-wider">
               <HugeiconsIcon icon={CallIcon} className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
               {hero.ctaSecondary}
             </a>

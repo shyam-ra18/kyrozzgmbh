@@ -7,7 +7,7 @@ export default function FloatingCTA({ locale }: { locale: string }) {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* Email — opens Gmail compose in new tab */}
       <a
-        href="https://mail.google.com/mail/?view=cm&to=info@kyrozz.de"
+        href="mailto:info@kyrozz.de"
         target="_blank"
         rel="noopener noreferrer"
         title="Email us: info@kyrozz.de"

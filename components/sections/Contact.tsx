@@ -58,7 +58,7 @@ export function ContactSection() {
                     {locale === 'de' ? 'Anrufen' : 'Call us'}
                   </h4>
                   <a href="tel:+4915758906010" className="text-base sm:text-lg font-bold text-slate-800 hover:text-blue-600 transition-colors block">
-                    🇩🇪 +49 157 5890 6010
+                    +49 157 5890 6010
                   </a>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export function ContactSection() {
                   <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-0.5">
                     {locale === 'de' ? 'Schreiben' : 'Write to us'}
                   </h4>
-                  <a href="https://mail.google.com/mail/?view=cm&to=info@kyrozz.de" target="_blank" rel="noopener noreferrer" className="text-base sm:text-lg font-bold text-slate-800 hover:text-blue-600 transition-colors block truncate">
+                  <a href="mailto:info@kyrozz.de" target="_blank" rel="noopener noreferrer" className="text-base sm:text-lg font-bold text-slate-800 hover:text-blue-600 transition-colors block truncate">
                     info@kyrozz.de
                   </a>
                 </div>

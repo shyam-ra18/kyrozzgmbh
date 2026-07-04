@@ -838,14 +838,14 @@ export const aboutPage = {
   metadata: {
     title: "Über KYROZZ GmbH — Deutsches Spritzguss-Projektmanagement",
     description:
-      "50+ Jahre Fertigungserfahrung. Deutsches globales Spritzguss-Netzwerk. Ihr vertrauenswürdiger Partner für präzise Kunststofffertigung.",
+      "Deutsches globales Spritzguss-Netzwerk. Ihr vertrauenswürdiger Partner für präzise Kunststofffertigung.",
   },
   hero: {
     badge: "Über KYROZZ",
     headingLine1: "Deutsches Management.",
     headingLine2: "Globale Produktion. Ihr Erfolg.",
     description:
-      "Seit 50+ Jahren verbindet KYROZZ GmbH europäische Unternehmen mit erstklassigen Spritzgussherstellern — verwaltet mit deutscher Präzision von unserem Deggendorfer Hauptsitz.",
+      "KYROZZ GmbH verbindet europäische Unternehmen mit erstklassigen Spritzgussherstellern — verwaltet mit deutscher Präzision von unserem Deggendorfer Hauptsitz.",
   },
   model: {
     badge: "Unser Modell",
@@ -857,7 +857,6 @@ export const aboutPage = {
     body3:
       "Dieses Modell bietet Ihnen die Vorteile globaler Fertigungskosteneffizienz mit den Qualitätssicherungs-, Kommunikationsstandards und der Verantwortlichkeit eines deutschen Partners.",
     stats: [
-      { label: "Jahre in der Branche", value: "50+" },
       { label: "Abgeschlossene Projekte", value: "500+" },
       { label: "Globale Partner", value: "20+" },
       { label: "Bediente Länder", value: "15+" },
@@ -897,22 +896,9 @@ export const aboutPage = {
       },
     ],
   },
-  globalNetwork: {
-    badge: "Globales Netzwerk",
-    heading: "Ein globales Fertigungsnetzwerk",
-    body: "Unsere Fertigungspartner befinden sich in Europa, Asien und darüber hinaus — jeder geprüft und zugelassen von unserem deutschen Qualitätsteam.",
-    countries: [
-      "China",
-      "Vietnam",
-      "Deutschland",
-      "Tschechische Republik",
-      "Polen",
-      "Türkei",
-    ],
-  },
   cta: {
     title: "Arbeiten Sie mit einem Partner, dem Sie vertrauen können",
-    description: "50+ Jahre Fertigungsexzellenz, verwaltet aus Deutschland.",
+    description: "Fertigungsexzellenz, verwaltet aus Deutschland.",
     primaryText: "Kontakt aufnehmen",
     primaryHref: "/contact",
   },

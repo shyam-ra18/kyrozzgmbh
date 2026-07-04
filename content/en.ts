@@ -816,14 +816,14 @@ export const aboutPage = {
   metadata: {
     title: "About KYROZZ GmbH — German Injection Molding Project Management",
     description:
-      "50+ years of manufacturing expertise. German-managed global injection molding network. Your trusted partner for precision plastic manufacturing.",
+      "German-managed global injection molding network. Your trusted partner for precision plastic manufacturing.",
   },
   hero: {
     badge: "About KYROZZ",
     headingLine1: "German Management.",
     headingLine2: "Global Production. Your Success.",
     description:
-      "For 50+ years, KYROZZ GmbH has been connecting European businesses with world-class injection molding manufacturers — managed with German precision from our Deggendorf headquarters.",
+      "KYROZZ GmbH connects European businesses with world-class injection molding manufacturers — managed with German precision from our Deggendorf headquarters.",
   },
   model: {
     badge: "Our Model",
@@ -835,7 +835,6 @@ export const aboutPage = {
     body3:
       "This model gives you the benefits of global manufacturing cost efficiency with the quality assurance, communication standards, and accountability of a German partner.",
     stats: [
-      { label: "Years in Business", value: "50+" },
       { label: "Completed Projects", value: "500+" },
       { label: "Global Partners", value: "20+" },
       { label: "Countries Served", value: "15+" },
@@ -875,22 +874,9 @@ export const aboutPage = {
       },
     ],
   },
-  globalNetwork: {
-    badge: "Global Network",
-    heading: "A Global Manufacturing Network",
-    body: "Our manufacturing partners are located across Europe, Asia, and beyond — each audited and approved by our German quality team.",
-    countries: [
-      "China",
-      "Vietnam",
-      "Germany",
-      "Czech Republic",
-      "Poland",
-      "Turkey",
-    ],
-  },
   cta: {
     title: "Work with a Partner You Can Trust",
-    description: "50+ years of manufacturing excellence, managed from Germany.",
+    description: "Manufacturing excellence, managed from Germany.",
     primaryText: "Get in Touch",
     primaryHref: "/contact",
   },

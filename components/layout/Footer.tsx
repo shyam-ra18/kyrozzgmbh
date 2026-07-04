@@ -13,22 +13,6 @@ export default function Footer({ locale }: { locale: string }) {
   const titleServices = isDe ? "Dienstleistungen" : "Services";
   const titleContactUs = isDe ? "Kontakt" : "Contact Us";
 
-  const servicesList = isDe ? [
-    { label: "FDM-Druck", href: "/3d-printing" },
-    { label: "SLA-Druck", href: "/3d-printing" },
-    { label: "Werkzeugbau", href: "/injection-molding" },
-    { label: "Spritzguss", href: "/injection-molding" },
-    { label: "Qualitätsprüfung", href: "/injection-molding" },
-    { label: "Montagearbeiten", href: "/assembly-services" },
-  ] : [
-    { label: "FDM Printing", href: "/3d-printing" },
-    { label: "SLA Printing", href: "/3d-printing" },
-    { label: "Tooling", href: "/injection-molding" },
-    { label: "Injection Molding", href: "/injection-molding" },
-    { label: "Quality Testing", href: "/injection-molding" },
-    { label: "Assembly Services", href: "/assembly-services" },
-  ];
-
   return (
     <footer className="bg-slate-900 border-t border-slate-800 py-16 text-slate-400 relative overflow-hidden" id="about">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col">
@@ -40,9 +24,9 @@ export default function Footer({ locale }: { locale: string }) {
               <Image
                 src="/kyrozz_logo_hd.png"
                 alt="Kyrozz Logo"
-                width={220}
-                height={60}
-                className="w-auto h-12 md:h-14"
+                width={250}
+                height={68}
+                className="w-auto h-14 md:h-16"
               />
             </Link>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-sm font-medium">
@@ -74,25 +58,6 @@ export default function Footer({ locale }: { locale: string }) {
             </ul>
           </div>
 
-          {/* Column 3: Services */}
-          <div className="lg:col-span-3 flex flex-col gap-4">
-            <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider">
-              {titleServices}
-            </h3>
-            <ul className="flex flex-col gap-2.5">
-              {servicesList.map((service, idx) => (
-                <li key={idx}>
-                  <Link
-                    href={service.href}
-                    className="text-slate-300 hover:text-blue-400 font-semibold text-sm sm:text-base transition-colors"
-                  >
-                    {service.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Column 4: Contact Us */}
           <div className="lg:col-span-3 flex flex-col gap-4">
             <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider">
@@ -101,7 +66,7 @@ export default function Footer({ locale }: { locale: string }) {
             <ul className="flex flex-col gap-3.5">
               <li>
                 <a
-                  href="https://mail.google.com/mail/?view=cm&to=info@kyrozz.de"
+                  href="mailto:info@kyrozz.de"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-2.5 text-slate-300 hover:text-blue-400 font-semibold text-sm sm:text-base transition-colors"
@@ -116,7 +81,7 @@ export default function Footer({ locale }: { locale: string }) {
                   className="flex items-start gap-2.5 text-slate-300 hover:text-blue-400 font-semibold text-sm sm:text-base transition-colors"
                 >
                   <HugeiconsIcon icon={CallIcon} className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                  <span>🇩🇪 +49 157 5890 6010</span>
+                  <span>+49 157 5890 6010</span>
                 </a>
               </li>
               <li>

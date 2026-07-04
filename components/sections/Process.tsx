@@ -37,9 +37,9 @@ export function PrintFeatures() {
             </div>
           </div>
           <div className="relative rounded-2xl overflow-hidden border border-slate-100 shadow-sm p-2 bg-slate-50">
-            <img 
-              src="/3d-print.png" 
-              alt="3D Printing Process" 
+            <img
+              src="/3d-print.png"
+              alt="3D Printing Process"
               className="w-full h-full object-cover rounded-xl"
             />
           </div>
@@ -50,7 +50,7 @@ export function PrintFeatures() {
         <h3 className="text-3xl font-sans font-light text-slate-900 mb-12 tracking-tight">Why Choose 3D Printing with <span className="font-bold">KYROZZ?</span></h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {features.map((f, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

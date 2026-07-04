@@ -32,7 +32,7 @@ export default async function AboutPage() {
         badge={aboutPage.hero.badge}
         title={
           <>
-            {aboutPage.hero.headingLine1}<br/>
+            {aboutPage.hero.headingLine1}<br />
             <span className="text-blue-500">{aboutPage.hero.headingLine2}</span>
           </>
         }
@@ -96,32 +96,7 @@ export default async function AboutPage() {
 
       <WhatYouExpect />
 
-      <section className="py-20 md:py-28 bg-slate-950 relative overflow-hidden">
-        {/* Background graphics */}
-        <div className="absolute inset-0 z-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.5)_0,transparent_50%)]"></div>
-        </div>
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-wider uppercase mb-6">
-            <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-            {aboutPage.globalNetwork.badge}
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{aboutPage.globalNetwork.heading}</h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-16">
-            {aboutPage.globalNetwork.body}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {aboutPage.globalNetwork.countries.map((country) => (
-              <div key={country} className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full text-slate-200 font-semibold backdrop-blur-md shadow-lg">
-                <HugeiconsIcon icon={FactoryIcon} className="w-4 h-4 text-blue-400" />
-                {country}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <SubCTA 
+      <SubCTA
         title={aboutPage.cta.title}
         description={aboutPage.cta.description}
         primaryText={aboutPage.cta.primaryText}

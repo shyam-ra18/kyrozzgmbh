@@ -11,6 +11,7 @@ import SmoothScrolling from "@/components/layout/SmoothScrolling";
 import { routing } from "@/lib/routing";
 import { LocaleProvider } from "@/context/LocaleContext";
 import CookieBanner from "@/components/layout/CookieBanner";
+import QuoteModal from "@/components/layout/QuoteModal";
 
 export const metadata: Metadata = {
   title: {
@@ -75,6 +76,7 @@ export default async function RootLayout({
               <Footer locale={locale} />
               <FloatingCTA locale={locale} />
               <CookieBanner />
+              <QuoteModal />
             </SmoothScrolling>
           </LocaleProvider>
         </NextIntlClientProvider>

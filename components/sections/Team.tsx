@@ -20,7 +20,7 @@ export function TeamSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {team.members.map((member, i) => (
-            <motion.div 
+            <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -29,10 +29,10 @@ export function TeamSection() {
               className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 flex flex-col p-2 group hover:bg-white hover:shadow-xl hover:border-blue-200 transition-all duration-500 hover:-translate-y-1.5"
             >
               <div className="h-64 overflow-hidden relative rounded-xl bg-slate-200">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover object-top mix-blend-luminosity opacity-80 group-hover:scale-105 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-500" 
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-top mix-blend-luminosity opacity-80 group-hover:scale-105 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-500"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 to-transparent group-hover:from-white transition-all duration-500"></div>
               </div>
@@ -40,7 +40,7 @@ export function TeamSection() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-1 transition-colors duration-300 group-hover:text-blue-900">{member.name}</h3>
                 <p className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">{member.role}</p>
                 <p className="text-base text-slate-500 font-light leading-relaxed mb-8">{member.desc}</p>
-                
+
                 <div className="mt-auto">
                   <h4 className="flex items-center justify-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-widest mb-6 border-t border-slate-200 pt-6 group-hover:border-slate-100 transition-colors">
                     {team.areasTitle}

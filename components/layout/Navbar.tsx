@@ -43,7 +43,7 @@ export default function Navbar({ locale }: { locale: string }) {
           <img
             src="/kyrozz_logo_hd.png"
             alt="Kyrozz Logo"
-            className={`transition-all duration-300 w-[clamp(100px,10vw,180px)] h-auto `}
+            className={`transition-all duration-300 w-[clamp(120px,12vw,200px)] h-auto `}
           />
         </Link>
 

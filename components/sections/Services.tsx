@@ -2,12 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { 
-  CustomerSupportIcon, 
-  Clock01Icon, 
-  ShieldCheck, 
-  GlobeIcon, 
-  LayersIcon 
+import {
+  CustomerSupportIcon,
+  Clock01Icon,
+  ShieldCheck,
+  GlobeIcon,
+  LayersIcon
 } from '@hugeicons/core-free-icons';
 import { useContent } from '@/context/LocaleContext';
 

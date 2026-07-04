@@ -91,12 +91,6 @@ export default async function ThreeDPrintingPage() {
               >
                 {threeDPrintingPage.hero.ctaPrimary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
               </Link>
-              <Link
-                href="/contact"
-                className="flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-blue-600 border border-slate-200 rounded-md font-bold hover:bg-slate-50 transition-colors text-sm tracking-wide shadow-sm"
-              >
-                {threeDPrintingPage.hero.ctaSecondary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
-              </Link>
             </div>
           </div>
 
@@ -117,7 +111,7 @@ export default async function ThreeDPrintingPage() {
       <section className="py-12 md:py-14 bg-white border-t border-slate-100">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <div className="font-mono text-[11px] tracking-[2px] uppercase text-blue-600 mb-3 before:content-['—_'] after:content-['_—']">{threeDPrintingPage.whySection.badge}</div>
+            <div className="font-mono text-base tracking-[2px] uppercase text-blue-600 mb-3 before:content-['—_'] after:content-['_—']">{threeDPrintingPage.whySection.badge}</div>
             <h2 className="text-2xl md:text-[32px] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
               {threeDPrintingPage.whySection.heading} <em className="text-blue-600 not-italic">{threeDPrintingPage.whySection.headingHighlight}</em>
             </h2>
@@ -141,7 +135,7 @@ export default async function ThreeDPrintingPage() {
       <section className="py-12 md:py-14">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-[32px] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
+            <h2 className="text-3xl md:text-[40px] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
               {threeDPrintingPage.technologySection.heading1} <em className="text-blue-600 not-italic">{threeDPrintingPage.technologySection.heading2}</em>
             </h2>
           </div>
@@ -159,15 +153,15 @@ export default async function ThreeDPrintingPage() {
 
             {/* Center Content */}
             <div className="lg:col-span-5 border-b lg:border-b-0 lg:border-r border-slate-200 pb-10 lg:pb-0 lg:pr-10">
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">{threeDPrintingPage.fdmSection.heading}</h3>
-              <p className="text-slate-600 mb-8 leading-relaxed">
+              <h3 className="text-3xl font-bold text-blue-900 mb-4">{threeDPrintingPage.fdmSection.heading}</h3>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 {threeDPrintingPage.fdmSection.body}
               </p>
               <div className="space-y-4">
                 {threeDPrintingPage.fdmSection.features.map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <HugeiconsIcon icon={CheckIcon} className="w-5 h-5 text-blue-600 shrink-0" />
-                    <span className="font-bold text-slate-800">{feature}</span>
+                    <HugeiconsIcon icon={CheckIcon} className="w-6 h-6 text-blue-600 shrink-0" />
+                    <span className="text-lg font-bold text-slate-800">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -175,12 +169,12 @@ export default async function ThreeDPrintingPage() {
 
             {/* Right List */}
             <div className="lg:col-span-3 lg:pl-4">
-              <h3 className="text-xl font-bold text-slate-900 mb-6">{threeDPrintingPage.fdmSection.materialsHeading}</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">{threeDPrintingPage.fdmSection.materialsHeading}</h3>
               <div className="grid grid-cols-2 gap-y-4 gap-x-2">
                 {threeDPrintingPage.materials.map((mat, idx) => (
                   <div key={idx} className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
-                    <span className="text-sm font-bold text-slate-700">{mat}</span>
+                    <div className="w-2 h-2 rounded-full bg-blue-600 shrink-0" />
+                    <span className="text-base font-bold text-slate-700">{mat}</span>
                   </div>
                 ))}
               </div>
@@ -193,7 +187,7 @@ export default async function ThreeDPrintingPage() {
       <section className="py-12 md:py-14 bg-white border-t border-slate-200">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <div className="font-mono text-[11px] tracking-[2px] uppercase text-blue-600 mb-3 before:content-['—_'] after:content-['_—']">{threeDPrintingPage.applicationsSection.badge}</div>
+            <div className="font-mono base tracking-[2px] uppercase text-blue-600 mb-3 before:content-['—_'] after:content-['_—']">{threeDPrintingPage.applicationsSection.badge}</div>
             <h2 className="text-2xl md:text-[32px] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
               {threeDPrintingPage.applicationsSection.heading} <em className="text-blue-600 not-italic">{threeDPrintingPage.applicationsSection.headingHighlight}</em>
             </h2>
@@ -205,7 +199,7 @@ export default async function ThreeDPrintingPage() {
                 <div className="group-hover:scale-110 transition-transform">
                   {applicationIcons[idx]}
                 </div>
-                <span className="font-bold text-slate-800 text-sm whitespace-nowrap">{app.title}</span>
+                <span className="font-bold text-slate-800 text-[14px] whitespace-nowrap">{app.title}</span>
               </div>
             ))}
           </div>
