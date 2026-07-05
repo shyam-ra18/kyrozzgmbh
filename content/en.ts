@@ -64,17 +64,17 @@ export const introduction = {
   cta: "LEARN MORE ABOUT US",
   services: [
     {
-      image: "/cnc.png",
+      image: "/cnc.webp",
       title: "CNC MACHINING",
       desc: "Precision Components\nwith Tight Tolerances",
     },
     {
-      image: "/3d-print.png",
+      image: "/3d-print.webp",
       title: "3D PRINTING",
       desc: "Rapid Prototyping &\nProduction Parts",
     },
     {
-      image: "/injection-molding.png",
+      image: "/injection-molding.webp",
       title: "INJECTION MOLDING",
       desc: "High-Quality Plastic Parts\nfor Global Markets",
     },
@@ -92,7 +92,7 @@ export const featuredServices = [
     subtitle:
       "Your Professional Partner for High-Quality Production of Plastic Components.",
     desc: "We specialize in 3D printing components, utilizing the FDM printing process. We invite you to explore our website to learn more about our company, our services, and how to contact us. We appreciate your visit to our website.",
-    image: "/3d-print.png",
+    image: "/3d-print.webp",
     imageAlt: "Active 3D Printer",
     ctaHref: "/3d-printing",
     alignRight: true,
@@ -106,7 +106,7 @@ export const featuredServices = [
     subtitle:
       "Precision Injection Molding Solutions Through Our Trusted Sourcing Network.",
     desc: "KYROZZ GmbH is a German-based project management company that delivers high-precision injection molded components through a network of carefully selected manufacturing partners worldwide. We manage your injection molding project from Germany — prototyping to high-volume production, delivered on time.",
-    image: "/injection-molding-hero.png",
+    image: "/injection-molding-hero.webp",
     imageAlt: "Injection Molding Engineering",
     ctaHref: "/injection-molding",
     alignRight: false,
@@ -174,32 +174,32 @@ export const industriesBento = {
     {
       name: "Industrial Manufacturing",
       desc: "Functional parts, tooling, and production aids.",
-      img: "/industrial-manufacturing.png",
+      img: "/industrial-manufacturing.webp",
     },
     {
       name: "Education & Research",
       desc: "Prototypes, teaching tools, and experiments.",
-      img: "/education.png",
+      img: "/education.webp",
     },
     {
       name: "Hobbyist & Maker",
       desc: "Creative projects, custom parts, and more.",
-      img: "/hobbyist.png",
+      img: "/hobbyist.webp",
     },
     {
       name: "Product Development",
       desc: "Prototypes and functional parts for faster innovation.",
-      img: "/product-dev.png",
+      img: "/product-dev.webp",
     },
     {
       name: "Model Making & Prototyping",
       desc: "Detailed models and visual prototypes.",
-      img: "/model-making-prototype.png",
+      img: "/model-making-prototype.webp",
     },
     {
       name: "Custom Parts & Solutions",
       desc: "Tailored components for unique applications.",
-      img: "/custom-part-sol.png",
+      img: "/custom-part-sol.webp",
     },
   ],
 };
@@ -219,7 +219,7 @@ export const team = {
     {
       name: "Nirav Lukhi",
       role: "Founder & CEO",
-      image: "/nirav.png",
+      image: "/nirav.webp",
       desc: "Driven by a strong entrepreneurial vision, Nirav founded KYROZZ GmbH to bridge innovative manufacturing solutions with global business opportunities.",
       areas: [
         "Business Development",
@@ -231,7 +231,7 @@ export const team = {
     {
       name: "Pratik Kachariya",
       role: "AM Engineer",
-      image: "/pratik.png",
+      image: "/pratik.webp",
       desc: "Pratik specializes in additive manufacturing and supports customers throughout the complete production process. His expertise includes FDM 3D printing and print optimization.",
       areas: [
         "Additive Manufacturing",
@@ -311,13 +311,13 @@ export const htmlSections = {
           "Functional Part Production",
           "Wide Material Selection",
         ],
-        img: "/3dprint-ser1.png",
+        img: "/3dprint-ser1.webp",
       },
       {
         name: "Design & Engineering Support",
         text: "From concept to CAD model — we help bring your ideas to life with expert design assistance.",
         features: ["3D Modeling", "Design Optimization", "Print-Ready Files"],
-        img: "/design-ser2.png",
+        img: "/design-ser2.webp",
       },
       {
         name: "Post-Processing & Finishing",
@@ -327,7 +327,7 @@ export const htmlSections = {
           "Support Structure Removal",
           "Quality Inspection",
         ],
-        img: "/post-ser3.png",
+        img: "/post-ser3.webp",
       },
     ],
   },
@@ -1097,7 +1097,7 @@ export const products = [
     description:
       "Standard 10-inch polypropylene filter housing for residential and light commercial water filtration systems.",
     material: "Polypropylene (PP)",
-    image: "/images/products/filter-housing.png",
+    image: "/images/products/filter-housing.webp",
   },
   {
     id: "2",
@@ -1107,7 +1107,7 @@ export const products = [
     description:
       "Heavy-duty 20-inch filter housing for commercial and industrial water treatment applications.",
     material: "Polypropylene (PP)",
-    image: "/images/products/filter-housing-20.png",
+    image: "/images/products/filter-housing-20.webp",
   },
   {
     id: "3",
@@ -1117,7 +1117,7 @@ export const products = [
     description:
       "Dual-stage filtration housing for enhanced water purification with two cartridge slots.",
     material: "Polypropylene (PP)",
-    image: "/images/products/twin-housing.png",
+    image: "/images/products/twin-housing.webp",
   },
   {
     id: "4",
@@ -1127,7 +1127,7 @@ export const products = [
     description:
       "Precision-molded centrifugal pump body for water circulation systems, chemical-resistant.",
     material: "PA66 (Nylon)",
-    image: "/images/products/pump-body.png",
+    image: "/images/products/pump-body.webp",
   },
   {
     id: "5",
@@ -1137,7 +1137,7 @@ export const products = [
     description:
       "High-efficiency injection molded impeller for centrifugal pumps, balanced for low vibration.",
     material: "PPO (Noryl)",
-    image: "/images/products/impeller.png",
+    image: "/images/products/impeller.webp",
   },
   {
     id: "6",
@@ -1147,7 +1147,7 @@ export const products = [
     description:
       "5-micron sediment filter cartridge for pre-filtration of water systems.",
     material: "Polypropylene (PP)",
-    image: "/images/products/sediment-filter.png",
+    image: "/images/products/sediment-filter.webp",
   },
   {
     id: "7",
@@ -1157,7 +1157,7 @@ export const products = [
     description:
       "Activated carbon block cartridge for chlorine, taste, and odor reduction.",
     material: "Activated Carbon / PP",
-    image: "/images/products/carbon-block.png",
+    image: "/images/products/carbon-block.webp",
   },
   {
     id: "8",
@@ -1167,7 +1167,7 @@ export const products = [
     description:
       "Food-grade polypropylene granules optimized for injection molding applications.",
     material: "Polypropylene (PP)",
-    image: "/images/products/pp-granules.png",
+    image: "/images/products/pp-granules.webp",
   },
 ];
 

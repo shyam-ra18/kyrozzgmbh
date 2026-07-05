@@ -65,17 +65,17 @@ export const introduction = {
   cta: "MEHR ÜBER UNS",
   services: [
     {
-      image: "/cnc.png",
+      image: "/cnc.webp",
       title: "CNC-BEARBEITUNG",
       desc: "Präzisionsbauteile\nmit engen Toleranzen",
     },
     {
-      image: "/3d-print.png",
+      image: "/3d-print.webp",
       title: "3D-DRUCK",
       desc: "Rapid Prototyping &\nProduktionsteile",
     },
     {
-      image: "/injection-molding.png",
+      image: "/injection-molding.webp",
       title: "SPRITZGUSS",
       desc: "Hochwertige Kunststoffteile\nfür globale Märkte",
     },
@@ -93,7 +93,7 @@ export const featuredServices = [
     subtitle:
       "Ihr professioneller Partner für die hochwertige Produktion von Kunststoffbauteilen.",
     desc: "Wir sind spezialisiert auf den 3D-Druck von Bauteilen und nutzen das FDM-Druckverfahren. Wir laden Sie ein, unsere Website zu erkunden und mehr über unser Unternehmen, unsere Dienstleistungen und Kontaktmöglichkeiten zu erfahren.",
-    image: "/3d-print.png",
+    image: "/3d-print.webp",
     imageAlt: "3D-Druck Logo",
     ctaHref: "/3d-printing",
     alignRight: true,
@@ -107,7 +107,7 @@ export const featuredServices = [
     subtitle:
       "Präzisions-Spritzgusslösungen über unser vertrauenswürdiges Beschaffungsnetzwerk.",
     desc: "KYROZZ GmbH ist ein in Deutschland ansässiges Projektmanagement-Unternehmen, das hochpräzise Spritzgussbauteile über ein Netzwerk sorgfältig ausgewählter Fertigungspartner weltweit liefert. Wir verwalten Ihr Spritzgussprojekt aus Deutschland — vom Prototyp bis zur Großserienproduktion, termingerecht geliefert.",
-    image: "/injection-molding-hero.png",
+    image: "/injection-molding-hero.webp",
     imageAlt: "Spritzguss Logo",
     ctaHref: "/injection-molding",
     alignRight: false,
@@ -175,32 +175,32 @@ export const industriesBento = {
     {
       name: "Industrielle Fertigung",
       desc: "Funktionsteile, Werkzeuge und Produktionshilfsmittel.",
-      img: "/industrial-manufacturing.png",
+      img: "/industrial-manufacturing.webp",
     },
     {
       name: "Bildung & Forschung",
       desc: "Prototypen, Lehrmittel und Experimente.",
-      img: "/education.png",
+      img: "/education.webp",
     },
     {
       name: "Hobby & Maker",
       desc: "Kreative Projekte, individuelle Teile und mehr.",
-      img: "/hobbyist.png",
+      img: "/hobbyist.webp",
     },
     {
       name: "Produktentwicklung",
       desc: "Prototypen und Funktionsteile für schnellere Innovation.",
-      img: "/product-dev.png",
+      img: "/product-dev.webp",
     },
     {
       name: "Modellbau & Prototyping",
       desc: "Detaillierte Modelle und visuelle Prototypen.",
-      img: "/model-making-prototype.png",
+      img: "/model-making-prototype.webp",
     },
     {
       name: "Individuelle Teile & Lösungen",
       desc: "Maßgeschneiderte Komponenten für besondere Anwendungen.",
-      img: "/custom-part-sol.png",
+      img: "/custom-part-sol.webp",
     },
   ],
 };
@@ -220,7 +220,7 @@ export const team = {
     {
       name: "Nirav Lukhi",
       role: "Gründer & CEO",
-      image: "/nirav.png",
+      image: "/nirav.webp",
       desc: "Getrieben von einer starken unternehmerischen Vision gründete Nirav KYROZZ GmbH, um innovative Fertigungslösungen mit globalen Geschäftsmöglichkeiten zu verbinden.",
       areas: [
         "Geschäftsentwicklung",
@@ -232,7 +232,7 @@ export const team = {
     {
       name: "Pratik Kachariya",
       role: "AM-Ingenieur",
-      image: "/pratik.png",
+      image: "/pratik.webp",
       desc: "Pratik ist spezialisiert auf additive Fertigung und begleitet Kunden durch den gesamten Produktionsprozess. Sein Fachwissen umfasst FDM-3D-Druck und Druckoptimierung.",
       areas: [
         "Additive Fertigung",
@@ -313,7 +313,7 @@ export const htmlSections = {
           "Funktionsteile-Produktion",
           "Breites Materialspektrum",
         ],
-        img: "/3dprint-ser1.png",
+        img: "/3dprint-ser1.webp",
       },
       {
         name: "Design- & Ingenieur-Support",
@@ -323,7 +323,7 @@ export const htmlSections = {
           "Design-Optimierung",
           "Druckfertige Dateien",
         ],
-        img: "/design-ser2.png",
+        img: "/design-ser2.webp",
       },
       {
         name: "Nachbearbeitung & Veredelung",
@@ -333,7 +333,7 @@ export const htmlSections = {
           "Stützstruktur-Entfernung",
           "Qualitätsprüfung",
         ],
-        img: "/post-ser3.png",
+        img: "/post-ser3.webp",
       },
     ],
   },
@@ -1123,7 +1123,7 @@ export const products = [
     description:
       "Standard 10-Zoll Polypropylen-Filtergehäuse für Wasserfilteranlagen in Privathaushalten und leichter Gewerbenutzung.",
     material: "Polypropylen (PP)",
-    image: "/images/products/filter-housing.png",
+    image: "/images/products/filter-housing.webp",
   },
   {
     id: "2",
@@ -1133,7 +1133,7 @@ export const products = [
     description:
       "Robustes 20-Zoll Filtergehäuse für gewerbliche und industrielle Wasseraufbereitungsanwendungen.",
     material: "Polypropylen (PP)",
-    image: "/images/products/filter-housing-20.png",
+    image: "/images/products/filter-housing-20.webp",
   },
   {
     id: "3",
@@ -1143,7 +1143,7 @@ export const products = [
     description:
       "Zweistufiges Filtergehäuse für verbesserte Wasserreinigung mit zwei Kartuschenplätzen.",
     material: "Polypropylen (PP)",
-    image: "/images/products/twin-housing.png",
+    image: "/images/products/twin-housing.webp",
   },
   {
     id: "4",
@@ -1153,7 +1153,7 @@ export const products = [
     description:
       "Präzisionsgefertigtes Kreiselpumpengehäuse für Wasserumwälzsysteme, chemikalienbeständig.",
     material: "PA66 (Nylon)",
-    image: "/images/products/pump-body.png",
+    image: "/images/products/pump-body.webp",
   },
   {
     id: "5",
@@ -1163,7 +1163,7 @@ export const products = [
     description:
       "Hocheffizientes spritzgegossenes Flügelrad für Kreiselpumpen, ausgewuchtet für minimale Vibration.",
     material: "PPO (Noryl)",
-    image: "/images/products/impeller.png",
+    image: "/images/products/impeller.webp",
   },
   {
     id: "6",
@@ -1173,7 +1173,7 @@ export const products = [
     description:
       "5-Mikron-Sedimentfilterkartusche zur Vorfilterung von Wassersystemen.",
     material: "Polypropylen (PP)",
-    image: "/images/products/sediment-filter.png",
+    image: "/images/products/sediment-filter.webp",
   },
   {
     id: "7",
@@ -1183,7 +1183,7 @@ export const products = [
     description:
       "Aktivkohleblock-Kartusche zur Reduktion von Chlor, Geschmack und Geruch.",
     material: "Aktivkohle / PP",
-    image: "/images/products/carbon-block.png",
+    image: "/images/products/carbon-block.webp",
   },
   {
     id: "8",
@@ -1193,7 +1193,7 @@ export const products = [
     description:
       "Lebensmittelechtes Polypropylen-Granulat, optimiert für Spritzgussanwendungen.",
     material: "Polypropylen (PP)",
-    image: "/images/products/pp-granules.png",
+    image: "/images/products/pp-granules.webp",
   },
 ];
 

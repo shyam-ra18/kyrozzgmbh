@@ -11,9 +11,9 @@ export function Hero() {
     <section className="relative w-full min-h-[500px] md:min-h-[650px] lg:min-h-[750px] flex items-center bg-[#0A0F1C] py-10 md:py-0">
       {/* Main Hero Image */}
       <div className="absolute inset-0 left-30 overflow-hidden">
-        <div className="absolute inset-y-0 left-0 w-full md:w-[50%] lg:w-[45%] bg-linear-to-r from-[#0A0F1C] via-[#0A0F1C]/60 to-transparent z-10" />
+        <div className="absolute inset-y-0 left-0 w-full md:w-[60%] lg:w-[50%] bg-linear-to-r from-[#0A0F1C] via-[#0A0F1C]/60 to-transparent z-10" />
         <Image
-          src="/hero2.png"
+          src="/hero2.webp"
           alt="Fertigungshintergrund"
           fill
           priority={true}

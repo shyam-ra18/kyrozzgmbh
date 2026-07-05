@@ -49,8 +49,11 @@ export default function Footer({ locale }: { locale: string }) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-slate-300 hover:text-blue-400 font-semibold text-sm sm:text-base transition-colors"
+                    className="group flex items-center gap-2 text-slate-300 hover:text-blue-400 font-semibold text-sm sm:text-base transition-colors"
                   >
+                    <svg className="w-4 h-4 text-slate-600 group-hover:text-blue-400 transition-colors shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                    </svg>
                     {link.label}
                   </Link>
                 </li>
