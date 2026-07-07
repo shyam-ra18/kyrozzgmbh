@@ -140,7 +140,7 @@ export default async function ThreeDPrintingPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center bg-slate-50 rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center bg-slate-50 rounded-3xl py-8 shadow-sm border border-slate-100">
             {/* Image */}
             <div className="lg:col-span-4 relative aspect-4/3 flex items-center justify-center drop-shadow-xl">
               <Image
@@ -152,7 +152,7 @@ export default async function ThreeDPrintingPage() {
             </div>
 
             {/* Center Content */}
-            <div className="lg:col-span-5 border-b lg:border-b-0 lg:border-r border-slate-200 pb-10 lg:pb-0 lg:pr-10">
+            <div className="lg:col-span-4 border-b lg:border-b-0 lg:border-r border-slate-200 pb-10 lg:pb-0 lg:pr-8">
               <h3 className="text-3xl font-bold text-blue-900 mb-4">{threeDPrintingPage.fdmSection.heading}</h3>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 {threeDPrintingPage.fdmSection.body}
@@ -168,7 +168,7 @@ export default async function ThreeDPrintingPage() {
             </div>
 
             {/* Right List */}
-            <div className="lg:col-span-3 lg:pl-4">
+            <div className="lg:col-span-4 lg:pl-2">
               <h3 className="text-2xl font-bold text-slate-900 mb-6">{threeDPrintingPage.fdmSection.materialsHeading}</h3>
               <div className="grid grid-cols-2 gap-y-4 gap-x-2">
                 {threeDPrintingPage.materials.map((mat, idx) => (

@@ -89,7 +89,7 @@ export function BambuTechShowcase() {
                 >
                   {/* Top content wrapper */}
                   <div className="flex flex-col items-start lg:items-center flex-1 w-full">
-                    
+
                     <div className="flex items-center lg:flex-col gap-4 lg:gap-0 mb-3 lg:mb-0 w-full">
                       <div className="w-12 h-12 lg:w-14 lg:h-14 shrink-0 rounded-2xl border border-blue-50 flex items-center justify-center lg:mb-6 bg-blue-50/50 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
                         <HugeiconsIcon icon={Icon} className="w-5 h-5 lg:w-6 lg:h-6 text-blue-600 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
@@ -165,7 +165,7 @@ export function BambuTechShowcase() {
 
           {/* 5-Column Highlights Card */}
           <div className="bg-slate-50/80 rounded-3xl border border-slate-100 p-6 md:p-8 max-w-6xl mx-auto shadow-xs">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/80">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-2 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/80">
               {bambuTechShowcase.highlights.map((item, i) => (
                 <motion.div
                   key={i}
@@ -173,21 +173,21 @@ export function BambuTechShowcase() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 + 0.2, duration: 0.4 }}
-                  className={`flex flex-col justify-between px-4 lg:pl-6 ${i !== 0 ? 'pt-6 sm:pt-0' : ''}`}
+                  className={`flex flex-col justify-between px-2 lg:pl-6 ${i !== 0 ? 'pt-6 sm:pt-0' : ''}`}
                 >
-                  <div className="flex flex-row lg:flex-col items-center lg:items-start gap-4 lg:gap-0 mb-2 lg:mb-0">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50/80 flex items-center justify-center lg:mb-4 text-blue-600 shrink-0">
+                  <div className="flex flex-row items-center gap-4 mb-2 lg:mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50/80 flex items-center justify-center text-blue-600 shrink-0">
                       {i === 0 && <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" /></svg>}
                       {i === 1 && <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L12 7.5l5.571 2.25m-11.142 4.5L12 16.5l5.571-2.25m-11.142 0L2.25 12l4.179-2.25m11.142 4.5l4.179-2.25-4.179-2.25M6 15v3.75C6 19.99 9.92 21 12 21s6-1.01 6-2.25V15" /></svg>}
                       {i === 2 && <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>}
                       {i === 3 && <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
                       {i === 4 && <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>}
                     </div>
-                    <h4 className="font-bold text-slate-800 text-sm leading-tight lg:mb-2 lg:min-h-[36px] flex items-center whitespace-pre-line">
+                    <h4 className="font-bold text-slate-800 text-sm leading-tight flex items-center whitespace-normal">
                       {item.label}
                     </h4>
                   </div>
-                  <p className="text-sm sm:text-base text-slate-500 font-medium leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-500 font-medium leading-relaxed ">
                     {item.desc}
                   </p>
                 </motion.div>
