@@ -12,8 +12,8 @@ const highlightIcons = [FileCheckIcon, CompassIcon, Clock01Icon, PackageIcon];
 export function SimpleOrderingProcess() {
   const { simpleOrderingProcess } = useContent();
   return (
-    <section className="py-16 bg-white border-t border-slate-100">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 lg:py-16 bg-white border-t border-slate-100">
+      <div className="section-container">
 
         {/* Title */}
         <div className="text-center mb-16">
@@ -23,7 +23,7 @@ export function SimpleOrderingProcess() {
         </div>
 
         {/* 3-Step Process Grid */}
-        <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 mb-24 max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 mb-12 lg:mb-16 max-w-6xl mx-auto">
           {simpleOrderingProcess.steps.map((step, idx) => {
             const Icon = stepIcons[idx];
             return (

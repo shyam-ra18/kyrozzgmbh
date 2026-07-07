@@ -24,8 +24,8 @@ export function ContactSection() {
   }, []);
 
   return (
-    <section className="py-16 bg-slate-50 border-t border-slate-100" id="contact">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 lg:py-16 bg-slate-50 border-t border-slate-100" id="contact">
+      <div className="section-container">
 
         {/* Heading Block */}
         <div className="text-center mb-16">

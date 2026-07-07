@@ -36,7 +36,7 @@ export default async function InjectionMoldingPage() {
   return (
     <div className="bg-white">
       {/* Global Manufacturing Banner (Man Work) */}
-      <section className="relative w-full min-h-[700px] flex items-center bg-[#051124] overflow-hidden py-20 mt-16">
+      <section className="relative w-full min-h-[700px] flex items-center bg-[#051124] overflow-hidden py-12 lg:py-12 lg:py-16 mt-16">
         {/* Background Image positioned to the right */}
         <div className="absolute inset-0 w-full h-full lg:w-[70%] lg:left-auto lg:right-0">
           <Image
@@ -50,9 +50,9 @@ export default async function InjectionMoldingPage() {
           <div className="absolute inset-0 bg-linear-to-t from-[#051124] via-transparent to-transparent opacity-80"></div>
         </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="relative z-10 section-container w-full">
           <div className="max-w-3xl">
-            <h2 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.1] mb-6">
+            <h2 className="text-[clamp(2.25rem,1.75rem+3.75vw,4rem)] font-bold text-white tracking-tight leading-[1.1] mb-6">
               {injectionMoldingPage.hero.heading1}<br />
               <span className="text-[#1d64ff]">{injectionMoldingPage.hero.heading2}</span> {injectionMoldingPage.hero.heading2rest}
             </h2>
@@ -65,11 +65,11 @@ export default async function InjectionMoldingPage() {
             </p>
 
             {/* 4 Icons Row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
               {injectionMoldingPage.hero.icons.map((item, idx) => {
                 const Icon = heroIcons[idx];
                 return (
-                  <div key={idx} className="flex flex-col gap-4">
+                  <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-4">
                     <div className="w-12 h-12 rounded-full border border-blue-500/30 flex items-center justify-center bg-blue-900/40">
                       <HugeiconsIcon icon={Icon} className="w-5 h-5 text-blue-400 stroke-[1.5]" />
                     </div>
@@ -86,8 +86,8 @@ export default async function InjectionMoldingPage() {
       </section>
 
       {/* Why Kyrozz Card Block & Metrics Section */}
-      <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 lg:py-12 lg:py-16 bg-slate-50 border-t border-slate-100">
+        <div className="section-container">
 
           {/* WHY KYROZZ & ADVANTAGES Card */}
           <div className="bg-white rounded-3xl p-8 lg:p-14 shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-slate-100 mb-16">
@@ -139,16 +139,16 @@ export default async function InjectionMoldingPage() {
       </section>
 
       {/* One Partner Section */}
-      <section className="relative py-14 lg:py-16 bg-white overflow-hidden border-t border-slate-100">
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-14 lg:py-12 lg:py-16 bg-white overflow-hidden border-t border-slate-100">
+        <div className="relative z-10 section-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
             {/* Left Content */}
             <div className="flex flex-col items-start lg:col-span-5 max-w-xl">
-              <h2 className="text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#0B1523] leading-tight mb-1">
+              <h2 className="text-[clamp(1.875rem,1.5rem+1.875vw,2.5rem)] font-extrabold text-[#0B1523] leading-tight mb-1">
                 {injectionMoldingPage.onePartner.heading1}
               </h2>
-              <h2 className="text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#0a42bf] leading-tight mb-6">
+              <h2 className="text-[clamp(1.875rem,1.5rem+1.875vw,2.5rem)] font-extrabold text-[#0a42bf] leading-tight mb-6">
                 {injectionMoldingPage.onePartner.heading2}
               </h2>
 
@@ -182,13 +182,13 @@ export default async function InjectionMoldingPage() {
 
       {/* Process Steps Section */}
       <section className="py-10 bg-white border-t border-b border-slate-100">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-container">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
             {injectionMoldingPage.processSteps.map((step, idx) => {
               const Icon = processIcons[idx];
               return (
                 <Fragment key={idx}>
-                  <div className="flex items-center gap-5 flex-1 w-full lg:w-auto">
+                  <div className="flex flex-col lg:flex-row items-center text-center lg:text-left gap-4 lg:gap-5 flex-1 w-full lg:w-auto">
                     <div className="shrink-0">
                       <div className="w-[68px] h-[68px] rounded-full border border-slate-200 flex items-center justify-center bg-white shadow-sm hover:shadow-md transition-shadow">
                         <HugeiconsIcon icon={Icon} className="w-6 h-6 text-[#0a42bf] stroke-[1.5]" />

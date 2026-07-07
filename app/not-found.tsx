@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { ArrowRight01Icon, Settings01Icon } from '@hugeicons/core-free-icons';
+import { Settings01Icon, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 
 export default function NotFound() {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center p-4">
+    <div className="min-h-[80dvh] flex items-center justify-center bg-slate-50 px-4 py-12 lg:py-12 lg:py-16">
       <div className="max-w-xl w-full text-center space-y-8">
         <div className="flex justify-center mb-8">
           <div className="relative">
@@ -13,7 +13,7 @@ export default function NotFound() {
           </div>
         </div>
         
-        <h1 className="text-6xl md:text-8xl font-black text-slate-900 tracking-tighter">
+        <h1 className="text-[clamp(4rem,3rem+5vw,6rem)] font-black text-slate-900 tracking-tighter">
           4<span className="text-blue-600">0</span>4
         </h1>
         
@@ -27,7 +27,7 @@ export default function NotFound() {
         <div className="pt-8">
           <Link 
             href="/" 
-            className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30 min-h-[44px]"
           >
             Return to Homepage
             <HugeiconsIcon icon={ArrowRight01Icon} className="w-5 h-5" />

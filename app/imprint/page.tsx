@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function ImprintPage() {
   return (
-    <div className="min-h-screen bg-slate-50 py-24 sm:py-32">
+    <div className="min-h-screen bg-slate-50 py-16 lg:py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white border border-slate-200/60 rounded-3xl p-8 sm:p-12 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
           <h1 className="text-3xl sm:text-4xl font-sans font-bold text-slate-900 tracking-tight mb-8 pb-4 border-b border-slate-100">

@@ -41,7 +41,7 @@ export default async function ThreeDPrintingPage() {
   const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
   const { threeDPrintingPage } = locale === "de" ? de : en;
   return (
-    <div className="min-h-screen bg-white flex flex-col pt-20 md:pt-28">
+    <div className="min-h-screen bg-white flex flex-col pt-24 lg:pt-20 lg:pt-24">
 
       {/* 1. Hero Section */}
       <section className="relative overflow-hidden pb-12 lg:pb-16 bg-white">
@@ -72,9 +72,9 @@ export default async function ThreeDPrintingPage() {
           </div>
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row">
+        <div className="section-container relative z-10 flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2 py-8 lg:py-12 lg:pr-12">
-            <h1 className="text-4xl md:text-[48px] font-extrabold text-blue-900 mb-4 tracking-tight leading-[1.1]">
+            <h1 className="text-[clamp(2.25rem,1.75rem+2.5vw,3rem)] font-extrabold text-blue-900 mb-4 tracking-tight leading-[1.1]">
               {threeDPrintingPage.hero.heading1}<br />
               <span className="text-blue-600">{threeDPrintingPage.hero.heading2}</span>
             </h1>
@@ -87,7 +87,7 @@ export default async function ThreeDPrintingPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide"
+                className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide min-h-[44px]"
               >
                 {threeDPrintingPage.hero.ctaPrimary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
               </Link>
@@ -109,10 +109,10 @@ export default async function ThreeDPrintingPage() {
 
       {/* 2. Why Choose 3D Printing */}
       <section className="py-12 md:py-14 bg-white border-t border-slate-100">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-container">
           <div className="text-center mb-10">
             <div className="font-mono text-base tracking-[2px] uppercase text-blue-600 mb-3 before:content-['—_'] after:content-['_—']">{threeDPrintingPage.whySection.badge}</div>
-            <h2 className="text-2xl md:text-[32px] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
+            <h2 className="text-[clamp(1.5rem,1.25rem+1.5vw,2rem)] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
               {threeDPrintingPage.whySection.heading} <em className="text-blue-600 not-italic">{threeDPrintingPage.whySection.headingHighlight}</em>
             </h2>
           </div>
@@ -133,9 +133,9 @@ export default async function ThreeDPrintingPage() {
 
       {/* 3. Our 3D Printing Technology */}
       <section className="py-12 md:py-14">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-container">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-[40px] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
+            <h2 className="text-[clamp(1.875rem,1.5rem+1.875vw,2.5rem)] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
               {threeDPrintingPage.technologySection.heading1} <em className="text-blue-600 not-italic">{threeDPrintingPage.technologySection.heading2}</em>
             </h2>
           </div>
@@ -185,10 +185,10 @@ export default async function ThreeDPrintingPage() {
 
       {/* 4. Applications We Serve */}
       <section className="py-12 md:py-14 bg-white border-t border-slate-200">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-container">
           <div className="text-center mb-10">
             <div className="font-mono base tracking-[2px] uppercase text-blue-600 mb-3 before:content-['—_'] after:content-['_—']">{threeDPrintingPage.applicationsSection.badge}</div>
-            <h2 className="text-2xl md:text-[32px] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
+            <h2 className="text-[clamp(1.5rem,1.25rem+1.5vw,2rem)] font-black tracking-[-0.5px] leading-tight text-[#0B1523] uppercase">
               {threeDPrintingPage.applicationsSection.heading} <em className="text-blue-600 not-italic">{threeDPrintingPage.applicationsSection.headingHighlight}</em>
             </h2>
           </div>
@@ -216,7 +216,7 @@ export default async function ThreeDPrintingPage() {
 
       {/* 5. Bottom CTA Banner */}
       <section className="py-12 md:py-14 bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-container">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#0B1523]">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
@@ -239,18 +239,18 @@ export default async function ThreeDPrintingPage() {
                 {threeDPrintingPage.cta.body}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-row gap-2 sm:gap-3 w-full sm:w-auto">
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-1.5 px-6 py-2.5 bg-blue-600 text-white rounded font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-[11px] tracking-wide w-fit"
+                  className="flex-1 sm:flex-none flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-6 py-3 sm:py-2.5 bg-blue-600 text-white rounded font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-[11px] sm:text-[11px] tracking-wide whitespace-nowrap min-h-[44px]"
                 >
-                  {threeDPrintingPage.cta.ctaPrimary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-3 h-3" />
+                  {threeDPrintingPage.cta.ctaPrimary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-3 h-3 shrink-0" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-1.5 px-6 py-2.5 bg-transparent text-white border border-slate-500 rounded font-bold hover:bg-white/10 hover:border-white transition-colors text-[11px] tracking-wide w-fit"
+                  className="flex-1 sm:flex-none flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-6 py-3 sm:py-2.5 bg-transparent text-white border border-slate-500 rounded font-bold hover:bg-white/10 hover:border-white transition-colors text-[11px] sm:text-[11px] tracking-wide whitespace-nowrap min-h-[44px]"
                 >
-                  {threeDPrintingPage.cta.ctaSecondary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-3 h-3" />
+                  {threeDPrintingPage.cta.ctaSecondary} <HugeiconsIcon icon={ArrowRight01Icon} className="w-3 h-3 shrink-0" />
                 </Link>
               </div>
             </div>

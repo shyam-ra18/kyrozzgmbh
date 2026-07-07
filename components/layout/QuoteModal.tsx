@@ -40,11 +40,11 @@ export default function QuoteModal() {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 sm:p-6"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-3 sm:p-6"
       onClick={() => setIsOpen(false)}
     >
       <div
-        className="relative w-full max-w-5xl max-h-[95vh] overflow-hidden flex flex-col bg-white border border-slate-200/80 rounded-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-300"
+        className="relative w-full max-w-5xl max-h-[90dvh] overflow-hidden flex flex-col bg-white border border-slate-200/80 rounded-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-300"
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
@@ -52,7 +52,7 @@ export default function QuoteModal() {
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Request a Quote</h2>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 bg-white border border-slate-200 hover:bg-slate-100 hover:border-slate-300 rounded-full text-slate-500 hover:text-slate-900 transition-colors shadow-sm"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center bg-white border border-slate-200 hover:bg-slate-100 hover:border-slate-300 rounded-full text-slate-500 hover:text-slate-900 transition-colors shadow-sm"
             title="Close"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,15 +62,14 @@ export default function QuoteModal() {
         </div>
 
         {/* Iframe Container */}
-        <div className="w-full relative flex-1 overflow-scroll bg-slate-50 min-h-[400px]">
+        <div className="w-full relative flex-1 overflow-auto bg-slate-50 min-h-[300px]">
           {isLoading && (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10">
               <div className="w-10 h-10 border-4 border-slate-100 border-t-blue-600 rounded-full animate-spin mb-4" />
               <p className="text-sm sm:text-base text-slate-600 font-bold animate-pulse">Loading secure form...</p>
             </div>
           )}
-          {/* Cropping wrapper to hide Jotform branding at the bottom */}
-          <div className="w-full h-full overflow-scroll" style={{ height: 'calc(100% - 65px)' }}>
+          <div className="w-full flex-1 overflow-auto">
             <iframe
               ref={iframeRef}
               id="JotFormIFrame-261803746797471"

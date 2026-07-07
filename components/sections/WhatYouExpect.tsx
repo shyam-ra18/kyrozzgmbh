@@ -10,8 +10,8 @@ const expectationIcons = [HandshakeIcon, Award01Icon, ZapIcon, ShieldCheck, Coin
 export function WhatYouExpect() {
   const { whatYouExpect } = useContent();
   return (
-    <section className="py-16 bg-slate-50 border-b border-slate-100 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 lg:py-16 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
           {/* Left sticky column */}

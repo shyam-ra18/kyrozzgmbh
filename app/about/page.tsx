@@ -39,8 +39,8 @@ export default async function AboutPage() {
         description={aboutPage.hero.description}
       />
 
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-white">
+        <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold tracking-wider uppercase mb-6">
@@ -68,8 +68,8 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-slate-50 border-y border-slate-200">
+        <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold tracking-wider uppercase mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />

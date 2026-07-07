@@ -1,8 +1,5 @@
 "use client";
 import React, { useState, useRef } from 'react';
-import { db, storage } from '@/lib/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 export function ContactForm() {
   const [name, setName] = useState('');
@@ -42,24 +39,9 @@ export function ContactForm() {
     setError(null);
 
     try {
-      let fileUrl = "";
-      if (file) {
-        // Upload file to Firebase Storage
-        const fileRef = ref(storage, `quotes/${Date.now()}_${file.name}`);
-        const snapshot = await uploadBytes(fileRef, file);
-        fileUrl = await getDownloadURL(snapshot.ref);
-      }
-
-      // Save form data to Firestore
-      await addDoc(collection(db, 'quotes'), {
-        name,
-        company,
-        email,
-        description,
-        fileUrl,
-        createdAt: serverTimestamp(),
-        status: 'new'
-      });
+      // Simulate API call for form submission
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      console.log("Form data:", { name, company, email, description, file });
 
       setIsSuccess(true);
       // Reset form
@@ -70,7 +52,7 @@ export function ContactForm() {
       setFile(null);
     } catch (err: any) {
       console.error("Error submitting form:", err);
-      setError(err.message || "An error occurred while submitting. Please try again.");
+      setError("An error occurred while submitting. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -202,7 +184,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-3.5 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center mt-2"
+          className="w-full py-3.5 px-6 min-h-[44px] bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center mt-2"
         >
           {isSubmitting ? (
             <>

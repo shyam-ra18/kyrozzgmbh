@@ -28,14 +28,14 @@ export function ThreeDPrintingSection() {
     <section id="3d-printing" className="bg-white flex flex-col scroll-mt-24">
       
       {/* 1. Hero Section */}
-      <div className="relative overflow-hidden py-16 md:py-20">
+      <div className="relative overflow-hidden py-12 lg:py-12 lg:py-16">
         {/* Subtle dot pattern background */}
         <div className="absolute inset-0 bg-[url('/images/hero-pattern.png')] opacity-5 pointer-events-none" />
         
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="section-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="max-w-2xl">
-              <h2 className="text-5xl md:text-6xl font-extrabold text-blue-900 mb-6 tracking-tight leading-tight">
+              <h2 className="text-[clamp(2rem,1.5rem+2.5vw,3.75rem)] font-extrabold text-blue-900 mb-6 tracking-tight leading-tight">
                 3D Printing<br />
                 <span className="text-blue-600">Components</span>
               </h2>
@@ -74,12 +74,12 @@ export function ThreeDPrintingSection() {
       </div>
 
       {/* 2. Why Choose 3D Printing */}
-      <div className="py-16 md:py-20 bg-white relative overflow-hidden">
+      <div className="py-12 lg:py-12 lg:py-16 bg-white relative overflow-hidden">
         {/* Subtle background decoration */}
         <div className="absolute top-0 right-0 w-1/2 h-[500px] bg-gradient-to-bl from-blue-50/50 to-transparent pointer-events-none" />
         
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 md:mb-20">
+        <div className="section-container relative z-10">
+          <div className="text-center mb-16 md:mb-12 lg:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold tracking-wider uppercase mb-6">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
               The KYROZZ Advantage
@@ -93,9 +93,7 @@ export function ThreeDPrintingSection() {
             {reasons.map((r, idx) => (
               <div 
                 key={idx} 
-                className={`flex flex-col items-start p-8 md:p-10 rounded-[2rem] bg-slate-50/80 border border-slate-200/60 hover:bg-white hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:border-blue-100 transition-all duration-500 group relative overflow-hidden ${
-                  idx === 3 ? 'lg:col-span-2' : ''
-                }`}
+                className={`flex flex-col items-start p-8 md:p-10 rounded-[2rem] bg-slate-50/80 border border-slate-200/60 hover:bg-white hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:border-blue-100 transition-all duration-500 group relative overflow-hidden`}
               >
                 {/* Decorative background glow on hover */}
                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl group-hover:bg-blue-500/10 transition-colors duration-500" />
@@ -131,10 +129,10 @@ export function ThreeDPrintingSection() {
       </div>
 
       {/* 3. Our 3D Printing Technology */}
-      <div className="py-16 md:py-20 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-12 lg:py-12 lg:py-16 bg-slate-50 border-t border-slate-200">
+        <div className="section-container">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
+            <h3 className="text-[clamp(1.875rem,1.5rem+1.375vw,2.5rem)] font-bold text-slate-900">
               Our 3D Printing Technology
             </h3>
           </div>
@@ -187,8 +185,8 @@ export function ThreeDPrintingSection() {
       </div>
 
       {/* 4. Applications We Serve */}
-      <div className="py-16 bg-white border-t border-slate-200">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-12 lg:py-16 bg-white border-t border-slate-200">
+        <div className="section-container">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-slate-900">
               Applications We Serve
@@ -209,11 +207,11 @@ export function ThreeDPrintingSection() {
       </div>
 
       {/* 5. Bottom CTA Banner */}
-      <div className="py-12 md:py-16 bg-[#0A102A] relative overflow-hidden">
+      <div className="py-10 lg:py-12 bg-[#0A102A] relative overflow-hidden">
         {/* Background glow effects */}
         <div className="absolute top-0 right-0 w-[800px] h-full bg-blue-600/20 blur-[120px] pointer-events-none rounded-full" />
         
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="section-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
@@ -224,18 +222,18 @@ export function ThreeDPrintingSection() {
                 Partner with KYROZZ for reliable, innovative, and high-quality 3D printed components.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-row gap-2 sm:gap-4 w-full sm:w-auto">
                 <Link 
                   href="/contact" 
-                  className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-sm tracking-wide"
+                  className="flex-1 sm:flex-none flex items-center justify-center gap-1 sm:gap-2 px-2 sm:px-8 py-3.5 sm:py-4 bg-blue-600 text-white rounded-md font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-[11px] sm:text-sm tracking-wide whitespace-nowrap min-h-[44px]"
                 >
-                  GET A QUOTE <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
+                  GET A QUOTE <HugeiconsIcon icon={ArrowRight01Icon} className="w-3 h-3 sm:w-4 sm:h-4 shrink-0" />
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border border-slate-600 rounded-md font-bold hover:bg-white/5 transition-colors text-sm tracking-wide"
+                  className="flex-1 sm:flex-none flex items-center justify-center gap-1 sm:gap-2 px-2 sm:px-8 py-3.5 sm:py-4 bg-transparent text-white border border-slate-600 rounded-md font-bold hover:bg-white/5 transition-colors text-[11px] sm:text-sm tracking-wide whitespace-nowrap min-h-[44px]"
                 >
-                  CONTACT US <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
+                  CONTACT US <HugeiconsIcon icon={ArrowRight01Icon} className="w-3 h-3 sm:w-4 sm:h-4 shrink-0" />
                 </Link>
               </div>
             </div>

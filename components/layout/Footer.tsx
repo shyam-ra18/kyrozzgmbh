@@ -14,11 +14,10 @@ export default function Footer({ locale }: { locale: string }) {
   const titleContactUs = isDe ? "Kontakt" : "Contact Us";
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 py-16 text-slate-400 relative overflow-hidden" id="about">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col">
-        {/* 4-Column Layout */}
+    <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 relative overflow-hidden" id="about">
+      <div className="section-container section-spacing-lg relative z-10 flex flex-col">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 mb-12">
-          {/* Column 1: Logo & Description */}
+          {/* Column 1: Logo & Description — 4 cols */}
           <div className="lg:col-span-4 flex flex-col gap-4">
             <Link href="/" className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg w-fit">
               <Image
@@ -39,8 +38,8 @@ export default function Footer({ locale }: { locale: string }) {
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div className="lg:col-span-2 flex flex-col gap-4">
+          {/* Column 2: Quick Links — 3 cols */}
+          <div className="lg:col-span-3 flex flex-col gap-4">
             <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider">
               {titleQuickLinks}
             </h3>
@@ -61,8 +60,8 @@ export default function Footer({ locale }: { locale: string }) {
             </ul>
           </div>
 
-          {/* Column 4: Contact Us */}
-          <div className="lg:col-span-3 flex flex-col gap-4">
+          {/* Column 3: Contact Us — 5 cols */}
+          <div className="lg:col-span-5 flex flex-col gap-4">
             <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider">
               {titleContactUs}
             </h3>

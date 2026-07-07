@@ -15,14 +15,14 @@ const features = [
 
 export function PrintFeatures() {
   return (
-    <section className="py-16 bg-white" id="3d-printing">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-20">
+    <section className="py-12 lg:py-16 bg-white" id="3d-printing">
+      <div className="section-container mb-12 lg:mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="inline-block py-1 px-3 bg-blue-50 text-blue-600 text-[10px] font-bold tracking-[0.2em] rounded mb-6 uppercase">
               Production
             </div>
-            <h2 className="text-4xl md:text-5xl font-sans font-light text-slate-900 leading-[1.05] mb-6 tracking-tight">
+            <h2 className="text-[clamp(2rem,1.5rem+2.5vw,3.25rem)] font-sans font-light text-slate-900 leading-[1.05] mb-6 tracking-tight">
               3D Printing <span className="font-bold">Components</span>
             </h2>
             <p className="text-xl font-light text-slate-900 mb-4">
@@ -46,7 +46,7 @@ export function PrintFeatures() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center pt-16 border-t border-slate-100">
+      <div className="section-container text-center pt-16 border-t border-slate-100">
         <h3 className="text-3xl font-sans font-light text-slate-900 mb-12 tracking-tight">Why Choose 3D Printing with <span className="font-bold">KYROZZ?</span></h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {features.map((f, i) => (

@@ -50,8 +50,8 @@ export default async function ProductDetailPage({ params }: Props) {
   const textRelatedProducts = isDe ? "Ähnliche Produkte" : "Related Products";
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col pt-24 md:pt-32">
-      <section className="pb-20">
+    <div className="min-h-screen bg-slate-50 flex flex-col pt-24 md:pt-20 lg:pt-24">
+      <section className="pb-12 lg:pb-16">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Breadcrumb */}
@@ -118,7 +118,7 @@ export default async function ProductDetailPage({ params }: Props) {
       </section>
 
       {related.length > 0 && (
-        <section className="py-20 bg-white border-t border-slate-200">
+        <section className="py-12 lg:py-12 lg:py-16 bg-white border-t border-slate-200">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-10">{textRelatedProducts}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

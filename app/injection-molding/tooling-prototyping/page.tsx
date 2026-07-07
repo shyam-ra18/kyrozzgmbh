@@ -45,7 +45,7 @@ export default function ToolingPrototypingPage() {
       </PageHero>
 
       {/* Buyer Personas */}
-      <section className="py-16 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center justify-center text-blue-600 font-bold text-sm tracking-widest uppercase mb-4">
@@ -68,7 +68,7 @@ export default function ToolingPrototypingPage() {
       </section>
 
       {/* Capabilities & Timeline */}
-      <section className="py-16 bg-slate-50 border-t border-slate-200">
+      <section className="py-12 lg:py-16 bg-slate-50 border-t border-slate-200">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>

@@ -39,8 +39,8 @@ export default function ProductsPage() {
         description={productsPage.hero.description}
       />
 
-      <section className="py-12 md:py-16 flex-1">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing flex-1">
+        <div className="section-container">
 
           {/* Category tabs */}
           <div className="flex flex-wrap items-center gap-3 mb-12">
@@ -100,7 +100,7 @@ export default function ProductsPage() {
           </div>
 
           {filtered.length === 0 && (
-            <div className="text-center py-20 bg-white rounded-2xl border border-slate-200">
+            <div className="text-center py-12 lg:py-12 lg:py-16 bg-white rounded-2xl border border-slate-200">
               <p className="text-slate-500 text-lg">{productsPage.noProducts}</p>
             </div>
           )}

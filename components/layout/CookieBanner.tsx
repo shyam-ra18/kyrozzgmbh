@@ -71,7 +71,7 @@ export default function CookieBanner() {
                     </div>
                     <button
                       onClick={() => accept("necessary")}
-                      className="text-slate-400 hover:text-slate-600 transition-colors flex-shrink-0 mt-0.5"
+                      className="text-slate-400 hover:text-slate-600 transition-colors flex-shrink-0 mt-0.5 min-w-[44px] min-h-[44px] flex items-center justify-center"
                       aria-label="Dismiss"
                     >
                       <HugeiconsIcon icon={Cancel01Icon} className="w-5 h-5" />
@@ -151,13 +151,13 @@ export default function CookieBanner() {
                     <div className="flex items-center gap-2.5 w-full sm:w-auto">
                       <button
                         onClick={() => accept("necessary")}
-                        className="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-600 border border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 transition-all"
+                        className="flex-1 sm:flex-initial px-5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold text-slate-600 border border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 transition-all"
                       >
                         {cookieConsent.acceptNecessary}
                       </button>
                       <button
                         onClick={() => accept("all")}
-                        className="flex-1 sm:flex-initial px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-200 hover:shadow-lg hover:shadow-blue-200 transition-all"
+                        className="flex-1 sm:flex-initial px-6 py-2.5 min-h-[44px] rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-200 hover:shadow-lg hover:shadow-blue-200 transition-all"
                       >
                         {cookieConsent.acceptAll}
                       </button>

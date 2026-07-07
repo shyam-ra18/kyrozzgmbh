@@ -22,8 +22,8 @@ const highlights = [
 export function CoreServices() {
   const { introduction } = useContent();
   return (
-    <section className="py-20 bg-white border-b border-slate-100">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 lg:py-12 lg:py-16 bg-white border-b border-slate-100">
+      <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-slate-200">
           {introduction.services.map((s, i) => (
             <motion.div
@@ -52,11 +52,11 @@ export function CoreServices() {
 export function Introduction() {
   const { introduction } = useContent();
   return (
-    <section className="relative bg-gradient-to-r from-slate-50 via-white to-slate-50 border-y border-slate-100 overflow-hidden mt-6">
+    <section className="relative bg-gradient-to-r from-slate-50 via-white to-slate-50 border-y border-slate-100 overflow-hidden">
       {/* Subtle decorative dots pattern — right side */}
       <div className="absolute top-0 right-0 w-72 h-full opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(circle, #3b82f6 1.5px, transparent 1.5px)', backgroundSize: '14px 14px' }} />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-48 sm:pt-32 lg:pt-24 pb-12 lg:pb-16">
+      <div className="section-container pt-24 sm:pt-24 lg:pt-16 pb-12 lg:pb-16">
         {/* Top row: Logo + Text */}
         <div className="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left gap-6 lg:gap-12 mb-5">
           {/* Logo */}
@@ -82,7 +82,7 @@ export function Introduction() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-3 leading-tight tracking-tight">
+            <h2 className="text-[clamp(1.5rem,1.2rem+1.5vw,2rem)] font-black text-slate-900 mb-3 leading-tight tracking-tight">
               {introduction.heading1}{" "}
               <span className="text-blue-600 italic">{introduction.heading2}</span>
             </h2>

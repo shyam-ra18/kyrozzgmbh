@@ -25,13 +25,13 @@ export default function AssemblyServicesPage() {
         title={<>Complete Assembly Services &mdash; <span className="text-blue-500">Beyond Just Injection Molding</span></>}
         description="We don't just mold parts. We build finished products ready for your customer. Assembly, testing, and packaging in one place."
       >
-        <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2">
+        <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-600 text-white font-bold text-sm rounded-full transition-all hover:bg-blue-700 shadow-lg shadow-blue-200/50 gap-2 min-h-[44px]">
           Start Your Project <HugeiconsIcon icon={ArrowRight01Icon} className="w-4 h-4" />
         </Link>
       </PageHero>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-white">
+        <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center justify-center text-blue-600 font-bold text-sm tracking-widest uppercase mb-4">
               <span className="w-8 h-[2px] bg-blue-600 mr-4"></span>
@@ -52,8 +52,8 @@ export default function AssemblyServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-slate-50 border-t border-slate-200">
+        <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <div className="inline-flex items-center text-blue-600 font-bold text-sm tracking-widest uppercase mb-4">

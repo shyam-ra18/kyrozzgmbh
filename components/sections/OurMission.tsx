@@ -17,16 +17,16 @@ export default function OurMission() {
   const { ourMission } = useContent();
   const locale = useLocale();
   return (
-    <section className="py-16 lg:py-20 bg-white border-b border-slate-100 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 lg:py-12 lg:py-16 bg-white border-b border-slate-100 overflow-hidden">
+      <div className="section-container">
         {/* 1. Our Mission (Centered Content) */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-12 lg:mb-16">
           <div className="flex items-center justify-center mb-4">
             <span className="text-blue-600 text-[15px] sm:text-base font-bold tracking-[3px] uppercase">
               {ourMission.badge}
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[42px] font-black text-slate-900 tracking-tight leading-[1.1] mb-8">
+          <h2 className="text-[clamp(1.875rem,1.5rem+1.875vw,2.625rem)] font-black text-slate-900 tracking-tight leading-[1.1] mb-8">
             {ourMission.heading1} <br className="sm:hidden" />
             <span className="text-blue-600">{ourMission.heading2}</span>
           </h2>

@@ -58,8 +58,8 @@ export function FAQSection() {
   };
 
   return (
-    <section className="py-16 bg-slate-50 border-t border-slate-100" id="faq">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 lg:py-16 bg-slate-50 border-t border-slate-100" id="faq">
+      <div className="section-container">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

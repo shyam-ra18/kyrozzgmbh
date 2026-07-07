@@ -43,14 +43,14 @@ const industryIcons = [
 export function IndustriesBento() {
   const { industriesBento, threeDPrintingPage } = useContent();
   return (
-    <section id="industries" className="bg-[#F5F7FA] py-16 md:py-20">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <h2 className="text-3xl md:text-[38px] font-extrabold tracking-tight text-center text-slate-900">
+    <section id="industries" className="bg-[#F5F7FA] py-12 lg:py-12 lg:py-16">
+      <div className="section-container mb-16">
+        <h2 className="text-[clamp(1.875rem,1.5rem+1.875vw,2.375rem)] font-extrabold tracking-tight text-center text-slate-900">
           {industriesBento.heading}
         </h2>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="section-container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-x-3 gap-y-6">
           {industriesBento.industries.map((ind, i) => (
             <motion.div
@@ -92,7 +92,7 @@ export function IndustriesBento() {
 
       {/* 5. Bottom CTA Banner */}
       <section className="py-12">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-container">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#0B1523]">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
@@ -115,7 +115,7 @@ export function IndustriesBento() {
                 {threeDPrintingPage.cta.body}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-row gap-3">
                 <Link
                   href="/contact"
                   className="flex items-center justify-center gap-1.5 px-6 py-2.5 bg-blue-600 text-white rounded font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 text-[11px] tracking-wide w-fit"
@@ -141,8 +141,8 @@ export function IndustriesBento() {
 export function HTMLServices() {
   const { htmlSections } = useContent();
   return (
-    <section id="services" className="bg-white py-16">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="bg-white py-12 lg:py-16">
+      <div className="section-container">
         <h2 className="text-3xl font-bold text-center text-[#0B1523] mb-14">{htmlSections.services.heading}</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -193,8 +193,8 @@ const processIcons = [
 export function HTMLProcess() {
   const { htmlSections } = useContent();
   return (
-    <section id="process" className="bg-white py-16 border-t border-slate-100">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="process" className="bg-white py-12 lg:py-16 border-t border-slate-100">
+      <div className="section-container">
         {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-2xl md:text-3xl font-extrabold text-[#0B1523] tracking-tight">
@@ -211,7 +211,7 @@ export function HTMLProcess() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: idx * 0.08, duration: 0.5, ease: "easeOut" }}
-                className="flex flex-col items-center text-center w-[45%] sm:w-[45%] md:w-[28%] lg:flex-1 group"
+                className="flex flex-col items-center text-center w-full sm:w-[45%] md:w-[28%] lg:flex-1 group"
               >
                 {/* Icon Container using our globals.css animation container */}
                 <div className="w-20 h-20 rounded-full border border-slate-100 bg-slate-50/50 flex items-center justify-center mb-6 icon-animate-container">
@@ -254,8 +254,8 @@ export function HTMLFAQ() {
   ];
 
   return (
-    <section id="faq" className="bg-white py-28">
-      <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="bg-white py-16 lg:py-20">
+      <div className="max-w-[1000px] mx-auto section-container">
         <div className="text-center mb-16">
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#0B1523] mb-5 tracking-tight">{htmlSections.faq.heading}</h2>
           <div className="w-10 h-[3px] bg-blue-600 mx-auto rounded-full"></div>

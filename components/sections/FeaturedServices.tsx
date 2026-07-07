@@ -10,8 +10,8 @@ import { motion } from "framer-motion";
 export default function FeaturedServices() {
   const featuredServices = useContent().featuredServices;
   return (
-    <section className="relative overflow-hidden py-16 lg:py-24 bg-white border-b border-slate-100">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="relative overflow-hidden py-12 lg:py-12 lg:py-16 bg-white border-b border-slate-100">
+      <div className="section-container relative z-10">
         <div className="flex flex-col lg:flex-row justify-between items-stretch">
           {featuredServices.map((s, index) => {
             return (

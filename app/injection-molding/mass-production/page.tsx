@@ -23,9 +23,9 @@ export default function MassProductionPage() {
         </Link>
       </PageHero>
 
-      <section className="py-16 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 lg:mb-16">
             {[
               { label: "Machine Capacity", value: "50T – 1000T" },
               { label: "Shot Weight Range", value: "1g – 10kg+" },

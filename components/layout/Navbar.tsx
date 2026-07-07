@@ -28,7 +28,7 @@ export default function Navbar({ locale }: { locale: string }) {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-[background-color,border-color,padding] duration-300 ${isScrolled ? 'bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80 py-2 shadow-lg' : 'bg-slate-950/95 border-b border-slate-900/50 py-3'
       }`}>
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+      <div className="section-container flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
@@ -94,7 +94,7 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* Mobile hamburger */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden text-slate-200 hover:text-blue-400 p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md"
+          className="lg:hidden text-slate-200 hover:text-blue-400 min-w-[44px] min-h-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <HugeiconsIcon icon={Cancel01Icon} className="w-6 h-6" /> : <HugeiconsIcon icon={Menu01Icon} className="w-6 h-6" />}
@@ -103,14 +103,14 @@ export default function Navbar({ locale }: { locale: string }) {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-white/10 px-4 py-6 shadow-2xl">
-          <div className="flex flex-col gap-4">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-white/10 shadow-2xl max-h-[calc(100dvh-64px)] overflow-y-auto">
+          <div className="flex flex-col gap-1 section-container py-4">
             {navbar.links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-slate-300 hover:text-white py-2 border-b border-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-sm"
+                className="text-slate-300 hover:text-white min-h-[44px] flex items-center py-3 border-b border-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-sm"
               >
                 {link.label}
               </Link>

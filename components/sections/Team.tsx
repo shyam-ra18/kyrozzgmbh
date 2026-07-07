@@ -6,8 +6,8 @@ import { useContent } from '@/context/LocaleContext';
 export function TeamSection() {
   const { team } = useContent();
   return (
-    <section className="py-16 bg-white border-t border-slate-100" id="about">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+    <section className="py-12 lg:py-16 bg-white border-t border-slate-100" id="about">
+      <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block py-1 px-3 bg-blue-50 text-blue-600 text-[10px] font-bold tracking-[0.2em] rounded mb-6 uppercase">
             {team.badge}

@@ -22,60 +22,72 @@ export default async function MaterialsPage() {
 
   return (
     <>
-      <section style={{ background: "linear-gradient(135deg, #0A0F1E, #0D1635)", padding: "var(--space-6xl) 0 var(--space-5xl)", position: "relative" }}>
-        <div className="hero-pattern" />
-        <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <div className="section-label">{materialsPage.hero.label}</div>
-          <h1 style={{ color: "white", maxWidth: 720, marginBottom: "var(--space-lg)" }}>
+      {/* Hero Section */}
+      <section className="relative pt-24 lg:pt-20 lg:pt-24 pb-16 lg:pb-24 bg-gradient-to-br from-slate-900 to-[#0D1635] overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_2px_2px,white_1px,transparent_0)] bg-[size:32px_32px] pointer-events-none" />
+        <div className="section-container relative z-10">
+          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-widest uppercase mb-6">
+            {materialsPage.hero.label}
+          </div>
+          <h1 className="text-[clamp(2.5rem,2rem+2.5vw,4rem)] font-bold text-white max-w-3xl mb-6 leading-tight">
             {materialsPage.hero.title}
           </h1>
-          <p style={{ fontSize: 18, color: "rgba(255,255,255,0.65)", maxWidth: 560 }}>
+          <p className="text-lg text-white/70 max-w-2xl leading-relaxed">
             {materialsPage.hero.description}
           </p>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "var(--space-3xl)" }}>
-            <div className="section-label" style={{ justifyContent: "center" }}>{materialsPage.table.label}</div>
-            <h2>{materialsPage.table.title}</h2>
+      {/* Main Table Section */}
+      <section className="section-spacing bg-white">
+        <div className="section-container">
+          <div className="text-center mb-12 lg:mb-16">
+            <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold tracking-widest uppercase mb-4">
+              {materialsPage.table.label}
+            </div>
+            <h2 className="text-[clamp(1.875rem,1.5rem+1.875vw,2.5rem)] font-bold text-slate-900">
+              {materialsPage.table.title}
+            </h2>
           </div>
 
-          {/* Desktop table */}
-          <div style={{ overflowX: "auto", marginBottom: "var(--space-4xl)" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-body)" }}>
+          {/* Responsive Table Wrapper */}
+          <div className="w-full overflow-x-auto mb-16 lg:mb-12 lg:mb-16 rounded-2xl border border-slate-200 shadow-sm">
+            <table className="w-full text-left border-collapse min-w-[800px]">
               <thead>
-                <tr style={{ borderBottom: "2px solid var(--c-border)" }}>
+                <tr className="border-b-2 border-slate-200 bg-slate-50">
                   {materialsPage.table.headers.map((header) => (
-                    <th key={header} style={{ padding: "14px 16px", textAlign: "left", fontSize: 12, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--c-silver)" }}>{header}</th>
+                    <th key={header} className="px-5 py-4 text-xs font-bold tracking-widest uppercase text-slate-500">
+                      {header}
+                    </th>
                   ))}
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="divide-y divide-slate-100">
                 {materials.map((mat, i) => {
                   const isLow = mat.costLevel === "Low" || mat.costLevel === "Niedrig";
                   const isMedium = mat.costLevel === "Medium" || mat.costLevel === "Mittel";
                   return (
-                    <tr key={mat.shortName} style={{ borderBottom: "1px solid var(--c-border)", background: i % 2 === 0 ? "white" : "var(--c-mist)" }}>
-                      <td style={{ padding: "16px", verticalAlign: "top" }}>
-                        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                          <div style={{ width: 8, height: 8, background: mat.color, borderRadius: "50%", flexShrink: 0 }} />
+                    <tr key={mat.shortName} className={`hover:bg-slate-50 transition-colors ${i % 2 === 1 ? 'bg-slate-50/50' : 'bg-white'}`}>
+                      <td className="px-5 py-4 align-top">
+                        <div className="flex items-start gap-3">
+                          <div className="w-2.5 h-2.5 rounded-full shrink-0 mt-1.5" style={{ backgroundColor: mat.color }} />
                           <div>
-                            <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 15 }}>{mat.shortName}</div>
-                            <div style={{ fontSize: 12, color: "var(--c-silver)" }}>{mat.name}</div>
+                            <div className="font-display font-bold text-base text-slate-900">{mat.shortName}</div>
+                            <div className="text-sm text-slate-500">{mat.name}</div>
                           </div>
                         </div>
                       </td>
-                      <td style={{ padding: "16px", fontSize: 14, verticalAlign: "top", maxWidth: 240 }}>{mat.properties}</td>
-                      <td style={{ padding: "16px", fontSize: 14, verticalAlign: "top" }}>{mat.typicalUse}</td>
-                      <td style={{ padding: "16px", fontSize: 13, verticalAlign: "top", fontFamily: "var(--font-mono)", color: "var(--c-primary)" }}>{mat.tempRange}</td>
-                      <td style={{ padding: "16px", verticalAlign: "top" }}>
-                        <span style={{
-                          padding: "4px 12px", borderRadius: 100, fontSize: 12, fontWeight: 600,
-                          background: isLow ? "rgba(16,185,129,0.1)" : isMedium ? "rgba(245,158,11,0.1)" : "rgba(239,68,68,0.1)",
-                          color: isLow ? "#059669" : isMedium ? "#D97706" : "#DC2626",
-                        }}>{mat.costLevel}</span>
+                      <td className="px-5 py-4 text-sm text-slate-600 align-top max-w-xs">{mat.properties}</td>
+                      <td className="px-5 py-4 text-sm text-slate-600 align-top">{mat.typicalUse}</td>
+                      <td className="px-5 py-4 text-sm font-mono text-blue-600 align-top">{mat.tempRange}</td>
+                      <td className="px-5 py-4 align-top">
+                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${
+                          isLow ? "bg-emerald-100 text-emerald-700" : 
+                          isMedium ? "bg-amber-100 text-amber-700" : 
+                          "bg-red-100 text-red-700"
+                        }`}>
+                          {mat.costLevel}
+                        </span>
                       </td>
                     </tr>
                   );
@@ -84,29 +96,47 @@ export default async function MaterialsPage() {
             </table>
           </div>
 
-          <div className="grid-2" style={{ gap: "var(--space-3xl)" }}>
+          {/* Grid Layout for FAQ and Sustainability */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* FAQ */}
             <div>
-              <div className="section-label">{materialsPage.selection.label}</div>
-              <h2 style={{ marginBottom: "var(--space-lg)" }}>{materialsPage.selection.title}</h2>
-              {materialsPage.selection.items.map((item) => (
-                <div key={item.q} style={{ padding: "var(--space-md)", borderRadius: 10, border: "1px solid var(--c-border)", marginBottom: "var(--space-md)" }}>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "var(--c-ink)", marginBottom: 6 }}>Q: {item.q}</p>
-                  <p style={{ fontSize: 14, color: "var(--c-primary)", margin: 0 }}>→ {item.a}</p>
-                </div>
-              ))}
+              <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold tracking-widest uppercase mb-4">
+                {materialsPage.selection.label}
+              </div>
+              <h2 className="text-[clamp(1.5rem,1.25rem+1vw,2rem)] font-bold text-slate-900 mb-8">
+                {materialsPage.selection.title}
+              </h2>
+              <div className="space-y-4">
+                {materialsPage.selection.items.map((item) => (
+                  <div key={item.q} className="p-5 rounded-xl border border-slate-200 bg-white shadow-sm">
+                    <p className="text-sm font-bold text-slate-900 mb-2">Q: {item.q}</p>
+                    <p className="text-sm text-blue-600 leading-relaxed font-medium">→ {item.a}</p>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {/* Sustainability */}
             <div>
-              <div className="section-label">{materialsPage.sustainability.label}</div>
-              <h2 style={{ marginBottom: "var(--space-lg)" }}>{materialsPage.sustainability.title}</h2>
-              <p style={{ marginBottom: "var(--space-lg)" }}>{materialsPage.sustainability.description}</p>
-              {materialsPage.sustainability.bullets.map((item) => (
-                <div key={item} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
-                  <span style={{ color: "#10B981" }}>🌱</span>
-                  <span style={{ fontSize: 15 }}>{item}</span>
-                </div>
-              ))}
-              <div style={{ marginTop: "var(--space-xl)", padding: "var(--space-lg)", background: "rgba(16,185,129,0.05)", borderRadius: 10, border: "1px solid rgba(16,185,129,0.15)" }}>
-                <p style={{ fontSize: 14, color: "#064E3B", margin: 0 }}>
+              <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold tracking-widest uppercase mb-4">
+                {materialsPage.sustainability.label}
+              </div>
+              <h2 className="text-[clamp(1.5rem,1.25rem+1vw,2rem)] font-bold text-slate-900 mb-6">
+                {materialsPage.sustainability.title}
+              </h2>
+              <p className="text-slate-600 text-base leading-relaxed mb-8">
+                {materialsPage.sustainability.description}
+              </p>
+              <div className="space-y-3 mb-10">
+                {materialsPage.sustainability.bullets.map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <span className="text-emerald-500 mt-0.5">🌱</span>
+                    <span className="text-base text-slate-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="p-6 bg-emerald-50 rounded-xl border border-emerald-100">
+                <p className="text-sm font-medium text-emerald-800 leading-relaxed">
                   {materialsPage.sustainability.notSure}
                 </p>
               </div>
@@ -115,11 +145,19 @@ export default async function MaterialsPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--c-primary)", padding: "var(--space-4xl) 0" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ color: "white", marginBottom: "var(--space-md)" }}>{materialsPage.bottomCTA.title}</h2>
-          <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "var(--space-xl)" }}>{materialsPage.bottomCTA.description}</p>
-          <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 36px", background: "white", color: "var(--c-primary)", borderRadius: 10, fontWeight: 700, fontSize: 16, textDecoration: "none" }}>
+      {/* Bottom CTA */}
+      <section className="bg-blue-600 py-12 lg:py-12 lg:py-16">
+        <div className="section-container text-center">
+          <h2 className="text-[clamp(1.875rem,1.5rem+1.875vw,2.5rem)] font-bold text-white mb-6">
+            {materialsPage.bottomCTA.title}
+          </h2>
+          <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">
+            {materialsPage.bottomCTA.description}
+          </p>
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-lg font-bold text-base hover:bg-slate-50 transition-colors shadow-lg hover:shadow-xl min-h-[44px]"
+          >
             {materialsPage.bottomCTA.cta} →
           </Link>
         </div>
