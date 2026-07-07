@@ -195,11 +195,13 @@ export default async function ThreeDPrintingPage() {
 
           <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl mx-auto divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
             {threeDPrintingPage.applications.map((app, idx) => (
-              <div key={idx} className="flex items-center gap-3 px-2 lg:px-6 py-4 lg:py-0 w-full lg:w-auto justify-center group cursor-default">
-                <div className="group-hover:scale-110 transition-transform">
-                  {applicationIcons[idx]}
+              <div key={idx} className="flex items-center justify-center px-2 lg:px-6 py-4 lg:py-0 w-full lg:w-auto group cursor-default">
+                <div className="flex items-center gap-4 w-[220px] lg:w-auto justify-start">
+                  <div className="group-hover:scale-110 transition-transform shrink-0">
+                    {applicationIcons[idx]}
+                  </div>
+                  <span className="font-bold text-slate-800 text-[14px] whitespace-nowrap text-left">{app.title}</span>
                 </div>
-                <span className="font-bold text-slate-800 text-[14px] whitespace-nowrap">{app.title}</span>
               </div>
             ))}
           </div>

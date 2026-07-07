@@ -85,24 +85,28 @@ export function BambuTechShowcase() {
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ delay: i * 0.1, duration: 0.5, ease: "easeOut" }}
                   whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                  className="flex flex-col bg-white border border-slate-100 rounded-2xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-xl hover:border-blue-200 transition-all duration-300 h-full text-center group"
+                  className="flex flex-col bg-white border border-slate-100 rounded-2xl p-5 lg:p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-xl hover:border-blue-200 transition-all duration-300 h-full text-left lg:text-center group"
                 >
                   {/* Top content wrapper */}
-                  <div className="flex flex-col items-center flex-1 w-full">
-                    <div className="w-14 h-14 rounded-2xl border border-blue-50 flex items-center justify-center mb-6 bg-blue-50/50 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                      <HugeiconsIcon icon={Icon} className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                  <div className="flex flex-col items-start lg:items-center flex-1 w-full">
+                    
+                    <div className="flex items-center lg:flex-col gap-4 lg:gap-0 mb-3 lg:mb-0 w-full">
+                      <div className="w-12 h-12 lg:w-14 lg:h-14 shrink-0 rounded-2xl border border-blue-50 flex items-center justify-center lg:mb-6 bg-blue-50/50 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <HugeiconsIcon icon={Icon} className="w-5 h-5 lg:w-6 lg:h-6 text-blue-600 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                      </div>
+                      <h4 className="font-bold text-slate-900 lg:mb-3 text-sm tracking-tight leading-snug lg:min-h-[44px] flex items-center lg:justify-center">
+                        {item.title}
+                      </h4>
                     </div>
-                    <h4 className="font-bold text-slate-900 mb-3 text-sm tracking-tight leading-snug min-h-[44px] flex items-center justify-center">
-                      {item.title}
-                    </h4>
-                    <p className="text-sm text-slate-500 font-medium mb-6 leading-relaxed max-w-[200px]">
+
+                    <p className="text-sm text-slate-500 font-medium mb-4 lg:mb-6 leading-relaxed lg:max-w-[200px] text-justify lg:text-center w-full">
                       {item.desc}
                     </p>
                   </div>
 
                   {/* Checklist items at the bottom */}
-                  <div className="w-full pt-4 border-t border-slate-100 mt-auto flex justify-center">
-                    <div className="text-left space-y-2.5 w-fit">
+                  <div className="w-full pt-4 border-t border-slate-100 mt-auto flex lg:justify-center">
+                    <div className="text-left space-y-2 lg:space-y-2.5 w-full lg:w-fit">
                       {item.checklist.map((checkText, idx) => (
                         <div key={idx} className="flex items-center gap-2">
                           <HugeiconsIcon icon={CheckIcon} className="w-3.5 h-3.5 text-blue-600 shrink-0" strokeWidth={3} />

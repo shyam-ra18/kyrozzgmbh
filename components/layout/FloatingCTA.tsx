@@ -4,7 +4,7 @@ import { MailIcon } from '@hugeicons/core-free-icons';
 
 export default function FloatingCTA({ locale }: { locale: string }) {
   return (
-    <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-10 sm:bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end gap-3">
       {/* Email — opens Gmail compose in new tab */}
       <a
         href="mailto:info@kyrozz.de"

@@ -10,10 +10,10 @@ const expectationIcons = [HandshakeIcon, Award01Icon, ZapIcon, ShieldCheck, Coin
 export function WhatYouExpect() {
   const { whatYouExpect } = useContent();
   return (
-    <section className="py-12 lg:py-16 bg-slate-50 border-b border-slate-100 overflow-hidden">
+    <section className="py-8 lg:py-12 bg-slate-50 border-b border-slate-100 overflow-hidden">
       <div className="section-container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-16 items-start">
+
           {/* Left sticky column */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[11px] font-mono tracking-wider uppercase font-bold">
@@ -49,24 +49,30 @@ export function WhatYouExpect() {
                   {/* Subtle color highlight on hover */}
                   <div className="absolute top-0 left-0 w-1.5 h-full bg-blue-600 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
 
-                  <div className="flex gap-6 items-center flex-1">
-                    {/* Icon Container */}
-                    <div className="w-14 h-14 rounded-xl bg-blue-50/50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0 shadow-xs">
-                      <HugeiconsIcon icon={Icon} className="w-7 h-7" strokeWidth={1.5} />
-                    </div>
-                    
-                    <div className="space-y-1.5">
-                      <h4 className="font-bold text-slate-800 text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 sm:items-center flex-1 w-full">
+                    <div className="flex items-center gap-4 sm:gap-6">
+                      {/* Icon Container */}
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-blue-50/50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0 shadow-xs">
+                        <HugeiconsIcon icon={Icon} className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={1.5} />
+                      </div>
+
+                      <h4 className="sm:hidden font-bold text-slate-800 text-[17px] leading-tight group-hover:text-blue-600 transition-colors duration-200">
                         {exp.title}
                       </h4>
-                      <p className="text-base text-slate-500 leading-relaxed max-w-xl font-medium">
+                    </div>
+
+                    <div className="space-y-1.5 flex-1">
+                      <h4 className="hidden sm:block font-bold text-slate-800 text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200">
+                        {exp.title}
+                      </h4>
+                      <p className="text-[15px] sm:text-base text-slate-500 leading-relaxed max-w-xl font-medium">
                         {exp.desc}
                       </p>
                     </div>
                   </div>
 
                   {/* Large floating number */}
-                  <div className="text-4xl sm:text-5xl font-extrabold font-mono text-slate-100/70 select-none self-end sm:self-center group-hover:text-blue-50 transition-colors duration-300 shrink-0">
+                  <div className="hidden sm:block text-5xl font-extrabold font-mono text-slate-100/70 select-none self-center group-hover:text-blue-50 transition-colors duration-300 shrink-0">
                     {exp.num}
                   </div>
                 </motion.div>

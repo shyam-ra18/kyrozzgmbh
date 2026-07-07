@@ -68,23 +68,25 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      <section className="section-spacing bg-slate-50 border-y border-slate-200">
+      <section className="py-10 lg:py-12 bg-slate-50 border-y border-slate-200">
         <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold tracking-wider uppercase mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
               {aboutPage.whySection.badge}
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">{aboutPage.whySection.heading}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">{aboutPage.whySection.heading}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
             {aboutPage.whySection.reasons.map((r, idx) => (
-              <div key={idx} className="premium-card group">
-                <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 icon-animate-container">
-                  {(() => { const Icon = reasonIcons[idx]; return <HugeiconsIcon icon={Icon} className="w-8 h-8 text-blue-500 transition-colors duration-300" />; })()}
+              <div key={idx} className="premium-card group flex flex-col">
+                <div className="flex items-center gap-4 mb-3 lg:mb-4">
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 shrink-0 bg-blue-50 rounded-xl flex items-center justify-center icon-animate-container">
+                    {(() => { const Icon = reasonIcons[idx]; return <HugeiconsIcon icon={Icon} className="w-6 h-6 lg:w-7 lg:h-7 text-blue-500 transition-colors duration-300" />; })()}
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 leading-snug transition-colors duration-300 group-hover:text-blue-900">{r.title}</h3>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 transition-colors duration-300 group-hover:text-blue-900">{r.title}</h3>
-                <p className="text-base text-slate-600 leading-relaxed font-medium">{r.desc}</p>
+                <p className="text-[15px] md:text-base text-slate-600 leading-relaxed font-medium">{r.desc}</p>
               </div>
             ))}
           </div>

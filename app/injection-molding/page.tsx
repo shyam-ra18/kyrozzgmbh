@@ -183,22 +183,22 @@ export default async function InjectionMoldingPage() {
       {/* Process Steps Section */}
       <section className="py-10 bg-white border-t border-b border-slate-100">
         <div className="section-container">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
+          <div className="grid grid-cols-2 gap-y-8 gap-x-4 lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-4">
             {injectionMoldingPage.processSteps.map((step, idx) => {
               const Icon = processIcons[idx];
               return (
                 <Fragment key={idx}>
-                  <div className="flex flex-col lg:flex-row items-center text-center lg:text-left gap-4 lg:gap-5 flex-1 w-full lg:w-auto">
+                  <div className={`flex flex-col lg:flex-row items-center text-center lg:text-left gap-4 lg:gap-5 flex-1 w-full lg:w-auto ${idx === 4 ? 'col-span-2 lg:col-span-1' : ''}`}>
                     <div className="shrink-0">
-                      <div className="w-[68px] h-[68px] rounded-full border border-slate-200 flex items-center justify-center bg-white shadow-sm hover:shadow-md transition-shadow">
-                        <HugeiconsIcon icon={Icon} className="w-6 h-6 text-[#0a42bf] stroke-[1.5]" />
+                      <div className="w-14 h-14 sm:w-[68px] sm:h-[68px] lg:w-[68px] lg:h-[68px] rounded-full border border-slate-200 flex items-center justify-center bg-white shadow-sm hover:shadow-md transition-shadow">
+                        <HugeiconsIcon icon={Icon} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-6 lg:h-6 text-[#0a42bf] stroke-[1.5]" />
                       </div>
                     </div>
                     <div className="flex flex-col">
-                      <div className="text-[13px] font-extrabold text-[#0B1523] uppercase tracking-wider mb-1 leading-none">
+                      <div className="text-[12px] sm:text-[13px] lg:text-[13px] font-extrabold text-[#0B1523] uppercase tracking-wider mb-1 leading-none">
                         {step.num}. {step.title}
                       </div>
-                      <div className="text-[12px] text-[#475569] leading-snug whitespace-pre-line font-medium">
+                      <div className="text-[11px] sm:text-[12px] lg:text-[12px] text-[#475569] leading-snug whitespace-pre-line font-medium">
                         {step.desc}
                       </div>
                     </div>
