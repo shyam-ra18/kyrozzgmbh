@@ -40,7 +40,7 @@ export default async function InjectionMoldingPage() {
         {/* Background Image positioned to the right */}
         <div className="absolute inset-0 w-full h-full lg:w-[70%] lg:left-auto lg:right-0">
           <Image
-            src="/man-work.png"
+            src="/man-work.webp"
             alt="Ingenieur am CAD-Arbeitsplatz"
             fill
             className="object-cover object-center lg:object-left"

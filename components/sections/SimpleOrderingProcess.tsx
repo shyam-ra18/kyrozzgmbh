@@ -67,7 +67,7 @@ export function SimpleOrderingProcess() {
             {/* Left Image Column */}
             <div className="lg:col-span-5 relative w-full aspect-square rounded-2xl overflow-hidden">
               <Image
-                src="/3d-print.png"
+                src="/3d-print.webp"
                 alt="Präzise 3D-gedruckte Bauteile"
                 fill
                 className="object-cover"

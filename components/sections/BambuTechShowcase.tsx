@@ -25,7 +25,7 @@ export function BambuTechShowcase() {
           {/* Left: H2S */}
           <div className="flex flex-col md:flex-row gap-8 items-center lg:items-start lg:pr-12 pb-12 lg:pb-0">
             <div className="w-full md:w-[45%] flex-shrink-0">
-              <Image src="/bambulab-h2s.png" alt="Bambu Lab H2S" width={400} height={400} className="w-full h-auto object-contain" />
+              <Image src="/bambulab-h2s.webp" alt="Bambu Lab H2S" width={400} height={400} className="w-full h-auto object-contain" />
             </div>
             <div className="w-full md:w-[55%] space-y-3 pt-2">
               <div>
@@ -46,7 +46,7 @@ export function BambuTechShowcase() {
           {/* Right: P2S */}
           <div className="flex flex-col md:flex-row gap-8 items-center lg:items-start lg:pl-12 pt-12 lg:pt-0">
             <div className="w-full md:w-[45%] flex-shrink-0">
-              <Image src="/bambulab-p2s.png" alt="Bambu Lab P2S" width={400} height={400} className="w-full h-auto object-contain" />
+              <Image src="/bambulab-p2s.webp" alt="Bambu Lab P2S" width={400} height={400} className="w-full h-auto object-contain" />
             </div>
             <div className="w-full md:w-[55%] space-y-3 pt-2">
               <div>
@@ -206,7 +206,7 @@ export function BambuTechShowcase() {
           {/* Image */}
           <div className="absolute inset-y-0 right-0 w-full ml-1.5" style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%)' }}>
             <Image
-              src="/3dprint-ser1.png"
+              src="/3dprint-ser1.webp"
               alt="Bambu Lab Druckersetup"
               fill
               className="object-cover"
