@@ -74,10 +74,10 @@ export default async function RootLayout({
               <Navbar locale={locale} />
               <main>{children}</main>
               <Footer locale={locale} />
-              <FloatingCTA locale={locale} />
-              <CookieBanner />
-              <QuoteModal />
             </SmoothScrolling>
+            <FloatingCTA locale={locale} />
+            <CookieBanner />
+            <QuoteModal />
           </LocaleProvider>
         </NextIntlClientProvider>
       </body>

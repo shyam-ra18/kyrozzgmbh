@@ -5,7 +5,7 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import { ShieldIcon, ChevronDownIcon, ChevronUpIcon, Cancel01Icon, CheckIcon, CookieIcon } from '@hugeicons/core-free-icons';
 import { useContent, useLocale } from "@/context/LocaleContext";
 
-const COOKIE_KEY = "kyrozz_cookie_consent";
+const SESSION_KEY = "kyrozz_cookie_consent";
 
 export default function CookieBanner() {
   const { cookieConsent } = useContent();
@@ -14,16 +14,15 @@ export default function CookieBanner() {
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem(COOKIE_KEY);
-    if (!stored) {
-      // Small delay so page renders first
-      const t = setTimeout(() => setVisible(true), 800);
-      return () => clearTimeout(t);
+    // sessionStorage is tab-scoped: it is automatically wiped when the tab is
+    // closed AND on every hard page refresh — no extra cleanup needed.
+    if (!sessionStorage.getItem(SESSION_KEY)) {
+      setVisible(true);
     }
   }, []);
 
   const accept = (type: "all" | "necessary") => {
-    localStorage.setItem(COOKIE_KEY, JSON.stringify({ type, date: new Date().toISOString() }));
+    sessionStorage.setItem(SESSION_KEY, JSON.stringify({ type, date: new Date().toISOString() }));
     setVisible(false);
   };
 
