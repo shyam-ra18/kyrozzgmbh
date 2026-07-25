@@ -31,11 +31,11 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   alternates: {
-    canonical: "https://kyrozz.com",
+    canonical: "https://kyrozz.de",
     languages: {
-      "en": "https://kyrozz.com",
-      "de": "https://kyrozz.com",
-      "x-default": "https://kyrozz.com",
+      "en": "https://kyrozz.de",
+      "de": "https://kyrozz.de",
+      "x-default": "https://kyrozz.de",
     },
   },
   other: {

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | KYROZZ GmbH",
-  robots: "noindex",
 };
 
 export default function PrivacyPolicyPage() {

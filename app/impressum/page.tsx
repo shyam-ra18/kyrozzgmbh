@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Impressum | KYROZZ GmbH",
-  robots: "noindex",
 };
 
 export default function ImpressumPage() {
@@ -15,7 +14,7 @@ export default function ImpressumPage() {
           <p><strong>KYROZZ GmbH</strong></p>
           <p>Poschingerstraße 33</p>
           <p>94469 Deggendorf, Deutschland</p>
-          <p style={{ marginTop: "var(--space-md)" }}><strong>Handelsregister:</strong> HRB XXXXX</p>
+          {/* <p style={{ marginTop: "var(--space-md)" }}><strong>Handelsregister:</strong> HRB 6560</p> */}
           <p><strong>Registergericht:</strong> Amtsgericht Deggendorf</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Vertreten durch</h2>
           <p>Geschäftsführer: [Name des Geschäftsführers]</p>
@@ -23,7 +22,7 @@ export default function ImpressumPage() {
           <p><strong>Telefon:</strong> +91 95123 60862</p>
           <p><strong>E-Mail:</strong> info@kyrozz.de</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Umsatzsteuer-ID</h2>
-          <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE XXXXXXXXX</p>
+          <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: 10813090002</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Haftungsausschluss</h2>
           <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
         </div>

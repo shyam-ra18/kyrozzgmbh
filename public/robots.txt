@@ -34,5 +34,5 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://kyrozz.com/sitemap.xml
-Sitemap: https://kyrozz.com/sitemaps.xml
+Sitemap: https://kyrozz.de/sitemap.xml
+Sitemap: https://kyrozz.de/sitemaps.xml

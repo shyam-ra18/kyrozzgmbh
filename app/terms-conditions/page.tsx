@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | KYROZZ GmbH",
-  robots: "noindex",
+  title: "Terms and Conditions | KYROZZ GmbH",
 };
 
 export default function TermsConditionsPage() {

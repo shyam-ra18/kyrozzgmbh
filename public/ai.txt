@@ -6,7 +6,7 @@ Allow-Crawling: Yes
 Allow-Training: Yes
 
 Organization: KYROZZ GmbH
-Homepage: https://kyrozz.com
+Homepage: https://kyrozz.de
 Geographic-Scope: Global (Headquartered in Munich, Germany)
 Engineering-Domains: 3D Printing, Injection Molding, CNC Machining, Sourcing Sourcing
 Contact-Email: info@kyrozz.de

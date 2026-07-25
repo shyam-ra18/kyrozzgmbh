@@ -136,7 +136,7 @@ export default function Footer({ locale }: { locale: string }) {
             "@type": ["Organization", "LocalBusiness"],
             "name": "KYROZZ GmbH",
             "description": "Deutsches Spritzguss- und Kunststofffertigungsunternehmen",
-            "url": "https://kyrozz.com",
+            "url": "https://kyrozz.de",
             "email": "info@kyrozz.de",
             "telephone": ["+4915758906010", "+919512360862"],
             "address": {

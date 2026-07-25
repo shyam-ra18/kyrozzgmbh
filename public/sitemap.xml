@@ -2,127 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kyrozz.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/"/>
+    <loc>https://kyrozz.de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/3d-printing</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/3d-printing"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/3d-printing"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/3d-printing"/>
+    <loc>https://kyrozz.de/3d-printing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/3d-printing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/3d-printing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/3d-printing"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/injection-molding</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/injection-molding"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/injection-molding"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/injection-molding"/>
+    <loc>https://kyrozz.de/injection-molding</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/injection-molding"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/injection-molding"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/injection-molding"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/injection-molding/mass-production</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/injection-molding/mass-production"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/injection-molding/mass-production"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/injection-molding/mass-production"/>
+    <loc>https://kyrozz.de/injection-molding/mass-production</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/injection-molding/mass-production"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/injection-molding/mass-production"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/injection-molding/mass-production"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/injection-molding/tooling-prototyping</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/injection-molding/tooling-prototyping"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/injection-molding/tooling-prototyping"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/injection-molding/tooling-prototyping"/>
+    <loc>https://kyrozz.de/injection-molding/tooling-prototyping</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/injection-molding/tooling-prototyping"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/injection-molding/tooling-prototyping"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/injection-molding/tooling-prototyping"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/injection-molding/testing-quality</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/injection-molding/testing-quality"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/injection-molding/testing-quality"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/injection-molding/testing-quality"/>
+    <loc>https://kyrozz.de/injection-molding/testing-quality</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/injection-molding/testing-quality"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/injection-molding/testing-quality"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/injection-molding/testing-quality"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/assembly-services</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/assembly-services"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/assembly-services"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/assembly-services"/>
+    <loc>https://kyrozz.de/assembly-services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/assembly-services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/assembly-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/assembly-services"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/about"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/about"/>
+    <loc>https://kyrozz.de/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/about"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/contact"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/contact"/>
+    <loc>https://kyrozz.de/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/contact"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/products</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/products"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/products"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/products"/>
+    <loc>https://kyrozz.de/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/products"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/products"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/materials</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/materials"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/materials"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/materials"/>
+    <loc>https://kyrozz.de/materials</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/materials"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/materials"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/materials"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/quote</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/quote"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/quote"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/quote"/>
+    <loc>https://kyrozz.de/quote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/quote"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/quote"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/quote"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/impressum</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/impressum"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/impressum"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/impressum"/>
+    <loc>https://kyrozz.de/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/impressum"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://kyrozz.com/datenschutz</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.com/datenschutz"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.com/datenschutz"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.com/datenschutz"/>
+    <loc>https://kyrozz.de/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kyrozz.de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kyrozz.de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kyrozz.de/datenschutz"/>
     <lastmod>2026-06-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
