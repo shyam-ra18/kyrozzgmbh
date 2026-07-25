@@ -6,13 +6,12 @@ import { TargetIcon, TimerIcon, Settings01Icon, LayersIcon, ShieldCheck, CheckIc
 import { HTMLServices, HTMLFAQ } from "@/components/sections/HTMLSections";
 import { SimpleOrderingProcess } from "@/components/sections/SimpleOrderingProcess";
 import { BambuTechShowcase } from "@/components/sections/BambuTechShowcase";
-import { cookies } from "next/headers";
+
 import * as de from "@/content/de";
 import * as en from "@/content/en";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const content = locale === "de" ? de : en;
   return {
     title: content.threeDPrintingPage.metadata.title,
@@ -37,8 +36,7 @@ const applicationIcons = [
 ];
 
 export default async function ThreeDPrintingPage() {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const { threeDPrintingPage } = locale === "de" ? de : en;
   return (
     <div className="min-h-screen bg-white flex flex-col pt-24 lg:pt-20 lg:pt-24">

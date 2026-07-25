@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { cookies } from "next/headers";
+
 import * as de from "@/content/de";
 import * as en from "@/content/en";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const content = locale === "de" ? de : en;
   return {
     title: content.materialsPage.metadata.title,
@@ -15,8 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function MaterialsPage() {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const content = locale === "de" ? de : en;
   const { materials, materialsPage } = content;
 

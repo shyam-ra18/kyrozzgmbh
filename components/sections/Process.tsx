@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { TargetIcon, Clock01Icon, ZapIcon, LayersIcon, ShieldCheck, CheckmarkCircle01Icon } from '@hugeicons/core-free-icons';
+import Link from 'next/link';
 import { Button } from '../ui/Button';
 
 const features = [
@@ -32,8 +33,8 @@ export function PrintFeatures() {
               We specialize in 3D printing components, utilizing both FDM and SLA printing processes. We invite you to explore our website to learn more about our company, our services, and how to contact us. We appreciate your visit to our website.
             </p>
             <div className="flex gap-4">
-              <a href="/contact" className="inline-flex items-center justify-center font-bold text-sm rounded-full transition-all bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-200 px-8 py-4">Request a Quote</a>
-              <a href="/3d-printing" className="inline-flex items-center justify-center font-bold text-sm rounded-full transition-all bg-transparent border border-slate-200 text-slate-900 hover:bg-slate-50 shadow-sm px-8 py-4">Learn More</a>
+              <Link href="/contact" className="inline-flex items-center justify-center font-bold text-sm rounded-full transition-all bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-200 px-8 py-4">Request a Quote</Link>
+              <Link href="/3d-printing" className="inline-flex items-center justify-center font-bold text-sm rounded-full transition-all bg-transparent border border-slate-200 text-slate-900 hover:bg-slate-50 shadow-sm px-8 py-4">Learn More</Link>
             </div>
           </div>
           <div className="relative rounded-2xl overflow-hidden border border-slate-100 shadow-sm p-2 bg-slate-50">

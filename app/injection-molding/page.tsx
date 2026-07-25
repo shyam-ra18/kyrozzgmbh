@@ -4,13 +4,12 @@ import Image from "next/image";
 import { Fragment } from "react";
 import { HugeiconsIcon } from '@hugeicons/react';
 import { UserGroupIcon, Settings01Icon, ShieldCheck, GlobeIcon, TruckIcon, MessageSquare, ArrowRight01Icon, CheckIcon, CheckmarkCircle01Icon, SearchIcon, TrendingUp, ClipboardListIcon, HandshakeIcon, ChevronRightIcon } from '@hugeicons/core-free-icons';
-import { cookies } from "next/headers";
+
 import * as de from "@/content/de";
 import * as en from "@/content/en";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const content = locale === "de" ? de : en;
   return {
     title: content.injectionMoldingPage.metadata.title,
@@ -30,8 +29,7 @@ const metricIcons = [
 const processIcons = [MessageSquare, Settings01Icon, UserGroupIcon, ShieldCheck, TruckIcon];
 
 export default async function InjectionMoldingPage() {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const { injectionMoldingPage } = locale === "de" ? de : en;
   return (
     <div className="bg-white">

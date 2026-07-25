@@ -52,7 +52,7 @@ export default function QuoteModal() {
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Request a Quote</h2>
           <button
             onClick={() => setIsOpen(false)}
-            className="min-w-[44px] min-h-[44px] flex items-center justify-center bg-white border border-slate-200 hover:bg-slate-100 hover:border-slate-300 rounded-full text-slate-500 hover:text-slate-900 transition-colors shadow-sm"
+            className="p-2 flex items-center justify-center bg-white border border-slate-200 hover:bg-slate-100 hover:border-slate-300 rounded-full text-slate-500 hover:text-slate-900 transition-colors shadow-sm"
             title="Close"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

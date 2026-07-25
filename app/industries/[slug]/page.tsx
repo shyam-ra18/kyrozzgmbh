@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { HugeiconsIcon } from '@hugeicons/react';
 import { ChevronRightIcon } from '@hugeicons/core-free-icons';
-import { cookies } from "next/headers";
+
 import * as de from "@/content/de";
 import * as en from "@/content/en";
 
@@ -13,8 +13,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const { industries } = locale === "de" ? de : en;
   const industry = industries.find((i) => i.slug === slug);
   if (!industry) return { title: "Not Found" };
@@ -30,8 +29,7 @@ export async function generateStaticParams() {
 
 export default async function IndustryPage({ params }: Props) {
   const { slug } = await params;
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const { industries } = locale === "de" ? de : en;
   const industry = industries.find((i) => i.slug === slug);
   if (!industry) notFound();

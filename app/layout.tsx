@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { cookies } from "next/headers";
+
 import "@/app/globals.css";
 import "lenis/dist/lenis.css";
 import Navbar from "@/components/layout/Navbar";
@@ -52,8 +52,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
 
   // Enable static rendering
   setRequestLocale(locale);

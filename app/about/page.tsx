@@ -5,14 +5,13 @@ import { TeamSection } from "@/components/sections/Team";
 import { WhatYouExpect } from "@/components/sections/WhatYouExpect";
 import { HugeiconsIcon } from '@hugeicons/react';
 import { FactoryIcon, CheckmarkCircle01Icon, GlobeIcon, ShieldCheck, ZapIcon, TrendingUp, GemIcon, MessageCircle } from '@hugeicons/core-free-icons';
-import { cookies } from "next/headers";
+
 import * as de from "@/content/de";
 import * as en from "@/content/en";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const content = locale === "de" ? de : en;
   return {
     title: content.aboutPage.metadata.title,
@@ -23,8 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const reasonIcons = [CheckmarkCircle01Icon, GlobeIcon, ShieldCheck, ZapIcon, TrendingUp, GemIcon, MessageCircle];
 
 export default async function AboutPage() {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const locale = "en" as string;
   const { aboutPage } = locale === "de" ? de : en;
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
@@ -103,6 +101,7 @@ export default async function AboutPage() {
         description={aboutPage.cta.description}
         primaryText={aboutPage.cta.primaryText}
         primaryHref={aboutPage.cta.primaryHref}
+        secondaryText="Request a Quote"
       />
     </div>
   );
