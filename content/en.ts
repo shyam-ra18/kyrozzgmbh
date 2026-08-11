@@ -37,6 +37,7 @@ export const footer = {
   badge1: "🇩🇪 German Managed",
   location: "Poschingerstraße 33, 94469 Deggendorf",
   copyright: "All rights reserved.",
+  vatId: "VAT ID: DE463952764",
 };
 
 // ─────────────────────────────────────────────

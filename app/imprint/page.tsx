@@ -35,7 +35,7 @@ export default function ImprintPage() {
               <h2 className="text-lg font-bold text-slate-800 uppercase tracking-wider mb-2">Contact</h2>
               <p><strong>Email:</strong> <a href="mailto:info@kyrozz.de" className="text-blue-600 hover:underline">info@kyrozz.de</a></p>
               <p><strong>Phone:</strong> <a href="tel:+4915758906010" className="text-blue-600 hover:underline">+49 157 5890 6010</a></p>
-              {/* <p><strong>VAT ID number:</strong> 10813090002</p> */}
+              <p><strong>VAT ID number:</strong> DE463952764</p>
               <p><strong>Registry court:</strong> Amtsgericht Deggendorf</p>
               <p><strong>Registry number:</strong> HRB 6560</p>
             </div>

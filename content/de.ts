@@ -38,6 +38,7 @@ export const footer = {
   badge1: "🇩🇪 Deutsches Management",
   location: "Poschingerstraße 33, 94469 Deggendorf",
   copyright: "Alle Rechte vorbehalten.",
+  vatId: "USt-IdNr.: DE463952764",
 };
 
 // ─────────────────────────────────────────────

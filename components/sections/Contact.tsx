@@ -1,27 +1,13 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { MailIcon, CallIcon, MapPinIcon } from '@hugeicons/core-free-icons';
 import { useContent, useLocale } from '@/context/LocaleContext';
+import { ContactForm } from '@/components/sections/ContactForm';
 
 export function ContactSection() {
   const { contactSection } = useContent();
   const locale = useLocale();
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  // Auto-resize iframe based on JotForm postMessage events
-  useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
-      if (typeof event.data !== 'string') return;
-      const args = event.data.split(':');
-      if (args.length < 2) return;
-      if (args[0] === 'setHeight' && iframeRef.current) {
-        iframeRef.current.style.height = `${parseInt(args[1]) + 30}px`;
-      }
-    };
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, []);
 
   return (
     <section className="py-12 lg:py-16 bg-slate-50 border-t border-slate-100" id="contact">
@@ -40,10 +26,10 @@ export function ContactSection() {
 
         {/* 2-Column Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
-          
-          {/* Left Column: Contact Cards with border labels */}
+
+          {/* Left Column: Contact Cards */}
           <div className="lg:col-span-5 space-y-9 pt-3">
-            
+
             {/* Phone Card */}
             <div className="border border-slate-200/80 rounded-2xl p-6 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.01)] relative hover:border-blue-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 group">
               <span className="absolute -top-3 left-5 px-2.5 py-0.5 bg-white text-[10px] font-extrabold text-blue-600 tracking-wider uppercase border border-slate-200/80 rounded-md">
@@ -108,19 +94,9 @@ export function ContactSection() {
 
           </div>
 
-          {/* Right Column: Contact Form (JotForm) */}
-          <div className="lg:col-span-7 bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-[0_4px_30px_rgba(0,0,0,0.01)] hover:border-blue-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300">
-            <iframe
-              ref={iframeRef}
-              id="JotFormIFrame-261803746797471"
-              title="Online Video Upload Form"
-              allowTransparency={true}
-              allow="geolocation; microphone; camera; fullscreen; payment"
-              src="https://form.jotform.com/261803746797471"
-              frameBorder="0"
-              style={{ width: '100%', height: '800px', border: 'none', background: 'transparent', display: 'block' }}
-              scrolling="no"
-            />
+          {/* Right Column: Custom Quote Form */}
+          <div className="lg:col-span-7">
+            <ContactForm />
           </div>
 
         </div>

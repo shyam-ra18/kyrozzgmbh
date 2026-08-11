@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
+import { useLenis } from 'lenis/react';
+import { ContactForm } from "@/components/sections/ContactForm";
 
 export default function QuoteModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const lenis = useLenis();
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -16,7 +17,6 @@ export default function QuoteModal() {
 
       const text = target.textContent?.toLowerCase().trim() || '';
 
-      // Match variants of "Request a Quote" / "Angebot anfordern"
       if (
         text.includes('request a quote') ||
         text.includes('get a quote') ||
@@ -27,14 +27,27 @@ export default function QuoteModal() {
         e.preventDefault();
         e.stopPropagation();
         setIsOpen(true);
-        setIsLoading(true); // reset loading state when opened
       }
     };
 
-    // Use capturing phase to intercept before Next.js Link handles navigation
     document.addEventListener('click', handleClick, true);
     return () => document.removeEventListener('click', handleClick, true);
   }, []);
+
+  // Lock body scroll when modal is open using Lenis (since Lenis overrides CSS overflow)
+  useEffect(() => {
+    if (isOpen) {
+      lenis?.stop();
+      document.body.style.overflow = 'hidden';
+    } else {
+      lenis?.start();
+      document.body.style.overflow = '';
+    }
+    return () => {
+      lenis?.start();
+      document.body.style.overflow = '';
+    };
+  }, [isOpen, lenis]);
 
   if (!isOpen) return null;
 
@@ -44,15 +57,18 @@ export default function QuoteModal() {
       onClick={() => setIsOpen(false)}
     >
       <div
-        className="relative w-full max-w-5xl max-h-[90dvh] overflow-hidden flex flex-col bg-white border border-slate-200/80 rounded-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-300"
+        className="relative w-full max-w-2xl max-h-[90dvh] flex flex-col bg-white border border-slate-200/80 rounded-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-300"
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-slate-100 bg-slate-50/50 shrink-0">
-          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Request a Quote</h2>
+        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-slate-50/70 rounded-t-2xl shrink-0">
+          <div>
+            <h2 className="text-xl font-bold text-slate-900 tracking-tight">Request a Quote</h2>
+            <p className="text-xs text-slate-500 mt-0.5">Fill in your details and upload your CAD file.</p>
+          </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 flex items-center justify-center bg-white border border-slate-200 hover:bg-slate-100 hover:border-slate-300 rounded-full text-slate-500 hover:text-slate-900 transition-colors shadow-sm"
+            className="p-2 flex items-center justify-center bg-white border border-slate-200 hover:bg-slate-100 hover:border-slate-300 rounded-full text-slate-500 hover:text-slate-900 transition-colors shadow-sm shrink-0 ml-4"
             title="Close"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,28 +77,9 @@ export default function QuoteModal() {
           </button>
         </div>
 
-        {/* Iframe Container */}
-        <div className="w-full relative flex-1 overflow-auto bg-slate-50 min-h-[300px]">
-          {isLoading && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10">
-              <div className="w-10 h-10 border-4 border-slate-100 border-t-blue-600 rounded-full animate-spin mb-4" />
-              <p className="text-sm sm:text-base text-slate-600 font-bold animate-pulse">Loading secure form...</p>
-            </div>
-          )}
-          <div className="w-full flex-1 overflow-auto">
-            <iframe
-              ref={iframeRef}
-              id="JotFormIFrame-261803746797471"
-              title="Online Quote Form"
-              allowTransparency={true}
-              allow="geolocation; microphone; camera; fullscreen; payment"
-              src="https://form.jotform.com/261803746797471"
-              frameBorder="0"
-              onLoad={() => setIsLoading(false)}
-              style={{ width: '100%', height: '1000px', border: 'none', background: 'transparent', display: 'block' }}
-              scrolling="no"
-            />
-          </div>
+        {/* Scrollable Form Body */}
+        <div className="overflow-y-auto flex-1 p-4 sm:p-6" data-lenis-prevent="true">
+          <ContactForm isModal={true} />
         </div>
       </div>
     </div>

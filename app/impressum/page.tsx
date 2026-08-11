@@ -22,7 +22,7 @@ export default function ImpressumPage() {
           <p><strong>Telefon:</strong> +91 95123 60862</p>
           <p><strong>E-Mail:</strong> info@kyrozz.de</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Umsatzsteuer-ID</h2>
-          <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: 10813090002</p>
+          <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE463952764</p>
           <h2 style={{ fontSize: "1.3rem", marginBottom: "var(--space-md)", marginTop: "var(--space-xl)" }}>Haftungsausschluss</h2>
           <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
         </div>

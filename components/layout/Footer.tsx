@@ -117,12 +117,7 @@ export default function Footer({ locale }: { locale: string }) {
               Terms & Conditions
             </Link>
             <span className="text-slate-800 hidden sm:inline">|</span>
-            {/* <Link href="/impressum" className="hover:text-slate-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 rounded-sm">
-              Impressum
-            </Link>
-            <Link href="/datenschutz" className="hover:text-slate-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 rounded-sm">
-              Datenschutz
-            </Link> */}
+            <span className="text-slate-500">{footer.vatId}</span>
           </div>
         </div>
       </div>
@@ -139,6 +134,8 @@ export default function Footer({ locale }: { locale: string }) {
             "url": "https://kyrozz.de",
             "email": "info@kyrozz.de",
             "telephone": ["+4915758906010", "+919512360862"],
+            "vatID": "DE463952764",
+            "taxID": "DE463952764",
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "DE",
