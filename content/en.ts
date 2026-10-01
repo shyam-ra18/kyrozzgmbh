@@ -38,6 +38,10 @@ export const footer = {
   location: "Poschingerstraße 33, 94469 Deggendorf",
   copyright: "All rights reserved.",
   vatId: "VAT ID: DE463952764",
+  socials: [
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/kyrozz-gmbh" },
+    { name: "Instagram", href: "https://www.instagram.com/kyrozz_gmbh" },
+  ],
 };
 
 // ─────────────────────────────────────────────
@@ -612,7 +616,7 @@ export const subCTA = {
 // ─────────────────────────────────────────────
 export const homePage = {
   metadata: {
-    title: "Injection Molding Manufacturer | KYROZZ GmbH Germany",
+    title: "Industrial Contract Manufacturer | KYROZZ GmbH Germany",
     description:
       "German-managed injection molding, 3D printing and assembly services. 500+ completed projects, 20+ global partners, delivered in 15+ countries.",
   },

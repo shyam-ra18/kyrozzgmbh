@@ -39,6 +39,10 @@ export const footer = {
   location: "Poschingerstraße 33, 94469 Deggendorf",
   copyright: "Alle Rechte vorbehalten.",
   vatId: "USt-IdNr.: DE463952764",
+  socials: [
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/kyrozz-gmbh" },
+    { name: "Instagram", href: "https://www.instagram.com/kyrozz_gmbh" },
+  ],
 };
 
 // ─────────────────────────────────────────────

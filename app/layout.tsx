@@ -16,7 +16,7 @@ import QuoteModal from "@/components/layout/QuoteModal";
 export const metadata: Metadata = {
   title: {
     template: "%s | KYROZZ GmbH",
-    default: "Injection Molding Manufacturer | KYROZZ GmbH Germany",
+    default: "Industrial Contract Manufacturer | KYROZZ GmbH Germany",
   },
   description: "German-managed injection molding, 3D printing and assembly services. 500+ completed projects, 20+ global partners, delivered in 15+ countries.",
   robots: "index, follow",
